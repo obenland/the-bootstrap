@@ -1,0 +1,57 @@
+<?php
+/** content.php
+ *
+ * The default template for displaying content
+ *
+ * @author		Konstantin Obenland
+ * @package		WordPress
+ * @subpackage	The Bootstrap
+ * @since		1.0.0 - 05.02.2012
+ */
+?>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="page-header">
+	<?php if ( is_sticky() ) : ?>
+		<hgroup>
+			<?php the_title( '<h1 class="entry-title"><a href="' . get_permalink() . '" title="<' . sprintf( esc_attr__( 'Permalink to %s', 'the-bootstrap' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark">', '</a></h1>' ); ?>
+			<h3 class="entry-format"><?php _e( 'Featured', 'the-bootstrap' ); ?></h3>
+		</hgroup>
+	<?php
+		else :
+			the_title( '<h1 class="entry-title"><a href="' . get_permalink() .'" title="<' . sprintf( esc_attr__( 'Permalink to %s', 'the-bootstrap' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark">', '</a></h1>' );
+		endif;
+		
+		if ( 'post' == get_post_type() ) : ?>
+		<div class="entry-meta">
+			<?php the_bootstrap_posted_on(); ?>
+		</div><!-- .entry-meta -->
+		<?php endif; ?>
+	</header><!-- .entry-header -->
+
+	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
+	<div class="entry-summary clearfix">
+		<?php the_excerpt(); ?>
+	</div><!-- .entry-summary -->
+	<?php else : ?>
+	<div class="entry-content clearfix">
+		<?php
+		the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'the-bootstrap' ) );
+		the_bootstrap_link_pages(); ?>
+	</div><!-- .entry-content -->
+	<?php endif; ?>
+
+	<footer class="entry-meta">
+		<?php
+		if ( 'post' == get_post_type() ) { // Hide category text for pages on Search
+			printf(
+				'<span class="cat-links">' . __( 'Posted in %1$s.', 'the-bootstrap' ) . '</span>',
+				get_the_category_list( _x( ', ', 'used between list items, there is a space after the comma', 'the-bootstrap' ) )
+			);
+		} // End if ?>
+	</footer><!-- #entry-meta -->
+</article><!-- #post-<?php the_ID(); ?> -->
+<?php
+
+
+/* End of file content.php */
+/* Location: ./wp-content/themes/the-bootstrap/partials/content.php */

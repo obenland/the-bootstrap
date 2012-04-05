@@ -1,0 +1,320 @@
+/*
+Theme Name:		The Bootstrap
+Theme URI:		http://en.wp.obenland.it/the-bootstrap/
+Description:	A WordPress Theme based on Bootstrap, from Twitter. It features a 100% responsive layout, a superb gallery and image handling with a custom image meta widget, a clean and simple design and a lot more! The Bootstrap runs on HTML5 and CSS3, a 12-column grid and comes with custom jQuery plugins. See the Bootstrap documentation on GitHub for reference.
+Author:			Konstantin Obenland
+Author URI:		http://en.wp.obenland.it/
+Version:		1.1.4
+Tags:			black, blue, white, light, two-columns, right-sidebar, flexible-width, custom-background, threaded-comments, translation-ready, microformats, custom-menu, post-formats, sticky-post
+
+License:		GNU General Public License v3.0
+License URI:	http://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+
+/* =Elements
+-------------------------------------------------------------- */
+
+blockquote cite:before {
+    content: '\2014 \00A0';
+}
+
+blockquote cite {
+    color: #999999;
+    display: block;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+figure {
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, .clear {
+	clear: both;
+}
+
+
+/* =Classes
+-------------------------------------------------------------- */
+
+.assistive-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+}
+
+.container {
+	margin-top: 20px;
+}
+
+
+/* =Page
+-------------------------------------------------------------- */
+
+#page {
+	background-color: #FFFFFF;
+	padding: 20px 0;
+}
+
+.page-header {
+	margin: 0 0 18px;
+}
+
+.entry-content {
+	margin-bottom: 20px;
+}
+
+#author-info,
+article.post,
+article.page {
+	margin-bottom: 72px;
+}
+
+.page-header,
+.entry-content {
+	word-wrap: break-word;
+}
+
+.post-password-form legend {
+	font-size: inherit;
+}
+
+.entry-attachment {
+	margin-bottom: 36px;
+}
+
+.entry-attachment figure {
+	display: table;
+	margin: 0 auto;
+}
+
+
+/* =Comments
+-------------------------------------------------------------- */
+
+#comment,
+.entry-content iframe,
+.entry-content embed {
+	max-width: 100%;
+}
+
+.commentlist > li {
+	margin-bottom: 36px;
+}
+
+.commentlist ul.children {
+	margin: 10px 0 20px;
+	list-style: none;
+}
+
+#reply-title {
+	position: relative;
+}
+
+#reply-title small {
+	position: absolute;
+	right: 0;
+	top: 7px;
+}
+
+
+/* =Sidebar
+-------------------------------------------------------------- */
+
+.the-bootstrap-image-meta dt,
+.the-bootstrap-image-meta dd {
+    float: left;
+    width: 48%;
+}
+
+
+/* =Images
+-------------------------------------------------------------- */
+
+.thumbnail > img {
+	width: 100%;
+}
+
+.entry-content img,
+.comment-content img,
+.widget img {
+	max-width: 100%; /* Fluid images for posts, comments, and widgets */
+}
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"] {
+	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+
+img.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+
+/* =Footer
+-------------------------------------------------------------- */
+
+#site-generator {
+	float: right;
+	font-family: Georgia, "Bitstream Charter", serif;
+	font-style: italic;
+}
+
+#site-generator a {
+	background: url("images/wordpress.png") no-repeat scroll left center transparent;
+	color: #787878;
+	display: inline-block;
+	line-height: 16px;
+	padding-left: 20px;
+	text-decoration: none;
+}
+
+table .label {
+	background-color: transparent;
+	border-radius: none;
+	color: inherit;
+	font-size: inherit;
+	text-transform: inherit;
+}
+
+
+/* =Bootstrap Adjustments
+-------------------------------------------------------------- */
+
+#comment,
+.thumbnail {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.label .post-edit-link,
+.label .comment-edit-link {
+	color: #FFFFFF;
+}
+
+.navbar .btn, .navbar .btn-group {
+    margin: 5px;
+}
+
+.pagination span {
+	background-color: #f5f5f5;
+	border: 1px solid #ddd;
+	border-left-width: 0;
+	color: #999999;
+	cursor: default;
+	float: left;
+	line-height: 34px;
+	padding: 0 14px;
+}
+.pagination span.dots,
+.pagination a {
+	background-color: #FFFFFF;
+}
+
+.pagination li:first-child span {
+  border-left-width: 1px;
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter, div.aligncenter {
+    display:block;
+    margin: 0 auto 20px;
+}
+
+.alignright {
+    float:right;
+    margin: 0 0 20px 20px;
+}
+
+.alignleft {
+    float:left;
+    margin: 0 20px 20px 0;
+}
+
+a img.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption {
+	max-width: 100%;
+}
+
+.wp-caption .wp-caption-text,
+.gallery-caption,
+.entry-caption {
+	padding: 0 9px 9px;
+	text-align: center;
+}
+
+.wp-caption .wp-caption-text {
+	padding-top: 9px;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption.aligncenter {
+    text-align: center;
+}
+
+.sticky {}
+.bypostauthor {}
+
+
+/* =Responsiveness
+-------------------------------------------------------------- */
+
+@media (max-width: 480px) {
+	.container {
+		width: auto;
+		padding: 0 5px;
+	}
+}
+@media (max-width: 768px) {
+	#site-generator {
+		float: none;
+		margin-top: 5px;
+	}
+	textarea[class*="span"] {
+		height: auto;
+	}
+
+@media (min-width: 1200px) {
+	#page {
+		margin-right: -30px;
+	}
+	.wp-caption {
+		display: table;
+	}
+}
