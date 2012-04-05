@@ -1,10 +1,10 @@
 === The Bootstrap ===
 Contributors:		kobenland
-Tags:				black, blue, white, light, two-columns, right-sidebar, flexible-width, custom-background, threaded-comments, translation-ready, microformats, custom-menu, post-formats, sticky-posts
+Tags:				black, blue, white, light, two-columns, right-sidebar, flexible-width, custom-header, threaded-comments, translation-ready, microformats, custom-menu, post-formats, sticky-posts
 Donate link:		https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=542W6XT4PLT4L
 Requires at least:	3.0
-Tested up to:		3.4-alpha
-Stable tag:			1.1.4
+Tested up to:		3.4-beta1
+Stable tag:			1.2.0
 
 A WordPress Theme based on Bootstrap, from Twitter
 
@@ -12,6 +12,7 @@ A WordPress Theme based on Bootstrap, from Twitter
 
 The Theme is 100% responsive - you do not need a seperate mobile-Theme with this layout.
 It has a seperate Sidebar just for image pages, to make it a special place to show your pictures!
+The Bootstrap is fully compatible with WordPress SEO by Yoast!
 
 Please note:
 
@@ -42,6 +43,12 @@ None asked yet.
 
 
 == Changelog ==
+
+= 1.2.0 =
+* Added support for custom headers with flexible height in WordPress 3.4
+* Styled breadcrumb navigation for WordPress SEO by Yoast
+* Adjusted container margin to reflect Bootstrap standard
+* Temporarily removed custom background due to margin issues with content
 
 = 1.1.4 =
 * Quote Post Formats are displayed more consistently now

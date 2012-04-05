@@ -7,6 +7,7 @@
  * @since		1.0.0 - 05.02.2012
  */
 
+
 if ( ! function_exists( 'the_bootstrap_setup' ) ):
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -26,6 +27,11 @@ function the_bootstrap_setup() {
 	
 	add_theme_support( 'automatic-feed-links' );
 
+	/**
+	 * Implement the Custom Header feature
+	 */
+	require_once ( get_template_directory() . '/inc/custom-header.php' );
+	
 	add_theme_support( 'post-formats', array(
 		'aside',
 		'chat',
@@ -37,7 +43,8 @@ function the_bootstrap_setup() {
 		'video'
 	) );
 
-	add_custom_background();
+	// Theoretically custom backgrounds are possible, there is a weird margin bug though, that seems to be impossible to fix
+	//add_custom_background();
 	
 	register_nav_menu( 'primary', __( 'Main Navigation', 'the-bootstrap' ) );
 	
@@ -337,6 +344,7 @@ function the_bootstrap_wp_title( $title, $sep ) {
 }
 add_filter( 'wp_title', 'the_bootstrap_wp_title', 1, 2 );
 
+
 /**
  * Returns a "Continue Reading" link for excerpts
  *
@@ -408,6 +416,7 @@ function the_bootstrap_page_menu_args( $args ) {
 	return $args;
 }
 add_filter( 'wp_page_menu_args', 'the_bootstrap_page_menu_args' );
+
 
 /**
  * Filter in a link to a content ID attribute for the next/previous image links on image attachment pages
