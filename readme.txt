@@ -47,6 +47,8 @@ None asked yet.
 = 1.2.2 =
 * Added image carousel for the first ten images of a gallery post-format
 * Added default support for Bootstrap jQuery plugins Tooltip, Popover, Alert and Carousel
+* Define $content_width earlier, so embeds work how they are supposed to
+* Removed a misplaced character in Title title attributes
 
 = 1.2.1 =
 * Lets keep custom backgrounds active and live with it for now

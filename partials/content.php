@@ -13,12 +13,12 @@
 	<header class="page-header">
 	<?php if ( is_sticky() ) : ?>
 		<hgroup>
-			<?php the_title( '<h1 class="entry-title"><a href="' . get_permalink() . '" title="<' . sprintf( esc_attr__( 'Permalink to %s', 'the-bootstrap' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark">', '</a></h1>' ); ?>
+			<?php the_title( '<h1 class="entry-title"><a href="' . get_permalink() . '" title="' . sprintf( esc_attr__( 'Permalink to %s', 'the-bootstrap' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark">', '</a></h1>' ); ?>
 			<h3 class="entry-format"><?php _e( 'Featured', 'the-bootstrap' ); ?></h3>
 		</hgroup>
 	<?php
 		else :
-			the_title( '<h1 class="entry-title"><a href="' . get_permalink() .'" title="<' . sprintf( esc_attr__( 'Permalink to %s', 'the-bootstrap' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark">', '</a></h1>' );
+			the_title( '<h1 class="entry-title"><a href="' . get_permalink() .'" title="' . sprintf( esc_attr__( 'Permalink to %s', 'the-bootstrap' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark">', '</a></h1>' );
 		endif;
 		
 		if ( 'post' == get_post_type() ) : ?>
