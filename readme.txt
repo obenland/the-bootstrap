@@ -49,6 +49,7 @@ None asked yet.
 * Added default support for Bootstrap jQuery plugins Tooltip, Popover, Alert and Carousel
 * Define $content_width earlier, so embeds work how they are supposed to
 * Removed a misplaced character in Title title attributes
+* Minor bugfix in header admin panel
 
 = 1.2.1 =
 * Lets keep custom backgrounds active and live with it for now
