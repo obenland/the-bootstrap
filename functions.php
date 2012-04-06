@@ -43,8 +43,7 @@ function the_bootstrap_setup() {
 		'video'
 	) );
 
-	// Theoretically custom backgrounds are possible, there is a weird margin bug though, that seems to be impossible to fix
-	//add_custom_background();
+	add_custom_background();
 	
 	register_nav_menu( 'primary', __( 'Main Navigation', 'the-bootstrap' ) );
 	
