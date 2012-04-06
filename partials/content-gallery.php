@@ -24,39 +24,56 @@
 	</header><!-- .entry-header -->
 
 	
-	<div class="entry-content clearfix">
+	<div class="entry-content row">
 		<?php
-			$images = get_children( array(
-				'post_parent'		=>	$post->ID,
-				'post_type'			=>	'attachment',
-				'post_mime_type'	=>	'image',
-				'orderby'			=>	'menu_order',
-				'order'				=>	'ASC',
-				'numberposts'		=>	999
-			) );
-			if ( $images ) :
-				$total_images	=	count( $images );
-				$image			=	array_shift( $images );
-				?>
+		$images = get_children( array(
+			'post_parent'		=>	$post->ID,
+			'post_type'			=>	'attachment',
+			'post_mime_type'	=>	'image',
+			'orderby'			=>	'menu_order',
+			'order'				=>	'ASC',
+			'numberposts'		=>	999
+		) );
+		if ( $images ) :
+			$total_images	=	count( $images ); ?>
+		
+		<div class="span3">
+			<?php the_excerpt(); ?>
+	
+			<p class="gallery-meta">
+				<em>
+				<?php
+				printf(
+					_n( 'This gallery contains <strong>%1$s photo</strong>.', 'This gallery contains <strong>%1$s photos</strong>.', $total_images, 'the-bootstrap' ),
+					number_format_i18n( $total_images )
+				); ?>
+				</em>
+			</p>
+		</div>
+		<div id="gallery-slider" class="carousel span5">
 
-				<figure class="gallery-thumb row">
-					
-					<figcaption class="span4">
-						<?php the_excerpt(); ?>
-				
-						<p class="gallery-meta">
-							<em>
-							<?php
-							printf(
-								_n( 'This gallery contains <strong>%1$s photo</strong>.', 'This gallery contains <strong>%1$s photos</strong>.', $total_images, 'the-bootstrap' ),
-								number_format_i18n( $total_images )
-							); ?>
-							</em>
-						</p>
+			<!-- Carousel items -->
+			<div class="carousel-inner">
+				<?php for ( $i=0; $i < 10; $i++ ) :
+					$image = $images[$i]; ?>
+				<figure class="item">
+					<?php echo wp_get_attachment_image( $image->ID, array( 470, 353 ) ); 
+					if ( has_excerpt( $image->ID ) ) :?>
+					<figcaption class="carousel-caption">
+						<h4><?php echo get_the_title( $image->ID ); ?></h4>
+						<p><?php echo apply_filters( 'get_the_excerpt', $image->post_excerpt ); ?></p>
 					</figcaption>
-					<a class="span4 thumbnail" href="<?php the_permalink(); ?>"><?php echo wp_get_attachment_image( $image->ID, array( 370, 1024 ) ); ?></a>
-				</figure><!-- .gallery-thumb -->
-			<?php endif; /* if images */ ?>
+					<?php endif; ?>
+				</figure>
+				<?php endfor; ?>
+			</div>
+		
+			<!-- Carousel nav -->
+			<a class="carousel-control left" href="#gallery-slider" data-slide="prev"><?php _ex( '&lsaquo;', 'carousel-control', 'the-bootstrap' ); ?></a>
+			<a class="carousel-control right" href="#gallery-slider" data-slide="next"><?php _ex( '&rsaquo;', 'carousel-control', 'the-bootstrap' ); ?></a>
+		</div><!-- #gallery-slider -->
+				
+		<?php endif; /* if images */ ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
 <?php

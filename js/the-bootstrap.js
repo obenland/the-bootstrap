@@ -10,4 +10,6 @@ jQuery(function($){
 	$('[rel="tooltip"]').tooltip();
 	$('[rel="popover"]').popover();
 	$('.alert').alert()
+	$('.carousel-inner figure:first-child').addClass('active');
+	$('.carousel').carousel();
 });
