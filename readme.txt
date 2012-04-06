@@ -44,6 +44,9 @@ None asked yet.
 
 == Changelog ==
 
+= 1.2.2 =
+* Added default support for Bootstrap jQuery plugins Tooltip, Popover and Alert.
+
 = 1.2.1 =
 * Lets keep custom backgrounds active and live with it for now
 

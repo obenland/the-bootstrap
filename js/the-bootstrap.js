@@ -5,4 +5,9 @@ jQuery(function($){
 	$('.current-menu-item, .current-page-item').addClass('active');
 	$('.navbar .sub-menu').addClass('dropdown-menu');
 	$('.navbar li').has('ul').addClass('dropdown').children('a').addClass('dropdown-toggle').attr('data-toggle', 'dropdown').append('<b class="caret"></b>');
+	
+	// Bootstrap plugins
+	$('[rel="tooltip"]').tooltip();
+	$('[rel="popover"]').popover();
+	$('.alert').alert()
 });
