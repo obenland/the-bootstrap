@@ -22,6 +22,9 @@ Due to design restrictions in Bootstrap, the navigation menu can only be two lev
 
 While this Theme is licensed under GPLv3, Bootstrap by Twitter is licensed under the GPL-compatible [http://www.apache.org/licenses/LICENSE-2.0 Apache License v2.0].
 
+Twitter Icon: [https://twitter.com/about/resources/logos]
+RSS Icon: [http://www.icojam.com/blog/?p=130 Public Domain]
+
 = Translations =
 I will be more than happy to update the Theme with new locales, as soon as I receive them!
 Currently available in:

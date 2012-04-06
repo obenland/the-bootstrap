@@ -101,6 +101,19 @@ add_action( 'admin_menu', 'the_bootstrap_theme_options_add_page' );
 
 
 /**
+ * Returns the options array for The Bootstrap.
+ *
+ * @author	Automattic
+ * @since	1.3.0 - 06.04.2012
+ *
+ * @return	void
+ */
+function the_bootstrap_get_theme_options() {
+	return get_option( 'the_bootstrap_theme_options', the_bootstrap_get_default_theme_options() );
+}
+
+
+/**
  * Returns an array of sample select options registered for The Bootstrap.
  *
  * @author	Automattic
@@ -186,20 +199,7 @@ function the_bootstrap_get_default_theme_options() {
 	);
 
 	return apply_filters( 'the_bootstrap_default_theme_options', $default_theme_options );
-}
-
-
-/**
- * Returns the options array for The Bootstrap.
- *
- * @author	Automattic
- * @since	1.3.0 - 06.04.2012
- * 
- * @return	void
- */
-function the_bootstrap_get_theme_options() {
-	return get_option( 'the_bootstrap_theme_options', the_bootstrap_get_default_theme_options() );
-}
+} 
 
 
 /**
@@ -224,33 +224,6 @@ function the_bootstrap_settings_field_sample_text_input() {
 	?>
 	<input type="text" name="the_bootstrap_theme_options[sample_text_input]" id="sample-text-input" value="<?php echo esc_attr( $options['sample_text_input'] ); ?>" />
 	<label class="description" for="sample-text-input"><?php _e( 'Sample text input', 'the-bootstrap' ); ?></label>
-	<?php
-}
-
-
-/**
- * Renders the sample select options setting field.
- */
-function the_bootstrap_settings_field_sample_select_options() {
-	$options = the_bootstrap_get_theme_options();
-	?>
-	<select name="the_bootstrap_theme_options[sample_select_options]" id="sample-select-options">
-		<?php
-			$selected = $options['sample_select_options'];
-			$p = '';
-			$r = '';
-
-			foreach ( the_bootstrap_sample_select_options() as $option ) {
-				$label = $option['label'];
-				if ( $selected == $option['value'] ) // Make default first in list
-					$p = "\n\t<option style=\"padding-right: 10px;\" selected='selected' value='" . esc_attr( $option['value'] ) . "'>$label</option>";
-				else
-					$r .= "\n\t<option style=\"padding-right: 10px;\" value='" . esc_attr( $option['value'] ) . "'>$label</option>";
-			}
-			echo $p . $r;
-		?>
-	</select>
-	<label class="description" for="sample_theme_options[selectinput]"><?php _e( 'Sample select input', 'the-bootstrap' ); ?></label>
 	<?php
 }
 
@@ -303,18 +276,22 @@ function the_bootstrap_theme_options_render_page() {
 		<h2><?php esc_html_e( 'The Bootstrap Theme Options', 'the-bootstrap' ); ?></h2>
 		<?php settings_errors(); ?>
 
-		<div id="poststuff" class="metabox-holder has-right-sidebar wp-approve-user">
-			<div id="side-info-column" class="inner-sidebar">
-				<?php do_action( 'the_bootstrap_side_info_column' ); ?>
-			</div>
-			<div id="post-body-content">
-				<form method="post" action="options.php">
-					<?php
-						settings_fields( 'the_bootstrap_options' );
-						do_settings_sections( 'theme_options' );
-						submit_button();
-					?>
-				</form>
+		<div id="poststuff">
+			<div id="post-body" class="the-bootstrap columns-2">
+				<div id="post-body-content">
+					<form method="post" action="options.php">
+						<?php
+							settings_fields( 'the_bootstrap_options' );
+							do_settings_sections( 'theme_options' );
+							submit_button();
+						?>
+					</form>
+				</div>
+				<div id="postbox-container-1">
+					<div id="side-info-column" class="inner-sidebar">
+						<?php do_action( 'the_bootstrap_side_info_column' ); ?>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -326,7 +303,6 @@ function the_bootstrap_theme_options_render_page() {
  * Sanitize and validate form input. Accepts an array, return a sanitized array.
  *
  * @see the_bootstrap_theme_options_init()
- * @todo set up Reset Options action
  *
  * @author	Automattic
  * @since	1.3.0 - 06.04.2012
@@ -359,6 +335,57 @@ function the_bootstrap_theme_options_validate( $input ) {
 
 	return apply_filters( 'the_bootstrap_theme_options_validate', $output, $input, $defaults );
 }
+
+
+/**
+ * Displays style tag with setting page styles
+ * 
+ * @author	Konstantin Obenland
+ * @since	1.3.0 - 06.04.2012
+ *
+ * @return	void
+ */
+function the_bootstrap_settings_page_styles() {
+	?>
+	<style type="text/css">
+		#poststuff #post-body.columns-2 {
+		    margin-right: 300px;
+		}
+		#post-body.columns-2 #postbox-container-1 {
+		    float: right;
+		    margin-right: -300px;
+		    width: 280px;
+		}
+		#post-body-content {
+			float: left;
+			width: 100%;
+		}
+		.the-bootstrap div.inside li {
+			list-style: square outside none;
+			margin-left: 20px;
+		}
+		.the-bootstrap div.inside li.rss,
+		.the-bootstrap div.inside li.twitter {
+			background: none no-repeat scroll 0 0 transparent;
+			list-style-type: none;
+		    margin-left: 0;
+		    padding-left: 20px;
+		}
+		.the-bootstrap div.inside li.rss {
+			background-image: url("<?php echo esc_url( get_template_directory_uri() . '/images/rss.png' ); ?>");
+		}
+		.the-bootstrap div.inside li.twitter {
+			background-image: url("<?php echo esc_url( get_template_directory_uri() . '/images/twitter.png' ); ?>");
+		}
+		@media (max-width: 939px) {
+			#postbox-container-1 {
+				float: none !important;
+			}
+		}
+	</style>
+	<?php
+}
+add_action( 'admin_print_styles-appearance_page_theme_options', 'the_bootstrap_settings_page_styles' );
 
 
 /**
