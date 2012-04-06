@@ -11,6 +11,20 @@
 
 
 /**
+ * Properly enqueue styles for theme options page.
+ * 
+ * @author	Automattic
+ * @since	1.3.0 - 06.04.2012
+ * 
+ * @return	void
+ */
+function the_bootstrap_admin_enqueue_scripts( $hook_suffix ) {
+	wp_enqueue_style( 'the-bootstrap-theme-options', get_template_directory_uri() . '/inc/theme-options.css', false, '1.3.0' );
+}
+add_action( 'admin_print_styles-appearance_page_theme_options', 'the_bootstrap_admin_enqueue_scripts' );
+
+
+/**
  * Register the form setting for our the_bootstrap_options array.
  *
  * This function is attached to the admin_init action hook.
@@ -43,18 +57,7 @@ function the_bootstrap_theme_options_init() {
 	);
 
 	// Register individual settings fields
-	add_settings_field(
-		'sample_checkbox',						// Unique identifier for the field for this section
-		__( 'Sample Checkbox', 'the-bootstrap' ),	// Setting field label
-		'the_bootstrap_settings_field_sample_checkbox',	// Function that renders the settings field
-		'theme_options',						// Menu slug, used to uniquely identify the page; see the_bootstrap_theme_options_add_page()
-		'general'								// Settings section. Same as the first argument in the add_settings_section() above
-	);
-
-	add_settings_field( 'sample_text_input', __( 'Sample Text Input', 'the-bootstrap' ), 'the_bootstrap_settings_field_sample_text_input', 'theme_options', 'general' );
-	add_settings_field( 'sample_select_options', __( 'Sample Select Options', 'the-bootstrap' ), 'the_bootstrap_settings_field_sample_select_options', 'theme_options', 'general' );
-	add_settings_field( 'sample_radio_buttons', __( 'Sample Radio Buttons', 'the-bootstrap' ), 'the_bootstrap_settings_field_sample_radio_buttons', 'theme_options', 'general' );
-	add_settings_field( 'sample_textarea', __( 'Sample Textarea', 'the-bootstrap' ), 'the_bootstrap_settings_field_sample_textarea', 'theme_options', 'general' );
+	add_settings_field( 'layout', __( 'Default Layout', 'the-bootstrap' ), 'the_bootstrap_settings_field_layout', 'theme_options', 'general' );
 }
 add_action( 'admin_init', 'the_bootstrap_theme_options_init' );
 
@@ -114,74 +117,6 @@ function the_bootstrap_get_theme_options() {
 
 
 /**
- * Returns an array of sample select options registered for The Bootstrap.
- *
- * @author	Automattic
- * @since	1.3.0 - 06.04.2012
- * 
- * @return	void
- */
-function the_bootstrap_sample_select_options() {
-	$sample_select_options = array(
-		'0' => array(
-			'value' =>	'0',
-			'label' => __( 'Zero', 'the-bootstrap' )
-		),
-		'1' => array(
-			'value' =>	'1',
-			'label' => __( 'One', 'the-bootstrap' )
-		),
-		'2' => array(
-			'value' => '2',
-			'label' => __( 'Two', 'the-bootstrap' )
-		),
-		'3' => array(
-			'value' => '3',
-			'label' => __( 'Three', 'the-bootstrap' )
-		),
-		'4' => array(
-			'value' => '4',
-			'label' => __( 'Four', 'the-bootstrap' )
-		),
-		'5' => array(
-			'value' => '3',
-			'label' => __( 'Five', 'the-bootstrap' )
-		)
-	);
-
-	return apply_filters( 'the_bootstrap_sample_select_options', $sample_select_options );
-}
-
-
-/**
- * Returns an array of sample radio options registered for The Bootstrap.
- *
- * @author	Automattic
- * @since	1.3.0 - 06.04.2012
- * 
- * @return	void
- */
-function the_bootstrap_sample_radio_buttons() {
-	$sample_radio_buttons = array(
-		'yes' => array(
-			'value' => 'yes',
-			'label' => __( 'Yes', 'the-bootstrap' )
-		),
-		'no' => array(
-			'value' => 'no',
-			'label' => __( 'No', 'the-bootstrap' )
-		),
-		'maybe' => array(
-			'value' => 'maybe',
-			'label' => __( 'Maybe', 'the-bootstrap' )
-		)
-	);
-
-	return apply_filters( 'the_bootstrap_sample_radio_buttons', $sample_radio_buttons );
-}
-
-
-/**
  * Returns the default options for The Bootstrap.
  *
  * @author	Automattic
@@ -190,12 +125,8 @@ function the_bootstrap_sample_radio_buttons() {
  * @return	void
  */
 function the_bootstrap_get_default_theme_options() {
-	$default_theme_options = array(
-		'sample_checkbox' => 'off',
-		'sample_text_input' => '',
-		'sample_select_options' => '',
-		'sample_radio_buttons' => '',
-		'sample_textarea' => '',
+	$default_theme_options	=	array(
+		'theme_layout'	=>	'content-sidebar',
 	);
 
 	return apply_filters( 'the_bootstrap_default_theme_options', $default_theme_options );
@@ -203,66 +134,53 @@ function the_bootstrap_get_default_theme_options() {
 
 
 /**
- * Renders the sample checkbox setting field.
- */
-function the_bootstrap_settings_field_sample_checkbox() {
-	$options = the_bootstrap_get_theme_options();
-	?>
-	<label for"sample-checkbox">
-		<input type="checkbox" name="the_bootstrap_theme_options[sample_checkbox]" id="sample-checkbox" <?php checked( 'on', $options['sample_checkbox'] ); ?> />
-		<?php _e( 'A sample checkbox.', 'the-bootstrap' );  ?>
-	</label>
-	<?php
-}
-
-
-/**
- * Renders the sample text input setting field.
- */
-function the_bootstrap_settings_field_sample_text_input() {
-	$options = the_bootstrap_get_theme_options();
-	?>
-	<input type="text" name="the_bootstrap_theme_options[sample_text_input]" id="sample-text-input" value="<?php echo esc_attr( $options['sample_text_input'] ); ?>" />
-	<label class="description" for="sample-text-input"><?php _e( 'Sample text input', 'the-bootstrap' ); ?></label>
-	<?php
-}
-
-
-/**
- * Renders the radio options setting field.
+ * Returns an array of layout options registered for Twenty Eleven.
  *
- * @since The Bootstrap 1.0
+ * @author	WordPress.org
+ * @since	1.3.0 - 06.04.2012
+ * 
+ * @return	void
  */
-function the_bootstrap_settings_field_sample_radio_buttons() {
-	$options = the_bootstrap_get_theme_options();
+function the_bootstrap_layouts() {
+	$layout_options	=	array(
+		'content-sidebar'	=>	array(
+			'label'		=>	__( 'Content on left', 'the-bootstrap' ),
+			'thumbnail'	=>	get_template_directory_uri() . '/images/content-sidebar.png',
+		),
+		'sidebar-content'	=>	array(
+			'label'		=>	__( 'Content on right', 'the-bootstrap' ),
+			'thumbnail' =>	get_template_directory_uri() . '/images/sidebar-content.png',
+		),
+	);
 
-	foreach ( the_bootstrap_sample_radio_buttons() as $button ) {
-	?>
-	<div class="layout">
-		<label class="description">
-			<input type="radio" name="the_bootstrap_theme_options[sample_radio_buttons]" value="<?php echo esc_attr( $button['value'] ); ?>" <?php checked( $options['sample_radio_buttons'], $button['value'] ); ?> />
-			<?php echo $button['label']; ?>
+	return apply_filters( 'the_bootstrap_layouts', $layout_options );
+}
+/**
+ * Renders the Layout setting field.
+ *
+ * @author	WordPress.org
+ * @since	1.3.0 - 06.04.2012
+ * 
+ * @return	void
+ */
+function the_bootstrap_settings_field_layout() {
+	$options	=	the_bootstrap_get_theme_options();
+	foreach ( the_bootstrap_layouts() as $value => $layout ) {
+		?>
+		<label class="image-radio-option">
+			<input type="radio" name="the_bootstrap_theme_options[theme_layout]" value="<?php echo esc_attr( $value ); ?>" <?php checked( $options['theme_layout'], $value ); ?> />
+			<div class="image-radio-label">
+				<img src="<?php echo esc_url( $layout['thumbnail'] ); ?>" width="136" height="122" alt="" />
+				<span class="description"><?php echo $layout['label']; ?></span>
+			</div>
 		</label>
-	</div>
-	<?php
+		<?php
 	}
 }
 
 
 /**
- * Renders the sample textarea setting field.
- */
-function the_bootstrap_settings_field_sample_textarea() {
-	$options = the_bootstrap_get_theme_options();
-	?>
-	<textarea class="large-text" type="text" name="the_bootstrap_theme_options[sample_textarea]" id="sample-textarea" cols="50" rows="10" /><?php echo esc_textarea( $options['sample_textarea'] ); ?></textarea>
-	<label class="description" for="sample-textarea"><?php _e( 'Sample textarea', 'the-bootstrap' ); ?></label>
-	<?php
-}
-
-
-/**
- * Returns the options array for The Bootstrap.
+ * Renders the Settings page for The Bootstrap.
  *
  * @author	Automattic
  * @since	1.3.0 - 06.04.2012
@@ -312,81 +230,17 @@ function the_bootstrap_theme_options_render_page() {
 function the_bootstrap_theme_options_validate( $input ) {
 	$output = $defaults = the_bootstrap_get_default_theme_options();
 
-	// The sample checkbox should either be on or off
-	if ( ! isset( $input['sample_checkbox'] ) )
-		$input['sample_checkbox'] = 'off';
-	$output['sample_checkbox'] = ( $input['sample_checkbox'] == 'on' ? 'on' : 'off' );
-
-	// The sample text input must be safe text with no HTML tags
-	if ( isset( $input['sample_text_input'] ) )
-		$output['sample_text_input'] = wp_filter_nohtml_kses( $input['sample_text_input'] );
-
-	// The sample select option must actually be in the array of select options
-	if ( array_key_exists( $input['sample_select_options'], the_bootstrap_sample_select_options() ) )
-		$output['sample_select_options'] = $input['sample_select_options'];
-
 	// The sample radio button value must be in our array of radio button values
-	if ( isset( $input['sample_radio_buttons'] ) && array_key_exists( $input['sample_radio_buttons'], the_bootstrap_sample_radio_buttons() ) )
-		$output['sample_radio_buttons'] = $input['sample_radio_buttons'];
-
-	// The sample textarea must be safe text with the allowed tags for posts
-	if ( isset( $input['sample_textarea'] ) )
-		$output['sample_textarea'] = wp_filter_post_kses($input['sample_textarea'] );
+	if ( isset( $input['theme_layout'] ) && array_key_exists( $input['theme_layout'], the_bootstrap_layouts() ) )
+		$output['theme_layout'] = $input['theme_layout'];
 
 	return apply_filters( 'the_bootstrap_theme_options_validate', $output, $input, $defaults );
 }
 
 
-/**
- * Displays style tag with setting page styles
- * 
- * @author	Konstantin Obenland
- * @since	1.3.0 - 06.04.2012
- *
- * @return	void
- */
-function the_bootstrap_settings_page_styles() {
-	?>
-	<style type="text/css">
-		#poststuff #post-body.columns-2 {
-		    margin-right: 300px;
-		}
-		#post-body.columns-2 #postbox-container-1 {
-		    float: right;
-		    margin-right: -300px;
-		    width: 280px;
-		}
-		#post-body-content {
-			float: left;
-			width: 100%;
-		}
-		.the-bootstrap div.inside li {
-			list-style: square outside none;
-			margin-left: 20px;
-		}
-		.the-bootstrap div.inside li.rss,
-		.the-bootstrap div.inside li.twitter {
-			background: none no-repeat scroll 0 0 transparent;
-			list-style-type: none;
-		    margin-left: 0;
-		    padding-left: 20px;
-		}
-		.the-bootstrap div.inside li.rss {
-			background-image: url("<?php echo esc_url( get_template_directory_uri() . '/images/rss.png' ); ?>");
-		}
-		.the-bootstrap div.inside li.twitter {
-			background-image: url("<?php echo esc_url( get_template_directory_uri() . '/images/twitter.png' ); ?>");
-		}
-		@media (max-width: 939px) {
-			#postbox-container-1 {
-				float: none !important;
-			}
-		}
-	</style>
-	<?php
-}
-add_action( 'admin_print_styles-appearance_page_theme_options', 'the_bootstrap_settings_page_styles' );
-
+///////////////////////////////////////////////////////////////////////////////
+// META BOXES
+///////////////////////////////////////////////////////////////////////////////
 
 /**
  * Displays a box with a donate button and call to action links
@@ -490,6 +344,30 @@ function _the_bootstrap_fetch_feed( $feed_url ) {
 	}
 	return $rss_items;
 }
+
+
+///////////////////////////////////////////////////////////////////////////////
+// FRONT END
+///////////////////////////////////////////////////////////////////////////////
+
+/**
+ * Adds The Bootstrap layout classes to the array of body classes.
+ *
+ * @author	WordPress.org
+ * @since	1.3.0 - 06.04.2012
+ * 
+ * @return	void
+ */
+function the_bootstrap_layout_classes( $existing_classes ) {
+	$options		=	the_bootstrap_get_theme_options();
+	$current_layout	=	$options['theme_layout'];
+
+	$classes = array( $current_layout );
+	$classes = apply_filters( 'twentyeleven_layout_classes', $classes, $current_layout );
+
+	return array_merge( $existing_classes, $classes );
+}
+add_filter( 'body_class', 'the_bootstrap_layout_classes' );
 
 
 /* End of file theme-options.php */
