@@ -207,6 +207,10 @@ table .label {
     margin: 5px;
 }
 
+.navbar-search {
+	height: 34px;
+}
+
 .pagination span {
 	background-color: #f5f5f5;
 	border: 1px solid #ddd;

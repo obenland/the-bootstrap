@@ -115,10 +115,10 @@ add_action( 'admin_menu', 'the_bootstrap_theme_options_add_page' );
 function the_bootstrap_admin_bar_menu( $wp_admin_bar ) {
 	if ( current_user_can( 'edit_theme_options' ) AND is_admin_bar_showing() ) {
 		$wp_admin_bar->add_menu( array(
-				'title'		=>	__( 'Theme Options', 'the-bootstrap' ),
-				'href'		=>	admin_url( 'themes.php?page=theme_options' ),
-				'parent'	=>	'appearance',
-				'id'		=>	'the-bootstrap-theme-options',
+			'title'		=>	__( 'Theme Options', 'the-bootstrap' ),
+			'href'		=>	admin_url( 'themes.php?page=theme_options' ),
+			'parent'	=>	'appearance',
+			'id'		=>	'the-bootstrap-theme-options',
 		) );
 	}
 }
@@ -150,7 +150,7 @@ function the_bootstrap_get_default_theme_options() {
 	$default_theme_options	=	array(
 		'theme_layout'	=>	'content-sidebar',
 		'navbar_site_name'	=>	false,
-		'navbar_searchform'	=>	false
+		'navbar_searchform'	=>	true
 	);
 
 	return apply_filters( 'the_bootstrap_default_theme_options', $default_theme_options );
