@@ -8,6 +8,11 @@
  */
 
 
+if ( ! isset( $content_width ) ) {
+	$content_width = 770;
+}
+
+
 if ( ! function_exists( 'the_bootstrap_setup' ) ):
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -18,10 +23,6 @@ if ( ! function_exists( 'the_bootstrap_setup' ) ):
  * @return	void
  */
 function the_bootstrap_setup() {
-
-	if ( ! isset( $content_width ) ) {
-		$content_width = 770;
-	}
 	
 	load_theme_textdomain( 'the-bootstrap', get_template_directory() . '/lang' );
 	
