@@ -58,19 +58,27 @@
 										<span class="icon-bar"></span>
 										<span class="icon-bar"></span>
 									</a>
-								<?php wp_nav_menu( array(
-									'theme_location'	=>	'primary',
-									'container'			=>	'div',
-									'container_class'	=>	'nav-collapse',
-									'menu_class'		=>	'nav',
-									'depth'				=>	2,
-									'fallback_cb'		=>	false
-								) ); ?>
+									<?php if ( the_bootstrap_get_theme_options()->navbar_site_name ) : ?>
+									    <span class="brand"><?php bloginfo( 'name' ); ?></span>
+									<?php endif;?>
+									<div class="nav-collapse">
+										<?php wp_nav_menu( array(
+											'theme_location'	=>	'primary',
+											'menu_class'		=>	'nav',
+											'depth'				=>	2,
+											'fallback_cb'		=>	false
+										) ); 
+										if ( the_bootstrap_get_theme_options()->navbar_searchform ) : ?>
+									    <form id="searchform" class="navbar-search pull-right" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+									    	<label for="s" class="assistive-text hidden"><?php _e( 'Search', 'the-bootstrap' ); ?></label>
+									    	<input type="search" class="search-query" name="s" id="s" placeholder="<?php esc_attr_e( 'Search', 'the-bootstrap' ); ?>" />
+									    </form>
+									    <?php endif; ?>
+								    </div>
 								</div>
 							</div>
 						</div>
 					</nav><!-- #access -->
-					
 					<?php if ( function_exists( 'yoast_breadcrumb' ) ) {
 						yoast_breadcrumb( '<nav id="breadcrumb" class="breadcrumb">', '</nav>' );
 					} ?>

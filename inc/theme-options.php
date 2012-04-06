@@ -58,6 +58,7 @@ function the_bootstrap_theme_options_init() {
 
 	// Register individual settings fields
 	add_settings_field( 'layout', __( 'Default Layout', 'the-bootstrap' ), 'the_bootstrap_settings_field_layout', 'theme_options', 'general' );
+	add_settings_field( 'navbar', __( 'Navigation Bar', 'the-bootstrap' ), 'the_bootstrap_settings_field_navbar', 'theme_options', 'general' );
 }
 add_action( 'admin_init', 'the_bootstrap_theme_options_init' );
 
@@ -130,10 +131,10 @@ add_action( 'admin_bar_menu', 'the_bootstrap_admin_bar_menu', 61 ); //Appearance
  * @author	Automattic
  * @since	1.3.0 - 06.04.2012
  *
- * @return	void
+ * @return	stdClass	Theme Options
  */
 function the_bootstrap_get_theme_options() {
-	return get_option( 'the_bootstrap_theme_options', the_bootstrap_get_default_theme_options() );
+	return (object) get_option( 'the_bootstrap_theme_options', the_bootstrap_get_default_theme_options() );
 }
 
 
@@ -148,6 +149,8 @@ function the_bootstrap_get_theme_options() {
 function the_bootstrap_get_default_theme_options() {
 	$default_theme_options	=	array(
 		'theme_layout'	=>	'content-sidebar',
+		'navbar_site_name'	=>	false,
+		'navbar_searchform'	=>	false
 	);
 
 	return apply_filters( 'the_bootstrap_default_theme_options', $default_theme_options );
@@ -187,18 +190,39 @@ function the_bootstrap_layouts() {
  * @return	void
  */
 function the_bootstrap_settings_field_layout() {
-	$options	=	the_bootstrap_get_theme_options();
 	foreach ( the_bootstrap_layouts() as $value => $layout ) {
 		?>
 		<label class="image-radio-option">
-			<input type="radio" name="the_bootstrap_theme_options[theme_layout]" value="<?php echo esc_attr( $value ); ?>" <?php checked( $options['theme_layout'], $value ); ?> />
-			<div class="image-radio-label">
+			<input type="radio" name="the_bootstrap_theme_options[theme_layout]" value="<?php echo esc_attr( $value ); ?>" <?php checked( the_bootstrap_get_theme_options()->theme_layout, $value ); ?> />
+			<span class="image-radio-label">
 				<img src="<?php echo esc_url( $layout['thumbnail'] ); ?>" width="136" height="122" alt="" />
 				<span class="description"><?php echo $layout['label']; ?></span>
-			</div>
+			</span>
 		</label>
 		<?php
 	}
+}
+
+
+/**
+ * Renders the Navbar setting field.
+ *
+ * @author	WordPress.org
+ * @since	1.3.0 - 06.04.2012
+ *
+ * @return	void
+ */
+function the_bootstrap_settings_field_navbar() {
+	?>
+	<label for="navbar-site-name">
+		<input type="checkbox" name="the_bootstrap_theme_options[navbar_site_name]" id="navbar-site-name" value="1" <?php checked( the_bootstrap_get_theme_options()->navbar_site_name ); ?> />
+		<?php _e( 'Add site name to navigation bar.', 'the-bootstrap' );  ?>
+	</label><br />
+	<label for="navbar-searchform">
+		<input type="checkbox" name="the_bootstrap_theme_options[navbar_searchform]" id="navbar-searchform" value="1" <?php checked( the_bootstrap_get_theme_options()->navbar_searchform ); ?> />
+		<?php _e( 'Add searchform to navigation bar.', 'the-bootstrap' );  ?>
+	</label>
+	<?php
 }
 
 
@@ -255,7 +279,14 @@ function the_bootstrap_theme_options_validate( $input ) {
 
 	if ( isset( $input['theme_layout'] ) AND array_key_exists( $input['theme_layout'], the_bootstrap_layouts() ) )
 		$output['theme_layout']	=	$input['theme_layout'];
-
+	
+	$output['navbar_site_name'] = isset( $input['navbar_site_name'] );
+	$output['navbar_searchform'] = isset( $input['navbar_searchform'] );
+	
+	if ( ! get_settings_errors() ) {
+		add_settings_error( 'the-bootstrap-options', 'settings_updated', sprintf( __( 'Settings saved. <a href="%s">Visit your site</a> to see how it looks.', 'the-bootstrap' ), home_url( '/' ) ), 'updated' );
+	}
+	
 	return apply_filters( 'the_bootstrap_theme_options_validate', $output, $input, $defaults );
 }
 
@@ -381,8 +412,7 @@ function _the_bootstrap_fetch_feed( $feed_url ) {
  * @return	void
  */
 function the_bootstrap_layout_classes( $existing_classes ) {
-	$options		=	the_bootstrap_get_theme_options();
-	$current_layout	=	$options['theme_layout'];
+	$current_layout	=	the_bootstrap_get_theme_options()->theme_layout;
 
 	$classes = array( $current_layout );
 	$classes = apply_filters( 'the_bootstrap_layout_classes', $classes, $current_layout );
