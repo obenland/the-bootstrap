@@ -82,9 +82,7 @@ add_filter( 'option_page_capability_the_bootstrap_options', 'the_bootstrap_optio
 
 
 /**
- * Add our theme options page to the admin menu.
- *
- * This function is attached to the admin_menu action hook.
+ * Add theme options page to the admin menu.
  *
  * @author	Automattic
  * @since	1.3.0 - 06.04.2012
@@ -101,6 +99,29 @@ function the_bootstrap_theme_options_add_page() {
 	);
 }
 add_action( 'admin_menu', 'the_bootstrap_theme_options_add_page' );
+
+
+/**
+ * Add theme options page to the admin bar.
+ *
+ * @author	Konstantin Obenland
+ * @since	1.3.0 - 06.04.2012
+ * 
+ * @param	WP_Admin_Bar	$wp_admin_bar
+ *
+ * @return	void
+ */
+function the_bootstrap_admin_bar_menu( $wp_admin_bar ) {
+	if ( current_user_can( 'edit_theme_options' ) AND is_admin_bar_showing() ) {
+		$wp_admin_bar->add_menu( array(
+				'title'		=>	__( 'Theme Options', 'the-bootstrap' ),
+				'href'		=>	admin_url( 'themes.php?page=theme_options' ),
+				'parent'	=>	'appearance',
+				'id'		=>	'the-bootstrap-theme-options',
+		) );
+	}
+}
+add_action( 'admin_bar_menu', 'the_bootstrap_admin_bar_menu', 61 ); //Appearance Menu used to be added at 60
 
 
 /**
@@ -155,6 +176,8 @@ function the_bootstrap_layouts() {
 
 	return apply_filters( 'the_bootstrap_layouts', $layout_options );
 }
+
+
 /**
  * Renders the Layout setting field.
  *
@@ -230,9 +253,8 @@ function the_bootstrap_theme_options_render_page() {
 function the_bootstrap_theme_options_validate( $input ) {
 	$output = $defaults = the_bootstrap_get_default_theme_options();
 
-	// The sample radio button value must be in our array of radio button values
-	if ( isset( $input['theme_layout'] ) && array_key_exists( $input['theme_layout'], the_bootstrap_layouts() ) )
-		$output['theme_layout'] = $input['theme_layout'];
+	if ( isset( $input['theme_layout'] ) AND array_key_exists( $input['theme_layout'], the_bootstrap_layouts() ) )
+		$output['theme_layout']	=	$input['theme_layout'];
 
 	return apply_filters( 'the_bootstrap_theme_options_validate', $output, $input, $defaults );
 }
@@ -363,7 +385,7 @@ function the_bootstrap_layout_classes( $existing_classes ) {
 	$current_layout	=	$options['theme_layout'];
 
 	$classes = array( $current_layout );
-	$classes = apply_filters( 'twentyeleven_layout_classes', $classes, $current_layout );
+	$classes = apply_filters( 'the_bootstrap_layout_classes', $classes, $current_layout );
 
 	return array_merge( $existing_classes, $classes );
 }
