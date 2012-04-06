@@ -28,6 +28,11 @@ function the_bootstrap_setup() {
 	add_theme_support( 'automatic-feed-links' );
 
 	/**
+	 * Custom Theme Options
+	 */
+	require_once ( get_template_directory() . '/inc/theme-options.php' );
+	
+	/**
 	 * Implement the Custom Header feature
 	 */
 	require_once ( get_template_directory() . '/inc/custom-header.php' );
