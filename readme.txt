@@ -4,7 +4,7 @@ Tags:				black, blue, white, light, two-columns, right-sidebar, flexible-width, 
 Donate link:		https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=542W6XT4PLT4L
 Requires at least:	3.0
 Tested up to:		3.4-beta1
-Stable tag:			1.2.1
+Stable tag:			1.2.2
 
 A WordPress Theme based on Bootstrap, from Twitter
 
@@ -46,6 +46,13 @@ None asked yet.
 
 
 == Changelog ==
+
+= 1.2.2 =
+* Added image carousel for the first ten images of a gallery post-format
+* Added default support for Bootstrap jQuery plugins Tooltip, Popover, Alert and Carousel
+* Define $content_width earlier, so embeds work how they are supposed to
+* Removed a misplaced character in Title title attributes
+* Minor bugfix in header admin panel
 
 = 1.2.1 =
 * Lets keep custom backgrounds active and live with it for now
