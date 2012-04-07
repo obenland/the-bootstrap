@@ -46,7 +46,19 @@ function the_bootstrap_setup() {
 
 	add_custom_background();
 	
-	register_nav_menu( 'primary', __( 'Main Navigation', 'the-bootstrap' ) );
+        /**
+         * Including three menu (header-menu, primary ans footer-menu).
+		 * Primary is wrapping in a navbar containing div (wich support responsive variation)
+		 * Header_menu and Footer-menu are inside pills dropdown menu
+		 * @since	1.2.2 - 07.04.2012
+         * @see http://codex.wordpress.org/Function_Reference/register_nav_menus
+         */
+	register_nav_menus(array(
+			'header-menu'  	=> __('Header Menu', 'the-bootstrap'),
+			'primary'				=> __('Main Navigation', 'the-bootstrap'),			
+			'footer-menu' 		=> __('Footer Menu', 'the-bootstrap')
+		)
+	);
 	
 } // the_bootstrap_setup
 endif;
