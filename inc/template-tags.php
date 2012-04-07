@@ -3,7 +3,7 @@
  * 
  * Implementation of the Custom Header feature
  * http://codex.wordpress.org/Custom_Headers
- * 
+ *  
  * @author		Konstantin Obenland
  * @package		The Bootstrap
  * @since		1.2.4 - 07.04.2012
