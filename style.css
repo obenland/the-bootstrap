@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6, .clear {
 }
 
 .container {
-	margin-top: 18px;
+	margin: 18px auto;
 }
 
 
@@ -301,13 +301,15 @@ a img.alignleft {
 /* =Responsiveness
 -------------------------------------------------------------- */
 
-@media (max-width: 480px) {
-	.container {
-		width: auto;
-		padding: 0 5px;
+@media (max-width: 479px) {}
+@media (max-width: 767px) {
+	body {
+		padding: 0;
 	}
-}
-@media (max-width: 768px) {
+	#page {
+		margin: 5px;
+		padding: 10px;
+	}
 	#site-generator {
 		float: none;
 		margin-top: 5px;
@@ -315,7 +317,7 @@ a img.alignleft {
 	textarea[class*="span"] {
 		height: auto;
 	}
-
+}
 @media (min-width: 1200px) {
 	#page {
 		margin-right: -30px;
