@@ -43,9 +43,6 @@ Currently available in:
 
 None asked yet.
 
-
-[http://www.apache.org/licenses/LICENSE-2.0 Apache License v2.0]
-
 == Changelog ==
 
 = 1.2.2 =
