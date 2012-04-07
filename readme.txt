@@ -16,7 +16,7 @@ The Bootstrap is fully compatible with WordPress SEO by Yoast!
 
 Please note:
 
-Due to design restrictions in Bootstrap, the navigation menu can only be two levels deep, while the parent menu item only serves as a headline for the child menu items and can not be accessed over the navigation menu.
+Due to design restrictions in Bootstrap, the navigation menu can only be two levels deep, while parent menu items only serves as a headline for the child menu items and can not be accessed over the navigation menu.
 
 = License =
 
@@ -49,6 +49,8 @@ None asked yet.
 * Added default support for Bootstrap jQuery plugins Tooltip, Popover, Alert and Carousel
 * Define $content_width earlier, so embeds work how they are supposed to
 * Removed a misplaced character in Title title attributes
+* Removed wp_page_menu callback since `wp_page_menu()` never gets called
+* Added a short description for image sidebar
 * Minor bugfix in header admin panel
 
 = 1.2.1 =

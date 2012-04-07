@@ -46,19 +46,19 @@ function the_bootstrap_setup() {
 
 	add_custom_background();
 	
-        /**
-         * Including three menu (header-menu, primary ans footer-menu).
-		 * Primary is wrapping in a navbar containing div (wich support responsive variation)
-		 * Header_menu and Footer-menu are inside pills dropdown menu
-		 * @since	1.2.2 - 07.04.2012
-         * @see http://codex.wordpress.org/Function_Reference/register_nav_menus
-         */
-	register_nav_menus(array(
-			'header-menu'  	=> __('Header Menu', 'the-bootstrap'),
-			'primary'				=> __('Main Navigation', 'the-bootstrap'),			
-			'footer-menu' 		=> __('Footer Menu', 'the-bootstrap')
-		)
-	);
+	/**
+	 * Including three menu (header-menu, primary and footer-menu).
+	 * Primary is wrapping in a navbar containing div (wich support responsive variation)
+	 * Header_menu and Footer-menu are inside pills dropdown menu
+	 * 
+	 * @since	1.2.2 - 07.04.2012
+	 * @see		http://codex.wordpress.org/Function_Reference/register_nav_menus
+	 */
+	register_nav_menus( array(
+		'primary'		=>	__( 'Main Navigation', 'the-bootstrap' ),
+		'header-menu'  	=>	__( 'Header Menu', 'the-bootstrap' ),
+		'footer-menu' 	=>	__( 'Footer Menu', 'the-bootstrap' )
+	) );
 	
 } // the_bootstrap_setup
 endif;
@@ -86,6 +86,7 @@ function the_bootstrap_widgets_init() {
 	
 	register_sidebar( array(
 		'name'			=>	__( 'Image Sidebar', 'the-bootstrap' ),
+		'description'	=>	__( 'Shown on image attchment pages.', 'the-bootstrap' ),
 		'id'			=>	'image',
 		'before_widget'	=>	'<aside id="%1$s" class="widget well %2$s">',
 		'after_widget'	=>	"</aside>",
@@ -231,6 +232,7 @@ function the_bootstrap_content_nav() {
 	}
 }
 
+
 if ( ! function_exists( 'the_bootstrap_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author,
@@ -238,10 +240,8 @@ if ( ! function_exists( 'the_bootstrap_posted_on' ) ) :
  *
  * @author	Konstantin Obenland
  * @since	1.0.0 - 05.02.2012
- *
- * @param	array	$args
- *
- * @return	void|string
+ * 
+ * @return	void
  */
 function the_bootstrap_posted_on() {
 	printf( __( '<span class="sep">Posted on </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'the-bootstrap' ),
@@ -278,7 +278,7 @@ if ( ! function_exists( 'the_bootstrap_link_pages' ) ) :
  *
  * @param	array	$args
  *
- * @return	void|string
+ * @return	string
  */
 function the_bootstrap_link_pages( $args = array() ) {
 	wp_link_pages( array( 'echo' => 0 ));
@@ -331,6 +331,27 @@ function the_bootstrap_link_pages( $args = array() ) {
 		echo $output;
 
 	return $output;
+}
+endif;
+
+
+if ( ! function_exists( 'the_bootstrap_credits' ) ) :
+/**
+ * Prints HTML with meta information for the current post-date/time and author,
+ * comment and edit link
+ *
+ * @author	Konstantin Obenland
+ * @since	1.2.2 - 07.04.2012
+ *
+ * @return	string
+ */
+function the_bootstrap_credits() {
+	return sprintf(
+		__('&copy; %1$s <a href="%2$s">%3$s</a>, all rights reserved.', 'the-bootstrap'),
+		date( 'Y' ),
+		home_url( '/' ),
+		get_bloginfo( 'name' )
+	);
 }
 endif;
 
