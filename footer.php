@@ -9,13 +9,19 @@
 ?>
 				<footer id="colophon" role="contentinfo" class="span12">
 					<div id="page-footer" class="well clearfix">
-						<?php
-						printf(
-							__('&copy; %1$s <a href="%2$s">%3$s</a>, all rights reserved.', 'the-bootstrap'),
-							date( 'Y' ),
-							home_url( '/' ),
-							get_bloginfo( 'name' )
-						); ?>
+						<?php if (has_nav_menu('footer-menu')) : ?>
+						<div class="subnav">
+						<?php wp_nav_menu(array(
+										'container'			=> false,
+										'theme_location'	=>	'footer-menu',
+										'menu_class'		=>	'nav nav-pills pull-left',
+										'depth'					=>	1,
+										'fallback_cb'		=>	false
+									) );
+						?>
+						</div>
+						<?php endif; ?>
+
 						<div id="site-generator">
 							<a	href="<?php echo esc_url( __( 'http://wordpress.org/', 'the-bootstrap' ) ); ?>"
 								title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'the-bootstrap' ); ?>"
