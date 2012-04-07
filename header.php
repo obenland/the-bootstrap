@@ -30,6 +30,20 @@
 	
 	<body <?php body_class(); ?>>
 		<div class="container">
+			<?php if (has_nav_menu('header-menu')) : ?>
+			<div class="subnav">
+				<div class="container">
+				<?php wp_nav_menu(array(
+								'container'			=> false,
+								'theme_location'	=>	'header-menu',
+								'menu_class'		=>	'nav nav-pills pull-right',
+								'depth'					=>	2,
+								'fallback_cb'		=>	false
+							) );
+					?>
+				</div>
+			</div>
+			<?php endif; ?>
 			<div id="page" class="hfeed row">
 				<header id="branding" role="banner" class="span12">
 					<hgroup>
