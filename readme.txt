@@ -49,6 +49,9 @@ None asked yet.
 == Changelog ==
 
 = 1.2.4 =
+* Capsuled version retreiving into its own function to handle WP 3.4 changes
+* Moved template tags in their own file
+* Updated script dependencies
 
 = 1.2.3 =
 * Fixed credits output
