@@ -5,7 +5,7 @@ Description:	A WordPress Theme based on Bootstrap, from Twitter. It features a 1
 Author:			Konstantin Obenland
 Author URI:		http://en.wp.obenland.it/
 Version:		1.2.2
-Tags:			black, blue, white, light, two-columns, right-sidebar, flexible-width, custom-background, threaded-comments, translation-ready, microformats, custom-menu, post-formats, sticky-post
+Tags:			black, blue, white, light, two-columns, right-sidebar, flexible-width, custom-header, custom-background, threaded-comments, translation-ready, microformats, custom-menu, post-formats, sticky-post
 
 License:		GNU General Public License v3.0
 License URI:	http://www.gnu.org/licenses/gpl-3.0.html
@@ -158,6 +158,10 @@ img.wp-smiley {
 
 /* =Footer
 -------------------------------------------------------------- */
+
+#colophon .nav-pills {
+	margin: 0;
+}
 
 #site-generator {
 	float: right;

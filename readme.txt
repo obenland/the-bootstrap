@@ -17,6 +17,7 @@ The Bootstrap is fully compatible with WordPress SEO by Yoast!
 Please note:
 
 Due to design restrictions in Bootstrap, the navigation menu can only be two levels deep, while parent menu items only serves as a headline for the child menu items and can not be accessed over the navigation menu.
+The Footer Menu is best suitable for short menues with just a few links. It replaces the credits section, once a menu has been assigned to the location. It will hold only top level nav items.
 
 = License =
 
@@ -27,6 +28,7 @@ I will be more than happy to update the Theme with new locales, as soon as I rec
 Currently available in:
 
 * English
+* French
 * German
 
 
@@ -42,15 +44,18 @@ Currently available in:
 None asked yet.
 
 
+[http://www.apache.org/licenses/LICENSE-2.0 Apache License v2.0]
+
 == Changelog ==
 
 = 1.2.2 =
 * Added image carousel for the first ten images of a gallery post-format
 * Added default support for Bootstrap jQuery plugins Tooltip, Popover, Alert and Carousel
 * Define $content_width earlier, so embeds work how they are supposed to
-* Removed a misplaced character in Title title attributes
+* Removed a misplaced character in Title title-attributes
 * Removed wp_page_menu callback since `wp_page_menu()` never gets called
 * Added a short description for image sidebar
+* Added some French localization
 * Minor bugfix in header admin panel
 
 = 1.2.1 =
