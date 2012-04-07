@@ -48,6 +48,7 @@ None asked yet.
 = 1.2.2 =
 * Added image carousel for the first ten images of a gallery post-format
 * Added default support for Bootstrap jQuery plugins Tooltip, Popover, Alert and Carousel
+* Added tow more menu locations, nav pills style (props Benfarhat)
 * Define $content_width earlier, so embeds work how they are supposed to
 * Removed a misplaced character in Title title-attributes
 * Removed wp_page_menu callback since `wp_page_menu()` never gets called

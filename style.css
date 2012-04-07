@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6, .clear {
 }
 
 .entry-content {
-	margin-bottom: 20px;
+	margin-bottom: 18px;
 }
 
 #author-info,
@@ -104,7 +104,7 @@ article.page {
 }
 
 .commentlist ul.children {
-	margin: 10px 0 20px;
+	margin: 10px 0 18px;
 	list-style: none;
 }
 
