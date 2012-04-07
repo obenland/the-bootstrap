@@ -52,6 +52,7 @@ None asked yet.
 * Capsuled version retreiving into its own function to handle WP 3.4 changes
 * Moved template tags in their own file
 * Updated script dependencies
+* Fixed a bug in displaying the carousel. (Props Griden)
 
 = 1.2.3 =
 * Fixed credits output
