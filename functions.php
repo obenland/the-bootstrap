@@ -343,10 +343,10 @@ if ( ! function_exists( 'the_bootstrap_credits' ) ) :
  * @author	Konstantin Obenland
  * @since	1.2.2 - 07.04.2012
  *
- * @return	string
+ * @return	void
  */
 function the_bootstrap_credits() {
-	return sprintf(
+	printf(
 		__('&copy; %1$s <a href="%2$s">%3$s</a>, all rights reserved.', 'the-bootstrap'),
 		date( 'Y' ),
 		home_url( '/' ),
