@@ -4,7 +4,7 @@ Tags:				black, blue, white, light, two-columns, right-sidebar, flexible-width, 
 Donate link:		https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=542W6XT4PLT4L
 Requires at least:	3.0
 Tested up to:		3.4-beta1
-Stable tag:			1.2.3
+Stable tag:			1.2.4
 
 A WordPress Theme based on Bootstrap, from Twitter
 
@@ -20,8 +20,11 @@ Due to design restrictions in Bootstrap, the navigation menu can only be two lev
 The Footer Menu is best suitable for short menues with just a few links. It replaces the credits section, once a menu has been assigned to the location. It will hold only top level nav items.
 
 = License =
+Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public Licemse.
+The exceptions to this license are as follows:
+* Bootstrap by Twitter is licensed under the GPL-compatible [http://www.apache.org/licenses/LICENSE-2.0 Apache License v2.0]
+* The script html5.js is licensed under MIT
 
-While this Theme is licensed under GPLv3, Bootstrap by Twitter is licensed under the GPL-compatible [http://www.apache.org/licenses/LICENSE-2.0 Apache License v2.0].
 
 = Translations =
 I will be more than happy to update the Theme with new locales, as soon as I receive them!
@@ -44,6 +47,8 @@ Currently available in:
 None asked yet.
 
 == Changelog ==
+
+= 1.2.4 =
 
 = 1.2.3 =
 * Fixed credits output
