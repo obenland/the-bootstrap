@@ -1,0 +1,525 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The_Bootstrap for WP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-04-07 08:29+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Benfarhat <benfarhat@domain.com>\n"
+"Language-Team: The-Bootstrap\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+# @ the-bootstrap
+#: ../404.php:19
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "C'est génant, n'est ce pas?"
+
+# @ the-bootstrap
+#: ../404.php:23
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help."
+msgstr ""
+
+# @ the-bootstrap
+#: ../404.php:30
+msgid "Most Used Categories"
+msgstr "Catégorie la plus utilisée"
+
+# @ the-bootstrap
+#: ../404.php:44
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+# @ the-bootstrap
+#: ../archive.php:28
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Archives quotidienne: %s"
+
+# @ the-bootstrap
+#: ../archive.php:30
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Archives mensuelle: %s"
+
+# @ the-bootstrap
+#: ../archive.php:32
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Archives annuelle: %s"
+
+# @ the-bootstrap
+#: ../archive.php:34
+msgid "Blog Archives"
+msgstr ""
+
+# @ the-bootstrap
+#: ../author.php:21
+#, php-format
+msgid "Author Archives: %s"
+msgstr ""
+
+# @ the-bootstrap
+#: ../author.php:29
+#, php-format
+msgid "About %s"
+msgstr ""
+
+# @ the-bootstrap
+#: ../category.php:21
+#, php-format
+msgid "Category Archives: %s"
+msgstr ""
+
+# @ the-bootstrap
+#: ../comments.php:20
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+# @ the-bootstrap
+#: ../comments.php:31
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+# @ the-bootstrap
+#: ../comments.php:38
+#: ../comments.php:50
+msgid "Comment navigation"
+msgstr ""
+
+# @ the-bootstrap
+#: ../comments.php:39
+#: ../comments.php:51
+msgid "&larr; Newer Comments"
+msgstr ""
+
+# @ the-bootstrap
+#: ../comments.php:40
+#: ../comments.php:52
+msgid "Older Comments &rarr;"
+msgstr ""
+
+# @ the-bootstrap
+#: ../comments.php:60
+msgid "Comments are closed."
+msgstr "Les commentaires sont clos"
+
+# @ the-bootstrap
+#: ../comments.php:63
+msgctxt "noun"
+msgid "Comment"
+msgstr "commentaire"
+
+# @ the-bootstrap
+#: ../comments.php:65
+#, php-format
+msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes: %s"
+msgstr ""
+
+# @ the-bootstrap
+#: ../comments.php:67
+#: ../functions.php:259
+msgid "Leave a reply"
+msgstr "Déposer une réponse"
+
+# @ the-bootstrap
+#: ../comments.php:68
+#, php-format
+msgid "Leave a reply to %s"
+msgstr "Répondre à %s"
+
+# @ the-bootstrap
+#: ../comments.php:69
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Vous devez vous <a href=\"%s\">enregistrer</a> pour poster un commentaire."
+
+# @ the-bootstrap
+#: ../comments.php:70
+#, php-format
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out?</a>"
+msgstr ""
+
+# @ the-bootstrap
+#: ../footer.php:26
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+# @ the-bootstrap
+#: ../footer.php:30
+#, php-format
+msgctxt "WordPress"
+msgid "Proudly powered by %s"
+msgstr "Fièrement propulsé par %s"
+
+# @ the-bootstrap
+#: ../footer.php:37
+#, php-format
+msgid "%d queries. %s seconds."
+msgstr "%d requêtes en %s secondes"
+
+#: ../functions.php:57
+msgid "Header Menu"
+msgstr ""
+
+# @ the-bootstrap
+#: ../functions.php:58
+msgid "Main Navigation"
+msgstr "Navigation principale"
+
+#: ../functions.php:59
+msgid "Footer Menu"
+msgstr ""
+
+# @ the-bootstrap
+#: ../functions.php:79
+msgid "Main Sidebar"
+msgstr "Sidebar principale"
+
+# @ the-bootstrap
+#: ../functions.php:88
+msgid "Image Sidebar"
+msgstr ""
+
+# @ the-bootstrap
+#: ../functions.php:247
+#, php-format
+msgid "<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
+msgstr ""
+
+# @ the-bootstrap
+#: ../functions.php:253
+#, php-format
+msgid "View all posts by %s"
+msgstr "Voir tous les postes par %s "
+
+# @ the-bootstrap
+#: ../functions.php:259
+msgid "<strong>1</strong> Reply"
+msgstr "<strong>1</strong> réponse"
+
+# @ the-bootstrap
+#: ../functions.php:259
+msgid "<strong>%</strong> Replies"
+msgstr "<strong>%</strong> réponses"
+
+# @ the-bootstrap
+#: ../functions.php:263
+#: ../functions.php:484
+#: ../functions.php:510
+#: ../image.php:55
+msgid "Edit"
+msgstr "Editer"
+
+# @ the-bootstrap
+#: ../functions.php:287
+msgid "Next page"
+msgstr "Page suivante"
+
+# @ the-bootstrap
+#: ../functions.php:288
+msgid "Previous page"
+msgstr "Page précédente"
+
+# @ the-bootstrap
+#: ../functions.php:302
+#: ../functions.php:316
+msgid "Pages:"
+msgstr "Pages:"
+
+# @ the-bootstrap
+#: ../functions.php:371
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Lire plus <span class=\"meta-nav\">&rarr;</span>"
+
+# @ the-bootstrap
+#: ../functions.php:483
+msgid "Pingback:"
+msgstr "Pingback:"
+
+# @ the-bootstrap
+#: ../functions.php:501
+#, php-format
+msgid "%1$s <span class=\"says\">said</span> on %2$s:"
+msgstr "%1$s <span class=\"says\">a dit</span> sur %2$s:"
+
+# @ the-bootstrap
+#: ../functions.php:507
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+# @ the-bootstrap
+#: ../functions.php:514
+msgid "Your comment is awaiting moderation."
+msgstr "Votre commentaire est en attente de modération"
+
+# @ the-bootstrap
+#: ../functions.php:523
+msgid "Reply <span>&darr;</span>"
+msgstr "Répondre <span>&darr;</span>"
+
+# @ the-bootstrap
+#: ../functions.php:587
+msgid "Name"
+msgstr "Nom"
+
+# @ the-bootstrap
+#: ../functions.php:590
+#: ../functions.php:616
+msgid "required"
+msgstr "requis"
+
+# @ the-bootstrap
+#: ../functions.php:613
+msgid "Email"
+msgstr "E-Mail"
+
+# @ the-bootstrap
+#: ../functions.php:616
+msgid "will not be published"
+msgstr "Ne sera pas publié"
+
+# @ the-bootstrap
+#: ../functions.php:637
+msgid "Website"
+msgstr "Site Web"
+
+# @ the-bootstrap
+#: ../functions.php:813
+#, php-format
+msgid "%d comment"
+msgid_plural "%d comments"
+msgstr[0] "%d commentaire"
+msgstr[1] "%d commentaires"
+
+# @ the-bootstrap
+#: ../functions.php:879
+msgid "This post is password protected. To view it please enter your password below:"
+msgstr "Cet article est protégé par un mot de passe. Pour le consulter veuillez rentrer votre mot de passe ci dessous"
+
+# @ the-bootstrap
+#: ../functions.php:879
+msgid "Password:"
+msgstr "Mot de passe:"
+
+# @ the-bootstrap
+#: ../functions.php:879
+msgid "Submit"
+msgstr "Envoyer"
+
+# @ the-bootstrap
+#: ../header.php:63
+msgid "Main menu"
+msgstr "Menu Principal"
+
+# @ the-bootstrap
+#: ../header.php:64
+msgid "Skip to primary content"
+msgstr "Aller au contenu primaire"
+
+# @ the-bootstrap
+#: ../header.php:65
+msgid "Skip to secondary content"
+msgstr "Aller au contenu secondaire"
+
+# @ the-bootstrap
+#: ../image.php:47
+msgid "image"
+msgid_plural "images"
+msgstr[0] "image"
+msgstr[1] "images"
+
+# @ the-bootstrap
+#: ../image.php:56
+msgid "Leave a comment"
+msgstr "Laisser un commentaire"
+
+# @ the-bootstrap
+#: ../image.php:59
+msgid "&laquo; Previous Photo"
+msgstr "&laquo; Photo précédente"
+
+# @ the-bootstrap
+#: ../image.php:61
+msgid "Next Photo &raquo;"
+msgstr "Photo suivante &raquo;"
+
+# @ the-bootstrap
+#: ../search.php:20
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+# @ the-bootstrap
+#: ../searchform.php:13
+msgid "Search"
+msgstr ""
+
+# @ the-bootstrap
+#: ../sidebar.php:14
+msgid "Archives"
+msgstr ""
+
+# @ the-bootstrap
+#: ../sidebar.php:21
+msgid "Meta"
+msgstr ""
+
+# @ the-bootstrap
+#: ../single.php:25
+msgid "Post navigation"
+msgstr ""
+
+# @ the-bootstrap
+#: ../single.php:26
+msgid "<span class=\"meta-nav\">&larr;</span> Next Post"
+msgstr ""
+
+# @ the-bootstrap
+#: ../single.php:27
+msgid "Previous Post <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+# @ the-bootstrap
+#: ../tag.php:21
+#, php-format
+msgid "Tag Archives: %s"
+msgstr ""
+
+# @ the-bootstrap
+#: ../inc/the-bootstrap-image-meta-widget.php:27
+msgid "The Bootstrap Image Meta Widget"
+msgstr "The Bootstrap Bild Meta Widget"
+
+# @ the-bootstrap
+#: ../inc/the-bootstrap-image-meta-widget.php:29
+msgid "Displays meta information on image attachment pages"
+msgstr "Affiche les informations meta d'une image liée à une page"
+
+# @ the-bootstrap
+#: ../inc/the-bootstrap-image-meta-widget.php:51
+msgid "Info"
+msgstr "Info"
+
+# @ the-bootstrap
+#: ../inc/the-bootstrap-image-meta-widget.php:59
+msgid "Created:"
+msgstr "Crée par:"
+
+# @ the-bootstrap
+#: ../inc/the-bootstrap-image-meta-widget.php:63
+msgid "Full size:"
+msgstr "Taille maximale"
+
+# @ the-bootstrap
+#: ../inc/the-bootstrap-image-meta-widget.php:64
+#, php-format
+msgid "%s pixels"
+msgstr "%s Pixels"
+
+# @ the-bootstrap
+#: ../inc/the-bootstrap-image-meta-widget.php:67
+msgid "Aperture:"
+msgstr ""
+
+# @ the-bootstrap
+#: ../inc/the-bootstrap-image-meta-widget.php:72
+msgid "Focal length:"
+msgstr ""
+
+# @ the-bootstrap
+#: ../inc/the-bootstrap-image-meta-widget.php:77
+msgid "Iso:"
+msgstr ""
+
+# @ the-bootstrap
+#: ../inc/the-bootstrap-image-meta-widget.php:82
+msgid "Shutter:"
+msgstr ""
+
+# @ the-bootstrap
+#: ../inc/the-bootstrap-image-meta-widget.php:101
+msgid "Camera:"
+msgstr "Camera:"
+
+# @ the-bootstrap
+#: ../inc/the-bootstrap-image-meta-widget.php:152
+msgid "Title:"
+msgstr "Titre:"
+
+# @ the-bootstrap
+#: ../partials/content-gallery.php:47
+#, php-format
+msgid "This gallery contains <strong>%1$s photo</strong>."
+msgid_plural "This gallery contains <strong>%1$s photos</strong>."
+msgstr[0] "Cette galerie contient<strong>%1$s photo</strong>."
+msgstr[1] "Cette galerie contient<strong>%1$s photos</strong>."
+
+#: ../partials/content-gallery.php:72
+msgctxt "carousel-control"
+msgid "&lsaquo;"
+msgstr ""
+
+#: ../partials/content-gallery.php:73
+msgctxt "carousel-control"
+msgid "&rsaquo;"
+msgstr ""
+
+# @ the-bootstrap
+#: ../partials/content-no-results.php:14
+msgid "Nothing Found"
+msgstr "Aucun résultat"
+
+# @ the-bootstrap
+#: ../partials/content-no-results.php:19
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Désolé, aucune correspondance à vos critères de recherche, Veuillez vérifiez l'orthographes des termes ou en essayer d'autre"
+
+# @ the-bootstrap
+#: ../partials/content-no-results.php:21
+msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
+msgstr "Désolé, mais il n'y a pas de résultat dans l'archive, Nous vous conseillons d'effectuer une récherche pour trouver l'article souhaité"
+
+# @ the-bootstrap
+#: ../partials/content-single.php:29
+#: ../partials/content.php:47
+#, php-format
+msgid "Posted in %1$s."
+msgstr ""
+
+# @ the-bootstrap
+#: ../partials/content-single.php:30
+#: ../partials/content-single.php:34
+#: ../partials/content.php:48
+msgctxt "used between list items, there is a space after the comma"
+msgid ", "
+msgstr ""
+
+# @ the-bootstrap
+#: ../partials/content-single.php:33
+msgid "Tagged "
+msgstr ""
+
+# @ the-bootstrap
+#: ../partials/content-single.php:47
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+# @ the-bootstrap
+#: ../partials/content.php:17
+msgid "Featured"
+msgstr ""
+
