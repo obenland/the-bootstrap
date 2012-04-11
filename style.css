@@ -301,13 +301,25 @@ a img.alignleft {
 /* =Responsiveness
 -------------------------------------------------------------- */
 
-@media (max-width: 480px) {
+-------------------------------------------------------------- */
+
+@media (max-width: 479px) {
+	#page {
+		margin-right: 5px !important;
+	}
+}
+@media (max-width: 767px) {
+	body {
+		padding:0;
+	}
 	.container {
 		width: auto;
 		padding: 0 5px;
 	}
-}
-@media (max-width: 768px) {
+	#page {
+		margin: 0;
+		padding: 10px;
+	}
 	#site-generator {
 		float: none;
 		margin-top: 5px;
@@ -315,7 +327,7 @@ a img.alignleft {
 	textarea[class*="span"] {
 		height: auto;
 	}
-
+}
 @media (min-width: 1200px) {
 	#page {
 		margin-right: -30px;
