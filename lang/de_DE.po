@@ -119,195 +119,187 @@ msgstr "&Auml;ltere Kommentare &larr;"
 msgid "Comments are closed."
 msgstr "Die Kommentarfunktion ist geschlossen."
 
-#: comments.php:63
+#: comments.php:64
 #@ the-bootstrap
 msgctxt "noun"
 msgid "Comment"
 msgstr "Kommentar"
 
-#: comments.php:65
+#: comments.php:66
 #, php-format
 #@ the-bootstrap
 msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes: %s"
-msgstr ""
+msgstr "Du kannst folgende <abbr title=\"HyperText Markup Language\">HTML</abbr>-Tags benutzen: %s"
 
-#: comments.php:69
+#: comments.php:70
 #, php-format
 #@ the-bootstrap
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr "Du musst <a href=\"%s\">angemeldet</a> sein, um zu kommentieren."
 
-#: comments.php:70
+#: comments.php:71
 #, php-format
 #@ the-bootstrap
 msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out?</a>"
-msgstr ""
+msgstr "Angemeldet als <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Vom Benutzerkonto ausloggen\">Abmelden?</a>"
 
-#: footer.php:14
+#: functions.php:232
 #, php-format
 #@ the-bootstrap
 msgid "&copy; %1$s <a href=\"%2$s\">%3$s</a>, all rights reserved."
 msgstr "&copy; %1$s <a href=\"%2$s\">%3$s</a>, alle Rechte vorbehalten."
 
-#: footer.php:20
+#: footer.php:22
 #@ the-bootstrap
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
-#: footer.php:21
+#: footer.php:23
 #@ the-bootstrap
 msgid "Semantic Personal Publishing Platform"
 msgstr "Semantic Personal Publishing Platform"
 
-#: footer.php:24
+#: footer.php:25
 #, php-format
 #@ the-bootstrap
 msgctxt "WordPress"
 msgid "Proudly powered by %s"
 msgstr "Proudly powered by %s"
 
-#: footer.php:30
+#: footer.php:31
 #, php-format
 #@ the-bootstrap
 msgid "%d queries. %s seconds."
 msgstr "%d Abfragen. %s Sekunden."
 
-#: functions.php:52
+#: functions.php:61
 #@ the-bootstrap
 msgid "Main Navigation"
 msgstr "Hauptnavigation"
 
-#: functions.php:70
+#: functions.php:107
 #@ the-bootstrap
 msgid "Main Sidebar"
 msgstr "Haupt Sidebar"
 
-#: functions.php:79
+#: functions.php:116
 #@ the-bootstrap
 msgid "Image Sidebar"
 msgstr "Bilder Sitebar"
 
-#: functions.php:244
+#: inc/template-tags.php:69
 #, php-format
 #@ the-bootstrap
 msgid "<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
 msgstr "<span class=\"sep\">Veröffentlicht am </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> von </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
 
-#: functions.php:250
+#: inc/template-tags.php:75
 #, php-format
 #@ the-bootstrap
 msgid "View all posts by %s"
 msgstr "Alle Artikel von %s ansehen"
 
-#: functions.php:256
-#@ the-bootstrap
-msgid "Reply"
-msgstr "Kommentieren"
-
-#: functions.php:256
-#: partials/content-quote.php:66
+#: inc/template-tags.php:81
 #@ the-bootstrap
 msgid "<strong>1</strong> Reply"
 msgstr "<strong>1</strong> Kommentar"
 
-#: functions.php:256
-#: partials/content-quote.php:66
+#: inc/template-tags.php:81
 #@ the-bootstrap
 msgid "<strong>%</strong> Replies"
 msgstr "<strong>%</strong> Kommentare"
 
-#: functions.php:260
-#: functions.php:456
-#: functions.php:482
+#: functions.php:387
+#: functions.php:413
 #: image.php:55
+#: inc/template-tags.php:85
 #: partials/content-page.php:22
 #@ the-bootstrap
 msgid "Edit"
 msgstr "Bearbeiten"
 
-#: functions.php:284
+#: inc/template-tags.php:109
 #@ the-bootstrap
 msgid "Next page"
 msgstr "N&auml;chste Seite"
 
-#: functions.php:285
+#: inc/template-tags.php:110
 #@ the-bootstrap
 msgid "Previous page"
 msgstr "Vorherige Seite"
 
-#: functions.php:299
-#: functions.php:313
+#: inc/template-tags.php:124
+#: inc/template-tags.php:138
 #@ the-bootstrap
 msgid "Pages:"
 msgstr "Seiten:"
 
-#: functions.php:367
+#: functions.php:274
 #: partials/content-aside.php:29
 #: partials/content-image.php:17
 #: partials/content-page.php:19
-#: partials/content-quote.php:33
 #: partials/content-status.php:31
 #: partials/content.php:38
 #@ the-bootstrap
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Weiterlesen <span class=\"meta-nav\">&rarr;</span>"
 
-#: functions.php:455
+#: functions.php:386
 #@ the-bootstrap
 msgid "Pingback:"
 msgstr "Pingback:"
 
 #. translators: 1: comment author, 2: date and time
-#: functions.php:473
+#: functions.php:404
 #, php-format
 #@ the-bootstrap
 msgid "%1$s <span class=\"says\">said</span> on %2$s:"
 msgstr "%1$s <span class=\"says\">sagte</span> am %2$s:"
 
 #. translators: 1: date, 2: time
-#: functions.php:479
+#: functions.php:410
 #, php-format
 #@ the-bootstrap
 msgid "%1$s at %2$s"
 msgstr "%1$s um %2$s"
 
-#: functions.php:486
+#: functions.php:417
 #@ the-bootstrap
 msgid "Your comment is awaiting moderation."
 msgstr "Dein Kommentar muss noch moderiert werden."
 
-#: functions.php:495
+#: functions.php:426
 #@ the-bootstrap
 msgid "Reply <span>&darr;</span>"
 msgstr "Antworten <span>&darr;</span>"
 
-#: functions.php:559
+#: functions.php:490
 #@ the-bootstrap
 msgid "Name"
 msgstr "Name"
 
-#: functions.php:562
-#: functions.php:588
+#: functions.php:493
+#: functions.php:519
 #@ the-bootstrap
 msgid "required"
 msgstr "ben&ouml;tigt"
 
-#: functions.php:585
+#: functions.php:516
 #@ the-bootstrap
 msgid "Email"
 msgstr "E-Mail"
 
-#: functions.php:588
+#: functions.php:519
 #@ the-bootstrap
 msgid "will not be published"
 msgstr "wird nicht ver&ouml;ffentlicht"
 
-#: functions.php:609
+#: functions.php:540
 #@ the-bootstrap
 msgid "Website"
 msgstr "Webseite"
 
-#: functions.php:804
+#: functions.php:716
 #, php-format
 #@ the-bootstrap
 msgid "%d comment"
@@ -315,32 +307,32 @@ msgid_plural "%d comments"
 msgstr[0] "%d Kommentar"
 msgstr[1] "%d Kommentare"
 
-#: functions.php:870
+#: functions.php:782
 #@ the-bootstrap
 msgid "This post is password protected. To view it please enter your password below:"
 msgstr "Dieser Artikel ist passwortgesch&uuml;tzt. Um Kommentare anschauen zu k&ouml;nnen musst du das Passwort angeben."
 
-#: functions.php:870
+#: functions.php:782
 #@ the-bootstrap
 msgid "Password:"
 msgstr "Passwort:"
 
-#: functions.php:870
+#: functions.php:782
 #@ the-bootstrap
 msgid "Submit"
 msgstr "Senden"
 
-#: header.php:42
+#: header.php:57
 #@ the-bootstrap
 msgid "Main menu"
 msgstr "Hauptmen&uuml;"
 
-#: header.php:43
+#: header.php:58
 #@ the-bootstrap
 msgid "Skip to primary content"
 msgstr "Zum Inhalt wechseln"
 
-#: header.php:44
+#: header.php:59
 #@ the-bootstrap
 msgid "Skip to secondary content"
 msgstr "Zum sekund&auml;ren Inhalt wechseln"
@@ -430,7 +422,6 @@ msgstr "Titel:"
 
 #: partials/content-aside.php:17
 #: partials/content-gallery.php:17
-#: partials/content-quote.php:17
 #: partials/content-status.php:17
 #: partials/content.php:16
 #: partials/content.php:21
@@ -439,27 +430,13 @@ msgstr "Titel:"
 msgid "Permalink to %s"
 msgstr "Permalink zu %s"
 
-#: partials/content-gallery.php:51
+#: partials/content-gallery.php:49
 #, php-format
 #@ the-bootstrap
 msgid "This gallery contains <strong>%1$s photo</strong>."
 msgid_plural "This gallery contains <strong>%1$s photos</strong>."
 msgstr[0] "Diese Galerie enth&auml;lt <strong>%1$s Foto</strong>."
 msgstr[1] "Diese Galerie enth&auml;lt <strong>%1$s Fotos</strong>."
-
-#. translators: used between list items, there is a space after the comma
-#: partials/content-image.php:24
-#: partials/content-quote.php:41
-#: partials/content-quote.php:51
-#@ the-bootstrap
-msgid ", "
-msgstr ", "
-
-#: partials/content-image.php:28
-#, php-format
-#@ the-bootstrap
-msgid " <span class=\"%1$s\">in</span> %2$s"
-msgstr " <span class=\"%1$s\">in</span> %2$s"
 
 #: partials/content-no-results.php:14
 #@ the-bootstrap
@@ -476,20 +453,8 @@ msgstr "Entschuldige, aber es konnte nichts gefunden werden. Versuche es mit and
 msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
 msgstr "In diesem Archiv wurden keine Ergebnisse gefunden, vielleicht hilft die Suchfunktion weiter."
 
-#: partials/content-quote.php:45
-#, php-format
-#@ the-bootstrap
-msgid "<span class=\"%1$s\">Posted in</span> %2$s"
-msgstr "<span class=\"%1$s\">Ver&ouml;ffentlicht unter</span> %2$s"
-
-#: partials/content-quote.php:57
-#, php-format
-#@ the-bootstrap
-msgid "<span class=\"%1$s\">Tagged</span> %2$s"
-msgstr "<span class=\"%1$s\">Verschlagwortet mit</span> %2$s"
-
-#: comments.php:67
-#: partials/content-quote.php:66
+#: comments.php:68
+#: inc/template-tags.php:81
 #@ the-bootstrap
 msgid "Leave a reply"
 msgstr "Kommentar hinterlassen"
@@ -499,7 +464,7 @@ msgstr "Kommentar hinterlassen"
 #, php-format
 #@ the-bootstrap
 msgid "Posted in %1$s."
-msgstr ""
+msgstr "Ver&ouml;ffentlicht unter %1$s."
 
 #: partials/content-single.php:30
 #: partials/content-single.php:34
@@ -507,71 +472,102 @@ msgstr ""
 #@ the-bootstrap
 msgctxt "used between list items, there is a space after the comma"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: partials/content-single.php:33
 #@ the-bootstrap
 msgid "Tagged "
-msgstr ""
+msgstr "Verschlagwortet mit"
 
 #: partials/content-single.php:47
 #, php-format
 #@ the-bootstrap
 msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "Zeige alle Beiträge von %s <span class=\"meta-nav\">&rarr;</span>"
 
 #: partials/content.php:17
 #@ the-bootstrap
 msgid "Featured"
-msgstr ""
+msgstr "Hervorgehoben"
 
 #: search.php:20
 #, php-format
 #@ the-bootstrap
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Suchresultate f&uuml;r: %s"
 
 #: searchform.php:13
 #: searchform.php:14
-#: searchform.php:15
 #@ the-bootstrap
 msgid "Search"
-msgstr ""
+msgstr "Suchen"
 
 #: sidebar.php:14
 #@ the-bootstrap
 msgid "Archives"
-msgstr ""
+msgstr "Archive"
 
 #: sidebar.php:21
 #@ the-bootstrap
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: single.php:25
 #@ the-bootstrap
 msgid "Post navigation"
-msgstr ""
+msgstr "Artikelnavigation"
 
 #: single.php:26
 #@ the-bootstrap
 msgid "<span class=\"meta-nav\">&larr;</span> Next Post"
-msgstr ""
+msgstr "<span class=\"meta-nav\">&larr;</span> N&auml;chster Artikel"
 
 #: single.php:27
 #@ the-bootstrap
 msgid "Previous Post <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "Vorheriger Artikel <span class=\"meta-nav\">&rarr;</span>"
 
 #: tag.php:21
 #, php-format
 #@ the-bootstrap
 msgid "Tag Archives: %s"
-msgstr ""
+msgstr "Schlagwort-Archive: %s"
 
-#: comments.php:68
+#: comments.php:69
 #, php-format
 #@ the-bootstrap
 msgid "Leave a reply to %s"
 msgstr "Kommentar zu %s hinterlassen"
+
+#: functions.php:62
+#@ the-bootstrap
+msgid "Header Menu"
+msgstr "Kopfmenu"
+
+#: functions.php:63
+#@ the-bootstrap
+msgid "Footer Menu"
+msgstr "Fu&szlig;menu"
+
+#: partials/content-gallery.php:73
+#@ the-bootstrap
+msgctxt "carousel-control"
+msgid "&lsaquo;"
+msgstr "&lsaquo;"
+
+#: partials/content-gallery.php:74
+#@ the-bootstrap
+msgctxt "carousel-control"
+msgid "&rsaquo;"
+msgstr "&lsaquo;"
+
+#: searchform.php:15
+#@ the-bootstrap
+msgid "Go"
+msgstr "Los"
+
+#: functions.php:117
+#@ the-bootstrap
+msgid "Shown on image attachment pages."
+msgstr "Auf Bilder-Seiten sichtbar."
 
