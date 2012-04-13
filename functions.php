@@ -539,7 +539,7 @@ function the_bootstrap_comment_form_field_url( $html ) {
 	return	'<div class="comment-form-url control-group">
 				<label for="url" class="control-label">' . __( 'Website', 'the-bootstrap' ) . '</label>
 				<div class="controls">
-					<input id="url" name="url" type="url" value="' . esc_attr(  $commenter['comment_author_url'] ) . '" size="30"' . $aria_req . ' />
+					<input id="url" name="url" type="url" value="' . esc_attr(  $commenter['comment_author_url'] ) . '" size="30" />
 				</div>
 			</div>';
 }
