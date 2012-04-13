@@ -114,7 +114,7 @@ function the_bootstrap_widgets_init() {
 	
 	register_sidebar( array(
 		'name'			=>	__( 'Image Sidebar', 'the-bootstrap' ),
-		'description'	=>	__( 'Shown on image attchment pages.', 'the-bootstrap' ),
+		'description'	=>	__( 'Shown on image attachment pages.', 'the-bootstrap' ),
 		'id'			=>	'image',
 		'before_widget'	=>	'<aside id="%1$s" class="widget well %2$s">',
 		'after_widget'	=>	"</aside>",
