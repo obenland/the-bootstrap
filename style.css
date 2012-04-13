@@ -73,6 +73,10 @@ h1, h2, h3, h4, h5, h6, .clear {
 	padding: 20px 0;
 }
 
+#branding {	
+	margin-bottom: 18px;
+}
+
 .page-header {
 	margin: 0 0 18px;
 }
