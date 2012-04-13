@@ -56,6 +56,7 @@ None asked yet.
 * Added padding on site footer
 * Removed undefined variable from comment form url input
 * Added license information
+* Now shows nav toggle only when there actually is a nav menu set
 
 = 1.2.4 =
 * Capsuled version retreiving into its own function to handle WP 3.4 changes
