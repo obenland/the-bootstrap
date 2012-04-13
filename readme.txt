@@ -47,10 +47,6 @@ Currently available in:
 None asked yet.
 
 == Changelog ==
-
-= 1.2.5 =
-* Improved responsivness
-
 = 1.2.4 =
 * Capsuled version retreiving into its own function to handle WP 3.4 changes
 * Moved template tags in their own file
