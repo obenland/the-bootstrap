@@ -20,7 +20,7 @@
  */
 function the_bootstrap_custom_header_setup() {
 	$args = apply_filters( 'the_bootstrap_custom_header_args',  array(
-		
+		'default-image'				=>	'',
 		// The height and width of your custom header.
 		// Add a filter to the_bootstrap_header_image_width and the_bootstrap_header_image_height to change these values.
 		'width'						=>	apply_filters( 'the_bootstrap_header_image_width', 1170 ),
