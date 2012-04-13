@@ -4,7 +4,7 @@ Tags:				black, blue, white, light, two-columns, right-sidebar, flexible-width, 
 Donate link:		https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=542W6XT4PLT4L
 Requires at least:	3.0
 Tested up to:		3.4-beta1
-Stable tag:			1.2.4
+Stable tag:			1.2.5
 
 A WordPress Theme based on Bootstrap, from Twitter
 
@@ -47,6 +47,17 @@ Currently available in:
 None asked yet.
 
 == Changelog ==
+
+= 1.2.5 =
+* Added Custom Image Header support for pre-3.4
+* Added Custom Background support for post-3.3.1
+* Improved responsive styling on mobile devices
+* Improved comment form label layout
+* Added padding on site footer
+* Removed undefined variable from comment form url input
+* Added license information
+* Now shows nav toggle only when there actually is a nav menu set
+
 = 1.2.4 =
 * Capsuled version retreiving into its own function to handle WP 3.4 changes
 * Moved template tags in their own file

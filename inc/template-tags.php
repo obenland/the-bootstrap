@@ -49,7 +49,7 @@ function the_bootstrap_content_nav() {
 	) );
 
 	if ( $links ) {
-		echo "<nav class=\"pagination pagination-centered\">{$links}</nav>";
+		echo "<nav class=\"pagination pagination-centered clearfix\">{$links}</nav>";
 	}
 }
 endif;

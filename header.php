@@ -57,6 +57,7 @@
 						<h3 class="assistive-text"><?php _e( 'Main menu', 'the-bootstrap' ); ?></h3>
 						<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'the-bootstrap' ); ?>"><?php _e( 'Skip to primary content', 'the-bootstrap' ); ?></a></div>
 						<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'the-bootstrap' ); ?>"><?php _e( 'Skip to secondary content', 'the-bootstrap' ); ?></a></div>
+						<?php if ( has_nav_menu( 'primary' ) ) : ?>
 						<div class="navbar">
 							<div class="navbar-inner">
 								<div class="container">
@@ -66,17 +67,17 @@
 										<span class="icon-bar"></span>
 										<span class="icon-bar"></span>
 									</a>
-								<?php wp_nav_menu( array(
-									'theme_location'	=>	'primary',
-									'container'			=>	'div',
-									'container_class'	=>	'nav-collapse',
-									'menu_class'		=>	'nav',
-									'depth'				=>	2,
-									'fallback_cb'		=>	false
-								) ); ?>
+									<?php wp_nav_menu( array(
+										'theme_location'	=>	'primary',
+										'container'			=>	'div',
+										'container_class'	=>	'nav-collapse',
+										'menu_class'		=>	'nav',
+										'depth'				=>	2
+									) ); ?>
 								</div>
 							</div>
 						</div>
+						<?php endif; ?>
 					</nav><!-- #access -->
 					
 					<?php if ( function_exists( 'yoast_breadcrumb' ) ) {

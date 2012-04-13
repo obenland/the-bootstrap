@@ -38,8 +38,6 @@ function the_bootstrap_setup() {
 		'image',
 		'video'
 	) );
-
-	add_custom_background();
 	
 	/**
 	 * Custom template tags for this theme.
@@ -71,6 +69,31 @@ add_action( 'after_setup_theme', 'the_bootstrap_setup' );
 
 
 /**
+ * Adds Custom Background support
+ *
+ * @author	Konstantin Obenland
+ * @since	1.2.5 - 13.04.2012
+ *
+ * @return	void
+ */
+function the_bootstrap_custom_background_setup() {
+	
+	$args = apply_filters( 'the_bootstrap_custom_background_args',  array(
+		'default-color'	=>	'EFEFEF',
+	) );
+	
+	add_theme_support( 'custom-background', $args );
+	
+	if ( version_compare( get_bloginfo( 'version' ), '3.3.1', '<=' ) ) {
+		// Compat: Versions of WordPress prior to 3.4.
+		define( 'BACKGROUND_COLOR', $args['default-color'] );
+		add_custom_background();
+	}
+}
+add_action( 'after_setup_theme', 'the_bootstrap_custom_background_setup' );
+
+
+/**
  * Register the sidebars.
  *
  * @author	Konstantin Obenland
@@ -91,7 +114,7 @@ function the_bootstrap_widgets_init() {
 	
 	register_sidebar( array(
 		'name'			=>	__( 'Image Sidebar', 'the-bootstrap' ),
-		'description'	=>	__( 'Shown on image attchment pages.', 'the-bootstrap' ),
+		'description'	=>	__( 'Shown on image attachment pages.', 'the-bootstrap' ),
 		'id'			=>	'image',
 		'before_widget'	=>	'<aside id="%1$s" class="widget well %2$s">',
 		'after_widget'	=>	"</aside>",
@@ -466,8 +489,8 @@ function the_bootstrap_comment_form_field_author( $html ) {
 	return	'<div class="comment-form-author control-group">
 				<label for="author" class="control-label">' . __( 'Name', 'the-bootstrap' ) . '</label>
 				<div class="controls">
-					<input id="author" class="alignleft" name="author" type="text" value="' . esc_attr(  $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' />
-					' . ( $req ? '<p class="help-block"><span class="required">' . __('required', 'the-bootstrap') . '</span></p>' : '' ) . '
+					<input id="author" name="author" type="text" value="' . esc_attr(  $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' />
+					' . ( $req ? '<p class="help-inline"><span class="required">' . __('required', 'the-bootstrap') . '</span></p>' : '' ) . '
 				</div>
 			</div>';
 }
@@ -492,8 +515,8 @@ function the_bootstrap_comment_form_field_email( $html ) {
 	return	'<div class="comment-form-email control-group">
 				<label for="email" class="control-label">' . __( 'Email', 'the-bootstrap' ) . '</label>
 				<div class="controls">
-					<input id="email" class="alignleft" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />
-					<p class="help-block">' . ( $req ? '<span class="required">' . __('required', 'the-bootstrap') . '</span>, ' : '' ) . __( 'will not be published', 'the-bootstrap' ) . '</p>
+					<input id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />
+					<p class="help-inline">' . ( $req ? '<span class="required">' . __('required', 'the-bootstrap') . '</span>, ' : '' ) . __( 'will not be published', 'the-bootstrap' ) . '</p>
 				</div>
 			</div>';
 }
@@ -516,7 +539,7 @@ function the_bootstrap_comment_form_field_url( $html ) {
 	return	'<div class="comment-form-url control-group">
 				<label for="url" class="control-label">' . __( 'Website', 'the-bootstrap' ) . '</label>
 				<div class="controls">
-					<input id="url" name="url" type="url" value="' . esc_attr(  $commenter['comment_author_url'] ) . '" size="30"' . $aria_req . ' />
+					<input id="url" name="url" type="url" value="' . esc_attr(  $commenter['comment_author_url'] ) . '" size="30" />
 				</div>
 			</div>';
 }
