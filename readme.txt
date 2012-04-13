@@ -54,7 +54,6 @@ None asked yet.
 * Improved responsive styling on mobile devices
 * Improved comment form label layout
 * Added padding on site footer
-* Updated French translation (props Benfarhat)
 * Removed undefined variable from comment form url input
 * Added license information
 
