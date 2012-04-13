@@ -38,8 +38,6 @@ function the_bootstrap_setup() {
 		'image',
 		'video'
 	) );
-
-	add_custom_background();
 	
 	/**
 	 * Custom template tags for this theme.
@@ -68,6 +66,31 @@ function the_bootstrap_setup() {
 } // the_bootstrap_setup
 endif;
 add_action( 'after_setup_theme', 'the_bootstrap_setup' );
+
+
+/**
+ * Adds Custom Background support
+ *
+ * @author	Konstantin Obenland
+ * @since	1.2.5 - 13.04.2012
+ *
+ * @return	void
+ */
+function the_bootstrap_custom_background_setup() {
+	
+	$args = apply_filters( 'the_bootstrap_custom_background_args',  array(
+		'default-color'	=>	'EFEFEF',
+	) );
+	
+	add_theme_support( 'custom-background', $args );
+	
+	if ( version_compare( get_bloginfo( 'version' ), '3.3.1', '<=' ) ) {
+		// Compat: Versions of WordPress prior to 3.4.
+		define( 'BACKGROUND_COLOR', $args['default-color'] );
+		add_custom_background();
+	}
+}
+add_action( 'after_setup_theme', 'the_bootstrap_custom_background_setup' );
 
 
 /**

@@ -38,7 +38,7 @@ function the_bootstrap_custom_header_setup() {
 	
 	add_theme_support( 'custom-header', $args );
 	
-	if ( version_compare( get_bloginfo( 'version' ), '3.4', '<' ) ) {
+	if ( version_compare( get_bloginfo( 'version' ), '3.3.1', '<=' ) ) {
 		// Compat: Versions of WordPress prior to 3.4.
 		define( 'HEADER_TEXTCOLOR',    $args['default-text-color'] );
 		define( 'HEADER_IMAGE',        $args['default-image'] );

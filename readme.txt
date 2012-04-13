@@ -50,6 +50,7 @@ None asked yet.
 
 = 1.2.5 =
 * Added Custom Image Header support for pre-3.4
+* Added Custom Background support for post-3.3.1
 * Improved responsive styling on mobile devices
 * Improved comment form label layout
 * Added padding on site footer
