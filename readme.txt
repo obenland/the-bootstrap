@@ -56,6 +56,7 @@ None asked yet.
 * Added padding on site footer
 * Updated French translation (props Benfarhat)
 * Removed undefined variable from comment form url input
+* Added license information
 
 = 1.2.4 =
 * Capsuled version retreiving into its own function to handle WP 3.4 changes
