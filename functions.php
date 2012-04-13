@@ -466,8 +466,8 @@ function the_bootstrap_comment_form_field_author( $html ) {
 	return	'<div class="comment-form-author control-group">
 				<label for="author" class="control-label">' . __( 'Name', 'the-bootstrap' ) . '</label>
 				<div class="controls">
-					<input id="author" class="alignleft" name="author" type="text" value="' . esc_attr(  $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' />
-					' . ( $req ? '<p class="help-block"><span class="required">' . __('required', 'the-bootstrap') . '</span></p>' : '' ) . '
+					<input id="author" name="author" type="text" value="' . esc_attr(  $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' />
+					' . ( $req ? '<p class="help-inline"><span class="required">' . __('required', 'the-bootstrap') . '</span></p>' : '' ) . '
 				</div>
 			</div>';
 }
@@ -492,8 +492,8 @@ function the_bootstrap_comment_form_field_email( $html ) {
 	return	'<div class="comment-form-email control-group">
 				<label for="email" class="control-label">' . __( 'Email', 'the-bootstrap' ) . '</label>
 				<div class="controls">
-					<input id="email" class="alignleft" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />
-					<p class="help-block">' . ( $req ? '<span class="required">' . __('required', 'the-bootstrap') . '</span>, ' : '' ) . __( 'will not be published', 'the-bootstrap' ) . '</p>
+					<input id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />
+					<p class="help-inline">' . ( $req ? '<span class="required">' . __('required', 'the-bootstrap') . '</span>, ' : '' ) . __( 'will not be published', 'the-bootstrap' ) . '</p>
 				</div>
 			</div>';
 }

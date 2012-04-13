@@ -49,6 +49,9 @@ None asked yet.
 == Changelog ==
 
 = 1.2.5 =
+* Added Custom Image Header support for pre-3.4
+* Improved responsive styling on mobile devices
+* Improved comment form label layout
 * Added padding on site footer
 * Updated French translation (props Benfarhat)
 
