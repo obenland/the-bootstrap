@@ -321,20 +321,13 @@ a img.alignleft {
 /* =Responsiveness
 -------------------------------------------------------------- */
 
--------------------------------------------------------------- */
-
-@media (max-width: 479px) {
-	#page {
-		margin-right: 5px !important;
-	}
-}
 @media (max-width: 767px) {
 	body {
 		padding:0;
 	}
 	.container {
 		width: auto;
-		padding: 0 5px;
+		padding: 0 10px;
 	}
 	#page {
 		margin: 0;
