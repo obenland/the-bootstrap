@@ -26,7 +26,7 @@
 	
 	<div class="entry-content row">
 		<?php
-		$images = get_children( array(
+		$the_bootstrap_images = get_children( array(
 			'post_parent'		=>	$post->ID,
 			'post_type'			=>	'attachment',
 			'post_mime_type'	=>	'image',
@@ -34,8 +34,10 @@
 			'order'				=>	'ASC',
 			'numberposts'		=>	999
 		) );
-		if ( $images ) :
-			$total_images	=	count( $images ); ?>
+		if ( $the_bootstrap_images ) :
+			$the_bootstrap_total_images	=	count( $the_bootstrap_images );
+			$the_bootstrap_images		=	array_slice( $the_bootstrap_images, 0, 10 );
+		?>
 		
 		<div class="span3">
 			<?php the_excerpt(); ?>
@@ -44,8 +46,8 @@
 				<em>
 				<?php
 				printf(
-					_n( 'This gallery contains <strong>%1$s photo</strong>.', 'This gallery contains <strong>%1$s photos</strong>.', $total_images, 'the-bootstrap' ),
-					number_format_i18n( $total_images )
+					_n( 'This gallery contains <strong>%1$s photo</strong>.', 'This gallery contains <strong>%1$s photos</strong>.', $the_bootstrap_total_images, 'the-bootstrap' ),
+					number_format_i18n( $the_bootstrap_total_images )
 				); ?>
 				</em>
 			</p>
@@ -54,18 +56,17 @@
 
 			<!-- Carousel items -->
 			<div class="carousel-inner">
-				<?php for ( $i=0; $i < 10; $i++ ) :
-					$image = $images[$i]; ?>
+				<?php foreach ( $the_bootstrap_images as $the_bootstrap_image ) : ?>
 				<figure class="item">
-					<?php echo wp_get_attachment_image( $image->ID, array( 470, 353 ) ); 
-					if ( has_excerpt( $image->ID ) ) :?>
+					<?php echo wp_get_attachment_image( $the_bootstrap_image->ID, array( 470, 353 ) ); 
+					if ( has_excerpt( $the_bootstrap_image->ID ) ) :?>
 					<figcaption class="carousel-caption">
-						<h4><?php echo get_the_title( $image->ID ); ?></h4>
-						<p><?php echo apply_filters( 'get_the_excerpt', $image->post_excerpt ); ?></p>
+						<h4><?php echo get_the_title( $the_bootstrap_image->ID ); ?></h4>
+						<p><?php echo apply_filters( 'get_the_excerpt', $the_bootstrap_image->post_excerpt ); ?></p>
 					</figcaption>
 					<?php endif; ?>
 				</figure>
-				<?php endfor; ?>
+				<?php endforeach; ?>
 			</div>
 		
 			<!-- Carousel nav -->

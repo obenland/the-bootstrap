@@ -59,6 +59,7 @@ if ( have_comments() ) : ?>
 if ( ! comments_open() AND ! is_page() AND post_type_supports( get_post_type(), 'comments' ) ) : ?>
 	<p class="nocomments"><?php _e( 'Comments are closed.', 'the-bootstrap' ); ?></p>
 <?php endif;
+
 comment_form( array(
 	'comment_field'			=>	'<div class="comment-form-comment control-group"><label class="control-label" for="comment">' . _x( 'Comment', 'noun', 'the-bootstrap' ) . '</label><div class="controls"><textarea class="span7" id="comment" name="comment" rows="8" aria-required="true"></textarea></div></div>',
 	'comment_notes_before'	=>	'',

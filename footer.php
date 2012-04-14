@@ -9,20 +9,20 @@
 ?>
 				<footer id="colophon" role="contentinfo" class="span12">
 					<div id="page-footer" class="well clearfix">
-						<?php
-						printf(
-							__('&copy; %1$s <a href="%2$s">%3$s</a>, all rights reserved.', 'the-bootstrap'),
-							date( 'Y' ),
-							home_url( '/' ),
-							get_bloginfo( 'name' )
-						); ?>
+						<?php wp_nav_menu( array(
+							'container'			=>	'nav',
+							'container_class'	=>	'subnav',
+							'theme_location'	=>	'footer-menu',
+							'menu_class'		=>	'nav nav-pills pull-left',
+							'depth'				=>	1,
+							'fallback_cb'		=>	'the_bootstrap_credits'
+						) );
+						?>
 						<div id="site-generator">
 							<a	href="<?php echo esc_url( __( 'http://wordpress.org/', 'the-bootstrap' ) ); ?>"
 								title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'the-bootstrap' ); ?>"
 								target="_blank"
-								rel="generator">
-								<?php printf( _x( 'Proudly powered by %s', 'WordPress', 'the-bootstrap' ), 'WordPress' ); ?>
-							</a>
+								rel="generator"><?php printf( _x( 'Proudly powered by %s', 'WordPress', 'the-bootstrap' ), 'WordPress' ); ?></a>
 						</div>
 					</div>
 				</footer><!-- #colophon -->

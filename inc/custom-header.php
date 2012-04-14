@@ -19,8 +19,8 @@
  * @return	void
  */
 function the_bootstrap_custom_header_setup() {
-	add_theme_support( 'custom-header', array(
-		
+	$args = apply_filters( 'the_bootstrap_custom_header_args',  array(
+		'default-image'				=>	'',
 		// The height and width of your custom header.
 		// Add a filter to the_bootstrap_header_image_width and the_bootstrap_header_image_height to change these values.
 		'width'						=>	apply_filters( 'the_bootstrap_header_image_width', 1170 ),
@@ -28,13 +28,24 @@ function the_bootstrap_custom_header_setup() {
 		'flex-height'				=>	true,
 		
 		// The default header text color
-		'default-text-color'		=>	'333',
+		'default-text-color'		=>	'333333',
 			
 		// Add a way for the custom header to be styled in the admin panel that controls custom headers
 		'wp-head-callback'			=>	'the_bootstrap_header_style',
 		'admin-head-callback'		=>	'the_bootstrap_admin_header_style',
 		'admin-preview-callback'	=>	'the_bootstrap_admin_header_image',
 	) );
+	
+	add_theme_support( 'custom-header', $args );
+	
+	if ( version_compare( get_bloginfo( 'version' ), '3.3.1', '<=' ) ) {
+		// Compat: Versions of WordPress prior to 3.4.
+		define( 'HEADER_TEXTCOLOR',    $args['default-text-color'] );
+		define( 'HEADER_IMAGE',        $args['default-image'] );
+		define( 'HEADER_IMAGE_WIDTH',  $args['width'] );
+		define( 'HEADER_IMAGE_HEIGHT', $args['height'] );
+		add_custom_image_header( $args['wp-head-callback'], $args['admin-head-callback'], $args['admin-preview-callback'] );
+	}
 }
 add_action( 'after_setup_theme', 'the_bootstrap_custom_header_setup', 11 );
 
@@ -140,6 +151,26 @@ function the_bootstrap_admin_header_image() { ?>
 	</div>
 <?php }
 endif; // the_bootstrap_admin_header_image
+
+
+if ( ! function_exists( 'get_custom_header' ) ) :
+/**
+ * Get the header image data.
+ *
+ * @author	Automattic
+ * @since	1.2.5 - 11.04.2012
+ *
+ * @return	object
+ */
+function get_custom_header() {
+	 return (object) array(
+		'url'           => get_header_image(),
+		'thumbnail_url' => get_header_image(),
+		'width'         => HEADER_IMAGE_WIDTH,
+		'height'        => HEADER_IMAGE_HEIGHT,
+	);
+}
+endif; // get_custom_header
 
 
 /* End of file custom-header.php */

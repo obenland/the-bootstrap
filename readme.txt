@@ -16,11 +16,15 @@ The Bootstrap is fully compatible with WordPress SEO by Yoast!
 
 Please note:
 
-Due to design restrictions in Bootstrap, the navigation menu can only be two levels deep, while the parent menu item only serves as a headline for the child menu items and can not be accessed over the navigation menu.
+Due to design restrictions in Bootstrap, the navigation menu can only be two levels deep, while parent menu items only serves as a headline for the child menu items and can not be accessed over the navigation menu.
+The Footer Menu is best suitable for short menues with just a few links. It replaces the credits section, once a menu has been assigned to the location. It will hold only top level nav items.
 
 = License =
+Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public Licemse.
+The exceptions to this license are as follows:
+* Bootstrap by Twitter is licensed under the GPL-compatible [http://www.apache.org/licenses/LICENSE-2.0 Apache License v2.0]
+* The script html5.js is licensed under MIT
 
-While this Theme is licensed under GPLv3, Bootstrap by Twitter is licensed under the GPL-compatible [http://www.apache.org/licenses/LICENSE-2.0 Apache License v2.0].
 
 Twitter Icon: [https://twitter.com/about/resources/logos]
 RSS Icon: [http://www.icojam.com/blog/?p=130 Public Domain]
@@ -30,6 +34,7 @@ I will be more than happy to update the Theme with new locales, as soon as I rec
 Currently available in:
 
 * English
+* French
 * German
 
 
@@ -44,14 +49,36 @@ Currently available in:
 
 None asked yet.
 
-
 == Changelog ==
+
+= 1.2.5 =
+* Added Custom Image Header support for pre-3.4
+* Added Custom Background support for post-3.3.1
+* Improved responsive styling on mobile devices
+* Improved comment form label layout
+* Added padding on site footer
+* Removed undefined variable from comment form url input
+* Added license information
+* Now shows nav toggle only when there actually is a nav menu set
+
+= 1.2.4 =
+* Capsuled version retreiving into its own function to handle WP 3.4 changes
+* Moved template tags in their own file
+* Updated script dependencies
+* Fixed a bug in displaying the carousel. (Props Griden)
+
+= 1.2.3 =
+* Fixed credits output
 
 = 1.2.2 =
 * Added image carousel for the first ten images of a gallery post-format
 * Added default support for Bootstrap jQuery plugins Tooltip, Popover, Alert and Carousel
+* Added tow more menu locations, nav pills style (props Benfarhat)
 * Define $content_width earlier, so embeds work how they are supposed to
-* Removed a misplaced character in Title title attributes
+* Removed a misplaced character in Title title-attributes
+* Removed wp_page_menu callback since `wp_page_menu()` never gets called
+* Added a short description for image sidebar
+* Added some French localization
 * Minor bugfix in header admin panel
 
 = 1.2.1 =

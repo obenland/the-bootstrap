@@ -32,6 +32,14 @@
 		<div class="container">
 			<div id="page" class="hfeed row">
 				<header id="branding" role="banner" class="span12">
+					<?php wp_nav_menu( array(
+						'container'			=>	'nav',
+						'container_class'	=>	'subnav clearfix',
+						'theme_location'	=>	'header-menu',
+						'menu_class'		=>	'nav nav-pills pull-right',
+						'depth'				=>	1,
+						'fallback_cb'		=>	false
+					) ); ?>
 					<hgroup>
 						<h1 id="site-title">
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
@@ -49,6 +57,7 @@
 						<h3 class="assistive-text"><?php _e( 'Main menu', 'the-bootstrap' ); ?></h3>
 						<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'the-bootstrap' ); ?>"><?php _e( 'Skip to primary content', 'the-bootstrap' ); ?></a></div>
 						<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'the-bootstrap' ); ?>"><?php _e( 'Skip to secondary content', 'the-bootstrap' ); ?></a></div>
+						<?php if ( has_nav_menu( 'primary' ) ) : ?>
 						<div class="navbar">
 							<div class="navbar-inner">
 								<div class="container">
@@ -59,14 +68,13 @@
 										<span class="icon-bar"></span>
 									</a>
 									<?php if ( the_bootstrap_get_theme_options()->navbar_site_name ) : ?>
-									    <span class="brand"><?php bloginfo( 'name' ); ?></span>
+									<span class="brand"><?php bloginfo( 'name' ); ?></span>
 									<?php endif;?>
 									<div class="nav-collapse">
 										<?php wp_nav_menu( array(
 											'theme_location'	=>	'primary',
 											'menu_class'		=>	'nav',
-											'depth'				=>	2,
-											'fallback_cb'		=>	false
+											'depth'				=>	2
 										) ); 
 										if ( the_bootstrap_get_theme_options()->navbar_searchform ) : ?>
 									    <form id="searchform" class="navbar-search pull-right" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -78,6 +86,7 @@
 								</div>
 							</div>
 						</div>
+						<?php endif; ?>
 					</nav><!-- #access -->
 					<?php if ( function_exists( 'yoast_breadcrumb' ) ) {
 						yoast_breadcrumb( '<nav id="breadcrumb" class="breadcrumb">', '</nav>' );
