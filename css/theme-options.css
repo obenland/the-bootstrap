@@ -22,10 +22,10 @@
     padding-left: 20px;
 }
 .the-bootstrap div.inside li.rss {
-	background-image: url("/the-bootstrap/images/rss.png");
+	background-image: url("../images/rss.png");
 }
 .the-bootstrap div.inside li.twitter {
-	background-image: url("/the-bootstrap/images/twitter.png");
+	background-image: url("../images/twitter.png");
 }
 
 #wpcontent select option {
