@@ -795,12 +795,12 @@ add_filter( 'the_password_form', 'the_bootstrap_the_password_form' );
  */
 function _the_bootstrap_version() {
 	
-	if ( version_compare( get_bloginfo( 'version' ), '3.3.1', '>' ) ) {
-		$theme_version = wp_get_theme()->get( 'Version' );
+	if ( function_exists( 'wp_get_theme' ) ) {
+		$theme_version	=	wp_get_theme()->get( 'Version' );
 	}
 	else {
-		$theme_data = get_theme_data( get_template_directory() . '/style.css' );
-		$theme_version = $theme_data['Version'];
+		$theme_data		=	get_theme_data( get_template_directory() . '/style.css' );
+		$theme_version	=	$theme_data['Version'];
 	}
 	
 	return $theme_version;
