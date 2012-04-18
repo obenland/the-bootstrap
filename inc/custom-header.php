@@ -158,7 +158,7 @@ if ( ! function_exists( 'get_custom_header' ) ) :
 /**
  * Get the header image data.
  *
- * @author	Automattic
+ * @author	WordPress.org
  * @since	1.2.5 - 11.04.2012
  *
  * @return	object
