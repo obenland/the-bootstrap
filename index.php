@@ -10,8 +10,7 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @author		Konstantin Obenland
- * @package		WordPress
- * @subpackage	The Bootstrap
+ * @package		The Bootstrap
  * @since		1.0.0 - 05.02.2012
  */
 

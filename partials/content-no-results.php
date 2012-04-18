@@ -4,8 +4,7 @@
  * The template for displaying a 'Noting found' message.
  *
  * @author		Konstantin Obenland
- * @package		WordPress
- * @subpackage	The Bootstrap
+ * @package		The Bootstrap
  * @since		1.0.0 - 07.02.2012
  */
 ?>

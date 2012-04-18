@@ -4,8 +4,7 @@
  * The template used to display Tag Archive pages
  *
  * @author		Konstantin Obenland
- * @package		WordPress
- * @subpackage	The Bootstrap
+ * @package		The Bootstrap
  * @since		1.0.0 - 05.02.2012
  */
 
@@ -21,11 +20,9 @@ get_header(); ?>
 				printf( __( 'Tag Archives: %s', 'the-bootstrap' ), '<span>' . single_tag_title( '', false ) . '</span>' );
 			?></h1>
 
-			<?php
-				$tag_description = tag_description();
-				if ( ! empty( $tag_description ) ) {
-					echo apply_filters( 'tag_archive_meta', '<div class="tag-archive-meta">' . $tag_description . '</div>' );
-				} ?>
+			<?php if ( $tag_description = tag_description() ) ) {
+				echo apply_filters( 'tag_archive_meta', '<div class="tag-archive-meta">' . $tag_description . '</div>' );
+			} ?>
 		</header>
 
 		<?php

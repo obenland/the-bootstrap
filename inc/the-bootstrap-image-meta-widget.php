@@ -2,7 +2,8 @@
 /** image-meta-widget.php
  *
  * @author	Konstantin Obenland
- * @since	1.1.0
+ * @package	The Bootstrap
+ * @since	1.1.0 - 08.03.2012
  */
 
 

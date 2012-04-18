@@ -6,8 +6,7 @@
  * Displays all of the <head> section and everything up till <div id="main">
  *
  * @author		Konstantin Obenland
- * @package		WordPress
- * @subpackage	The Bootstrap
+ * @package		The Bootstrap
  * @since		1.0 - 05.02.2012
  */
 
