@@ -72,7 +72,7 @@ add_action( 'after_setup_theme', 'the_bootstrap_setup' );
  * Adds Custom Background support
  *
  * @author	Konstantin Obenland
- * @since	1.2.5 - 13.04.2012
+ * @since	1.2.5 - 11.04.2012
  *
  * @return	void
  */

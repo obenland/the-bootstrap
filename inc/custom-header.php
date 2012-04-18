@@ -21,6 +21,7 @@
 function the_bootstrap_custom_header_setup() {
 	$args = apply_filters( 'the_bootstrap_custom_header_args',  array(
 		'default-image'				=>	'',
+
 		// The height and width of your custom header.
 		// Add a filter to the_bootstrap_header_image_width and the_bootstrap_header_image_height to change these values.
 		'width'						=>	apply_filters( 'the_bootstrap_header_image_width', 1170 ),
@@ -40,10 +41,10 @@ function the_bootstrap_custom_header_setup() {
 	
 	if ( version_compare( get_bloginfo( 'version' ), '3.3.1', '<=' ) ) {
 		// Compat: Versions of WordPress prior to 3.4.
-		define( 'HEADER_TEXTCOLOR',    $args['default-text-color'] );
-		define( 'HEADER_IMAGE',        $args['default-image'] );
-		define( 'HEADER_IMAGE_WIDTH',  $args['width'] );
-		define( 'HEADER_IMAGE_HEIGHT', $args['height'] );
+		define( 'HEADER_TEXTCOLOR',		$args['default-text-color'] );
+		define( 'HEADER_IMAGE',			$args['default-image'] );
+		define( 'HEADER_IMAGE_WIDTH',	$args['width'] );
+		define( 'HEADER_IMAGE_HEIGHT',	$args['height'] );
 		add_custom_image_header( $args['wp-head-callback'], $args['admin-head-callback'], $args['admin-preview-callback'] );
 	}
 }
