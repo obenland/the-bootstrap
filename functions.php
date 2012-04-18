@@ -610,11 +610,11 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 	// We're trusting author input, so let's at least make sure it looks like a valid orderby statement
 	if ( isset( $attr['orderby'] ) ) {
 		$attr['orderby'] = sanitize_sql_orderby( $attr['orderby'] );
-		if ( !$attr['orderby'] )
+		if ( ! $attr['orderby'] )
 			unset( $attr['orderby'] );
 	}
 
-	extract(shortcode_atts(array(
+	extract( shortcode_atts( array(
 		'order'			=>	'ASC',
 		'orderby'		=>	'menu_order ID',
 		'id'			=>	$post->ID,
@@ -625,57 +625,57 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 		'size'			=>	'thumbnail',
 		'include'		=>	'',
 		'exclude'		=>	''
-	), $attr));
+	), $attr ) );
 
 
 	$id = intval($id);
 	if ( 'RAND' == $order )
-	$orderby = 'none';
+		$orderby = 'none';
 
-	if ( !empty($include) ) {
+	if ( $include ) {
 		$include = preg_replace( '/[^0-9,]+/', '', $include );
 		$_attachments = get_posts( array(
-		'include'			=>	$include,
-		'post_status'		=>	'inherit',
-		'post_type'			=>	'attachment',
-		'post_mime_type'	=>	'image',
-		'order'				=>	$order,
-		'orderby'			=>	$orderby
+			'include'			=>	$include,
+			'post_status'		=>	'inherit',
+			'post_type'			=>	'attachment',
+			'post_mime_type'	=>	'image',
+			'order'				=>	$order,
+			'orderby'			=>	$orderby
 		) );
 
 		$attachments = array();
 		foreach ( $_attachments as $key => $val ) {
 			$attachments[$val->ID] = $_attachments[$key];
 		}
-	} elseif ( !empty($exclude) ) {
+	} elseif ( $exclude ) {
 		$exclude = preg_replace( '/[^0-9,]+/', '', $exclude );
 		$attachments = get_children( array(
-		'post_parent'		=>	$id,
-		'exclude'			=>	$exclude,
-		'post_status'		=>	'inherit',
-		'post_type'			=>	'attachment',
-		'post_mime_type'	=>	'image',
-		'order'				=>	$order,
-		'orderby'			=>	$orderby
+			'post_parent'		=>	$id,
+			'exclude'			=>	$exclude,
+			'post_status'		=>	'inherit',
+			'post_type'			=>	'attachment',
+			'post_mime_type'	=>	'image',
+			'order'				=>	$order,
+			'orderby'			=>	$orderby
 		) );
 	} else {
 		$attachments = get_children( array(
-		'post_parent'		=>	$id,
-		'post_status'		=>	'inherit',
-		'post_type'			=>	'attachment',
-		'post_mime_type'	=>	'image',
-		'order'				=>	$order,
-		'orderby'			=>	$orderby
+			'post_parent'		=>	$id,
+			'post_status'		=>	'inherit',
+			'post_type'			=>	'attachment',
+			'post_mime_type'	=>	'image',
+			'order'				=>	$order,
+			'orderby'			=>	$orderby
 		) );
 	}
 
 	if ( empty($attachments) )
-		return '';
+		return;
 
 	if ( is_feed() ) {
 		$output = "\n";
 		foreach ( $attachments as $att_id => $attachment )
-		$output .= wp_get_attachment_link( $att_id, $size, true ) . "\n";
+			$output .= wp_get_attachment_link( $att_id, $size, true ) . "\n";
 		return $output;
 	}
 
@@ -683,43 +683,37 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 	$captiontag	=	tag_escape( $captiontag );
 	$columns	=	intval( $columns );
 	$itemwidth	=	($columns > 0) ? floor( 100/$columns ) : 100;
-	$float		=	(is_rtl())? 'right' : 'left';
+	$float		=	(is_rtl()) ? 'right' : 'left';
 
-	$selector = "gallery-{$instance}";
+	$selector	=	"gallery-{$instance}";
 
-	$size_class = sanitize_html_class( $size );
-	$output = "<ul id='$selector' class='gallery galleryid-{$id} gallery-columns-{$columns} gallery-size-{$size_class} thumbnails'>";
+	$size_class	=	sanitize_html_class( $size );
+	$output		=	"<ul id='$selector' class='gallery galleryid-{$id} gallery-columns-{$columns} gallery-size-{$size_class} thumbnails'>";
 
 	$i = 0;
 	foreach ( $attachments as $id => $attachment ) {
-		$comments = get_comments(array(
-		'post_id'	=>	$id,
-		'count'		=>	true,
-		'type'		=>	'comment',
-		'status'	=>	'approve'
-		));
-			
-		$link = isset($attr['link']) && 'file' == $attr['link'] ? wp_get_attachment_link($id, $size) : wp_get_attachment_link($id, $size, true);
+		$comments = get_comments( array(
+			'post_id'	=>	$id,
+			'count'		=>	true,
+			'type'		=>	'comment',
+			'status'	=>	'approve'
+		) );
+		
+		$link = wp_get_attachment_link( $id, $size, ! ( isset($attr['link']) AND 'file' == $attr['link'] ) );
 		
 		$clear_class = '';
-		if (  $i % $columns == 0 ) {
+		if ( 0 == $i % $columns ) {
 			$clear_class = ' style="clear:both;"';
 		}
 		
 		$output .= "<li class='span2'{$clear_class}><{$itemtag} class='gallery-item'>";
-		$output .= "
-		<{$icontag} class='gallery-icon'>
-		$link
-		</{$icontag}>\n";
+		$output .= "<{$icontag} class='gallery-icon'>{$link}</{$icontag}>\n";
 			
 		if ( $captiontag AND (0 < $comments OR trim($attachment->post_excerpt)) ) {
 			$comments	=	( 0 < $comments ) ? sprintf( _n('%d comment', '%d comments', $comments, 'the-bootstrap'), $comments ) : '';
 			$excerpt	=	wptexturize( $attachment->post_excerpt );
 			$out		=	($comments AND $excerpt) ? " $excerpt <br /> $comments " : " $excerpt$comments ";
-			$output .= "
-			<{$captiontag} class='wp-caption-text gallery-caption'>
-			{$out}
-			</{$captiontag}>\n";
+			$output		.=	"<{$captiontag} class='wp-caption-text gallery-caption'>{$out}</{$captiontag}>\n";
 		}
 		$output .= "</{$itemtag}></li>\n";
 		$i++;
