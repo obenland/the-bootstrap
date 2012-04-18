@@ -345,13 +345,13 @@ add_filter( 'wp_page_menu_args', 'the_bootstrap_page_menu_args' );
  * @return	string
  */
 function the_bootstrap_enhanced_image_navigation( $url, $id ) {
-    if ( ! is_attachment() AND ! wp_attachment_is_image( $id ) )
-        return $url;
- 
-    $image = get_post( $id );
-    if ( $image->post_parent AND $image->post_parent != $id )
-        $url .= '#primary';
- 
+    
+	if ( is_attachment() AND wp_attachment_is_image( $id ) ) {
+		$image = get_post( $id );
+		if ( $image->post_parent AND $image->post_parent != $id )
+			$url .= '#primary';
+    }
+    
     return $url;
 }
 add_filter( 'attachment_link', 'the_bootstrap_enhanced_image_navigation', 10, 2 );
@@ -562,7 +562,7 @@ add_filter( 'comment_form_field_url', 'the_bootstrap_comment_form_field_url');
  *
  * @return	string
  */
-function the_bootstrap_get_attachment_link( $link, $id, $size, $permalink, $icon, $text) {
+function the_bootstrap_get_attachment_link( $link, $id, $size, $permalink, $icon, $text ) {
 	if ( ! $text ) {
 		$link	=	str_replace( '<a ', '<a class="thumbnail" ', $link );
 	}
