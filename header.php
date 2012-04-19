@@ -67,7 +67,7 @@
 										<span class="icon-bar"></span>
 										<span class="icon-bar"></span>
 									</a>
-									<?php if ( the_bootstrap_get_theme_options()->navbar_site_name ) : ?>
+									<?php if ( the_bootstrap_options()->navbar_site_name ) : ?>
 									<span class="brand"><?php bloginfo( 'name' ); ?></span>
 									<?php endif;?>
 									<div class="nav-collapse">
@@ -76,7 +76,7 @@
 											'menu_class'		=>	'nav',
 											'depth'				=>	2
 										) ); 
-										if ( the_bootstrap_get_theme_options()->navbar_searchform ) : ?>
+										if ( the_bootstrap_options()->navbar_searchform ) : ?>
 									    <form id="searchform" class="navbar-search pull-right" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 									    	<label for="s" class="assistive-text hidden"><?php _e( 'Search', 'the-bootstrap' ); ?></label>
 									    	<input type="search" class="search-query" name="s" id="s" placeholder="<?php esc_attr_e( 'Search', 'the-bootstrap' ); ?>" />

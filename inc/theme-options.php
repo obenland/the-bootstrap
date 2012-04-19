@@ -11,6 +11,27 @@
 
 
 /**
+ * Add theme options page to the admin menu.
+ *
+ * @author	Automattic
+ * @since	1.3.0 - 06.04.2012
+ *
+ * @return	void
+ */
+function the_bootstrap_theme_options_add_page() {
+	$theme_page = add_theme_page(
+		__( 'Theme Options', 'the-bootstrap' ),		// Name of page
+		__( 'Theme Options', 'the-bootstrap' ),		// Label in menu
+		'edit_theme_options',						// Capability required
+		'theme_options',							// Menu slug, used to uniquely identify the page
+		'the_bootstrap_theme_options_render_page'	// Function that renders the options page
+	);
+	add_action( "admin_print_styles-{$theme_page}", 'the_bootstrap_admin_enqueue_scripts' );
+}
+add_action( 'admin_menu', 'the_bootstrap_theme_options_add_page' );
+
+
+/**
  * Properly enqueue styles for theme options page.
  * 
  * @author	Automattic
@@ -19,9 +40,8 @@
  * @return	void
  */
 function the_bootstrap_admin_enqueue_scripts( $hook_suffix ) {
-	wp_enqueue_style( 'the-bootstrap-theme-options', get_template_directory_uri() . '/inc/theme-options.css', false, '1.3.0' );
+	wp_enqueue_style( 'the-bootstrap-theme-options', get_template_directory_uri() . '/css/theme-options.css', false, '1.3.0' );
 }
-add_action( 'admin_print_styles-appearance_page_theme_options', 'the_bootstrap_admin_enqueue_scripts' );
 
 
 /**
@@ -44,7 +64,7 @@ function the_bootstrap_theme_options_init() {
 
 	register_setting(
 		'the_bootstrap_options',				// Options group, see settings_fields() call in the_bootstrap_theme_options_render_page()
-		'the_bootstrap_theme_options',			// Database option, see the_bootstrap_get_theme_options()
+		'the_bootstrap_theme_options',			// Database option, see the_bootstrap_options()
 		'the_bootstrap_theme_options_validate'	// The sanitization callback, see the_bootstrap_theme_options_validate()
 	);
 
@@ -83,26 +103,6 @@ add_filter( 'option_page_capability_the_bootstrap_options', 'the_bootstrap_optio
 
 
 /**
- * Add theme options page to the admin menu.
- *
- * @author	Automattic
- * @since	1.3.0 - 06.04.2012
- * 
- * @return	void
- */
-function the_bootstrap_theme_options_add_page() {
-	$theme_page = add_theme_page(
-		__( 'Theme Options', 'the-bootstrap' ),		// Name of page
-		__( 'Theme Options', 'the-bootstrap' ),		// Label in menu
-		'edit_theme_options',						// Capability required
-		'theme_options',							// Menu slug, used to uniquely identify the page
-		'the_bootstrap_theme_options_render_page'	// Function that renders the options page
-	);
-}
-add_action( 'admin_menu', 'the_bootstrap_theme_options_add_page' );
-
-
-/**
  * Add theme options page to the admin bar.
  *
  * @author	Konstantin Obenland
@@ -133,7 +133,7 @@ add_action( 'admin_bar_menu', 'the_bootstrap_admin_bar_menu', 61 ); //Appearance
  *
  * @return	stdClass	Theme Options
  */
-function the_bootstrap_get_theme_options() {
+function the_bootstrap_options() {
 	return (object) get_option( 'the_bootstrap_theme_options', the_bootstrap_get_default_theme_options() );
 }
 
@@ -148,7 +148,7 @@ function the_bootstrap_get_theme_options() {
  */
 function the_bootstrap_get_default_theme_options() {
 	$default_theme_options	=	array(
-		'theme_layout'	=>	'content-sidebar',
+		'theme_layout'		=>	'content-sidebar',
 		'navbar_site_name'	=>	false,
 		'navbar_searchform'	=>	true
 	);
@@ -193,7 +193,7 @@ function the_bootstrap_settings_field_layout() {
 	foreach ( the_bootstrap_layouts() as $value => $layout ) {
 		?>
 		<label class="image-radio-option">
-			<input type="radio" name="the_bootstrap_theme_options[theme_layout]" value="<?php echo esc_attr( $value ); ?>" <?php checked( the_bootstrap_get_theme_options()->theme_layout, $value ); ?> />
+			<input type="radio" name="the_bootstrap_theme_options[theme_layout]" value="<?php echo esc_attr( $value ); ?>" <?php checked( the_bootstrap_options()->theme_layout, $value ); ?> />
 			<span class="image-radio-label">
 				<img src="<?php echo esc_url( $layout['thumbnail'] ); ?>" width="136" height="122" alt="" />
 				<span class="description"><?php echo $layout['label']; ?></span>
@@ -215,11 +215,11 @@ function the_bootstrap_settings_field_layout() {
 function the_bootstrap_settings_field_navbar() {
 	?>
 	<label for="navbar-site-name">
-		<input type="checkbox" name="the_bootstrap_theme_options[navbar_site_name]" id="navbar-site-name" value="1" <?php checked( the_bootstrap_get_theme_options()->navbar_site_name ); ?> />
+		<input type="checkbox" name="the_bootstrap_theme_options[navbar_site_name]" id="navbar-site-name" value="1" <?php checked( the_bootstrap_options()->navbar_site_name ); ?> />
 		<?php _e( 'Add site name to navigation bar.', 'the-bootstrap' );  ?>
 	</label><br />
 	<label for="navbar-searchform">
-		<input type="checkbox" name="the_bootstrap_theme_options[navbar_searchform]" id="navbar-searchform" value="1" <?php checked( the_bootstrap_get_theme_options()->navbar_searchform ); ?> />
+		<input type="checkbox" name="the_bootstrap_theme_options[navbar_searchform]" id="navbar-searchform" value="1" <?php checked( the_bootstrap_options()->navbar_searchform ); ?> />
 		<?php _e( 'Add searchform to navigation bar.', 'the-bootstrap' );  ?>
 	</label>
 	<?php
@@ -242,14 +242,13 @@ function the_bootstrap_theme_options_render_page() {
 		<?php settings_errors(); ?>
 
 		<div id="poststuff">
-			<div id="post-body" class="the-bootstrap columns-2">
+			<div id="post-body" class="obenland-wp columns-2">
 				<div id="post-body-content">
 					<form method="post" action="options.php">
 						<?php
-							settings_fields( 'the_bootstrap_options' );
-							do_settings_sections( 'theme_options' );
-							submit_button();
-						?>
+						settings_fields( 'the_bootstrap_options' );
+						do_settings_sections( 'theme_options' );
+						submit_button(); ?>
 					</form>
 				</div>
 				<div id="postbox-container-1">
@@ -300,8 +299,9 @@ function the_bootstrap_theme_options_validate( $input ) {
  * 
  * Props Joost de Valk, as this is almost entirely from his awesome WordPress
  * SEO Plugin
+ * @see		http://plugins.svn.wordpress.org/wordpress-seo/tags/1.1.5/admin/class-config.php
  *
- * @author	Konstantin Obenland
+ * @author	Joost de Valk, Konstantin Obenland
  * @since	1.3.0 - 06.04.2012
  *
  * @return	void
@@ -315,7 +315,7 @@ function the_bootstrap_donate_box() {
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 				<input type="hidden" name="cmd" value="_s-xclick">
 				<input type="hidden" name="hosted_button_id" value="542W6XT4PLT4L">
-				<input type="image" src="https://www.paypalobjects.com/<?php echo get_locale(); ?>/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal">
+				<input type="image" src="https://www.paypalobjects.com/<?php echo get_locale(); ?>/i/btn/btn_donate_LG.gif" name="submit" alt="PayPal">
 				<img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
 			</form>
 			<p><?php _e( 'Or you could:', 'the-bootstrap' ); ?></p>
@@ -335,8 +335,9 @@ add_action( 'the_bootstrap_side_info_column', 'the_bootstrap_donate_box', 1 );
  * 
  * Props Joost de Valk, as this is almost entirely from his awesome WordPress
  * SEO Plugin
+ * @see		http://plugins.svn.wordpress.org/wordpress-seo/tags/1.1.5/admin/class-config.php
  *
- * @author	Konstantin Obenland
+ * @author	Joost de Valk, Konstantin Obenland
  * @since	1.3.0 - 06.04.2012
  *
  * @return	void
@@ -412,7 +413,7 @@ function _the_bootstrap_fetch_feed( $feed_url ) {
  * @return	void
  */
 function the_bootstrap_layout_classes( $existing_classes ) {
-	$current_layout	=	the_bootstrap_get_theme_options()->theme_layout;
+	$current_layout	=	the_bootstrap_options()->theme_layout;
 
 	$classes = array( $current_layout );
 	$classes = apply_filters( 'the_bootstrap_layout_classes', $classes, $current_layout );
