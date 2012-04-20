@@ -34,22 +34,20 @@ the_post();
 	<div id="content" role="main">
 
 		<nav id="nav-single" class="well clearfix">
-			<p class="gallery-link alignleft">
+			<span class="gallery-link pull-left">
 				<a href="<?php echo get_permalink( $post->post_parent ); ?>">
-				<?php
-					printf(
-						'&laquo; %1$s (%2$s)',
-						get_the_title($post->post_parent),
-						sprintf(
-							'%d %s',
-							$total_images,
-							_n('image', 'images', $total_images, 'the-bootstrap')
-						)
-					);
-				?>
+				<?php printf(
+					'&laquo; %1$s (%2$s)',
+					get_the_title($post->post_parent),
+					sprintf(
+						'%d %s',
+						$total_images,
+						_n('image', 'images', $total_images, 'the-bootstrap')
+					)
+				); ?>
 				</a>
-			</p>
-			<p class="nav-links alignright">
+			</span>
+			<span class="nav-links pull-right">
 				<?php
 				edit_post_link( __( 'Edit', 'the-bootstrap' ), ' <span class="edit-link label">', '</span><span class="sep">&nbsp;</span>' );
 				$reply	=	__( 'Leave a comment', 'the-bootstrap' );
@@ -59,7 +57,7 @@ the_post();
 				if ( isset($attachments[$k+1]) )
 					echo ' &mdash; <a href="' . get_permalink( $attachments[$k+1]->ID ) . '">' . __( 'Next Photo &raquo;', 'the-bootstrap' ) . '</a>';
 				?>
-			</p>
+			</span>
 		</nav><!-- #nav-single -->
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
