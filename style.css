@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6, .clear {
 #page {
 	background-color: #FFFFFF;
 	margin-right: -20px;
-	padding: 20px 0;
+	padding: 14px 0 0;
 }
 
 #branding {	
@@ -202,6 +202,10 @@ img.wp-smiley {
 	line-height: 16px;
 	padding-left: 20px;
 	text-decoration: none;
+}
+
+#site-generator.footer-nav-menu a {
+	margin-top: 10px;
 }
 
 table .label {
@@ -343,7 +347,7 @@ a img.alignleft {
 		margin: 0;
 		padding: 10px;
 	}
-	#site-generator {
+	#site-generator, #site-generator.footer-nav-menu a {
 		float: none;
 		margin-top: 5px;
 	}
@@ -354,6 +358,7 @@ a img.alignleft {
 @media (min-width: 1200px) {
 	#page {
 		margin-right: -30px;
+		padding: 24px 0 10px;
 	}
 	.wp-caption {
 		display: table;

@@ -33,6 +33,7 @@ RSS Icon: [http://www.icojam.com/blog/?p=130 Public Domain]
 I will be more than happy to update the Theme with new locales, as soon as I receive them!
 Currently available in:
 
+* Dutch
 * English
 * French
 * German
@@ -51,8 +52,13 @@ None asked yet.
 
 == Changelog ==
 
+= 1.2.7 =
+* Changed default column count for galleries to 4
+
 = 1.2.6 =
 * Added Dutch translation. Props m038
+* Changed version determination implementation to cope with WP 3.3.2 security release. Thank you Chip Bennett for you quick help!
+* Code cleanup and formatting
 
 = 1.2.5 =
 * Added Custom Image Header support for pre-3.4

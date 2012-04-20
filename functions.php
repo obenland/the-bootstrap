@@ -625,7 +625,7 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 		'itemtag'		=>	'figure',
 		'icontag'		=>	'div',
 		'captiontag'	=>	'figcaption',
-		'columns'		=>	3,
+		'columns'		=>	4,
 		'size'			=>	'thumbnail',
 		'include'		=>	'',
 		'exclude'		=>	''
@@ -686,7 +686,6 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 	$itemtag	=	tag_escape( $itemtag );
 	$captiontag	=	tag_escape( $captiontag );
 	$columns	=	intval( $columns );
-	$itemwidth	=	($columns > 0) ? floor( 100/$columns ) : 100;
 	$float		=	(is_rtl()) ? 'right' : 'left';
 
 	$selector	=	"gallery-{$instance}";
@@ -704,13 +703,9 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 		) );
 		
 		$link = wp_get_attachment_link( $id, $size, ! ( isset($attr['link']) AND 'file' == $attr['link'] ) );
+		$clear_class = ( 0 == $i++ % $columns ) ? ' clear' : '';
 		
-		$clear_class = '';
-		if ( 0 == $i % $columns ) {
-			$clear_class = ' style="clear:both;"';
-		}
-		
-		$output .= "<li class='span2'{$clear_class}><{$itemtag} class='gallery-item'>";
+		$output .= "<li class='span2{$clear_class}'><{$itemtag} class='gallery-item'>";
 		$output .= "<{$icontag} class='gallery-icon'>{$link}</{$icontag}>\n";
 			
 		if ( $captiontag AND (0 < $comments OR trim($attachment->post_excerpt)) ) {
@@ -720,7 +715,6 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 			$output		.=	"<{$captiontag} class='wp-caption-text gallery-caption'>{$out}</{$captiontag}>\n";
 		}
 		$output .= "</{$itemtag}></li>\n";
-		$i++;
 	}
 	$output .= "</ul>\n";
 	
