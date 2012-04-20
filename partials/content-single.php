@@ -4,17 +4,14 @@
  * The template for displaying content in the single.php template
  *
  * @author		Konstantin Obenland
- * @package		WordPress
- * @subpackage	The Bootstrap
+ * @package		The Bootstrap
  * @since		1.0.0 - 07.02.2012
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="page-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<div class="entry-meta">
-			<?php the_bootstrap_posted_on(); ?>
-		</div><!-- .entry-meta -->
+		<div class="entry-meta"><?php the_bootstrap_posted_on(); ?></div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
 	<div class="entry-content clearfix">

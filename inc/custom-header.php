@@ -5,8 +5,7 @@
  * http://codex.wordpress.org/Custom_Headers
  * 
  * @author		Automattic, Konstantin Obenland
- * @package		WordPress
- * @subpackage	The Bootstrap
+ * @package		The Bootstrap
  * @since		1.2.0 - 05.04.2012
  */
 
@@ -21,6 +20,7 @@
 function the_bootstrap_custom_header_setup() {
 	$args = apply_filters( 'the_bootstrap_custom_header_args',  array(
 		'default-image'				=>	'',
+
 		// The height and width of your custom header.
 		// Add a filter to the_bootstrap_header_image_width and the_bootstrap_header_image_height to change these values.
 		'width'						=>	apply_filters( 'the_bootstrap_header_image_width', 1170 ),
@@ -38,12 +38,12 @@ function the_bootstrap_custom_header_setup() {
 	
 	add_theme_support( 'custom-header', $args );
 	
-	if ( version_compare( get_bloginfo( 'version' ), '3.3.1', '<=' ) ) {
+	if ( ! function_exists( 'wp_get_theme' ) ) {
 		// Compat: Versions of WordPress prior to 3.4.
-		define( 'HEADER_TEXTCOLOR',    $args['default-text-color'] );
-		define( 'HEADER_IMAGE',        $args['default-image'] );
-		define( 'HEADER_IMAGE_WIDTH',  $args['width'] );
-		define( 'HEADER_IMAGE_HEIGHT', $args['height'] );
+		define( 'HEADER_TEXTCOLOR',		$args['default-text-color'] );
+		define( 'HEADER_IMAGE',			$args['default-image'] );
+		define( 'HEADER_IMAGE_WIDTH',	$args['width'] );
+		define( 'HEADER_IMAGE_HEIGHT',	$args['height'] );
 		add_custom_image_header( $args['wp-head-callback'], $args['admin-head-callback'], $args['admin-preview-callback'] );
 	}
 }
@@ -157,7 +157,7 @@ if ( ! function_exists( 'get_custom_header' ) ) :
 /**
  * Get the header image data.
  *
- * @author	Automattic
+ * @author	WordPress.org
  * @since	1.2.5 - 11.04.2012
  *
  * @return	object

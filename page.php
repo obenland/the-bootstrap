@@ -9,8 +9,7 @@
  * different template.
  *
  * @author		Konstantin Obenland
- * @package		WordPress
- * @subpackage	The Bootstrap
+ * @package		The Bootstrap
  * @since		1.0.0 - 07.02.2012
  */
 

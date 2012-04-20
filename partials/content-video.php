@@ -6,8 +6,7 @@
  * Learn more: http://codex.wordpress.org/Post_Formats
  *
  * @author		Konstantin Obenland
- * @package		WordPress
- * @subpackage	The Bootstrap
+ * @package		The Bootstrap
  * @since		1.0.1 - 07.03.2012
  */
 

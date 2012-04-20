@@ -4,8 +4,7 @@
  * The default template for displaying content
  *
  * @author		Konstantin Obenland
- * @package		WordPress
- * @subpackage	The Bootstrap
+ * @package		The Bootstrap
  * @since		1.0.0 - 05.02.2012
  */
 ?>

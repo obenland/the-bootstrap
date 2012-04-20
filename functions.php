@@ -2,8 +2,7 @@
 /** functions.php
  *
  * @author		Konstantin Obenland
- * @package		WordPress
- * @subpackage	The Bootstrap
+ * @package		The Bootstrap
  * @since		1.0.0 - 05.02.2012
  */
 
@@ -77,7 +76,7 @@ add_action( 'after_setup_theme', 'the_bootstrap_setup' );
  * Adds Custom Background support
  *
  * @author	Konstantin Obenland
- * @since	1.2.5 - 13.04.2012
+ * @since	1.2.5 - 11.04.2012
  *
  * @return	void
  */
@@ -89,7 +88,7 @@ function the_bootstrap_custom_background_setup() {
 	
 	add_theme_support( 'custom-background', $args );
 	
-	if ( version_compare( get_bloginfo( 'version' ), '3.3.1', '<=' ) ) {
+	if ( ! function_exists( 'wp_get_theme' ) ) {
 		// Compat: Versions of WordPress prior to 3.4.
 		define( 'BACKGROUND_COLOR', $args['default-color'] );
 		add_custom_background();
@@ -350,13 +349,13 @@ add_filter( 'wp_page_menu_args', 'the_bootstrap_page_menu_args' );
  * @return	string
  */
 function the_bootstrap_enhanced_image_navigation( $url, $id ) {
-    if ( ! is_attachment() AND ! wp_attachment_is_image( $id ) )
-        return $url;
- 
-    $image = get_post( $id );
-    if ( $image->post_parent AND $image->post_parent != $id )
-        $url .= '#primary';
- 
+    
+	if ( is_attachment() AND wp_attachment_is_image( $id ) ) {
+		$image = get_post( $id );
+		if ( $image->post_parent AND $image->post_parent != $id )
+			$url .= '#primary';
+    }
+    
     return $url;
 }
 add_filter( 'attachment_link', 'the_bootstrap_enhanced_image_navigation', 10, 2 );
@@ -567,7 +566,7 @@ add_filter( 'comment_form_field_url', 'the_bootstrap_comment_form_field_url');
  *
  * @return	string
  */
-function the_bootstrap_get_attachment_link( $link, $id, $size, $permalink, $icon, $text) {
+function the_bootstrap_get_attachment_link( $link, $id, $size, $permalink, $icon, $text ) {
 	if ( ! $text ) {
 		$link	=	str_replace( '<a ', '<a class="thumbnail" ', $link );
 	}
@@ -615,11 +614,11 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 	// We're trusting author input, so let's at least make sure it looks like a valid orderby statement
 	if ( isset( $attr['orderby'] ) ) {
 		$attr['orderby'] = sanitize_sql_orderby( $attr['orderby'] );
-		if ( !$attr['orderby'] )
+		if ( ! $attr['orderby'] )
 			unset( $attr['orderby'] );
 	}
 
-	extract(shortcode_atts(array(
+	extract( shortcode_atts( array(
 		'order'			=>	'ASC',
 		'orderby'		=>	'menu_order ID',
 		'id'			=>	$post->ID,
@@ -630,57 +629,57 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 		'size'			=>	'thumbnail',
 		'include'		=>	'',
 		'exclude'		=>	''
-	), $attr));
+	), $attr ) );
 
 
 	$id = intval($id);
 	if ( 'RAND' == $order )
-	$orderby = 'none';
+		$orderby = 'none';
 
-	if ( !empty($include) ) {
+	if ( $include ) {
 		$include = preg_replace( '/[^0-9,]+/', '', $include );
 		$_attachments = get_posts( array(
-		'include'			=>	$include,
-		'post_status'		=>	'inherit',
-		'post_type'			=>	'attachment',
-		'post_mime_type'	=>	'image',
-		'order'				=>	$order,
-		'orderby'			=>	$orderby
+			'include'			=>	$include,
+			'post_status'		=>	'inherit',
+			'post_type'			=>	'attachment',
+			'post_mime_type'	=>	'image',
+			'order'				=>	$order,
+			'orderby'			=>	$orderby
 		) );
 
 		$attachments = array();
 		foreach ( $_attachments as $key => $val ) {
 			$attachments[$val->ID] = $_attachments[$key];
 		}
-	} elseif ( !empty($exclude) ) {
+	} elseif ( $exclude ) {
 		$exclude = preg_replace( '/[^0-9,]+/', '', $exclude );
 		$attachments = get_children( array(
-		'post_parent'		=>	$id,
-		'exclude'			=>	$exclude,
-		'post_status'		=>	'inherit',
-		'post_type'			=>	'attachment',
-		'post_mime_type'	=>	'image',
-		'order'				=>	$order,
-		'orderby'			=>	$orderby
+			'post_parent'		=>	$id,
+			'exclude'			=>	$exclude,
+			'post_status'		=>	'inherit',
+			'post_type'			=>	'attachment',
+			'post_mime_type'	=>	'image',
+			'order'				=>	$order,
+			'orderby'			=>	$orderby
 		) );
 	} else {
 		$attachments = get_children( array(
-		'post_parent'		=>	$id,
-		'post_status'		=>	'inherit',
-		'post_type'			=>	'attachment',
-		'post_mime_type'	=>	'image',
-		'order'				=>	$order,
-		'orderby'			=>	$orderby
+			'post_parent'		=>	$id,
+			'post_status'		=>	'inherit',
+			'post_type'			=>	'attachment',
+			'post_mime_type'	=>	'image',
+			'order'				=>	$order,
+			'orderby'			=>	$orderby
 		) );
 	}
 
 	if ( empty($attachments) )
-		return '';
+		return;
 
 	if ( is_feed() ) {
 		$output = "\n";
 		foreach ( $attachments as $att_id => $attachment )
-		$output .= wp_get_attachment_link( $att_id, $size, true ) . "\n";
+			$output .= wp_get_attachment_link( $att_id, $size, true ) . "\n";
 		return $output;
 	}
 
@@ -688,43 +687,37 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 	$captiontag	=	tag_escape( $captiontag );
 	$columns	=	intval( $columns );
 	$itemwidth	=	($columns > 0) ? floor( 100/$columns ) : 100;
-	$float		=	(is_rtl())? 'right' : 'left';
+	$float		=	(is_rtl()) ? 'right' : 'left';
 
-	$selector = "gallery-{$instance}";
+	$selector	=	"gallery-{$instance}";
 
-	$size_class = sanitize_html_class( $size );
-	$output = "<ul id='$selector' class='gallery galleryid-{$id} gallery-columns-{$columns} gallery-size-{$size_class} thumbnails'>";
+	$size_class	=	sanitize_html_class( $size );
+	$output		=	"<ul id='$selector' class='gallery galleryid-{$id} gallery-columns-{$columns} gallery-size-{$size_class} thumbnails'>";
 
 	$i = 0;
 	foreach ( $attachments as $id => $attachment ) {
-		$comments = get_comments(array(
-		'post_id'	=>	$id,
-		'count'		=>	true,
-		'type'		=>	'comment',
-		'status'	=>	'approve'
-		));
-			
-		$link = isset($attr['link']) && 'file' == $attr['link'] ? wp_get_attachment_link($id, $size) : wp_get_attachment_link($id, $size, true);
+		$comments = get_comments( array(
+			'post_id'	=>	$id,
+			'count'		=>	true,
+			'type'		=>	'comment',
+			'status'	=>	'approve'
+		) );
+		
+		$link = wp_get_attachment_link( $id, $size, ! ( isset($attr['link']) AND 'file' == $attr['link'] ) );
 		
 		$clear_class = '';
-		if (  $i % $columns == 0 ) {
+		if ( 0 == $i % $columns ) {
 			$clear_class = ' style="clear:both;"';
 		}
 		
 		$output .= "<li class='span2'{$clear_class}><{$itemtag} class='gallery-item'>";
-		$output .= "
-		<{$icontag} class='gallery-icon'>
-		$link
-		</{$icontag}>\n";
+		$output .= "<{$icontag} class='gallery-icon'>{$link}</{$icontag}>\n";
 			
 		if ( $captiontag AND (0 < $comments OR trim($attachment->post_excerpt)) ) {
 			$comments	=	( 0 < $comments ) ? sprintf( _n('%d comment', '%d comments', $comments, 'the-bootstrap'), $comments ) : '';
 			$excerpt	=	wptexturize( $attachment->post_excerpt );
 			$out		=	($comments AND $excerpt) ? " $excerpt <br /> $comments " : " $excerpt$comments ";
-			$output .= "
-			<{$captiontag} class='wp-caption-text gallery-caption'>
-			{$out}
-			</{$captiontag}>\n";
+			$output		.=	"<{$captiontag} class='wp-caption-text gallery-caption'>{$out}</{$captiontag}>\n";
 		}
 		$output .= "</{$itemtag}></li>\n";
 		$i++;
@@ -800,12 +793,12 @@ add_filter( 'the_password_form', 'the_bootstrap_the_password_form' );
  */
 function _the_bootstrap_version() {
 	
-	if ( version_compare( get_bloginfo( 'version' ), '3.3.1', '>' ) ) {
-		$theme_version = wp_get_theme()->get( 'Version' );
+	if ( function_exists( 'wp_get_theme' ) ) {
+		$theme_version	=	wp_get_theme()->get( 'Version' );
 	}
 	else {
-		$theme_data = get_theme_data( get_template_directory() . '/style.css' );
-		$theme_version = $theme_data['Version'];
+		$theme_data		=	get_theme_data( get_template_directory() . '/style.css' );
+		$theme_version	=	$theme_data['Version'];
 	}
 	
 	return $theme_version;

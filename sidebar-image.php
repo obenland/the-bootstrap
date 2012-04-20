@@ -2,8 +2,7 @@
 /** sidebar-image.php
  *
  * @author		Konstantin Obenland
- * @package		WordPress
- * @subpackage	The Bootstrap
+ * @package		The Bootstrap
  * @since		1.0.0	- 05.02.2012
  */
 ?>
@@ -12,7 +11,7 @@
 	if ( ! dynamic_sidebar( 'image' ) ) {
 		the_widget( 'The_Bootstrap_Image_Meta_Widget', array(), array(
 			'before_widget'	=>	'<aside id="the-bootstrap-image-meta" class="widget well the-bootstrap-image-meta">',
-			'after_widget'	=>	"</aside>",
+			'after_widget'	=>	'</aside>',
 			'before_title'	=>	'<h3 class="widget-title">',
 			'after_title'	=>	'</h3>',
 		) );
