@@ -40,7 +40,7 @@ add_action( 'admin_menu', 'the_bootstrap_theme_options_add_page' );
  * @return	void
  */
 function the_bootstrap_admin_enqueue_scripts( $hook_suffix ) {
-	wp_enqueue_style( 'the-bootstrap-theme-options', get_template_directory_uri() . '/css/theme-options.css', false, '1.3.0' );
+	wp_enqueue_style( 'the-bootstrap-theme-options', get_template_directory_uri() . '/css/theme-options.css', false, _the_bootstrap_version() );
 }
 
 
