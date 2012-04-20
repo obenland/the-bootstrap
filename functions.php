@@ -567,10 +567,7 @@ add_filter( 'comment_form_field_url', 'the_bootstrap_comment_form_field_url');
  * @return	string
  */
 function the_bootstrap_get_attachment_link( $link, $id, $size, $permalink, $icon, $text ) {
-	if ( ! $text ) {
-		$link	=	str_replace( '<a ', '<a class="thumbnail" ', $link );
-	}
-	return $link;
+	return ( ! $text ) ? str_replace( '<a ', '<a class="thumbnail" ', $link ) : $link;
 }
 add_filter( 'wp_get_attachment_link', 'the_bootstrap_get_attachment_link', 10, 6 );
 
