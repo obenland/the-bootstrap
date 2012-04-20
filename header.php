@@ -56,7 +56,7 @@
 						<h3 class="assistive-text"><?php _e( 'Main menu', 'the-bootstrap' ); ?></h3>
 						<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'the-bootstrap' ); ?>"><?php _e( 'Skip to primary content', 'the-bootstrap' ); ?></a></div>
 						<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'the-bootstrap' ); ?>"><?php _e( 'Skip to secondary content', 'the-bootstrap' ); ?></a></div>
-						<?php if ( has_nav_menu( 'primary' ) ) : ?>
+						<?php if ( has_nav_menu( 'primary' ) OR the_bootstrap_options()->navbar_site_name OR the_bootstrap_options()->navbar_searchform ) : ?>
 						<div class="navbar">
 							<div class="navbar-inner">
 								<div class="container">
@@ -73,7 +73,8 @@
 										<?php wp_nav_menu( array(
 											'theme_location'	=>	'primary',
 											'menu_class'		=>	'nav',
-											'depth'				=>	2
+											'depth'				=>	2,
+												'fallback_cb'	=>	false,
 										) ); 
 										if ( the_bootstrap_options()->navbar_searchform ) : ?>
 									    <form id="searchform" class="navbar-search pull-right" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
