@@ -4,7 +4,7 @@ Tags:				black, blue, white, light, two-columns, right-sidebar, flexible-width, 
 Donate link:		https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=542W6XT4PLT4L
 Requires at least:	3.0
 Tested up to:		3.4-beta1
-Stable tag:			1.2.6
+Stable tag:			1.2.7
 
 A WordPress Theme based on Bootstrap, from Twitter
 
@@ -30,6 +30,7 @@ The exceptions to this license are as follows:
 I will be more than happy to update the Theme with new locales, as soon as I receive them!
 Currently available in:
 
+* Dutch
 * English
 * French
 * German
@@ -48,8 +49,13 @@ None asked yet.
 
 == Changelog ==
 
+= 1.2.7 =
+* Changed default column count for galleries to 4
+
 = 1.2.6 =
 * Added Dutch translation. Props m038
+* Changed version determination implementation to cope with WP 3.3.2 security release. Thank you Chip Bennett for you quick help!
+* Code cleanup and formatting
 
 = 1.2.5 =
 * Added Custom Image Header support for pre-3.4
