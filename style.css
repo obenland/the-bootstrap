@@ -198,6 +198,10 @@ img.wp-smiley {
 	text-decoration: none;
 }
 
+#site-generator.footer-nav-menu a {
+	margin-top: 10px;
+}
+
 table .label {
 	background-color: transparent;
 	border-radius: none;
@@ -333,7 +337,7 @@ a img.alignleft {
 		margin: 0;
 		padding: 10px;
 	}
-	#site-generator {
+	#site-generator, #site-generator.footer-nav-menu a {
 		float: none;
 		margin-top: 5px;
 	}
