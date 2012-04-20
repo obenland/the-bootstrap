@@ -4,8 +4,7 @@
  * The Bootstrap Theme Options
  *
  * @author		Automattic, Konstantin Obenland
- * @package		WordPress
- * @subpackage	The Bootstrap
+ * @package		The Bootstrap
  * @since		1.3.0 - 06.04.2012
  */
 
