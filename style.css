@@ -119,6 +119,12 @@ article.page {
 /* =Comments
 -------------------------------------------------------------- */
 
+#comments-title {
+	border-bottom: 1px solid #EEEEEE;
+	font-size: 19.5px;
+    margin: 0 0 27px;
+}
+
 #comment,
 .entry-content iframe,
 .entry-content embed {
