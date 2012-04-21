@@ -3,7 +3,7 @@ Contributors:		kobenland
 Tags:				black, blue, white, light, two-columns, right-sidebar, flexible-width, custom-header, custom-background, threaded-comments, translation-ready, microformats, custom-menu, post-formats, sticky-posts
 Donate link:		https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=542W6XT4PLT4L
 Requires at least:	3.0
-Tested up to:		3.4-beta1
+Tested up to:		3.4-beta3
 Stable tag:			1.3.0
 
 A WordPress Theme based on Bootstrap, from Twitter
@@ -24,10 +24,7 @@ Unless otherwise specified, all the theme files, scripts and images are licensed
 The exceptions to this license are as follows:
 * Bootstrap by Twitter is licensed under the GPL-compatible [http://www.apache.org/licenses/LICENSE-2.0 Apache License v2.0]
 * The script html5.js is licensed under MIT
-
-
-Twitter Icon: [https://twitter.com/about/resources/logos]
-RSS Icon: [http://www.icojam.com/blog/?p=130 Public Domain]
+* Twitter Icon: [https://twitter.com/about/resources/logos]
 
 = Translations =
 I will be more than happy to update the Theme with new locales, as soon as I receive them!
@@ -50,6 +47,7 @@ Currently available in:
 
 None asked yet.
 
+
 == Changelog ==
 
 = 1.2.7 =
@@ -57,7 +55,7 @@ None asked yet.
 
 = 1.2.6 =
 * Added Dutch translation. Props m038
-* Changed version determination implementation to cope with WP 3.3.2 security release. Thank you Chip Bennett for you quick help!
+* Changed version determination implementation to cope with WP 3.3.2 security release. Thank you Chip Bennett for taking care of the ticket so quickly!
 * Code cleanup and formatting
 
 = 1.2.5 =
