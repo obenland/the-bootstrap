@@ -154,6 +154,10 @@ article.page {
 /* =Sidebar
 -------------------------------------------------------------- */
 
+#searchform {
+	margin: 0;
+}
+
 .the-bootstrap-image-meta dt,
 .the-bootstrap-image-meta dd {
     float: left;
