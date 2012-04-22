@@ -249,6 +249,7 @@ endif;
  * @since	1.1.0 - 18.03.2012
  *
  * @param	string	$title
+ * @param	string	$sep
  *
  * @return	string
  */
