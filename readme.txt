@@ -54,7 +54,7 @@ None asked yet.
 * Changed default column count for galleries to 4
 * Added Theme Options page
 * Added support for Post Thumbnails. Displayed on posts with the standard post format.
-* Removed post title and added thumbnail look to teh status post format
+* Removed post title and added thumbnail look to the status post format
 
 = 1.2.6 =
 * Added Dutch translation. Props m038
