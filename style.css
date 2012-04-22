@@ -173,6 +173,10 @@ article.page {
 /* =Images
 -------------------------------------------------------------- */
 
+.entry-content .post-thumbnail {
+	margin: 0 20px 20px 0;
+}
+
 .thumbnail > img {
 	width: 100%;
 }

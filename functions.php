@@ -38,6 +38,8 @@ function the_bootstrap_setup() {
 		'video'
 	) );
 	
+	add_theme_support( 'post-thumbnails' );
+	
 	/**
 	 * Custom Theme Options
 	 */
