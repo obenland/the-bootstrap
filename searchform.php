@@ -10,8 +10,10 @@
 ?>
 <form method="get" id="searchform" class="form-search" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 	<label for="s" class="assistive-text hidden"><?php _e( 'Search', 'the-bootstrap' ); ?></label>
-	<input type="search" class="search-query span2" name="s" id="s" placeholder="<?php esc_attr_e( 'Search', 'the-bootstrap' ); ?>" />
-	<input type="submit" class="submit btn btn-primary" name="submit" id="searchsubmit" value="<?php esc_attr_e( 'Go', 'the-bootstrap' ); ?>" />
+	<div class="input-append">
+		<input type="search" placeholder="<?php esc_attr_e( 'Search', 'the-bootstrap' ); ?>" id="s" name="s" class="span2">
+		<button class="btn btn-primary" name="submit" id="searchsubmit" type="submit"><?php _e( 'Go', 'the-bootstrap' ); ?></button>
+   	</div>
 </form>
 <?php
 
