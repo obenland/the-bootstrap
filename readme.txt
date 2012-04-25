@@ -1,6 +1,6 @@
 === The Bootstrap ===
 Contributors:		kobenland
-Tags:				black, blue, white, light, two-columns, right-sidebar, flexible-width, custom-header, custom-background, threaded-comments, translation-ready, microformats, custom-menu, post-formats, sticky-posts
+Tags:				black, blue, white, light, two-columns, left-sidebar, right-sidebar, flexible-width, custom-header, custom-background, threaded-comments, translation-ready, microformats, custom-menu, post-formats, sticky-posts
 Donate link:		https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=542W6XT4PLT4L
 Requires at least:	3.0
 Tested up to:		3.4-beta3
@@ -18,12 +18,13 @@ Please note:
 
 Due to design restrictions in Bootstrap, the navigation menu can only be two levels deep, while parent menu items only serves as a headline for the child menu items and can not be accessed over the navigation menu.
 The Footer Menu is best suitable for short menues with just a few links. It replaces the credits section, once a menu has been assigned to the location. It will hold only top level nav items.
+The Bootstrap does not include the Glyphicon Icon set, which comes with Bootstrap from Twitter, since its license is GPL-incompatible. Themes hosted by the WordPress Theme Repository and all embundled resources must be fully GPL-compatible.
 
 = License =
 Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public Licemse.
 The exceptions to this license are as follows:
 * Bootstrap by Twitter is licensed under the GPL-compatible [http://www.apache.org/licenses/LICENSE-2.0 Apache License v2.0]
-* The script html5.js is licensed under MIT
+* html5shiv is licensed under MIT
 * Twitter Icon: [https://twitter.com/about/resources/logos]
 
 = Translations =
