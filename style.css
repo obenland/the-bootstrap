@@ -165,12 +165,6 @@ article.page {
 	margin: 0;
 }
 
-.the-bootstrap-image-meta dt,
-.the-bootstrap-image-meta dd {
-    float: left;
-    width: 48%;
-}
-
 
 /* =Images
 -------------------------------------------------------------- */
@@ -382,6 +376,14 @@ a img.alignleft {
 	}
 	textarea[class*="span"] {
 		height: auto;
+	}
+}
+@media (min-width: 768px) and (max-width: 979px) {
+	.dl-horizontal dt {
+		width: 85px;
+	}
+	.dl-horizontal dd {
+		margin-left: 95px;
 	}
 }
 @media (min-width: 1200px) {

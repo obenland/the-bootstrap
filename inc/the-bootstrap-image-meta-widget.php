@@ -55,7 +55,7 @@ class The_Bootstrap_Image_Meta_Widget extends WP_Widget {
 			echo $before_widget . $before_title . $title . $after_title;
 			
 			?>
-			<dl class="clearfix">
+			<dl class="dl-horizontal">
 				<?php if ( $image_meta['image_meta']['created_timestamp'] ): ?>
 				<dt><?php _e( 'Created:', 'the-bootstrap' ); ?></dt>
 				<dd><?php echo date_i18n( get_option('date_format'), $image_meta['image_meta']['created_timestamp'] ); ?></dd>
