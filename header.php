@@ -13,21 +13,24 @@
 
 ?>
 <!DOCTYPE html>
-<html class="no-js" <?php language_attributes(); ?>>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" <?php language_attributes(); ?>"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 	<head>
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<title><?php wp_title( '&laquo;', true, 'right' ); ?></title>
-		
+
 		<!--[if lt IE 9]>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 		<![endif]-->
-		
+
 		<?php wp_head(); ?>
 	</head>
-	
+
 	<body <?php body_class(); ?>>
 		<div class="container">
 			<div id="page" class="hfeed row">
@@ -79,12 +82,12 @@
 						</div>
 						<?php endif; ?>
 					</nav><!-- #access -->
-					
+
 					<?php if ( function_exists( 'yoast_breadcrumb' ) ) {
 						yoast_breadcrumb( '<nav id="breadcrumb" class="breadcrumb">', '</nav>' );
 					} ?>
 				</header><!-- #branding --><?php
-			
+
 
 /* End of file header.php */
 /* Location: ./wp-content/themes/the-bootstrap/header.php */
