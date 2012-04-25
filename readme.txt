@@ -57,7 +57,8 @@ None asked yet.
 * Added Theme Options page
 * Added support for Post Thumbnails. Displayed on posts with the standard post format.
 * Removed post title and added thumbnail look to the status post format
-* Added Russian translation. Props Dmitry
+* Added Russian translation. Props serzhenko
+* Updated Dutch translation. Props m038
 * Updated Bootstrap Core to 2.0.3
 
 = 1.2.6 =
