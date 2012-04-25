@@ -95,6 +95,12 @@ h1, h2, h3, h4, h5, h6, .clear {
 #author-info,
 article.post,
 article.page {
+	margin-bottom: 72px;
+}
+
+.single #author-info,
+.single article.post,
+.single article.page {
 	margin-bottom: 54px;
 }
 
