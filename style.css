@@ -186,7 +186,8 @@ header img,
 }
 img[class*="align"],
 img[class*="wp-image-"],
-img[class*="attachment-"] {
+img[class*="attachment-"],
+img[class*="avatar"] {
 	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 }
 
@@ -362,6 +363,20 @@ a img.alignleft {
 	#page {
 		margin: 0;
 		padding: 10px;
+	}
+	.thumbnail[class*="span"],
+	.gallery [class*="span"] .thumbnail {
+		display: table;
+		float: left;
+	}
+	.carousel .item > img {
+		width: 100%;
+	}
+	.thumbnails > li:nth-child(4n+1) {
+		margin-left:0;
+	}
+	.thumbnails [class*="span"] {
+		width: 21%;
 	}
 	.sidebar-content #primary {
 		float: none;
