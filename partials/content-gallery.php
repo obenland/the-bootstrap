@@ -51,7 +51,7 @@
 				</em>
 			</p>
 		</div>
-		<div id="gallery-slider" class="carousel span5">
+		<div id="gallery-slider" class="carousel slide span5">
 
 			<!-- Carousel items -->
 			<div class="carousel-inner">
