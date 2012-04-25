@@ -34,6 +34,7 @@ Currently available in:
 * English
 * French
 * German
+* Russian
 
 
 == Installation ==
@@ -55,6 +56,7 @@ None asked yet.
 * Added Theme Options page
 * Added support for Post Thumbnails. Displayed on posts with the standard post format.
 * Removed post title and added thumbnail look to the status post format
+* Added Russian translation. Props Dmitry
 
 = 1.2.6 =
 * Added Dutch translation. Props m038
@@ -75,7 +77,7 @@ None asked yet.
 * Capsuled version retreiving into its own function to handle WP 3.4 changes
 * Moved template tags in their own file
 * Updated script dependencies
-* Fixed a bug in displaying the carousel. (Props Griden)
+* Fixed a bug in displaying the carousel. Props Griden
 
 = 1.2.3 =
 * Fixed credits output
