@@ -21,8 +21,8 @@ get_header(); ?>
 				
 				<nav id="nav-single" class="pager">
 					<h3 class="assistive-text"><?php _e( 'Post navigation', 'the-bootstrap' ); ?></h3>
-					<span class="next"><?php next_post_link( '%link', __( '<span class="meta-nav">&larr;</span> Next Post', 'the-bootstrap' ) ); ?></span>
-					<span class="previous"><?php previous_post_link( '%link', __( 'Previous Post <span class="meta-nav">&rarr;</span>', 'the-bootstrap' ) ); ?></span>
+					<span class="next"><?php next_post_link( '%link', sprintf( '%1$s <span class="meta-nav">&rarr;</span>', __( 'Next Post', 'the-bootstrap' ) ) ); ?></span>
+					<span class="previous"><?php previous_post_link( '%link', sprintf( '<span class="meta-nav">&larr;</span> %1$s', __( 'Previous Post', 'the-bootstrap' ) ) ); ?></span>
 				</nav><!-- #nav-single -->
 			</div><!-- #content -->
 		</div><!-- #primary -->
