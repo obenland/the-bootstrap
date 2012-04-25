@@ -89,8 +89,8 @@ msgstr "Dit bericht is beveiligd met een wachtwoord. Voer het wachtwoord in om o
 #, php-format
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "Een gedacht voor &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$s gedachten voor &ldquo;%2$s&rdquo;"
+msgstr[0] "Een reactie op &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s reacties op &ldquo;%2$s&rdquo;"
 
 #@ the-bootstrap
 #: comments.php:38
@@ -113,7 +113,7 @@ msgstr "Oudere reacties &larr;"
 #@ the-bootstrap
 #: comments.php:60
 msgid "Comments are closed."
-msgstr "Het is meer mogelijk te reageren."
+msgstr "Het is niet meer mogelijk om te reageren."
 
 #@ the-bootstrap
 #: comments.php:63
@@ -125,13 +125,13 @@ msgstr "Reactie"
 #: comments.php:65
 #, php-format
 msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes: %s"
-msgstr "Je kan de volgende <abbr title=\"HyperText Markup Language\">HTML</abbr> tags en attributen gebruikenJe mag de volgende <abbr title=\"HyperText Markup Language\">HTML</abbr> tags en attributen gebruiken: %s"
+msgstr "U kunt de volgende <abbr title=\"HyperText Markup Language\">HTML</abbr> tags en attributen gebruiken: %s"
 
 #@ the-bootstrap
 #: comments.php:69
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
-msgstr "Je moet <a href=\"%s\">ingelogd</a> zijn, om te kunnen reageren."
+msgstr "U moet <a href=\"%s\">ingelogd</a> zijn, om te kunnen reageren."
 
 #@ the-bootstrap
 #: comments.php:70
@@ -160,7 +160,7 @@ msgstr "Semantisch Persoonlijk Publicatie Platform"
 #, php-format
 msgctxt "WordPress"
 msgid "Proudly powered by %s"
-msgstr "Trots aangedreven door %s"
+msgstr "Met trots aangedreven door %s"
 
 #@ the-bootstrap
 #: footer.php:30
@@ -246,7 +246,7 @@ msgstr "Pagina's:"
 #: partials/content-status.php:31
 #: partials/content.php:38
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Verder lezen <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Lees verder <span class=\"meta-nav\">&rarr;</span>"
 
 #@ the-bootstrap
 #: functions.php:455
@@ -270,7 +270,7 @@ msgstr "%1$s om %2$s"
 #@ the-bootstrap
 #: functions.php:486
 msgid "Your comment is awaiting moderation."
-msgstr "Je reactie moet nog gemodereerd worden."
+msgstr "Uw reactie moet gemodereerd worden, voordat hij publiekelijk wordt getoond."
 
 #@ the-bootstrap
 #: functions.php:495
@@ -314,7 +314,7 @@ msgstr[1] "%d reacties"
 #@ the-bootstrap
 #: functions.php:870
 msgid "This post is password protected. To view it please enter your password below:"
-msgstr "Dit bericht is beveiligd met een wachtwoord. Om het bericht te bekijken moet u uw wachtwoord invoeren."
+msgstr "Dit bericht is beveiligd met een wachtwoord. Om het bericht te bekijken kunt u uw wachtwoord hieronder invoeren:"
 
 #@ the-bootstrap
 #: functions.php:870
@@ -334,12 +334,12 @@ msgstr "Hoofdmenu"
 #@ the-bootstrap
 #: header.php:43
 msgid "Skip to primary content"
-msgstr "Wissel naar hoofd inhoud"
+msgstr "Ga naar hoofdinhoud"
 
 #@ the-bootstrap
 #: header.php:44
 msgid "Skip to secondary content"
-msgstr "Wissel naar subinhoud"
+msgstr "Ga naar subinhoud"
 
 #@ the-bootstrap
 #: image.php:47

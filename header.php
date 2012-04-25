@@ -1,9 +1,7 @@
 <?php
 /** header.php
  *
- * The Header for our theme.
- *
- * Displays all of the <head> section and everything up till <div id="main">
+ * Displays all of the <head> section and everything up till </header>
  *
  * @author		Konstantin Obenland
  * @package		The Bootstrap
@@ -74,7 +72,7 @@
 											'theme_location'	=>	'primary',
 											'menu_class'		=>	'nav',
 											'depth'				=>	2,
-												'fallback_cb'	=>	false,
+											'fallback_cb'		=>	false,
 										) ); 
 										if ( the_bootstrap_options()->navbar_searchform ) : ?>
 									    <form id="searchform" class="navbar-search pull-right" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -88,6 +86,7 @@
 						</div>
 						<?php endif; ?>
 					</nav><!-- #access -->
+					
 					<?php if ( function_exists( 'yoast_breadcrumb' ) ) {
 						yoast_breadcrumb( '<nav id="breadcrumb" class="breadcrumb">', '</nav>' );
 					} ?>
