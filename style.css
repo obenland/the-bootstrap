@@ -99,6 +99,7 @@ article.page {
 }
 
 .single #author-info,
+.author #author-info,
 .single article.post,
 .single article.page {
 	margin-bottom: 54px;
