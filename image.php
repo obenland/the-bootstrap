@@ -80,7 +80,7 @@ the_post();
 						}
 					?>
 					<a href="<?php echo $next_attachment_url; ?>" title="<?php the_title_attribute(); ?>" rel="attachment" class="thumbnail">
-						<?php echo wp_get_attachment_image( $post->ID, 'full', false, array( 'class' => '' ) ); ?>
+						<?php echo wp_get_attachment_image( $post->ID, 'full' ); ?>
 					</a>
 
 					<?php if ( $post->post_excerpt ) : ?>

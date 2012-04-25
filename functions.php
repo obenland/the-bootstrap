@@ -155,7 +155,7 @@ function the_bootstrap_register_scripts_styles() {
 			'tw-bootstrap',
 			get_template_directory_uri() . "/js/bootstrap{$suffix}.js",
 			array('jquery'),
-			'2.0.2',
+			'2.0.3',
 			true
 		);
 		
@@ -174,7 +174,7 @@ function the_bootstrap_register_scripts_styles() {
 			'tw-bootstrap',
 			get_template_directory_uri() . "/css/bootstrap{$suffix}.css",
 			array(),
-			'2.0.2'
+			'2.0.3'
 		);
 		
 		wp_register_style(
