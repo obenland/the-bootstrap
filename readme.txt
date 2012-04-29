@@ -55,9 +55,11 @@ None asked yet.
 = 1.3.0 =
 * Added Theme Options page
 * Added support for Post Thumbnails. Displayed on posts with the standard post format.
+* Added full width template
 * Removed post title and added thumbnail look to the status post format
 * Added Russian translation. Props serzhenko
 * Updated Dutch translation. Props m038
+* Updated German translation
 * Updated Bootstrap Core to 2.0.3
 * Changed default column count for galleries to 4
 * Updated screenshot
