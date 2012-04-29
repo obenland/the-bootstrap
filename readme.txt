@@ -52,14 +52,15 @@ None asked yet.
 
 == Changelog ==
 
-= 1.2.7 =
-* Changed default column count for galleries to 4
+= 1.3.0 =
 * Added Theme Options page
 * Added support for Post Thumbnails. Displayed on posts with the standard post format.
 * Removed post title and added thumbnail look to the status post format
 * Added Russian translation. Props serzhenko
 * Updated Dutch translation. Props m038
 * Updated Bootstrap Core to 2.0.3
+* Changed default column count for galleries to 4
+* Updated screenshot
 
 = 1.2.6 =
 * Added Dutch translation. Props m038
