@@ -86,7 +86,6 @@
 						</div>
 						<?php endif; ?>
 					</nav><!-- #access -->
-					
 					<?php if ( function_exists( 'yoast_breadcrumb' ) ) {
 						yoast_breadcrumb( '<nav id="breadcrumb" class="breadcrumb">', '</nav>' );
 					} ?>
