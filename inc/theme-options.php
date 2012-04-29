@@ -413,7 +413,7 @@ function _the_bootstrap_fetch_feed( $feed_url ) {
  */
 function the_bootstrap_layout_classes( $existing_classes ) {
 	$classes = array( the_bootstrap_options()->theme_layout );
-	$classes = apply_filters( 'the_bootstrap_layout_classes', $classes, $current_layout );
+	$classes = apply_filters( 'the_bootstrap_layout_classes', $classes );
 
 	return array_merge( $existing_classes, $classes );
 }
