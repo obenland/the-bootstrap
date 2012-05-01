@@ -4,7 +4,7 @@ Tags:				black, blue, white, light, two-columns, left-sidebar, right-sidebar, fl
 Donate link:		https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=542W6XT4PLT4L
 Requires at least:	3.0
 Tested up to:		3.4-beta3
-Stable tag:			1.3.0
+Stable tag:			1.3.1
 
 A WordPress Theme based on Bootstrap, from Twitter
 
@@ -51,6 +51,9 @@ None asked yet.
 
 
 == Changelog ==
+
+= 1.3.1 =
+* Fixed a bug for IE9, misinterpreting a margin in the navbar
 
 = 1.3.0 =
 * Added Theme Options page
