@@ -43,17 +43,24 @@ function the_bootstrap_setup() {
 	/**
 	 * Custom Theme Options
 	 */
-	require_once ( get_template_directory() . '/inc/theme-options.php' );
+	require_once( get_template_directory() . '/inc/theme-options.php' );
 	
 	/**
 	 * Custom template tags for this theme.
 	 */
-	require_once ( get_template_directory() . '/inc/template-tags.php' );
+	require_once( get_template_directory() . '/inc/template-tags.php' );
 	
 	/**
 	 * Implement the Custom Header feature
 	 */
-	require_once ( get_template_directory() . '/inc/custom-header.php' );
+	require_once( get_template_directory() . '/inc/custom-header.php' );
+	
+	/**
+	 * Implement the Theme Customizer script
+	 */
+	if ( isset( $_REQUEST['customize'] ) AND 'on' == $_REQUEST['customize'] ) {
+		require_once( get_template_directory() . '/inc/theme-customizer.php' );
+	}
 	
 	/**
 	 * Including three menu (header-menu, primary and footer-menu).
