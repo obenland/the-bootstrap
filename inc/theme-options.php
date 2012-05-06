@@ -133,7 +133,10 @@ add_action( 'admin_bar_menu', 'the_bootstrap_admin_bar_menu', 61 ); //Appearance
  * @return	stdClass	Theme Options
  */
 function the_bootstrap_options() {
-	return (object) get_option( 'the_bootstrap_theme_options', the_bootstrap_get_default_theme_options() );
+	return (object) wp_parse_args(
+		get_option( 'the_bootstrap_theme_options', array() ),
+		the_bootstrap_get_default_theme_options()
+	);
 }
 
 
