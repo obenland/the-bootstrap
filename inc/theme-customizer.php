@@ -74,7 +74,7 @@ function the_bootstrap_customize_register( $wp_customize ) {
 	) );
 	
 	if ( $wp_customize->is_preview() && ! is_admin() ) {
-		add_action( 'wp_footer', 'the_bootstrap_customize_preview', 21);
+		add_action( 'wp_enqueue_scripts', 'the_bootstrap_customize_enqueue_scripts' );
 	}
 }
 add_action( 'customize_register', 'the_bootstrap_customize_register' );
@@ -88,32 +88,15 @@ add_action( 'customize_register', 'the_bootstrap_customize_register' );
  *
  * @return	void
  */
-function the_bootstrap_customize_preview() {
-	$sitename	=	get_bloginfo( 'name', 'display' );
-	?>
-	<script type="text/javascript">
-		wp.customize('the_bootstrap_theme_options[theme_layout]',function( value ) {
-			value.bind(function(to) {
-				jQuery('body').removeClass('content-sidebar sidebar-content').addClass(to);
-			});
-		});
-		wp.customize('the_bootstrap_theme_options[navbar_site_name]',function( value ) {
-			value.bind(function(to) {
-				if (to)
-					jQuery('<span class="brand"><?php echo $sitename; ?></span>').insertBefore('.nav-collapse');
-				else
-					jQuery('span.brand').remove();
-			});
-		});
-		wp.customize('the_bootstrap_theme_options[navbar_searchform]',function( value ) {
-			value.bind(function(to) {
-				var $show = to ? 'block' : 'none';
-				jQuery('.nav-collapse > #searchform').css('display', $show);
-			});
-		});
-	</script>
-	<?php 
-} 
+function the_bootstrap_customize_enqueue_scripts() {
+	
+	wp_enqueue_script( 'the-bootstrap-customize', get_template_directory_uri() . '/js/theme-customizer.js', array('jquery'), _the_bootstrap_version(), true );
+	
+	wp_localize_script( 'the-bootstrap-customize', 'the_bootstrap_customize', array(
+		'sitename'		=>	get_bloginfo( 'name', 'display' ),
+		'searchform'	=>	the_bootstrap_nav_searchform( false )
+	) );
+}
 
 
 /* End of file theme-customizer.php */
