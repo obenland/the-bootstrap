@@ -53,6 +53,9 @@ None asked yet.
 == Changelog ==
 
 = 1.3.1 =
+* Now loads Child Theme stylesheet automatically, when a Child Theme is active
+
+= 1.3.1 =
 * Fixed a bug for IE9, misinterpreting a margin in the navbar
 
 = 1.3.0 =

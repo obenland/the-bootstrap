@@ -218,7 +218,11 @@ add_action( 'wp_enqueue_scripts', 'the_bootstrap_print_scripts' );
  * @return	void
  */
 function the_bootstrap_print_styles() {
-	wp_enqueue_style( 'the-bootstrap' );
+	if ( is_child_theme() ) {
+		wp_enqueue_style( 'the-bootstrap-child', get_stylesheet_uri(), array( 'the-bootstrap' ) );
+	} else {
+		wp_enqueue_style( 'the-bootstrap' );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'the_bootstrap_print_styles' );
 
