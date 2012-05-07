@@ -4,7 +4,7 @@ Tags:				black, blue, white, light, two-columns, left-sidebar, right-sidebar, fl
 Donate link:		https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=542W6XT4PLT4L
 Requires at least:	3.0
 Tested up to:		3.4-beta3
-Stable tag:			1.3.1
+Stable tag:			1.3.2
 
 A WordPress Theme based on Bootstrap, from Twitter
 
@@ -52,7 +52,7 @@ None asked yet.
 
 == Changelog ==
 
-= 1.3.1 =
+= 1.3.2 =
 * Now loads Child Theme stylesheet automatically, when a Child Theme is active
 
 = 1.3.1 =
