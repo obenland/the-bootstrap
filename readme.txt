@@ -54,6 +54,7 @@ None asked yet.
 
 = 1.3.2 =
 * Now loads Child Theme stylesheet automatically, when a Child Theme is active
+* Comment-reply script now hooked to the commentform.
 
 = 1.3.1 =
 * Fixed a bug for IE9, misinterpreting a margin in the navbar
