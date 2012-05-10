@@ -183,6 +183,14 @@ function the_bootstrap_register_scripts_styles() {
 			array('tw-bootstrap'),
 			$theme_version
 		);
+
+		wp_register_style(
+			'fixed-navbar-top',
+			get_template_directory_uri() . "/css/fixed-navbar-top.css",
+			array('the-bootstrap'),
+			$theme_version
+		);
+
 	}
 }
 add_action( 'init', 'the_bootstrap_register_scripts_styles' );
@@ -219,6 +227,10 @@ add_action( 'wp_enqueue_scripts', 'the_bootstrap_print_scripts' );
  */
 function the_bootstrap_print_styles() {
 	wp_enqueue_style( 'the-bootstrap' );
+
+	if ( the_bootstrap_options()->navbar_fixed AND the_bootstrap_is_primairy_menu_showing() ) {
+		wp_enqueue_style( 'fixed-navbar-top' );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'the_bootstrap_print_styles' );
 
@@ -798,6 +810,18 @@ function _the_bootstrap_version() {
 	return $theme_version;
 }
 
+/**
+ * Utility function, returns wether or not primairy menu is rendered
+ *
+ * @author
+ * @since
+ *
+ * @return	boolean
+ */
+function the_bootstrap_is_primairy_menu_showing() {
+	$is_showing =(has_nav_menu( 'primary' ) OR the_bootstrap_options()->navbar_site_name OR the_bootstrap_options()->navbar_searchform );
+	return $is_showing;
+}
 
 /* End of file functions.php */
 /* Location: ./wp-content/themes/the-bootstrap/functions.php */

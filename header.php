@@ -23,9 +23,44 @@
 		<![endif]-->
 		
 		<?php wp_head(); ?>
+		<?php if (is_admin_bar_showing()): // adjust offset .navbar-fixed-top ?>
+		<style type="text/css" media="screen">
+		.navbar-fixed-top {
+             top: 28px;
+        }
+		</style>
+		<?php endif; ?>
 	</head>
 	
 	<body <?php body_class(); ?>>
+
+		<?php if ( the_bootstrap_options()->navbar_fixed AND the_bootstrap_is_primairy_menu_showing() ) : ?>
+		<div class="navbar navbar-fixed-top" role="navigation">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+						<span><?php bloginfo( 'name' ); ?></span>
+					</a>
+					<?php
+						wp_nav_menu(array(
+							'theme_location'	=>	'primary',
+							'container'			=>	'div',
+							'container_class'	=>	'nav-collapse collapse',
+							'menu_class'		=>	'nav',
+							'depth'				=>	2,
+							'fallback_cb'		=>	false
+						));
+					?>
+				</div>
+			</div>
+		</div>
+		<?php endif; ?>
+
 		<div class="container">
 			<div id="page" class="hfeed row">
 				<header id="branding" role="banner" class="span12">

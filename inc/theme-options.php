@@ -149,7 +149,8 @@ function the_bootstrap_get_default_theme_options() {
 	$default_theme_options	=	array(
 		'theme_layout'		=>	'content-sidebar',
 		'navbar_site_name'	=>	false,
-		'navbar_searchform'	=>	true
+		'navbar_searchform'	=>	true,
+		'navbar_fixed'		=>	true
 	);
 
 	return apply_filters( 'the_bootstrap_default_theme_options', $default_theme_options );
@@ -220,6 +221,10 @@ function the_bootstrap_settings_field_navbar() {
 	<label for="navbar-searchform">
 		<input type="checkbox" name="the_bootstrap_theme_options[navbar_searchform]" id="navbar-searchform" value="1" <?php checked( the_bootstrap_options()->navbar_searchform ); ?> />
 		<?php _e( 'Add searchform to navigation bar.', 'the-bootstrap' );  ?>
+	</label><br />
+	<label for="navbar-fixed">
+		<input type="checkbox" name="the_bootstrap_theme_options[navbar_fixed]" id="navbar-fixed" value="1" <?php checked( the_bootstrap_options()->navbar_fixed ); ?> />
+		<?php _e( 'Fix navigation bar to top.', 'the-bootstrap' );  ?>
 	</label>
 	<?php
 }
@@ -280,6 +285,7 @@ function the_bootstrap_theme_options_validate( $input ) {
 	
 	$output['navbar_site_name']		=	(bool) $input['navbar_site_name'];
 	$output['navbar_searchform']	=	(bool) $input['navbar_searchform'];
+	$output['navbar_fixed']			=	(bool) $input['navbar_fixed'];
 	
 	if ( ! get_settings_errors() ) {
 		add_settings_error( 'the-bootstrap-options', 'settings_updated', sprintf( __( 'Settings saved. <a href="%s">Visit your site</a> to see how it looks.', 'the-bootstrap' ), home_url( '/' ) ), 'updated' );
