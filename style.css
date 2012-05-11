@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6, .clear {
 }
 
 body > .container {
-	margin: 18px auto;
+	margin: 20px auto;
 }
 
 
@@ -76,8 +76,7 @@ body > .container {
 
 #page {
 	background-color: #FFFFFF;
-	margin-right: -20px;
-	padding: 14px 0 0;
+	padding: 20px;
 }
 
 #branding hgroup {	
@@ -351,18 +350,15 @@ a img.alignleft {
 
 /* =Responsiveness
 -------------------------------------------------------------- */
-
-@media (max-width: 767px) {
+@media (max-width: 480px) {
 	body {
-		padding:0;
+		padding-left: 0;
+		padding-right: 0;
 	}
-	.container {
-		width: auto;
-		padding: 0 10px;
-	}
-	#page {
-		margin: 0;
-		padding: 10px;
+	.navbar-fixed-top,
+	.navbar-fixed-bottom {
+		margin-left: 0;
+		margin-right: 0;
 	}
 	.thumbnail[class*="span"],
 	.gallery [class*="span"] .thumbnail {
@@ -403,13 +399,6 @@ a img.alignleft {
 	}
 }
 @media (min-width: 1200px) {
-	#page {
-		margin-right: -30px;
-		padding: 24px 0 10px;
-	}
-	.sidebar-content #primary {
-		margin-right: 30px;
-	}
 	.wp-caption {
 		display: table;
 	}

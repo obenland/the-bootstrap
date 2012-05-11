@@ -61,8 +61,8 @@
 		</div>
 		<?php endif; ?>
 
-		<div class="container">
-			<div id="page" class="hfeed row">
+		<div id="page" class="hfeed container">
+			<div class="row">
 				<header id="branding" role="banner" class="span12">
 					<?php wp_nav_menu( array(
 						'container'			=>	'nav',

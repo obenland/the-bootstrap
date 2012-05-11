@@ -6,6 +6,8 @@
  * @since		1.0.0 - 05.02.2012
  */
 
+// To force loading of the non minified CSS
+defined('SCRIPT_DEBUG') or define('SCRIPT_DEBUG', true);
 
 if ( ! function_exists( 'the_bootstrap_setup' ) ):
 /**
