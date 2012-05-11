@@ -51,11 +51,6 @@ h1, h2, h3, h4, h5, h6, .clear {
 	clear: both;
 }
 
-/* Right Content */
-.sidebar-content #primary {
-	float: right;
-}
-
 
 /* =Classes
 -------------------------------------------------------------- */
@@ -373,10 +368,6 @@ a img.alignleft {
 	.thumbnails [class*="span"] {
 		width: 21%;
 	}
-	.sidebar-content #primary {
-		float: none;
-		margin: inherit;
-	}
 	#s {
 		display: inline-block;
 	}
@@ -395,6 +386,12 @@ a img.alignleft {
 	}
 	.dl-horizontal dd {
 		margin-left: 95px;
+	}
+}
+@media (min-width: 768px) {
+	/* Right Content */
+	.sidebar-content #primary {
+		float: right;
 	}
 }
 @media (min-width: 1200px) {
