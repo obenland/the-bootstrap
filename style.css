@@ -349,6 +349,12 @@ a img.alignleft {
 		padding-left: 0;
 		padding-right: 0;
 	}
+	body > .container {
+		margin: 0 auto;
+	}
+	.navbar-fixed-top {
+		margin-bottom: 0;
+	}
 	.navbar-fixed-top,
 	.navbar-fixed-bottom {
 		margin-left: 0;
