@@ -23,11 +23,46 @@
 		<![endif]-->
 		
 		<?php wp_head(); ?>
+		<?php if (is_admin_bar_showing()): // adjust offset .navbar-fixed-top ?>
+		<style type="text/css" media="screen">
+		.navbar-fixed-top {
+             top: 28px;
+        }
+		</style>
+		<?php endif; ?>
 	</head>
 	
 	<body <?php body_class(); ?>>
-		<div class="container">
-			<div id="page" class="hfeed row">
+
+		<?php if ( the_bootstrap_options()->navbar_fixed AND the_bootstrap_is_primairy_menu_showing() ) : ?>
+		<div class="navbar navbar-fixed-top" role="navigation">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+						<span><?php bloginfo( 'name' ); ?></span>
+					</a>
+					<?php
+						wp_nav_menu(array(
+							'theme_location'	=>	'primary',
+							'container'			=>	'div',
+							'container_class'	=>	'nav-collapse collapse',
+							'menu_class'		=>	'nav',
+							'depth'				=>	2,
+							'fallback_cb'		=>	false
+						));
+					?>
+				</div>
+			</div>
+		</div>
+		<?php endif; ?>
+
+		<div id="page" class="hfeed container">
+			<div class="row">
 				<header id="branding" role="banner" class="span12">
 					<?php wp_nav_menu( array(
 						'container'			=>	'nav',
@@ -54,7 +89,7 @@
 						<h3 class="assistive-text"><?php _e( 'Main menu', 'the-bootstrap' ); ?></h3>
 						<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'the-bootstrap' ); ?>"><?php _e( 'Skip to primary content', 'the-bootstrap' ); ?></a></div>
 						<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'the-bootstrap' ); ?>"><?php _e( 'Skip to secondary content', 'the-bootstrap' ); ?></a></div>
-						<?php if ( has_nav_menu( 'primary' ) OR the_bootstrap_options()->navbar_site_name OR the_bootstrap_options()->navbar_searchform ) : ?>
+						<?php if ( ! the_bootstrap_options()->navbar_fixed AND the_bootstrap_is_primairy_menu_showing() ) : ?>
 						<div class="navbar">
 							<div class="navbar-inner">
 								<div class="container">

@@ -1,0 +1,19 @@
+/**
+ * Adjustments for body:padding-top of body when for fixed navbar
+ */
+
+@media (min-width: 980px) {
+	body {
+		padding-top: 48px;
+	}
+}
+
+@media (max-width: 979px) {
+	body {
+		padding-top: 0px;
+	}
+
+	.navbar-fixed-top {
+		top: 0px;
+	}
+}

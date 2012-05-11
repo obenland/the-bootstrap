@@ -51,12 +51,6 @@ h1, h2, h3, h4, h5, h6, .clear {
 	clear: both;
 }
 
-/* Right Content */
-.sidebar-content #primary {
-	float: right;
-	margin: 0 20px 0 0;
-}
-
 
 /* =Classes
 -------------------------------------------------------------- */
@@ -67,7 +61,7 @@ h1, h2, h3, h4, h5, h6, .clear {
 }
 
 body > .container {
-	margin: 18px auto;
+	margin: 20px auto;
 }
 
 
@@ -76,8 +70,7 @@ body > .container {
 
 #page {
 	background-color: #FFFFFF;
-	margin-right: -20px;
-	padding: 14px 0 0;
+	padding: 20px 10px;
 }
 
 #branding hgroup {	
@@ -351,18 +344,21 @@ a img.alignleft {
 
 /* =Responsiveness
 -------------------------------------------------------------- */
-
-@media (max-width: 767px) {
+@media (max-width: 480px) {
 	body {
-		padding:0;
+		padding-left: 0;
+		padding-right: 0;
 	}
-	.container {
-		width: auto;
-		padding: 0 10px;
+	body > .container {
+		margin: 0 auto;
 	}
-	#page {
-		margin: 0;
-		padding: 10px;
+	.navbar-fixed-top {
+		margin-bottom: 0;
+	}
+	.navbar-fixed-top,
+	.navbar-fixed-bottom {
+		margin-left: 0;
+		margin-right: 0;
 	}
 	.thumbnail[class*="span"],
 	.gallery [class*="span"] .thumbnail {
@@ -377,10 +373,6 @@ a img.alignleft {
 	}
 	.thumbnails [class*="span"] {
 		width: 21%;
-	}
-	.sidebar-content #primary {
-		float: none;
-		margin: inherit;
 	}
 	#s {
 		display: inline-block;
@@ -402,14 +394,13 @@ a img.alignleft {
 		margin-left: 95px;
 	}
 }
-@media (min-width: 1200px) {
-	#page {
-		margin-right: -30px;
-		padding: 24px 0 10px;
-	}
+@media (min-width: 768px) {
+	/* Right Content */
 	.sidebar-content #primary {
-		margin-right: 30px;
+		float: right;
 	}
+}
+@media (min-width: 1200px) {
 	.wp-caption {
 		display: table;
 	}
