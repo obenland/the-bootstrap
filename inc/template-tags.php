@@ -162,5 +162,27 @@ function the_bootstrap_link_pages( $args = array() ) {
 endif;
 
 
+if ( ! function_exists( 'the_bootstrap_navbar_class' ) ) :
+/**
+ * Adds The Bootstrap navbar classes
+ *
+ * @author	WordPress.org
+ * @since	1.4.0 - 12.05.2012
+ *
+ * @return	void
+ */
+function the_bootstrap_navbar_class() {
+	$classes	=	array( 'navbar' );
+
+	if ( 'static' != the_bootstrap_options()->navbar_layout )
+		$classes[]	=	the_bootstrap_options()->navbar_layout;
+	
+	apply_filters( 'the_bootstrap_navbar_classes', $classes );
+
+	echo 'class="' . join( ' ', $classes ) . '"';
+}
+endif;
+
+
 /* End of file template-tags.php */
 /* Location: ./wp-content/themes/the-bootstrap/inc/template-tags.php */

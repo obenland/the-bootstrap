@@ -54,6 +54,7 @@ None asked yet.
 
 = 1.4.0 =
 * Added Theme Options to Theme Customizer for WP 3.4
+* Navbar can now optionally be fixed on top or bottom of the screen
 * Now loads Child Theme stylesheet automatically, when a Child Theme is active
 * Comment form on attachement pages now adhere to layout settings
 * Added support for PATHINFO permalinks in pagination

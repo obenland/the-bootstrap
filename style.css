@@ -394,6 +394,10 @@ a img.alignleft {
 	textarea[class*="span"] {
 		height: auto;
 	}
+	.navbar-fixed-top, .navbar-fixed-bottom {
+		position: fixed;
+		margin: 0;
+	}
 }
 @media (min-width: 768px) and (max-width: 778px) {
 	#page {

@@ -77,7 +77,7 @@ function the_bootstrap_theme_options_init() {
 
 	// Register individual settings fields
 	add_settings_field( 'layout', __( 'Default Layout', 'the-bootstrap' ), 'the_bootstrap_settings_field_layout', 'theme_options', 'general' );
-	add_settings_field( 'navbar', __( 'Navigation Bar', 'the-bootstrap' ), 'the_bootstrap_settings_field_navbar', 'theme_options', 'general', array(
+	add_settings_field( 'navbar', __( 'Navigation Bar', 'the-bootstrap' ), 'the_bootstrap_settings_field_checkbox', 'theme_options', 'general', array(
 		(object) array(
 			'name'			=>	'navbar_site_name',
 			'value'			=>	the_bootstrap_options()->navbar_site_name,
@@ -87,6 +87,23 @@ function the_bootstrap_theme_options_init() {
 			'name'			=>	'navbar_searchbar',
 			'value'			=>	the_bootstrap_options()->navbar_searchbar,
 			'description'	=>	__( 'Add searchform to navigation bar.', 'the-bootstrap' )
+		)
+	) );
+	add_settings_field( 'navbar-layout', __( 'Navigation Bar Layout', 'the-bootstrap' ), 'the_bootstrap_settings_field_radio', 'theme_options', 'general', array(
+		'name'		=>	'navbar_layout',
+		'options'	=>	array(
+			(object) array(
+					'value'			=>	'static',
+					'description'	=>	__( 'Static.', 'the-bootstrap' )
+			),
+			(object) array(
+					'value'			=>	'navbar-fixed-top',
+					'description'	=>	__( 'Fixed on top.', 'the-bootstrap' )
+			),
+			(object) array(
+					'value'			=>	'navbar-fixed-bottom',
+					'description'	=>	__( 'Fixed at bottom.', 'the-bootstrap' )
+			),
 		)
 	) );
 }
@@ -163,7 +180,8 @@ function the_bootstrap_get_default_theme_options() {
 	$default_theme_options	=	array(
 		'theme_layout'		=>	'content-sidebar',
 		'navbar_site_name'	=>	false,
-		'navbar_searchform'	=>	true
+		'navbar_searchform'	=>	true,
+		'navbar_layout'		=>	'static',
 	);
 
 	return apply_filters( 'the_bootstrap_default_theme_options', $default_theme_options );
@@ -218,7 +236,7 @@ function the_bootstrap_settings_field_layout() {
 
 
 /**
- * Renders the Navbar setting field.
+ * Renders a field with checkboxes.
  *
  * @author	WordPress.org
  * @since	1.3.0 - 06.04.2012
@@ -231,6 +249,30 @@ function the_bootstrap_settings_field_checkbox( $options ) {
 	<label for="<?php echo sanitize_title_with_dashes( $option->name ); ?>">
 		<input type="checkbox" name="the_bootstrap_theme_options[<?php echo esc_attr( $option->name ); ?>]" id="<?php echo sanitize_title_with_dashes( $option->name ); ?>" value="1" <?php checked( $option->value ); ?> />
 		<?php echo esc_html( $option->description ); ?>
+	</label><br />
+	<?php
+	endforeach;
+}
+
+
+/**
+ * Renders a field with radio buttons.
+ *
+ * @author	WordPress.org
+ * @since	1.4.0 - 12.05.2012
+ *
+ * @return	void
+ */
+function the_bootstrap_settings_field_radio( $args ) {
+	extract( wp_parse_args( $args, array(
+			'name'		=>	null,
+			'options'	=>	array(),
+	) ) );
+
+	foreach ( (array) $options as $o ) : ?>
+	<label for="<?php echo sanitize_title_with_dashes( $o->value ); ?>">
+		<input type="radio" name="the_bootstrap_theme_options[<?php echo esc_attr( $name ); ?>]" id="<?php echo sanitize_title_with_dashes( $o->value ); ?>" value="<?php echo esc_attr( $o->value ); ?>" <?php checked( $o->value, the_bootstrap_options()->$name ); ?> />
+		<?php if ( isset( $o->description ) ) echo $o->description; ?>
 	</label><br />
 	<?php
 	endforeach;
@@ -289,6 +331,9 @@ function the_bootstrap_theme_options_validate( $input ) {
 
 	if ( isset( $input['theme_layout'] ) AND array_key_exists( $input['theme_layout'], the_bootstrap_layouts() ) )
 		$output['theme_layout']	=	$input['theme_layout'];
+	
+	if ( isset( $input['navbar_layout'] ) AND in_array( $input['navbar_layout'], array('static', 'navbar-fixed-top', 'navbar-fixed-bottom') ) )
+		$output['navbar_layout']	=	$input['navbar_layout'];
 	
 	$output['navbar_site_name']		=	(bool) $input['navbar_site_name'];
 	$output['navbar_searchform']	=	(bool) $input['navbar_searchform'];

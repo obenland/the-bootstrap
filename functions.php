@@ -213,7 +213,7 @@ add_action( 'wp_enqueue_scripts', 'the_bootstrap_print_scripts' );
  * Properly enqueue comment-reply script
  *
  * @author	Konstantin Obenland
- * @since	1.3.2 - 08.05.2012
+ * @since	1.4.0 - 08.05.2012
  *
  * @return	void
  */
@@ -241,6 +241,19 @@ function the_bootstrap_print_styles() {
 		wp_enqueue_style( 'the-bootstrap-child', get_stylesheet_uri(), array( 'the-bootstrap' ) );
 	} else {
 		wp_enqueue_style( 'the-bootstrap' );
+	}
+	
+	if ( 'static' != the_bootstrap_options()->navbar_layout ) {
+		$top_bottom	=	str_replace( 'navbar-fixed-', '', the_bootstrap_options()->navbar_layout );
+		$css		=	"body > .container{margin-{$top_bottom}:68px}@media(min-width: 980px){body > .container{margin-{$top_bottom}:58px}}";
+	
+		if ( is_admin_bar_showing() AND 'top' == $top_bottom )
+			$css	.=	'.navbar.navbar-fixed-top{margin-top:28px;}';
+	
+		if ( function_exists( 'wp_add_inline_style' ) )
+			wp_add_inline_style( 'the-bootstrap', $css );
+		else
+			echo "<style type='text/css'>\n{$css}\n</style>\n";
 	}
 }
 add_action( 'wp_enqueue_scripts', 'the_bootstrap_print_styles' );
