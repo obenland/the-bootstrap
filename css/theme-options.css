@@ -58,8 +58,3 @@ label.image-radio-option input {
 	margin: 0 7px 0 3px;
 	padding: 4px 14px;
 }
-@media (max-width: 939px) {
-	#postbox-container-1 {
-		float: none !important;
-	}
-}

@@ -71,6 +71,10 @@ body > .container {
 	margin: 18px auto;
 }
 
+.navbar-fixed-top {
+	position: fixed;
+}
+
 
 /* =Page
 -------------------------------------------------------------- */
@@ -395,7 +399,6 @@ a img.alignleft {
 		height: auto;
 	}
 	.navbar-fixed-top, .navbar-fixed-bottom {
-		position: fixed;
 		margin: 0;
 	}
 }
