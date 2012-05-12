@@ -2,7 +2,7 @@
 Contributors:		kobenland
 Tags:				black, blue, white, light, two-columns, left-sidebar, right-sidebar, flexible-width, custom-header, custom-background, threaded-comments, translation-ready, microformats, custom-menu, post-formats, sticky-posts
 Donate link:		https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=542W6XT4PLT4L
-Requires at least:	3.0
+Requires at least:	3.3.0
 Tested up to:		3.4-beta4
 Stable tag:			1.4.0
 
@@ -19,6 +19,7 @@ Please note:
 Due to design restrictions in Bootstrap, the navigation menu can only be two levels deep, while parent menu items only serves as a headline for the child menu items and can not be accessed over the navigation menu.
 The Footer Menu is best suitable for short menues with just a few links. It replaces the credits section, once a menu has been assigned to the location. It will hold only top level nav items.
 The Bootstrap does not include the Glyphicon Icon set, which comes with Bootstrap from Twitter, since its license is GPL-incompatible. Themes hosted by the WordPress Theme Repository and all bundled resources must be fully GPL-compatible.
+To take advantage of all the possibilites Bootstrap has to offer, Bootstrap requires jQuery 1.7, which does not come with WordPress versions prior to 3.3.0. Consider adding a plugin that provides the lates version of jQuery, if you want to use this Theme with a WordPress 3.2.1 or lower.
 
 = License =
 Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public Licemse.
