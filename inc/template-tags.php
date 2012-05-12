@@ -174,8 +174,8 @@ if ( ! function_exists( 'the_bootstrap_navbar_class' ) ) :
 function the_bootstrap_navbar_class() {
 	$classes	=	array( 'navbar' );
 
-	if ( 'static' != the_bootstrap_options()->navbar_layout )
-		$classes[]	=	the_bootstrap_options()->navbar_layout;
+	if ( 'static' != the_bootstrap_options()->navbar_position )
+		$classes[]	=	the_bootstrap_options()->navbar_position;
 	
 	apply_filters( 'the_bootstrap_navbar_classes', $classes );
 

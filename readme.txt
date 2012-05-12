@@ -18,7 +18,7 @@ Please note:
 
 Due to design restrictions in Bootstrap, the navigation menu can only be two levels deep, while parent menu items only serves as a headline for the child menu items and can not be accessed over the navigation menu.
 The Footer Menu is best suitable for short menues with just a few links. It replaces the credits section, once a menu has been assigned to the location. It will hold only top level nav items.
-The Bootstrap does not include the Glyphicon Icon set, which comes with Bootstrap from Twitter, since its license is GPL-incompatible. Themes hosted by the WordPress Theme Repository and all embundled resources must be fully GPL-compatible.
+The Bootstrap does not include the Glyphicon Icon set, which comes with Bootstrap from Twitter, since its license is GPL-incompatible. Themes hosted by the WordPress Theme Repository and all bundled resources must be fully GPL-compatible.
 
 = License =
 Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public Licemse.

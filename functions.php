@@ -65,7 +65,7 @@ function the_bootstrap_setup() {
 	/**
 	 * Including three menu (header-menu, primary and footer-menu).
 	 * Primary is wrapping in a navbar containing div (wich support responsive variation)
-	 * Header_menu and Footer-menu are inside pills dropdown menu
+	 * Header-menu and Footer-menu are inside pills dropdown menu
 	 * 
 	 * @since	1.2.2 - 07.04.2012
 	 * @see		http://codex.wordpress.org/Function_Reference/register_nav_menus
@@ -243,8 +243,8 @@ function the_bootstrap_print_styles() {
 		wp_enqueue_style( 'the-bootstrap' );
 	}
 	
-	if ( 'static' != the_bootstrap_options()->navbar_layout ) {
-		$top_bottom	=	str_replace( 'navbar-fixed-', '', the_bootstrap_options()->navbar_layout );
+	if ( 'static' != the_bootstrap_options()->navbar_position ) {
+		$top_bottom	=	str_replace( 'navbar-fixed-', '', the_bootstrap_options()->navbar_position );
 		$css		=	"body > .container{margin-{$top_bottom}:68px}@media(min-width: 980px){body > .container{margin-{$top_bottom}:58px}}";
 	
 		if ( is_admin_bar_showing() AND 'top' == $top_bottom )
