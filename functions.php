@@ -205,12 +205,24 @@ add_action( 'init', 'the_bootstrap_register_scripts_styles' );
  */
 function the_bootstrap_print_scripts() {
 	wp_enqueue_script( 'the-bootstrap' );
+}
+add_action( 'wp_enqueue_scripts', 'the_bootstrap_print_scripts' );
 
-	if ( is_singular() AND comments_open() AND get_option( 'thread_comments' ) ) {
+
+/**
+ * Properly enqueue comment-reply script
+ *
+ * @author	Konstantin Obenland
+ * @since	1.3.2 - 08.05.2012
+ *
+ * @return	void
+ */
+function the_bootstrap_comment_reply() {
+	if ( get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'the_bootstrap_print_scripts' );
+add_action( 'comment_form_before', 'the_bootstrap_comment_reply' );
 
 
 /**

@@ -57,6 +57,7 @@ None asked yet.
 * Now loads Child Theme stylesheet automatically, when a Child Theme is active
 * Comment form on attachement pages now adhere to layout settings
 * Added support for PATHINFO permalinks in pagination
+* Comment-reply script now hooked to the commentform.
 
 = 1.3.1 =
 * Fixed a bug for IE9, misinterpreting a margin in the navbar
