@@ -26,26 +26,31 @@ if ( ! function_exists( 'the_bootstrap_content_nav' ) ) :
  * @return	void
  */
 function the_bootstrap_content_nav() {
-	global $wp_query;
+	global $wp_query, $wp_rewrite;
 
 	$paged			=	( get_query_var( 'paged' ) ) ? intval( get_query_var( 'paged' ) ) : 1;
+
 	$pagenum_link	=	get_pagenum_link();
+	$query_args		=	array();
 	$url_parts		=	parse_url( $pagenum_link );
-	$format			=	( get_option('permalink_structure') ) ? user_trailingslashit('page/%#%', 'paged') : '?paged=%#%';
-
-	if ( isset($url_parts['query']) ) {
-		$pagenum_link	=	"{$url_parts['scheme']}://{$url_parts['host']}{$url_parts['path']}%_%?{$url_parts['query']}";
-	} else {
-		$pagenum_link	.=	'%_%';
+	
+	if ( isset( $url_parts['query'] ) ) {
+		wp_parse_str( $url_parts['query'], $query_args );
 	}
-
+	$pagenum_link	=	remove_query_arg( array_keys( $query_args ), $pagenum_link );
+	$pagenum_link	=	trailingslashit( $pagenum_link ) . '%_%';
+	
+	$format			=	( $wp_rewrite->using_index_permalinks() AND ! strpos( $pagenum_link, 'index.php' ) ) ? 'index.php/' : '';
+	$format			.=	$wp_rewrite->using_permalinks() ? user_trailingslashit( 'page/%#%', 'paged' ) : '?paged=%#%';
+	
 	$links	=	paginate_links( array(
-			'base'		=>	$pagenum_link,
-			'format'	=>	$format,
-			'total'		=>	$wp_query->max_num_pages,
-			'current'	=>	$paged,
-			'mid_size'	=>	3,
-			'type'		=>	'list'
+		'base'		=>	$pagenum_link,
+		'format'	=>	$format,
+		'total'		=>	$wp_query->max_num_pages,
+		'current'	=>	$paged,
+		'mid_size'	=>	3,
+		'type'		=>	'list',
+		'add_args'	=>	$query_args
 	) );
 
 	if ( $links ) {

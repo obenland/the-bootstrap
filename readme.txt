@@ -56,6 +56,7 @@ None asked yet.
 * Added Theme Options to Theme Customizer for WP 3.4
 * Now loads Child Theme stylesheet automatically, when a Child Theme is active
 * Comment form on attachement pages now adhere to layout settings
+* Added support for PATHINFO permalinks in pagination
 
 = 1.3.1 =
 * Fixed a bug for IE9, misinterpreting a margin in the navbar
