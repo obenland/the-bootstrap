@@ -300,7 +300,7 @@ function the_bootstrap_theme_options_render_page() {
 					</form>
 				</div>
 				<div id="postbox-container-1">
-					<div id="side-info-column" class="inner-sidebar">
+					<div id="side-info-column">
 						<?php do_action( 'the_bootstrap_side_info_column' ); ?>
 					</div>
 				</div>
