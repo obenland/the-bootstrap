@@ -8,7 +8,10 @@
 ?>
 <section id="secondary" class="widget-area span4" role="complementary">
 	<?php if ( ! dynamic_sidebar( 'main' ) ) {
-		the_widget( 'WP_Widget_Archives', array(), array(
+		the_widget( 'WP_Widget_Archives', array(
+			'count'		=>	0,
+			'dropdown'	=>	0
+		), array(
 			'before_widget'	=>	'<aside id="archives" class="widget well widget_archives">',
 			'after_widget'	=>	'</aside>',
 			'before_title'	=>	'<h3 class="widget-title">',
