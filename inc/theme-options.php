@@ -77,7 +77,18 @@ function the_bootstrap_theme_options_init() {
 
 	// Register individual settings fields
 	add_settings_field( 'layout', __( 'Default Layout', 'the-bootstrap' ), 'the_bootstrap_settings_field_layout', 'theme_options', 'general' );
-	add_settings_field( 'navbar', __( 'Navigation Bar', 'the-bootstrap' ), 'the_bootstrap_settings_field_navbar', 'theme_options', 'general' );
+	add_settings_field( 'navbar', __( 'Navigation Bar', 'the-bootstrap' ), 'the_bootstrap_settings_field_navbar', 'theme_options', 'general', array(
+		(object) array(
+			'name'			=>	'navbar_site_name',
+			'value'			=>	the_bootstrap_options()->navbar_site_name,
+			'description'	=>	__( 'Add site name to navigation bar.', 'the-bootstrap' )
+		),
+		(object) array(
+			'name'			=>	'navbar_searchbar',
+			'value'			=>	the_bootstrap_options()->navbar_searchbar,
+			'description'	=>	__( 'Add searchform to navigation bar.', 'the-bootstrap' )
+		)
+	) );
 }
 add_action( 'admin_init', 'the_bootstrap_theme_options_init' );
 
@@ -211,17 +222,15 @@ function the_bootstrap_settings_field_layout() {
  *
  * @return	void
  */
-function the_bootstrap_settings_field_navbar() {
-	?>
-	<label for="navbar-site-name">
-		<input type="checkbox" name="the_bootstrap_theme_options[navbar_site_name]" id="navbar-site-name" value="1" <?php checked( the_bootstrap_options()->navbar_site_name ); ?> />
-		<?php _e( 'Add site name to navigation bar.', 'the-bootstrap' );  ?>
+function the_bootstrap_settings_field_checkbox( $options ) {
+	
+	foreach ( $options as $option ) : ?>
+	<label for="<?php echo sanitize_title_with_dashes( $option->name ); ?>">
+		<input type="checkbox" name="the_bootstrap_theme_options[<?php echo esc_attr( $option->name ); ?>]" id="<?php echo sanitize_title_with_dashes( $option->name ); ?>" value="1" <?php checked( $option->value ); ?> />
+		<?php echo esc_html( $option->description ); ?>
 	</label><br />
-	<label for="navbar-searchform">
-		<input type="checkbox" name="the_bootstrap_theme_options[navbar_searchform]" id="navbar-searchform" value="1" <?php checked( the_bootstrap_options()->navbar_searchform ); ?> />
-		<?php _e( 'Add searchform to navigation bar.', 'the-bootstrap' );  ?>
-	</label>
 	<?php
+	endforeach;
 }
 
 
