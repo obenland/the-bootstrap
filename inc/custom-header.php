@@ -67,8 +67,7 @@ function the_bootstrap_header_style() {
 	?>
 	<style type="text/css">
 		<?php if ( 'blank' == get_header_textcolor() ) : ?>
-		#site-title,
-		#site-description {
+		#branding hgroup {
 			position: absolute !important;
 			clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
 			clip: rect(1px, 1px, 1px, 1px);

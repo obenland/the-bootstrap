@@ -84,8 +84,8 @@ function the_bootstrap_theme_options_init() {
 			'description'	=>	__( 'Add site name to navigation bar.', 'the-bootstrap' )
 		),
 		(object) array(
-			'name'			=>	'navbar_searchbar',
-			'value'			=>	the_bootstrap_options()->navbar_searchbar,
+			'name'			=>	'navbar_searchform',
+			'value'			=>	the_bootstrap_options()->navbar_searchform,
 			'description'	=>	__( 'Add searchform to navigation bar.', 'the-bootstrap' )
 		)
 	) );
@@ -93,16 +93,16 @@ function the_bootstrap_theme_options_init() {
 		'name'		=>	'navbar_position',
 		'options'	=>	array(
 			(object) array(
-					'value'			=>	'static',
-					'description'	=>	__( 'Static.', 'the-bootstrap' )
+				'value'			=>	'static',
+				'description'	=>	__( 'Static.', 'the-bootstrap' )
 			),
 			(object) array(
-					'value'			=>	'navbar-fixed-top',
-					'description'	=>	__( 'Fixed on top.', 'the-bootstrap' )
+				'value'			=>	'navbar-fixed-top',
+				'description'	=>	__( 'Fixed on top.', 'the-bootstrap' )
 			),
 			(object) array(
-					'value'			=>	'navbar-fixed-bottom',
-					'description'	=>	__( 'Fixed at bottom.', 'the-bootstrap' )
+				'value'			=>	'navbar-fixed-bottom',
+				'description'	=>	__( 'Fixed at bottom.', 'the-bootstrap' )
 			),
 		)
 	) );
@@ -254,15 +254,15 @@ function the_bootstrap_settings_field_checkbox( $options ) {
 /**
  * Renders a field with radio buttons.
  *
- * @author	WordPress.org
+ * @author	Konstantin Obenland
  * @since	1.4.0 - 12.05.2012
  *
  * @return	void
  */
 function the_bootstrap_settings_field_radio( $args ) {
 	extract( wp_parse_args( $args, array(
-			'name'		=>	null,
-			'options'	=>	array(),
+		'name'		=>	null,
+		'options'	=>	array(),
 	) ) );
 
 	foreach ( (array) $options as $o ) : ?>
@@ -322,10 +322,11 @@ function the_bootstrap_theme_options_render_page() {
  * @return	void
  */
 function the_bootstrap_theme_options_validate( $input ) {
-	$output = $defaults = the_bootstrap_get_default_theme_options();
-
+	$output	=	$defaults = the_bootstrap_get_default_theme_options();
+	$input	=	wp_parse_args( $input, $defaults );
+	
 	if ( isset( $input['theme_layout'] ) AND array_key_exists( $input['theme_layout'], the_bootstrap_layouts() ) )
-		$output['theme_layout']	=	$input['theme_layout'];
+		$output['theme_layout']		=	$input['theme_layout'];
 	
 	if ( isset( $input['navbar_position'] ) AND in_array( $input['navbar_position'], array('static', 'navbar-fixed-top', 'navbar-fixed-bottom') ) )
 		$output['navbar_position']	=	$input['navbar_position'];
