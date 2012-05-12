@@ -395,6 +395,11 @@ a img.alignleft {
 		height: auto;
 	}
 }
+@media (min-width: 768px) and (max-width: 778px) {
+	#page {
+		margin-right: -15px;
+	}
+}
 @media (min-width: 768px) and (max-width: 979px) {
 	.dl-horizontal dt {
 		width: 85px;
