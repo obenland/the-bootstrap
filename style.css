@@ -52,7 +52,8 @@ h1, h2, h3, h4, h5, h6, .clear {
 }
 
 /* Right Content */
-.sidebar-content #primary {
+.sidebar-content #primary,
+.sidebar-content #attachment-comment {
 	float: right;
 	margin: 0 20px 0 0;
 }
@@ -407,7 +408,8 @@ a img.alignleft {
 		margin-right: -30px;
 		padding: 24px 0 10px;
 	}
-	.sidebar-content #primary {
+	.sidebar-content #primary,
+	.sidebar-content #attachment-comment {
 		margin-right: 30px;
 	}
 	.wp-caption {

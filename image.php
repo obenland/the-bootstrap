@@ -93,7 +93,7 @@ the_post();
 		</article><!-- #post-<?php the_ID(); ?> -->
 	</div><!-- #content -->
 </section><!-- #primary -->
-<div class="span8"><?php comments_template( '', true ); ?></div>
+<div id="attachment-comment" class="span8"><?php comments_template( '', true ); ?></div>
 <?php
 get_sidebar( 'image' );
 get_footer();

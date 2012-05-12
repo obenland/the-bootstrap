@@ -3,8 +3,8 @@ Contributors:		kobenland
 Tags:				black, blue, white, light, two-columns, left-sidebar, right-sidebar, flexible-width, custom-header, custom-background, threaded-comments, translation-ready, microformats, custom-menu, post-formats, sticky-posts
 Donate link:		https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=542W6XT4PLT4L
 Requires at least:	3.0
-Tested up to:		3.4-beta3
-Stable tag:			1.3.2
+Tested up to:		3.4-beta4
+Stable tag:			1.4.0
 
 A WordPress Theme based on Bootstrap, from Twitter
 
@@ -52,8 +52,10 @@ None asked yet.
 
 == Changelog ==
 
-= 1.3.2 =
+= 1.4.0 =
+* Added Theme Options to Theme Customizer for WP 3.4
 * Now loads Child Theme stylesheet automatically, when a Child Theme is active
+* Comment form on attachement pages now adhere to layout settings
 
 = 1.3.1 =
 * Fixed a bug for IE9, misinterpreting a margin in the navbar
