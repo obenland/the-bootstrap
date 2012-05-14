@@ -241,6 +241,19 @@ table .label {
 }
 
 
+/* =Jetpack Support
+-------------------------------------------------------------- */
+
+.comment-subscription-form > input[type=checkbox] {
+	position: absolute;
+}
+
+.comment-subscription-form > label {
+	min-height: 18px;
+    padding-left: 18px;
+}
+
+
 /* =Bootstrap Adjustments
 -------------------------------------------------------------- */
 
