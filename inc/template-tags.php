@@ -162,6 +162,29 @@ function the_bootstrap_link_pages( $args = array() ) {
 endif;
 
 
+if ( ! function_exists( 'the_bootstrap_nav_searchform' ) ) :
+/**
+ * Returns or echoes searchform mark up, specifically for the navbar.
+*
+* @author	Konstantin Obenland
+* @since	1.4.1 - 14.05.2012
+*
+* @return	void
+*/
+function the_bootstrap_navbar_searchform( $echo = true ) {
+	$searchform = '	<form id="searchform" class="navbar-search pull-right" method="get" action="' . esc_url( home_url( '/' ) ) . '">
+	<label for="s" class="assistive-text hidden">' . __( 'Search', 'the-bootstrap' ) . '</label>
+	<input type="search" class="search-query" name="s" id="s" placeholder="' . esc_attr__( 'Search', 'the-bootstrap' ) . '" />
+	</form>';
+
+	if ( $echo )
+		echo $searchform;
+
+	return $searchform;
+}
+endif;
+
+
 if ( ! function_exists( 'the_bootstrap_navbar_class' ) ) :
 /**
  * Adds The Bootstrap navbar classes

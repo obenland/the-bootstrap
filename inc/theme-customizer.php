@@ -73,6 +73,24 @@ function the_bootstrap_customize_register( $wp_customize ) {
 		'type'		=>	'checkbox',
 	) );
 	
+	// Navbar Position
+	$wp_customize->add_setting( 'the_bootstrap_theme_options[navbar_position]', array(
+		'default'	=>	the_bootstrap_options()->navbar_position,
+		'type'		=>	'option',
+		'transport'	=>	'postMessage',
+	) );
+	$wp_customize->add_control( 'the_bootstrap_navbar_position', array(
+		'label'		=>	__( 'Navigation Bar Position', 'the-bootstrap' ),
+		'section'	=>	'the_bootstrap_theme_options',
+		'settings'	=>	'the_bootstrap_theme_options[navbar_position]',
+		'type'		=>	'radio',
+		'choices'	=>	array(
+			'static'				=>	__( 'Static.', 'the-bootstrap' ),
+			'navbar-fixed-top'		=>	__( 'Fixed on top.', 'the-bootstrap' ),
+			'navbar-fixed-bottom'	=>	__( 'Fixed at bottom.', 'the-bootstrap' ),
+		),
+	) );
+	
 	if ( $wp_customize->is_preview() && ! is_admin() ) {
 		add_action( 'wp_enqueue_scripts', 'the_bootstrap_customize_enqueue_scripts' );
 	}
@@ -94,7 +112,7 @@ function the_bootstrap_customize_enqueue_scripts() {
 	
 	wp_localize_script( 'the-bootstrap-customize', 'the_bootstrap_customize', array(
 		'sitename'		=>	get_bloginfo( 'name', 'display' ),
-		'searchform'	=>	the_bootstrap_nav_searchform( false )
+		'searchform'	=>	the_bootstrap_navbar_searchform( false )
 	) );
 }
 

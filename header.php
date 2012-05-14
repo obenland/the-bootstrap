@@ -74,12 +74,9 @@
 											'depth'				=>	2,
 											'fallback_cb'		=>	false,
 										) ); 
-										if ( the_bootstrap_options()->navbar_searchform ) : ?>
-									    <form id="searchform" class="navbar-search pull-right" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-									    	<label for="s" class="assistive-text hidden"><?php _e( 'Search', 'the-bootstrap' ); ?></label>
-									    	<input type="search" class="search-query" name="s" id="s" placeholder="<?php esc_attr_e( 'Search', 'the-bootstrap' ); ?>" />
-									    </form>
-									    <?php endif; ?>
+										if ( the_bootstrap_options()->navbar_searchform ) {
+											the_bootstrap_navbar_searchform();
+										} ?>
 								    </div>
 								</div>
 							</div>
