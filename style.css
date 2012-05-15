@@ -183,6 +183,7 @@ article.page {
 
 .thumbnail > img {
 	width: 100%;
+	width: auto\9; /* Cure IE8 max-width bug */
 }
 
 header img,
