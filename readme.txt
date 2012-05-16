@@ -4,7 +4,7 @@ Tags:				black, blue, white, light, two-columns, left-sidebar, right-sidebar, fl
 Donate link:		https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=542W6XT4PLT4L
 Requires at least:	3.3.0
 Tested up to:		3.4-beta4
-Stable tag:			1.4.0
+Stable tag:			1.5.0
 
 A WordPress Theme based on Bootstrap, from Twitter
 
@@ -46,12 +46,13 @@ Currently available in:
 3. Activate the Theme through the 'Appearance' menu in WordPress
 
 
-== Frequently Asked Questions ==
-
-None asked yet.
-
-
 == Changelog ==
+
+= 1.5.0 =
+* Added missing Theme Option to Theme Customizer
+* Add support (style) for Jetpack subscription checkboxes
+* Introduced The_Bootstrap_Nav_Walker to avoid JavaScript handling of navbar markup
+* Fixed a bug where images on attachment pages were not displayed in IE8
 
 = 1.4.0 =
 * Added Theme Options to Theme Customizer for WP 3.4

@@ -73,6 +73,7 @@
 											'menu_class'		=>	'nav',
 											'depth'				=>	2,
 											'fallback_cb'		=>	false,
+											'walker'			=>	new The_Bootstrap_Nav_Walker,
 										) ); 
 										if ( the_bootstrap_options()->navbar_searchform ) {
 											the_bootstrap_navbar_searchform();

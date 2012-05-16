@@ -50,6 +50,7 @@ function the_bootstrap_setup() {
 	 */
 	require_once( get_template_directory() . '/inc/template-tags.php' );
 	
+	
 	/**
 	 * Implement the Custom Header feature
 	 */
@@ -58,9 +59,14 @@ function the_bootstrap_setup() {
 	/**
 	 * Implement the Theme Customizer script
 	 */
-	if ( isset( $_REQUEST['customize'] ) AND 'on' == $_REQUEST['customize'] ) {
+	if ( isset( $_REQUEST['customize'] ) AND 'on' == $_REQUEST['customize'] )
 		require_once( get_template_directory() . '/inc/theme-customizer.php' );
-	}
+	
+	/**
+	 * Custom Nav Menu handler for the Navbar.
+	 */
+	if ( has_nav_menu( 'primary' ) )
+		require_once( get_template_directory() . '/inc/nav-menu-walker.php' );
 	
 	/**
 	 * Including three menu (header-menu, primary and footer-menu).
