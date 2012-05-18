@@ -47,29 +47,29 @@ class The_Bootstrap_Image_Meta_Widget extends WP_Widget {
 	public function widget( $args, $instance ) {
 		
 		if ( is_attachment() ) {
-			extract($args);
+			extract( $args );
 			
-			$title		=	apply_filters('widget_title', empty($instance['title']) ? __( 'Info', 'the-bootstrap' ) : $instance['title']);
+			$title		=	apply_filters( 'widget_title', empty($instance['title'] ) ? __( 'Info', 'the-bootstrap' ) : $instance['title'] );
 			$image_meta	=	wp_get_attachment_metadata();
 			
 			echo $before_widget . $before_title . $title . $after_title;
 			
 			?>
 			<dl class="dl-horizontal">
-				<?php if ( $image_meta['image_meta']['created_timestamp'] ): ?>
+				<?php if ( $image_meta['image_meta']['created_timestamp'] ) : ?>
 				<dt><?php _e( 'Created:', 'the-bootstrap' ); ?></dt>
-				<dd><?php echo date_i18n( get_option('date_format'), $image_meta['image_meta']['created_timestamp'] ); ?></dd>
+				<dd><?php echo date_i18n( get_option( 'date_format' ), $image_meta['image_meta']['created_timestamp'] ); ?></dd>
 				<?php endif; ?>
 				
 				<dt><?php _e( 'Full size:', 'the-bootstrap' ); ?></dt>
-				<dd><?php echo wp_get_attachment_link( '', 'full', false, false, sprintf(__( '%s pixels', 'the-bootstrap' ), $image_meta['width'] . ' &times; ' . $image_meta['height'])); ?></dd>
+				<dd><?php echo wp_get_attachment_link( '', 'full', false, false, sprintf(__( '%s pixels', 'the-bootstrap' ), $image_meta['width'] . ' &times; ' . $image_meta['height'] ) ); ?></dd>
 				
-				<?php if ( $image_meta['image_meta']['aperture'] ): ?>
+				<?php if ( $image_meta['image_meta']['aperture'] ) : ?>
 				<dt><?php _e( 'Aperture:', 'the-bootstrap' ); ?></dt>
 				<dd>f/<?php echo $image_meta['image_meta']['aperture']; ?></dd>
 				<?php endif;
 				
-				if ( $image_meta['image_meta']['focal_length'] ): ?>
+				if ( $image_meta['image_meta']['focal_length'] ) : ?>
 				<dt><?php _e( 'Focal length:', 'the-bootstrap' ); ?></dt>
 				<dd><?php echo $image_meta['image_meta']['focal_length']; ?> mm</dd>
 				<?php endif;
@@ -79,26 +79,26 @@ class The_Bootstrap_Image_Meta_Widget extends WP_Widget {
 				<dd><?php echo $image_meta['image_meta']['iso']; ?></dd>
 				<?php endif;
 				
-				if ( $image_meta['image_meta']['shutter_speed'] ): ?>
+				if ( $image_meta['image_meta']['shutter_speed'] ) : ?>
 				<dt><?php _e( 'Shutter:', 'the-bootstrap' ); ?></dt>
 				<dd>
 				<?php
 					// shutter speed handler
-					if ((1 / $image_meta['image_meta']['shutter_speed']) > 1) {
+					if ( ( 1 / $image_meta['image_meta']['shutter_speed'] ) > 1 ) {
 					echo "1/";
-						if (number_format((1 / $image_meta['image_meta']['shutter_speed']), 1) ==  number_format((1 / $image_meta['image_meta']['shutter_speed']), 0)) {
-							echo number_format((1 / $image_meta['image_meta']['shutter_speed']), 0, '.', '') . ' sek';
+						if ( number_format_i18n( ( 1 / $image_meta['image_meta']['shutter_speed'] ), 1 ) ==  number_format_i18n( ( 1 / $image_meta['image_meta']['shutter_speed'] ), 0 ) ) {
+							printf( __( '%d sec.', 'the-bootstrap' ), number_format_i18n( ( 1 / $image_meta['image_meta']['shutter_speed'] ), 0, '.', '' ) );
 						} else {
-							echo number_format((1 / $image_meta['image_meta']['shutter_speed']), 1, '.', '') . ' sek';
+							printf( __( '%d sec.', 'the-bootstrap' ), number_format_i18n( ( 1 / $image_meta['image_meta']['shutter_speed'] ), 1, '.', '' ) );
 						}
 					} else {
-						echo $image_meta['image_meta']['shutter_speed'].' sek';
+						printf( __( '%d sec.', 'the-bootstrap' ), number_format_i18n( $image_meta['image_meta']['shutter_speed'] ) );
 					}
 				 ?>
 				</dd>
 				<?php endif;
 				
-				if ( trim( $image_meta['image_meta']['camera'], '<,>' ) ): ?>
+				if ( trim( $image_meta['image_meta']['camera'], '<,>' ) ) : ?>
 				<dt><?php _e( 'Camera:', 'the-bootstrap' ); ?></dt>
 				<dd><?php echo trim( $image_meta['image_meta']['camera'], '<,>' ); ?></dd>
 				<?php endif; ?>
@@ -148,12 +148,9 @@ class The_Bootstrap_Image_Meta_Widget extends WP_Widget {
 			'title'	=>	'',
 		) );
 		?>
-		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>">
-				<?php _e( 'Title:', 'the-bootstrap' ); ?>
-				<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" />
-			</label>
-		</p>
+		<p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'the-bootstrap' ); ?>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" />
+		</label></p>
 		<?php
 	}
 } // End of class Image_Meta_Widget
