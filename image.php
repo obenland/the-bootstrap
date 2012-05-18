@@ -99,5 +99,5 @@ get_sidebar( 'image' );
 get_footer();
 
 
-/* End of file index.php */
-/* Location: ./wp-content/themes/the-bootstrap/index.php */
+/* End of file image.php */
+/* Location: ./wp-content/themes/the-bootstrap/image.php */

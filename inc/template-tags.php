@@ -60,6 +60,27 @@ function the_bootstrap_content_nav() {
 endif;
 
 
+if ( ! function_exists( 'the_bootstrap_comment_nav' ) ) :
+/**
+ * Display navigation to next/previous comments pages when applicable
+ *
+ * @author	Konstantin Obenland
+ * @since	1.5.0 - 19.05.2012
+ *
+ * @return	void
+ */
+function the_bootstrap_comment_nav() {
+	if ( get_comment_pages_count() > 1 AND get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
+	<nav class="comment-nav well">
+		<h1 class="assistive-text"><?php _e( 'Comment navigation', 'the-bootstrap' ); ?></h1>
+		<div class="nav-previous alignleft"><?php next_comments_link( __( '&larr; Newer Comments', 'the-bootstrap' ) ); ?></div>
+		<div class="nav-next alignright"><?php previous_comments_link( __( 'Older Comments &rarr;', 'the-bootstrap' ) ); ?></div>
+	</nav>
+	<?php endif; // check for comment navigation
+}
+endif;
+
+
 if ( ! function_exists( 'the_bootstrap_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author,
@@ -162,20 +183,22 @@ function the_bootstrap_link_pages( $args = array() ) {
 endif;
 
 
-if ( ! function_exists( 'the_bootstrap_nav_searchform' ) ) :
+if ( ! function_exists( 'the_bootstrap_navbar_searchform' ) ) :
 /**
  * Returns or echoes searchform mark up, specifically for the navbar.
 *
 * @author	Konstantin Obenland
-* @since	1.4.1 - 14.05.2012
+* @since	1.5,0 - 14.05.2012
+* 
+* @param	bool	$echo	Optional. Whether to echo the form
 *
 * @return	void
 */
 function the_bootstrap_navbar_searchform( $echo = true ) {
 	$searchform = '	<form id="searchform" class="navbar-search pull-right" method="get" action="' . esc_url( home_url( '/' ) ) . '">
-	<label for="s" class="assistive-text hidden">' . __( 'Search', 'the-bootstrap' ) . '</label>
-	<input type="search" class="search-query" name="s" id="s" placeholder="' . esc_attr__( 'Search', 'the-bootstrap' ) . '" />
-	</form>';
+						<label for="s" class="assistive-text hidden">' . __( 'Search', 'the-bootstrap' ) . '</label>
+						<input type="search" class="search-query" name="s" id="s" placeholder="' . esc_attr__( 'Search', 'the-bootstrap' ) . '" />
+					</form>';
 
 	if ( $echo )
 		echo $searchform;

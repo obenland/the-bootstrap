@@ -57,7 +57,7 @@ class The_Bootstrap_Nav_Walker extends Walker_Nav_Menu {
 	/**
 	 * @see Walker::display_element()
 	 */
-	function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ) {
+	function display_element( $element, &$children_elements, $max_depth, $depth = 0, $args, &$output ) {
 
 		if ( ! $element )
 			return;
@@ -76,7 +76,7 @@ class The_Bootstrap_Nav_Walker extends Walker_Nav_Menu {
 		$id = $element->$id_field;
 
 		// descend only when the depth is right and there are childrens for this element
-		if ( ( $max_depth == 0 || $max_depth > $depth+1 ) && isset( $children_elements[$id] ) ) {
+		if ( ( $max_depth == 0 OR $max_depth > $depth+1 ) AND isset( $children_elements[$id] ) ) {
 
 			foreach ( $children_elements[ $id ] as $child ) {
 
@@ -91,7 +91,7 @@ class The_Bootstrap_Nav_Walker extends Walker_Nav_Menu {
 			unset( $children_elements[ $id ] );
 		}
 
-		if ( isset( $newlevel ) && $newlevel ) {
+		if ( isset( $newlevel ) AND $newlevel ) {
 			//end the child delimiter
 			$cb_args = array_merge( array( &$output, $depth ), $args );
 			call_user_func_array( array( &$this, 'end_lvl' ), $cb_args );
@@ -105,13 +105,14 @@ class The_Bootstrap_Nav_Walker extends Walker_Nav_Menu {
 
 
 /**
+ * Adds the active CSS class
  *
  * @author	Konstantin Obenland
  * @since	1.5.0 - 15.05.2012
  *
- * @param	string	$menu
+ * @param	array	$classes	Default class names
  *
- * @return	string
+ * @return	array
  */
 function the_bootstrap_nav_menu_css_class( $classes ) {
 	if ( in_array('current-menu-item', $classes ) OR in_array( 'current-menu-ancestor', $classes ) )
