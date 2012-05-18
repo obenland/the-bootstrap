@@ -819,6 +819,31 @@ add_filter( 'the_password_form', 'the_bootstrap_the_password_form' );
 
 
 /**
+ * Modifies the category dropdown args for widgets on 404 pages
+ *
+ * @author	Konstantin Obenland
+ * @since	1.5.0 - 19.05.2012
+ *
+ * @param	array	$args
+ *
+ * @return	array
+ */
+function the_bootstrap_widget_categories_dropdown_args( $args ) {
+	if ( is_404() ) {
+		$args	=	wp_parse_args( $args, array(
+			'orderby'		=>	'count',
+			'order'			=>	'DESC',
+			'show_count'	=>	1,
+			'title_li'		=>	'',
+			'number'		=>	10
+		) );
+	}
+	return $args;
+}
+add_filter( 'widget_categories_dropdown_args', 'the_bootstrap_widget_categories_dropdown_args' );
+
+
+/**
  * Returns the Theme version string
  *
  * @author	Konstantin Obenland

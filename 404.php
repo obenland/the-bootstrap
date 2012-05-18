@@ -23,34 +23,20 @@ get_header(); ?>
 
 				<?php
 				get_search_form();
-				the_widget( 'WP_Widget_Recent_Posts', array( 'number' => 10 ), array( 'widget_id' => '404' ) ); ?>
-
-				<div class="widget">
-					<h2 class="widgettitle"><?php _e( 'Most Used Categories', 'the-bootstrap' ); ?></h2>
-					<ul>
-					<?php wp_list_categories( array(
-						'orderby'		=>	'count',
-						'order'			=>	'DESC',
-						'show_count'	=>	1,
-						'title_li'		=>	'',
-						'number'		=>	10
-					) ); ?>
-					</ul>
-				</div>
-
-				<?php
-				/* translators: %1$s: smilie */
-				$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s', 'the-bootstrap' ), convert_smilies( ':)' ) ) . '</p>';
-				the_widget(
-					'WP_Widget_Archives',
-					array(
-						'count'		=>	0,
-						'dropdown'	=>	1
-					),
-					array(
-						'after_title'	=>	'</h2>' . $archive_content
-					)
-				);
+				
+				the_widget( 'WP_Widget_Recent_Posts', array( 'number' => 10 ), array( 'widget_id' => '404' ) );
+				
+				the_widget( 'WP_Widget_Categories', array(
+					'title'	=>	__( 'Most Used Categories', 'the-bootstrap' ),
+				) );
+				
+				$archive_content = sprintf( _x( 'Try looking in the monthly archives. %1$s', '%1$s: smilie', 'the-bootstrap' ), convert_smilies( ':)' ) );
+				the_widget( 'WP_Widget_Archives', array(
+					'count'		=>	0,
+					'dropdown'	=>	1
+				), array(
+					'after_title'	=>	"</h2><p>{$archive_content}</p>"
+				) );
 				
 				the_widget( 'WP_Widget_Tag_Cloud' ); ?>
 

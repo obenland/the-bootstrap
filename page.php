@@ -15,16 +15,16 @@
 
 get_header(); ?>
 
-		<div id="primary" class="span8">
-			<div id="content" role="main">
+<div id="primary" class="span8">
+	<div id="content" role="main">
 
-				<?php
-				the_post();
-				get_template_part( '/partials/content', 'page' );
-				comments_template( '', true ); ?>
+		<?php
+		the_post();
+		get_template_part( '/partials/content', 'page' );
+		comments_template( '', true ); ?>
 
-			</div><!-- #content -->
-		</div><!-- #primary -->
+	</div><!-- #content -->
+</div><!-- #primary -->
 
 <?php
 get_sidebar();
