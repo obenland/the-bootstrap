@@ -29,6 +29,53 @@ License URI:	http://www.gnu.org/licenses/gpl-3.0.html
 */
 
 
+/* =Bootstrap layout
+-------------------------------------------------------------- */
+#page {
+	margin: 20px auto;
+	padding: 20px;
+}
+
+.navbar-fixed-top {
+	position: fixed !important;
+}
+
+@media (max-width: 480px) {
+	body {
+		padding: 0;
+	}
+	#page {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+
+@media (min-width: 768px) {
+	/* Right Content */
+	.sidebar-content #primary,
+	.sidebar-content #attachment-comment {
+		float: right;
+	}
+}
+
+@media (max-width: 767px) {
+	.navbar-fixed-top,
+	.navbar-fixed-bottom {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+@media (max-width: 979px) {
+	.navbar-fixed-top {
+		margin-bottom: 0;
+	}
+	.navbar-fixed-bottom .navbar-inner {
+		padding: 5px; /* See issue 3479 on twitter/bootstrap resolved in v2.0.4 */
+	}
+}
+
+
 /* =Elements
 -------------------------------------------------------------- */
 
@@ -60,29 +107,12 @@ h1, h2, h3, h4, h5, h6, .clear {
     position: absolute !important;
 }
 
-body > .container {
-	margin: 18px auto;
-}
-
-/* Right Content */
-.sidebar-content #primary,
-.sidebar-content #attachment-comment {
-	float: right;
-	margin: 0 20px 0 0;
-}
-
-.navbar-fixed-top {
-	position: fixed;
-}
-
 
 /* =Page
 -------------------------------------------------------------- */
 
 #page {
 	background-color: #FFFFFF;
-	margin-right: -20px;
-	padding: 14px 0 0;
 }
 
 .page-header {
@@ -234,7 +264,9 @@ img.wp-smiley {
 
 table .label {
 	background-color: transparent;
-	border-radius: none;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
 	color: inherit;
 	font-size: inherit;
 	text-transform: inherit;
@@ -257,11 +289,11 @@ table .label {
 }
 
 .navbar .btn, .navbar .btn-group {
-    margin: 5px;
+    /* margin: 5px; @obenland: Not sure about this */
 }
 
 .navbar-search {
-	height: 34px;
+	/* height: 34px; @obenland: Not sure about this */
 }
 
 .pagination span {
@@ -291,34 +323,36 @@ table .label {
 -------------------------------------------------------------- */
 
 .alignnone {
-    margin: 5px 20px 20px 0;
+    /* margin: 5px 20px 20px 0; @obenland: Not sure about this */
 }
 
 .aligncenter, div.aligncenter {
     display:block;
-    margin: 0 auto 20px;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin: 0 auto 20px; @obenland: Not sure about this */
 }
 
 .alignright {
-    float:right;
-    margin: 0 0 20px 20px;
+    float: right;
+    /* margin: 0 0 20px 20px; @obenland: Not sure about this */
 }
 
 .alignleft {
-    float:left;
-    margin: 0 20px 20px 0;
+    float: left;
+    /* margin: 0 20px 20px 0; @obenland: Not sure about this */
 }
 
 a img.alignright {
-    margin: 5px 0 20px 20px;
+    /* margin: 5px 0 20px 20px; @obenland: Not sure about this */
 }
 
 a img.alignnone {
-    margin: 5px 20px 20px 0;
+    /* margin: 5px 20px 20px 0; @obenland: Not sure about this */
 }
 
 a img.alignleft {
-    margin: 5px 20px 20px 0;
+    /* margin: 5px 20px 20px 0; @obenland: Not sure about this */
 }
 
 .wp-caption {
@@ -337,15 +371,15 @@ a img.alignleft {
 }
 
 .wp-caption.alignnone {
-    margin: 5px 20px 20px 0;
+    /* margin: 5px 20px 20px 0; @obenland: Not sure about this */
 }
 
 .wp-caption.alignleft {
-    margin: 5px 20px 20px 0;
+    /* margin: 5px 0 20px 0; @obenland: Not sure about this */
 }
 
 .wp-caption.alignright {
-    margin: 5px 0 20px 20px;
+    /* margin: 5px 0 20px 0; @obenland: Not sure about this */
 }
 
 .wp-caption.aligncenter {
@@ -360,17 +394,6 @@ a img.alignleft {
 -------------------------------------------------------------- */
 
 @media (max-width: 767px) {
-	body {
-		padding:0;
-	}
-	.container {
-		width: auto;
-		padding: 0 10px;
-	}
-	#page {
-		margin: 0;
-		padding: 10px;
-	}
 	.thumbnail[class*="span"],
 	.gallery [class*="span"] .thumbnail {
 		display: table;
@@ -385,10 +408,6 @@ a img.alignleft {
 	.thumbnails [class*="span"] {
 		width: 21%;
 	}
-	.sidebar-content #primary {
-		float: none;
-		margin: inherit;
-	}
 	#s {
 		display: inline-block;
 	}
@@ -400,14 +419,6 @@ a img.alignleft {
 	textarea[class*="span"] {
 		height: auto;
 	}
-	.navbar-fixed-top, .navbar-fixed-bottom {
-		margin: 0;
-	}
-}
-@media (min-width: 768px) and (max-width: 778px) {
-	#page {
-		margin-right: -15px;
-	}
 }
 @media (min-width: 768px) and (max-width: 979px) {
 	.dl-horizontal dt {
@@ -418,14 +429,6 @@ a img.alignleft {
 	}
 }
 @media (min-width: 1200px) {
-	#page {
-		margin-right: -30px;
-		padding: 24px 0 10px;
-	}
-	.sidebar-content #primary,
-	.sidebar-content #attachment-comment {
-		margin-right: 30px;
-	}
 	.wp-caption {
 		display: table;
 	}
