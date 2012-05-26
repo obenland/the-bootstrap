@@ -34,7 +34,7 @@ if ( have_comments() ) : ?>
 	
 		<ol class="commentlist unstyled">
 			<?php wp_list_comments( array( 'callback' => 'the_bootstrap_comment' ) ); ?>
-		</ol>
+		</ol><!-- .commentlist .unstyled -->
 	
 		<?php the_bootstrap_comment_nav(); ?>
 	
@@ -54,7 +54,6 @@ comment_form( array(
 	'title_reply_to'		=>	'<legend>' . __( 'Leave a reply to %s', 'the-bootstrap' ). '</legend>',
 	'must_log_in'			=>	'<div class="must-log-in control-group controls">' . sprintf( __( 'You must be <a href="%s">logged in</a> to post a comment.', 'the-bootstrap' ), wp_login_url( apply_filters( 'the_permalink', get_permalink( get_the_ID() ) ) ) ) . '</div>',
 	'logged_in_as'			=>	'<div class="logged-in-as control-group controls">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>', 'the-bootstrap' ), admin_url( 'profile.php' ), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( get_the_ID() ) ) ) ) . '</div>',
-
 ) );
 
 

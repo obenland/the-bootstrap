@@ -23,7 +23,7 @@
 								target="_blank"
 								rel="generator"><?php printf( _x( 'Proudly powered by %s', 'WordPress', 'the-bootstrap' ), 'WordPress' ); ?></a>
 						</div>
-					</div>
+					</div><!-- #page-footer .well .clearfix -->
 				</footer><!-- #colophon -->
 			</div><!-- #page -->
 		</div><!-- .container -->

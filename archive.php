@@ -33,7 +33,7 @@ get_header(); ?>
 							_e( 'Blog Archives', 'the-bootstrap' );
 						endif; ?>
 					</h1>
-				</header>
+				</header><!-- .page-header -->
 
 				<?php
 				while ( have_posts() ) {

@@ -23,7 +23,7 @@ get_header(); ?>
 			<?php if ( $tag_description = tag_description() ) {
 				echo apply_filters( 'tag_archive_meta', '<div class="tag-archive-meta">' . $tag_description . '</div>' );
 			} ?>
-		</header>
+		</header><!-- .page-header -->
 
 		<?php
 		while ( have_posts() ) {

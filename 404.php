@@ -16,7 +16,7 @@ get_header(); ?>
 		<article id="post-0" class="post error404 not-found">
 			<header class="page-header">
 				<h1 class="entry-title"><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'the-bootstrap' ); ?></h1>
-			</header>
+			</header><!-- .page-header -->
 
 			<div class="entry-content">
 				<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help.', 'the-bootstrap' ); ?></p>
@@ -41,7 +41,7 @@ get_header(); ?>
 				the_widget( 'WP_Widget_Tag_Cloud' ); ?>
 
 			</div><!-- .entry-content -->
-		</article><!-- #post-0 -->
+		</article><!-- #post-0 .post .error404 .not-found -->
 
 	</div><!-- #content -->
 </div><!-- #primary -->

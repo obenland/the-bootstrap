@@ -23,7 +23,7 @@ get_header(); ?>
 			<?php if ( $category_description = category_description() ) {
 				echo apply_filters( 'category_archive_meta', '<div class="category-archive-meta">' . $category_description . '</div>' );
 			} ?>
-		</header>
+		</header><!-- .page-header -->
 
 		<?php
 		while ( have_posts() ) {
