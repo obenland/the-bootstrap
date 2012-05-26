@@ -10,10 +10,6 @@
  */
 
 
-if ( ! function_exists( 'the_bootstrap_options' ) )
-	require_once 'theme-options.php';
-
-
 /**
  * Registers the theme setting controls with the Theme Customizer
  * 
@@ -30,12 +26,16 @@ function the_bootstrap_customize_register( $wp_customize ) {
 		'priority'	=>	99,
 	) );
 	
+	// Add settings
+	foreach ( array_keys( the_bootstrap_get_default_theme_options() ) as $setting ) {
+		$wp_customize->add_setting( "the_bootstrap_theme_options[{$setting}]", array(
+			'default'	=>	the_bootstrap_options()->$setting,
+			'type'		=>	'option',
+			'transport'	=>	'postMessage',
+		) );
+	}
+	
 	// Theme Layout
-	$wp_customize->add_setting( 'the_bootstrap_theme_options[theme_layout]', array(
-		'default'	=>	the_bootstrap_options()->theme_layout,
-		'type'		=>	'option',
-		'transport'	=>	'postMessage',
-	) );
 	$wp_customize->add_control( 'the_bootstrap_theme_layout', array(
 		'label'		=>	__( 'Default Layout', 'the-bootstrap' ),
 		'section'	=>	'the_bootstrap_theme_options',
@@ -48,11 +48,6 @@ function the_bootstrap_customize_register( $wp_customize ) {
 	) );
 	
 	// Sitename in Navbar
-	$wp_customize->add_setting( 'the_bootstrap_theme_options[navbar_site_name]', array(
-		'default'	=>	the_bootstrap_options()->navbar_site_name,
-		'type'		=>	'option',
-		'transport'	=>	'postMessage',
-	) );
 	$wp_customize->add_control( 'the_bootstrap_navbar_site_name', array(
 		'label'		=>	__( 'Add site name to navigation bar.', 'the-bootstrap' ),
 		'section'	=>	'the_bootstrap_theme_options',
@@ -61,11 +56,6 @@ function the_bootstrap_customize_register( $wp_customize ) {
 	) );
 	
 	// Searchform in Navbar
-	$wp_customize->add_setting( 'the_bootstrap_theme_options[navbar_searchform]', array(
-		'default'	=>	the_bootstrap_options()->navbar_searchform,
-		'type'		=>	'option',
-		'transport'	=>	'postMessage',
-	) );
 	$wp_customize->add_control( 'the_bootstrap_navbar_searchform', array(
 		'label'		=>	__( 'Add searchform to navigation bar.', 'the-bootstrap' ),
 		'section'	=>	'the_bootstrap_theme_options',
@@ -74,11 +64,6 @@ function the_bootstrap_customize_register( $wp_customize ) {
 	) );
 	
 	// Navbar Position
-	$wp_customize->add_setting( 'the_bootstrap_theme_options[navbar_position]', array(
-		'default'	=>	the_bootstrap_options()->navbar_position,
-		'type'		=>	'option',
-		'transport'	=>	'postMessage',
-	) );
 	$wp_customize->add_control( 'the_bootstrap_navbar_position', array(
 		'label'		=>	__( 'Navigation Bar Position', 'the-bootstrap' ),
 		'section'	=>	'the_bootstrap_theme_options',
@@ -103,9 +88,7 @@ add_action( 'customize_register', 'the_bootstrap_customize_register' );
  * @return	void
  */
 function the_bootstrap_customize_enqueue_scripts() {
-	
-	wp_enqueue_script( 'the-bootstrap-customize', get_template_directory_uri() . '/js/theme-customizer.js', array('jquery', 'customize-preview' ), _the_bootstrap_version(), true );
-	
+	wp_enqueue_script( 'the-bootstrap-customize', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), _the_bootstrap_version(), true );
 	wp_localize_script( 'the-bootstrap-customize', 'the_bootstrap_customize', array(
 		'sitename'		=>	get_bloginfo( 'name', 'display' ),
 		'searchform'	=>	the_bootstrap_navbar_searchform( false )
