@@ -32,7 +32,6 @@ function the_bootstrap_customize_register( $wp_customize ) {
 			'default'		=>	the_bootstrap_options()->$setting,
 			'type'			=>	'option',
 			'transport'		=>	'postMessage',
-			'capability'	=> 'edit_theme_options',
 		) );
 	}
 	
