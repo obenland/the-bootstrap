@@ -29,9 +29,10 @@ function the_bootstrap_customize_register( $wp_customize ) {
 	// Add settings
 	foreach ( array_keys( the_bootstrap_get_default_theme_options() ) as $setting ) {
 		$wp_customize->add_setting( "the_bootstrap_theme_options[{$setting}]", array(
-			'default'	=>	the_bootstrap_options()->$setting,
-			'type'		=>	'option',
-			'transport'	=>	'postMessage',
+			'default'		=>	the_bootstrap_options()->$setting,
+			'type'			=>	'option',
+			'transport'		=>	'postMessage',
+			'capability'	=> 'edit_theme_options',
 		) );
 	}
 	
