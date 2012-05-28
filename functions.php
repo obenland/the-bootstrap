@@ -428,57 +428,57 @@ function the_bootstrap_comment( $comment, $args, $depth ) {
 	switch ( $comment->comment_type ) :
 		case 'pingback' :
 		case 'trackback' :
-	?>
-	<li class="post pingback">
-		<p class="row">
-			<strong class="ping-label span1"><?php _e( 'Pingback:', 'the-bootstrap' ); ?></strong>
-			<span class="span7"><?php comment_author_link(); edit_comment_link( __( 'Edit', 'the-bootstrap' ), '<span class="sep">&nbsp;</span><span class="edit-link label">', '</span>' ); ?></span>
-		</p>
-	<?php
+			?>
+			<li class="post pingback">
+				<p class="row">
+					<strong class="ping-label span1"><?php _e( 'Pingback:', 'the-bootstrap' ); ?></strong>
+					<span class="span7"><?php comment_author_link(); edit_comment_link( __( 'Edit', 'the-bootstrap' ), '<span class="sep">&nbsp;</span><span class="edit-link label">', '</span>' ); ?></span>
+				</p>
+			<?php
 			break;
 		default :
 			$offset	=	$depth - 1;
 			$span	=	7 - $offset;
-	?>
-	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-		<article id="comment-<?php comment_ID(); ?>" class="comment row">
-			<div class="comment-author-avatar span1<?php if ($offset) echo " offset{$offset}"; ?>">
-				<?php echo get_avatar( $comment, 70 ); ?>
-			</div>
-			<footer class="comment-meta span<?php echo $span; ?>">
-				<div class="comment-author vcard">
-					<?php
-						/* translators: 1: comment author, 2: date and time */
-						printf( __( '%1$s <span class="says">said</span> on %2$s:', 'the-bootstrap' ),
-							sprintf( '<span class="fn">%s</span>', get_comment_author_link() ),
-							sprintf( '<a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
-								esc_url( get_comment_link( $comment->comment_ID ) ),
-								get_comment_time( 'c' ),
-								/* translators: 1: date, 2: time */
-								sprintf( __( '%1$s at %2$s', 'the-bootstrap' ), get_comment_date(), get_comment_time() )
-							)
-						);
-						edit_comment_link( __( 'Edit', 'the-bootstrap' ), '<span class="sep">&nbsp;</span><span class="edit-link label">', '</span>' ); ?>
-				</div><!-- .comment-author .vcard -->
-
-				<?php if ( ! $comment->comment_approved ) : ?>
-				<div class="comment-awaiting-moderation alert alert-info"><em><?php _e( 'Your comment is awaiting moderation.', 'the-bootstrap' ); ?></em></div>
-				<?php endif; ?>
-
-			</footer>
-
-			<div class="comment-content span<?php echo $span; ?>">
-				<?php
-				comment_text();
-				comment_reply_link( array_merge( $args, array(
-					'reply_text'	=>	__( 'Reply <span>&darr;</span>', 'the-bootstrap' ),
-					'depth'			=>	$depth,
-					'max_depth'		=>	$args['max_depth']
-				) ) ); ?>
-			</div>
-
-		</article><!-- #comment-<?php comment_ID(); ?> -->
-	<?php
+			?>
+			<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+				<article id="comment-<?php comment_ID(); ?>" class="comment row">
+					<div class="comment-author-avatar span1<?php if ($offset) echo " offset{$offset}"; ?>">
+						<?php echo get_avatar( $comment, 70 ); ?>
+					</div>
+					<footer class="comment-meta span<?php echo $span; ?>">
+						<div class="comment-author vcard">
+							<?php
+								/* translators: 1: comment author, 2: date and time */
+								printf( __( '%1$s <span class="says">said</span> on %2$s:', 'the-bootstrap' ),
+									sprintf( '<span class="fn">%s</span>', get_comment_author_link() ),
+									sprintf( '<a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
+										esc_url( get_comment_link( $comment->comment_ID ) ),
+										get_comment_time( 'c' ),
+										/* translators: 1: date, 2: time */
+										sprintf( __( '%1$s at %2$s', 'the-bootstrap' ), get_comment_date(), get_comment_time() )
+									)
+								);
+								edit_comment_link( __( 'Edit', 'the-bootstrap' ), '<span class="sep">&nbsp;</span><span class="edit-link label">', '</span>' ); ?>
+						</div><!-- .comment-author .vcard -->
+		
+						<?php if ( ! $comment->comment_approved ) : ?>
+						<div class="comment-awaiting-moderation alert alert-info"><em><?php _e( 'Your comment is awaiting moderation.', 'the-bootstrap' ); ?></em></div>
+						<?php endif; ?>
+		
+					</footer><!-- .comment-meta -->
+		
+					<div class="comment-content span<?php echo $span; ?>">
+						<?php
+						comment_text();
+						comment_reply_link( array_merge( $args, array(
+							'reply_text'	=>	__( 'Reply <span>&darr;</span>', 'the-bootstrap' ),
+							'depth'			=>	$depth,
+							'max_depth'		=>	$args['max_depth']
+						) ) ); ?>
+					</div><!-- .comment-content -->
+		
+				</article><!-- #comment-<?php comment_ID(); ?> .comment -->
+			<?php
 			break;
 	endswitch;
 }
@@ -743,13 +743,13 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 			'status'	=>	'approve'
 		) );
 		
-		$link = wp_get_attachment_link( $id, $size, ! ( isset($attr['link']) AND 'file' == $attr['link'] ) );
+		$link = wp_get_attachment_link( $id, $size, ! ( isset( $attr['link'] ) AND 'file' == $attr['link'] ) );
 		$clear_class = ( 0 == $i++ % $columns ) ? ' clear' : '';
 		
 		$output .= "<li class='span2{$clear_class}'><{$itemtag} class='gallery-item'>";
 		$output .= "<{$icontag} class='gallery-icon'>{$link}</{$icontag}>\n";
 			
-		if ( $captiontag AND (0 < $comments OR trim($attachment->post_excerpt)) ) {
+		if ( $captiontag AND ( 0 < $comments OR trim( $attachment->post_excerpt ) ) ) {
 			$comments	=	( 0 < $comments ) ? sprintf( _n('%d comment', '%d comments', $comments, 'the-bootstrap'), $comments ) : '';
 			$excerpt	=	wptexturize( $attachment->post_excerpt );
 			$out		=	($comments AND $excerpt) ? " $excerpt <br /> $comments " : " $excerpt$comments ";
@@ -783,9 +783,9 @@ function the_bootstrap_img_caption_shortcode( $empty, $attr, $content ) {
 		'align'		=>	'alignnone',
 		'width'		=>	'',
 		'caption'	=>	''
-	), $attr) );
+	), $attr ) );
 
-	if ( 1 > (int) $width OR empty($caption) ) {
+	if ( 1 > (int) $width OR empty( $caption ) ) {
 		return $content;
 	}
 
