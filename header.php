@@ -45,11 +45,13 @@
 						</h1>
 						<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
 					</hgroup>
+					
 					<?php if ( get_header_image() ) : ?>
 					<a id="header-image" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 						<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
 					</a>
 					<?php endif; // if ( get_header_image() ) ?>
+
 					<nav id="access" role="navigation">
 						<h3 class="assistive-text"><?php _e( 'Main menu', 'the-bootstrap' ); ?></h3>
 						<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'the-bootstrap' ); ?>"><?php _e( 'Skip to primary content', 'the-bootstrap' ); ?></a></div>
