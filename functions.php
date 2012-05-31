@@ -59,8 +59,7 @@ function the_bootstrap_setup() {
 	/**
 	 * Implement the Theme Customizer script
 	 */
-	if ( isset( $_REQUEST['theme'] ) AND 'the-bootstrap' == $_REQUEST['theme'] )
-		require_once( get_template_directory() . '/inc/theme-customizer.php' );
+	require_once( get_template_directory() . '/inc/theme-customizer.php' );
 	
 	/**
 	 * Custom Nav Menu handler for the Navbar.
