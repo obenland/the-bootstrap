@@ -271,6 +271,7 @@ function the_bootstrap_settings_field_radio( $args ) {
 			<?php if ( isset( $o->description ) ) echo $o->description; ?>
 		</label><br />
 	<?php endforeach;
+
 }
 
 
@@ -287,7 +288,7 @@ function the_bootstrap_theme_options_render_page() {
 	<div class="wrap">
 		<?php screen_icon(); ?>
 		<h2><?php esc_html_e( 'The Bootstrap Theme Options', 'the-bootstrap' ); ?></h2>
-		<?php settings_errors(); ?>
+		<?php settings_errors( 'the-bootstrap' ); ?>
 
 		<div id="poststuff">
 			<div id="post-body" class="obenland-wp columns-2">
@@ -332,9 +333,9 @@ function the_bootstrap_theme_options_validate( $input ) {
 	
 	$output['navbar_site_name']		=	isset( $input['navbar_site_name'] );
 	$output['navbar_searchform']	=	isset( $input['navbar_searchform'] );
-	
+
 	if ( ! get_settings_errors() ) {
-		add_settings_error( 'the-bootstrap-options', 'settings_updated', sprintf( __( 'Settings saved. <a href="%s">Visit your site</a> to see how it looks.', 'the-bootstrap' ), home_url( '/' ) ), 'updated' );
+		add_settings_error( 'the-bootstrap', 'settings_updated', sprintf( __( 'Settings saved. <a href="%s">Visit your site</a> to see how it looks.', 'the-bootstrap' ), home_url( '/' ) ), 'updated' );
 	}
 	
 	return apply_filters( 'the_bootstrap_theme_options_validate', $output, $input, $defaults );
