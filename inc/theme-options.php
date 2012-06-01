@@ -351,12 +351,15 @@ function the_bootstrap_theme_options_validate( $input ) {
  * 
  * Props Joost de Valk, as this is almost entirely from his awesome WordPress
  * SEO Plugin
- * @see		http://plugins.svn.wordpress.org/wordpress-seo/tags/1.1.5/admin/class-config.php
+ * 
+ * @link		http://plugins.trac.wordpress.org/browser/wordpress-seo/trunk/admin/class-config.php#L82
+ * @copyright	Joost de Valk
+ * @license		GPLv2 or later
  *
- * @author	Joost de Valk, Konstantin Obenland
- * @since	1.3.0 - 06.04.2012
+ * @author		Joost de Valk, Konstantin Obenland
+ * @since		1.3.0 - 06.04.2012
  *
- * @return	void
+ * @return		void
  */
 function the_bootstrap_donate_box() {
 	?>
@@ -387,12 +390,15 @@ add_action( 'the_bootstrap_side_info_column', 'the_bootstrap_donate_box', 1 );
  * 
  * Props Joost de Valk, as this is almost entirely from his awesome WordPress
  * SEO Plugin
- * @see		http://plugins.svn.wordpress.org/wordpress-seo/tags/1.1.5/admin/class-config.php
+ * 
+ * @link		http://plugins.trac.wordpress.org/browser/wordpress-seo/trunk/admin/yst_plugin_tools.php#L375
+ * @copyright	Joost de Valk
+ * @license		GPLv2 or later
+ * 
+ * @author		Joost de Valk, Konstantin Obenland
+ * @since		1.3.0 - 06.04.2012
  *
- * @author	Joost de Valk, Konstantin Obenland
- * @since	1.3.0 - 06.04.2012
- *
- * @return	void
+ * @return		void
  */
 function the_bootstrap_feed_box() {
 	$rss_items = _the_bootstrap_fetch_feed( 'http://en.wp.obenland.it/feed/' );
@@ -421,7 +427,14 @@ add_action( 'the_bootstrap_side_info_column', 'the_bootstrap_feed_box' );
 /**
  * Callback function to get feed items
  * 
- * @author	Konstantin Obenland
+ * Props Joost de Valk, as this is almost entirely from his awesome WordPress
+ * SEO Plugin
+ * 
+ * @link		http://plugins.trac.wordpress.org/browser/wordpress-seo/trunk/admin/yst_plugin_tools.php#L353
+ * @copyright	Joost de Valk
+ * @license		GPLv2 or later
+ * 
+ * @author	Joost de Valk, Konstantin Obenland
  * @since	1.3.0 - 06.04.2012
  * @access	private
  * 
