@@ -34,6 +34,7 @@ Currently available in:
 
 * Dutch
 * English
+* French
 * German
 * Russian
 
@@ -67,6 +68,7 @@ For more information on SemVer, please visit [http://semver.org/].
 = 1.6.0 =
 * Updated Twitter Bootstrap to 2.0.4
 * Added copyright and license info to Yoast's code
+* Added French translation. Props Pistil
 
 = 1.5.0 =
 * Added missing Theme Option to Theme Customizer
