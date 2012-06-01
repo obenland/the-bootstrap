@@ -5,7 +5,7 @@ Tags:				black, blue, white, light, two-columns, right-sidebar, flexible-width, 
 Donate link:		https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=542W6XT4PLT4L  
 Requires at least:	3.0  
 Tested up to:		3.4  
-Stable tag:			1.5.0
+Stable tag:			1.6.0
 
 A WordPress Theme based on Bootstrap, from Twitter
 
@@ -45,6 +45,18 @@ Currently available in:
 3. Activate the Theme through the 'Appearance' menu in WordPress
 
 
-## Frequently Asked Questions
+## Versioning
 
-None asked yet.
+For transparency and insight into my release cycle, and for striving to maintain backward compatibility, The Bootstrap - as all my WordPress APIs - will be maintained under the Semantic Versioning guidelines.
+
+Releases will be numbered with the following format:
+
+`<major>.<minor>.<patch>`
+
+And constructed with the following guidelines:
+
+* Breaking backward compatibility bumps the major (and resets the minor and patch)
+* New additions without breaking backward compatibility bumps the minor (and resets the patch)
+* Bug fixes and misc changes bumps the patch
+
+For more information on SemVer, please visit (http://semver.org/).
