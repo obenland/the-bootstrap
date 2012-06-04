@@ -143,7 +143,7 @@ function the_bootstrap_admin_bar_menu( $wp_admin_bar ) {
 	if ( current_user_can( 'edit_theme_options' ) AND is_admin_bar_showing() ) {
 		$wp_admin_bar->add_menu( array(
 			'title'		=>	__( 'Theme Options', 'the-bootstrap' ),
-			'href'		=>	admin_url( 'themes.php?page=theme_options' ),
+			'href'		=>	add_query_arg( array( 'page' => 'theme_options' ), admin_url( 'themes.php' ) ),
 			'parent'	=>	'appearance',
 			'id'		=>	'the-bootstrap-theme-options',
 		) );
