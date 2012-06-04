@@ -21,6 +21,9 @@
  * @return	void
  */
 function the_bootstrap_customize_register( $wp_customize ) {
+	$wp_customize->get_setting( 'blogname' )->transport	= 'postMessage';
+	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
+	
 	$wp_customize->add_section( 'the_bootstrap_theme_options', array(
 		'title'		=>	__( 'Theme Options', 'the-bootstrap' ),
 		'priority'	=>	99,

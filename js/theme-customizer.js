@@ -1,4 +1,14 @@
 jQuery(function($){
+	wp.customize( 'blogname', function( value ) {
+		value.bind( function( to ) {
+			$( '#site-title span' ).html( to );
+		} );
+	} );
+	wp.customize( 'blogdescription', function( value ) {
+		value.bind( function( to ) {
+			$( '#site-description' ).html( to );
+		} );
+	} );
 	wp.customize('the_bootstrap_theme_options[theme_layout]',function(value){
 		value.bind(function(to){
 			jQuery('body').removeClass('content-sidebar sidebar-content').addClass(to);

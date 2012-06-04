@@ -4,7 +4,7 @@ Tags:				black, blue, white, light, two-columns, left-sidebar, right-sidebar, fl
 Donate link:		https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=542W6XT4PLT4L
 Requires at least:	3.3.0
 Tested up to:		3.4
-Stable tag:			1.6.0
+Stable tag:			1.7.0
 
 A WordPress Theme based on Bootstrap, from Twitter
 
@@ -64,6 +64,9 @@ For more information on SemVer, please visit [http://semver.org/].
 
 
 == Changelog ==
+
+= 1.7.0 =
+* Changed site title and description transport method to postMessage in Theme Customizer
 
 = 1.6.0 =
 * Added a Gallery Widget for sidebars
