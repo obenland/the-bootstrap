@@ -124,7 +124,7 @@ function the_bootstrap_widgets_init() {
 		'name'			=>	__( 'Main Sidebar', 'the-bootstrap' ),
 		'id'			=>	'main',
 		'before_widget'	=>	'<aside id="%1$s" class="widget well %2$s">',
-		'after_widget'	=>	"</aside>",
+		'after_widget'	=>	'</aside>',
 		'before_title'	=>	'<h2 class="widget-title">',
 		'after_title'	=>	'</h2>',
 	) );
@@ -134,7 +134,7 @@ function the_bootstrap_widgets_init() {
 		'description'	=>	__( 'Shown on image attachment pages.', 'the-bootstrap' ),
 		'id'			=>	'image',
 		'before_widget'	=>	'<aside id="%1$s" class="widget well %2$s">',
-		'after_widget'	=>	"</aside>",
+		'after_widget'	=>	'</aside>',
 		'before_title'	=>	'<h2 class="widget-title">',
 		'after_title'	=>	'</h2>',
 	) );
