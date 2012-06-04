@@ -1,34 +1,34 @@
 /** style.css
+ * 
+ * Theme Name:	The Bootstrap
+ * Theme URI:	http://en.wp.obenland.it/the-bootstrap/
+ * Description:	A WordPress Theme based on Bootstrap, from Twitter. It features a 100% responsive layout, a superb gallery and image handling with a custom image meta widget and carousel for gallery post-formats, a clean and simple design and a lot more! The Bootstrap runs on HTML5 and CSS3, a 12-column grid and comes with custom jQuery plugins. See the Bootstrap documentation on GitHub for reference.
+ * Author:		Konstantin Obenland
+ * Author URI:	http://en.wp.obenland.it/
+ * Version:		1.6.0
+ * Tags:		black, blue, white, light, custom-background, custom-header, custom-menu, featured-images, flexible-width, full-width-template, left-sidebar, microformats, post-formats, right-sidebar, sticky-post, theme-options, threaded-comments, translation-ready, two-columns
+ * Text Domain:	the-bootstrap
+ * Domain Path:	/lang
  *
-Theme Name:		The Bootstrap
-Theme URI:		http://en.wp.obenland.it/the-bootstrap/
-Description:	A WordPress Theme based on Bootstrap, from Twitter. It features a 100% responsive layout, a superb gallery and image handling with a custom image meta widget and carousel for gallery post-formats, a clean and simple design and a lot more! The Bootstrap runs on HTML5 and CSS3, a 12-column grid and comes with custom jQuery plugins. See the Bootstrap documentation on GitHub for reference.
-Author:			Konstantin Obenland
-Author URI:		http://en.wp.obenland.it/
-Version:		1.6.0
-Tags:			black, blue, white, light, custom-background, custom-header, custom-menu, featured-images, flexible-width, full-width-template, left-sidebar, microformats, post-formats, right-sidebar, sticky-post, theme-options, threaded-comments, translation-ready, two-columns
-Text Domain:	the-bootstrap
-Domain Path:	/lang
-
-License:		GNU General Public License v3.0
-License URI:	http://www.gnu.org/licenses/gpl-3.0.html
-
-
-    Copyright (C) 2012 Konstantin Obenland <konstantin@obenland.it>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ * License:		GNU General Public License v3.0
+ * License URI:	http://www.gnu.org/licenses/gpl-3.0.html
+ *
+ *
+ *	Copyright (C) 2012 Konstantin Obenland <konstantin@obenland.it>
+ *
+ *	This program is free software: you can redistribute it and/or modify
+ *	it under the terms of the GNU General Public License as published by
+ *	the Free Software Foundation, either version 3 of the License, or
+ *	(at your option) any later version.
+ *
+ *	This program is distributed in the hope that it will be useful,
+ *	but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *	GNU General Public License for more details.
+ *
+ *	You should have received a copy of the GNU General Public License
+ *	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 
 
 /* =Elements

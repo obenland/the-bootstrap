@@ -66,6 +66,7 @@ For more information on SemVer, please visit [http://semver.org/].
 == Changelog ==
 
 = 1.6.0 =
+* Added a Gallery Widget for sidebars
 * Updated Twitter Bootstrap to 2.0.4
 * Added copyright and license info to Yoast's code
 * Added French translation. Props Pistil

@@ -1,5 +1,5 @@
 <?php
-/** image-meta-widget.php
+/** the-bootstrap-image-meta-widget.php
  *
  * @author	Konstantin Obenland
  * @package	The Bootstrap
@@ -153,9 +153,9 @@ class The_Bootstrap_Image_Meta_Widget extends WP_Widget {
 		</label></p>
 		<?php
 	}
-} // End of class Image_Meta_Widget
+} // End of class The_Bootstrap_Image_Meta_Widget
 
 
 
-/* End of file image-meta-widget.php */
-/* Location: ./wp-content/plugins/image-meta-widget/image-meta-widget.php */
+/* End of file the-bootstrap-image-meta-widget.php */
+/* Location: ./wp-content/themes/the-bootstrap/the-bootstrap-image-meta-widget.php */

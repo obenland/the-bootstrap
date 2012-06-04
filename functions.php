@@ -141,6 +141,9 @@ function the_bootstrap_widgets_init() {
 
 	include_once( 'inc/the-bootstrap-image-meta-widget.php' );
 	register_widget( 'The_Bootstrap_Image_Meta_Widget' );
+	
+	include_once( 'inc/the-bootstrap-gallery-widget.php' );
+	register_widget( 'The_Bootstrap_Gallery_Widget' );
 }
 add_action( 'widgets_init', 'the_bootstrap_widgets_init' );
 
