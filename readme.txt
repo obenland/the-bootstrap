@@ -26,6 +26,7 @@ Unless otherwise specified, all the theme files, scripts and images are licensed
 The exceptions to this license are as follows:
 * Bootstrap by Twitter is licensed under the GPL-compatible [http://www.apache.org/licenses/LICENSE-2.0 Apache License v2.0]
 * html5shiv is licensed under MIT
+* Respond.js: Copyright 2011: Scott Jehl, scottjehl.com. Dual licensed under the MIT or GPL Version 2 licenses.
 * Twitter Icon: [https://twitter.com/about/resources/logos]
 
 = Translations =
@@ -67,6 +68,7 @@ For more information on SemVer, please visit [http://semver.org/].
 
 = 1.7.0 =
 * Changed site title and description transport method to postMessage in Theme Customizer
+* Added response.js forthe use of media queries in InternetExplorer 6-8
 
 = 1.6.0 =
 * Added a Gallery Widget for sidebars
