@@ -1,0 +1,655 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: yoichi kikuchi <kic4o1@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#@ the-bootstrap
+#: 404.php:18
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "要求されたページは存在しません。"
+
+#@ the-bootstrap
+#: 404.php:22
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help."
+msgstr "検索結果はありません。もう一度検索してみてください。"
+
+#@ the-bootstrap
+#: 404.php:29
+msgid "Most Used Categories"
+msgstr "よく使用されるカテゴリー"
+
+#@ the-bootstrap
+#. translators: %1$s: smilie
+#: 404.php:43
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "月別 アーカイブで探してみてください。 %1$s"
+
+#@ the-bootstrap
+#: archive.php:27
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "日別 アーカイブ: %s"
+
+#@ the-bootstrap
+#: archive.php:29
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "月別 アーカイブ: %s"
+
+#@ the-bootstrap
+#: archive.php:31
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "年別 アーカイブ: %s"
+
+#@ the-bootstrap
+#: archive.php:33
+msgid "Blog Archives"
+msgstr "ブログ アーカイブ"
+
+#@ the-bootstrap
+#: author.php:20
+#, php-format
+msgid "Author Archives: %s"
+msgstr "著者別 アーカイブ: %s"
+
+#@ the-bootstrap
+#: author.php:28
+#: partials/content-single.php:38
+#, php-format
+msgid "About %s"
+msgstr "About %s"
+
+#@ the-bootstrap
+#: category.php:20
+#, php-format
+msgid "Category Archives: %s"
+msgstr "カテゴリー別 アーカイブ: %s"
+
+#@ the-bootstrap
+#: comments.php:19
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "この投稿はパスワード保護されています。コメントを読むには、パスワードを入力します。"
+
+#@ the-bootstrap
+#: comments.php:29
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "One thought on &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s thoughts on &ldquo;%2$s&rdquo;"
+
+#@ the-bootstrap
+#: comments.php:35
+#: comments.php:47
+msgid "Comment navigation"
+msgstr "コメント ナビゲーション"
+
+#@ the-bootstrap
+#: comments.php:36
+#: comments.php:48
+msgid "&larr; Newer Comments"
+msgstr "&larr; 新しいコメント"
+
+#@ the-bootstrap
+#: comments.php:37
+#: comments.php:49
+msgid "Older Comments &rarr;"
+msgstr "過去のコメント &larr;"
+
+#@ the-bootstrap
+#: comments.php:57
+msgid "Comments are closed."
+msgstr "コメントは閉じられています。"
+
+#@ the-bootstrap
+#: comments.php:61
+msgctxt "noun"
+msgid "Comment"
+msgstr "コメント"
+
+#@ the-bootstrap
+#: comments.php:63
+#, php-format
+msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes: %s"
+msgstr "次の HTML タグと、属性を使用できます。 %s"
+
+#@ the-bootstrap
+#: comments.php:67
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "コメントを投稿するには、<a href=\"%s\">ログイン</a>してください。"
+
+#@ the-bootstrap
+#: comments.php:68
+#, php-format
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out?</a>"
+msgstr "<a href=\"%1$s\">%2$s</a>としてログインしています。本人でない場合は<a href=\"%3$s\" title=\"Uitloggen\">ログアウト</a>。"
+
+#@ the-bootstrap
+#: functions.php:238
+#, php-format
+msgid "&copy; %1$s <a href=\"%2$s\">%3$s</a>, all rights reserved."
+msgstr "&copy; %1$s <a href=\"%2$s\">%3$s</a>, all rights reserved."
+
+#@ the-bootstrap
+#: footer.php:21
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#@ the-bootstrap
+#: footer.php:22
+msgid "Semantic Personal Publishing Platform"
+msgstr "Semantic Personal Publishing Platform"
+
+#@ the-bootstrap
+#: footer.php:24
+#, php-format
+msgctxt "WordPress"
+msgid "Proudly powered by %s"
+msgstr "Proudly powered by %s"
+
+#@ the-bootstrap
+#: footer.php:30
+#, php-format
+msgid "%d queries. %s seconds."
+msgstr "%d queries. %s seconds."
+
+#@ the-bootstrap
+#: functions.php:67
+msgid "Main Navigation"
+msgstr "メイン ナビゲーション"
+
+#@ the-bootstrap
+#: functions.php:113
+msgid "Main Sidebar"
+msgstr "メイン サイドバー"
+
+#@ the-bootstrap
+#: functions.php:122
+msgid "Image Sidebar"
+msgstr "イメージ サイドバー"
+
+#@ the-bootstrap
+#: inc/template-tags.php:69
+#, php-format
+msgid "<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
+msgstr "<a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> : </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span><span class=\"sep\"> が投稿</span>"
+
+#@ the-bootstrap
+#: inc/template-tags.php:75
+#, php-format
+msgid "View all posts by %s"
+msgstr "%s の投稿をすべて表示"
+
+#@ the-bootstrap
+#: inc/template-tags.php:81
+msgid "<strong>1</strong> Reply"
+msgstr "<strong>1</strong> コメント"
+
+#@ the-bootstrap
+#: inc/template-tags.php:81
+msgid "<strong>%</strong> Replies"
+msgstr "<strong>%</strong> コメント"
+
+#@ the-bootstrap
+#: functions.php:394
+#: functions.php:420
+#: image.php:52
+#: inc/template-tags.php:85
+#: partials/content-page.php:21
+msgid "Edit"
+msgstr "編集"
+
+#@ the-bootstrap
+#: inc/template-tags.php:109
+msgid "Next page"
+msgstr "次ページ"
+
+#@ the-bootstrap
+#: inc/template-tags.php:110
+msgid "Previous page"
+msgstr "前ページ"
+
+#@ the-bootstrap
+#: inc/template-tags.php:124
+#: inc/template-tags.php:138
+msgid "Pages:"
+msgstr "ページ:"
+
+#@ the-bootstrap
+#: functions.php:281
+#: partials/content-aside.php:28
+#: partials/content-image.php:16
+#: partials/content-page.php:18
+#: partials/content-status.php:19
+#: partials/content.php:41
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "続きを読む <span class=\"meta-nav\">&rarr;</span>"
+
+#@ the-bootstrap
+#: functions.php:393
+msgid "Pingback:"
+msgstr "ピンバック:"
+
+#@ the-bootstrap
+#. translators: 1: comment author, 2: date and time
+#: functions.php:411
+#, php-format
+msgid "%1$s <span class=\"says\">said</span> on %2$s:"
+msgstr "%1$s <span class=\"says\">から</span> %2$s へ:"
+
+#@ the-bootstrap
+#. translators: 1: date, 2: time
+#: functions.php:417
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s at %2$s"
+
+#@ the-bootstrap
+#: functions.php:424
+msgid "Your comment is awaiting moderation."
+msgstr "あなたのコメントはモデレーション待ちです。"
+
+#@ the-bootstrap
+#: functions.php:433
+msgid "Reply <span>&darr;</span>"
+msgstr "コメント <span>&darr;</span>"
+
+#@ the-bootstrap
+#: functions.php:497
+msgid "Name"
+msgstr "名前"
+
+#@ the-bootstrap
+#: functions.php:500
+#: functions.php:526
+msgid "required"
+msgstr "必須"
+
+#@ the-bootstrap
+#: functions.php:523
+msgid "Email"
+msgstr "メールアドレス"
+
+#@ the-bootstrap
+#: functions.php:526
+msgid "will not be published"
+msgstr "公開されません。"
+
+#@ the-bootstrap
+#: functions.php:547
+msgid "Website"
+msgstr "ウェブサイト"
+
+#@ the-bootstrap
+#: functions.php:712
+#, php-format
+msgid "%d comment"
+msgid_plural "%d comments"
+msgstr[0] "%d コメント"
+msgstr[1] "%d コメント"
+
+#@ the-bootstrap
+#: functions.php:774
+msgid "This post is password protected. To view it please enter your password below:"
+msgstr "この投稿はパスワード保護されています。記事を読むには、パスワードを入力します。"
+
+#@ the-bootstrap
+#: functions.php:774
+msgid "Password:"
+msgstr "パスワード:"
+
+#@ the-bootstrap
+#: functions.php:774
+msgid "Submit"
+msgstr "送信"
+
+#@ the-bootstrap
+#: header.php:54
+msgid "Main menu"
+msgstr "メイン メニュー"
+
+#@ the-bootstrap
+#: header.php:55
+msgid "Skip to primary content"
+msgstr "本文へ移動"
+
+#@ the-bootstrap
+#: header.php:56
+msgid "Skip to secondary content"
+msgstr "サブ コンテンツへ移動"
+
+#@ the-bootstrap
+#: image.php:45
+msgid "image"
+msgid_plural "images"
+msgstr[0] "画像"
+msgstr[1] "画像"
+
+#@ the-bootstrap
+#: image.php:53
+msgid "Leave a comment"
+msgstr "コメントを残す"
+
+#@ the-bootstrap
+#: image.php:56
+msgid "&laquo; Previous Photo"
+msgstr "&laquo; 前の写真"
+
+#@ the-bootstrap
+#: image.php:58
+msgid "Next Photo &raquo;"
+msgstr "次の写真 &raquo;"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:28
+msgid "The Bootstrap Image Meta Widget"
+msgstr "The Bootstrap 画像メタ ウィジェット"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:30
+msgid "Displays meta information on image attachment pages"
+msgstr "画像添付されたページのメタ情報を表示"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:52
+msgid "Info"
+msgstr "情報"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:60
+msgid "Created:"
+msgstr "作成日時:"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:64
+msgid "Full size:"
+msgstr "フル サイズ:"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:65
+#, php-format
+msgid "%s pixels"
+msgstr "%s ピクセル"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:68
+msgid "Aperture:"
+msgstr "絞り値:"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:73
+msgid "Focal length:"
+msgstr "焦点距離:"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:78
+msgid "Iso:"
+msgstr "ISO感度:"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:83
+msgid "Shutter:"
+msgstr "露光時間:"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:102
+msgid "Camera:"
+msgstr "カメラ:"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:153
+msgid "Title:"
+msgstr "タイトル:"
+
+#@ the-bootstrap
+#: partials/content-aside.php:16
+#: partials/content-gallery.php:16
+#: partials/content.php:15
+#: partials/content.php:20
+#, php-format
+msgid "Permalink to %s"
+msgstr "パーマリンク %s"
+
+#@ the-bootstrap
+#: partials/content-gallery.php:48
+#, php-format
+msgid "This gallery contains <strong>%1$s photo</strong>."
+msgid_plural "This gallery contains <strong>%1$s photos</strong>."
+msgstr[0] "このギャラリーには <strong>%1$s 点の写真</strong> が含まれます。"
+msgstr[1] "このギャラリーには <strong>%1$s 点の写真</strong> が含まれます。"
+
+#@ the-bootstrap
+#: partials/content-no-results.php:13
+msgid "Nothing Found"
+msgstr "何も見つかりませんでした。"
+
+#@ the-bootstrap
+#: partials/content-no-results.php:18
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "検索条件に一致するものは見つかりませんでした。もう一度、別のキーワードを試してみてください。"
+
+#@ the-bootstrap
+#: partials/content-no-results.php:20
+msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
+msgstr "アーカイブにリクエストは見つかりませんでした。検索を使用して、関連記事を探してみてください。"
+
+#@ the-bootstrap
+#: comments.php:65
+#: inc/template-tags.php:81
+msgid "Leave a reply"
+msgstr "コメントを残す"
+
+#@ the-bootstrap
+#: partials/content-single.php:26
+#: partials/content.php:50
+#, php-format
+msgid "Posted in %1$s."
+msgstr "カテゴリー: %1$s"
+
+#@ the-bootstrap
+#: partials/content-single.php:27
+#: partials/content-single.php:31
+#: partials/content.php:51
+msgctxt "used between list items, there is a space after the comma"
+msgid ", "
+msgstr ", "
+
+#@ the-bootstrap
+#: partials/content-single.php:30
+msgid "Tagged "
+msgstr "タグ: "
+
+#@ the-bootstrap
+#: partials/content-single.php:46
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "%s のすべての投稿を表示 <span class=\"meta-nav\">&rarr;</span>"
+
+#@ the-bootstrap
+#: partials/content.php:16
+msgid "Featured"
+msgstr "おすすめ"
+
+#@ the-bootstrap
+#: search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "検索結果: %s"
+
+#@ the-bootstrap
+#: header.php:79
+#: header.php:80
+#: searchform.php:12
+#: searchform.php:14
+msgid "Search"
+msgstr "検索"
+
+#@ the-bootstrap
+#: single.php:23
+msgid "Post navigation"
+msgstr "投稿ナビゲーション"
+
+#@ the-bootstrap
+#: tag.php:20
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "タグ別 アーカイブ: %s"
+
+#@ the-bootstrap
+#: comments.php:66
+#, php-format
+msgid "Leave a reply to %s"
+msgstr "%s に返信コメントを残す"
+
+#@ the-bootstrap
+#: functions.php:68
+msgid "Header Menu"
+msgstr "ヘッダー メニュー"
+
+#@ the-bootstrap
+#: functions.php:69
+msgid "Footer Menu"
+msgstr "フッター メニュー"
+
+#@ the-bootstrap
+#: partials/content-gallery.php:72
+msgctxt "carousel-control"
+msgid "&lsaquo;"
+msgstr "&lsaquo;"
+
+#@ the-bootstrap
+#: partials/content-gallery.php:73
+msgctxt "carousel-control"
+msgid "&rsaquo;"
+msgstr "&lsaquo;"
+
+#@ the-bootstrap
+#: searchform.php:15
+msgid "Go"
+msgstr "Go"
+
+#@ the-bootstrap
+#: functions.php:123
+msgid "Shown on image attachment pages."
+msgstr "添付画像をページに表示。"
+
+#@ the-bootstrap
+#: inc/theme-options.php:22
+#: inc/theme-options.php:23
+#: inc/theme-options.php:117
+msgid "Theme Options"
+msgstr "テーマ オプション"
+
+#@ the-bootstrap
+#: inc/theme-options.php:79
+msgid "Default Layout"
+msgstr "デフォルト レイアウト"
+
+#@ the-bootstrap
+#: inc/theme-options.php:80
+msgid "Navigation Bar"
+msgstr "ナビゲーション バー"
+
+#@ the-bootstrap
+#: inc/theme-options.php:170
+msgid "Content on left"
+msgstr "左側のコンテンツ"
+
+#@ the-bootstrap
+#: inc/theme-options.php:174
+msgid "Content on right"
+msgstr "右側のコンテンツ"
+
+#@ the-bootstrap
+#: inc/theme-options.php:218
+msgid "Add site name to navigation bar."
+msgstr "ナビゲーション バーにサイト名を追加します。"
+
+#@ the-bootstrap
+#: inc/theme-options.php:222
+msgid "Add searchform to navigation bar."
+msgstr "ナビゲーション バーに検索フォームを追加します。"
+
+#@ the-bootstrap
+#: inc/theme-options.php:240
+msgid "The Bootstrap Theme Options"
+msgstr "The Bootstrap テーマ オプション"
+
+#@ the-bootstrap
+#: inc/theme-options.php:285
+#, php-format
+msgid "Settings saved. <a href=\"%s\">Visit your site</a> to see how it looks."
+msgstr "設定を保存しました。 <a href=\"%s\">サイトを表示</a> して確認。"
+
+#@ the-bootstrap
+#: inc/theme-options.php:311
+msgid "Help spread the word!"
+msgstr "評判を広めるご協力をお願いします！"
+
+#@ the-bootstrap
+#: inc/theme-options.php:313
+#, php-format
+msgctxt "Plugin Name"
+msgid "Want to help make this Theme even better? All donations are used to improve %1$s, so donate $20, $50 or $100 now!"
+msgstr "このテーマをさらに良くする手助けをしたいですか？すべての寄付は %1$s を改善するために使用されます。 $20, $50 または $100 でも、今すぐ寄付することができます！"
+
+#@ the-bootstrap
+#: inc/theme-options.php:320
+msgid "Or you could:"
+msgstr "このようなこともできます:"
+
+#@ the-bootstrap
+#: inc/theme-options.php:322
+msgid "Rate the Theme 5&#9733; on WordPress.org"
+msgstr "WordPress.org で、テーマに &#9733;5 評価をする"
+
+#@ the-bootstrap
+#: inc/theme-options.php:323
+msgid "Blog about it &amp; link to the Theme page"
+msgstr "テーマ ページヘのリンク"
+
+#@ the-bootstrap
+#: inc/theme-options.php:348
+msgid "News from Konstantin"
+msgstr "Konstantin からのお知らせ"
+
+#@ the-bootstrap
+#: inc/theme-options.php:352
+msgid "No news items, feed might be broken..."
+msgstr "お知らせはありません。フィードが壊れているかもしれません…。"
+
+#@ the-bootstrap
+#: inc/theme-options.php:358
+msgid "Follow Konstantin on Twitter"
+msgstr "Twitter で Konstantin をフォロー"
+
+#@ the-bootstrap
+#: inc/theme-options.php:359
+msgid "Subscribe via RSS"
+msgstr "RSS を購読"
+
+#@ the-bootstrap
+#: single.php:24
+msgid "Next Post"
+msgstr "次の投稿"
+
+#@ the-bootstrap
+#: single.php:25
+msgid "Previous Post"
+msgstr "前の投稿"
+

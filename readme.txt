@@ -37,6 +37,7 @@ Currently available in:
 * English
 * French
 * German
+* Japanese
 * Russian
 
 
@@ -67,8 +68,10 @@ For more information on SemVer, please visit [http://semver.org/].
 == Changelog ==
 
 = 1.7.0 =
+* Added response.js for the use of media queries in InternetExplorer 6-8
 * Changed site title and description transport method to postMessage in Theme Customizer
-* Added response.js forthe use of media queries in InternetExplorer 6-8
+* Displays a message to administrators, when no menu has ben set for the main navigation
+* Added Japanese translation. Props Yoichi Kikuchi
 
 = 1.6.0 =
 * Added a Gallery Widget for sidebars
