@@ -407,7 +407,8 @@ a img.alignleft {
 	.thumbnails [class*="span"] {
 		width: 21%;
 	}
-	.sidebar-content #primary {
+	.sidebar-content #primary,
+	.sidebar-content #attachment-comment {
 		float: none;
 		margin: inherit;
 	}

@@ -72,6 +72,7 @@ For more information on SemVer, please visit [http://semver.org/].
 * Changed site title and description transport method to postMessage in Theme Customizer
 * Displays a message to administrators, when no menu has ben set for the main navigation
 * Added Japanese translation. Props Yoichi Kikuchi
+* Fixed a layout bug for attachment pages on narrow screens
 
 = 1.6.0 =
 * Added a Gallery Widget for sidebars
