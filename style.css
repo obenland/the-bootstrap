@@ -181,6 +181,14 @@ article.page {
 	margin: 0;
 }
 
+.widget {
+	word-wrap: break-word;
+}
+
+.widget .wp-caption {
+	display: inline-block;
+}
+
 
 /* =Images
 -------------------------------------------------------------- */
