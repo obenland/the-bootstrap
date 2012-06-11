@@ -75,7 +75,7 @@
 											'theme_location'	=>	'primary',
 											'menu_class'		=>	'nav',
 											'depth'				=>	2,
-											'fallback_cb'		=>	false,
+											'fallback_cb'		=>	'the_bootstrap_main_menu_fallback',
 											'walker'			=>	new The_Bootstrap_Nav_Walker,
 										) ); 
 										if ( the_bootstrap_options()->navbar_searchform ) {

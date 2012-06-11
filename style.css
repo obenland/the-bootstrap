@@ -95,6 +95,12 @@ body > .container {
 	display: block;
 }
 
+#menu-alert {
+	margin: 4px 0 0;
+	padding: 6px 35px 6px 14px;
+	position: fixed;
+}
+
 #branding hgroup,
 #header-image,
 .entry-content {
