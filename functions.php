@@ -216,6 +216,27 @@ add_action( 'wp_enqueue_scripts', 'the_bootstrap_print_scripts' );
 
 
 /**
+ * Adds IE specific scripts
+ * 
+ * Respond.js has to be loaded after Theme styles
+ *
+ * @author	Konstantin Obenland
+ * @since	1.7.0 - 11.06.2012
+ *
+ * @return	void
+ */
+function the_bootstrap_print_ie_scripts() {
+	?>
+	<!--[if lt IE 9]>
+		<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/js/respond.min.js" type="text/javascript"></script>
+	<![endif]-->
+	<?php
+}
+add_action( 'wp_head', 'the_bootstrap_print_ie_scripts', 11 );
+
+
+/**
  * Properly enqueue comment-reply script
  *
  * @author	Konstantin Obenland
