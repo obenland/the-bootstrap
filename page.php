@@ -21,7 +21,7 @@ get_header(); ?>
 		<?php
 		the_post();
 		get_template_part( '/partials/content', 'page' );
-		comments_template( '', true ); ?>
+		comments_template(); ?>
 
 	</div><!-- #content -->
 </div><!-- #primary -->

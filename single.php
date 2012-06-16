@@ -16,7 +16,7 @@ get_header(); ?>
 				<?php while ( have_posts() ) {
 					the_post();
 					get_template_part( '/partials/content', 'single' );
-					comments_template( '', true );
+					comments_template();
 				} ?>
 				
 				<nav id="nav-single" class="pager">
