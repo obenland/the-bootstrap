@@ -185,6 +185,10 @@ article.page {
 	word-wrap: break-word;
 }
 
+.widget img {
+	height: auto;
+}
+
 .widget .wp-caption {
 	display: inline-block;
 }
