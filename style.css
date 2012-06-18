@@ -98,7 +98,7 @@ body > .container {
 #menu-alert {
 	margin: 4px 0 0;
 	padding: 6px 35px 6px 14px;
-	position: fixed;
+	position: absolute;
 }
 
 #branding hgroup,
