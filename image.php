@@ -10,7 +10,7 @@
 
 get_header();
 
-$attachments = array_values( get_children( array(
+$the_bootstrap_attachments = array_values( get_children( array(
 	'post_parent'		=>	$post->post_parent,
 	'post_status'		=>	'inherit',
 	'post_type'			=>	'attachment',
@@ -19,11 +19,11 @@ $attachments = array_values( get_children( array(
 	'orderby'			=>	'menu_order ID'
 )));
 
-$total_images = count($attachments);
+$the_bootstrap_total_images = count( $the_bootstrap_attachments );
 
 //Get position of current pic
-foreach ( $attachments as $k => $attachment ) {
-	if ( $attachment->ID == $post->ID )
+foreach ( $the_bootstrap_attachments as $the_bootstrap_k => $the_bootstrap_attachment ) {
+	if ( $the_bootstrap_attachment->ID == $post->ID )
 		break;
 }
 
@@ -38,11 +38,11 @@ the_post();
 				<a href="<?php echo get_permalink( $post->post_parent ); ?>">
 				<?php printf(
 					'&laquo; %1$s (%2$s)',
-					get_the_title($post->post_parent),
+					get_the_title( $post->post_parent ),
 					sprintf(
 						'%d %s',
-						$total_images,
-						_n('image', 'images', $total_images, 'the-bootstrap')
+						$the_bootstrap_total_images,
+						_n('image', 'images', $the_bootstrap_total_images, 'the-bootstrap')
 					)
 				); ?>
 				</a>
@@ -52,10 +52,10 @@ the_post();
 				edit_post_link( __( 'Edit', 'the-bootstrap' ), ' <span class="edit-link label">', '</span><span class="sep">&nbsp;</span>' );
 				$reply	=	__( 'Leave a comment', 'the-bootstrap' );
 				comments_popup_link( $reply, $reply );
-				if ( isset($attachments[$k-1]) )
-					echo ' &mdash; <a href="' . get_permalink( $attachments[$k-1]->ID ) . '">' . __( '&laquo; Previous Photo', 'the-bootstrap' ) . '</a>';
-				if ( isset($attachments[$k+1]) )
-					echo ' &mdash; <a href="' . get_permalink( $attachments[$k+1]->ID ) . '">' . __( 'Next Photo &raquo;', 'the-bootstrap' ) . '</a>';
+				if ( isset($the_bootstrap_attachments[$the_bootstrap_k-1]) )
+					echo ' &mdash; <a href="' . get_permalink( $the_bootstrap_attachments[$the_bootstrap_k-1]->ID ) . '">' . __( '&laquo; Previous Photo', 'the-bootstrap' ) . '</a>';
+				if ( isset($the_bootstrap_attachments[$the_bootstrap_k+1]) )
+					echo ' &mdash; <a href="' . get_permalink( $the_bootstrap_attachments[$the_bootstrap_k+1]->ID ) . '">' . __( 'Next Photo &raquo;', 'the-bootstrap' ) . '</a>';
 				?>
 			</span>
 		</nav><!-- #nav-single -->
@@ -65,21 +65,21 @@ the_post();
 				<figure class="attachment">
 					<?php
 						// If there is more than 1 attachment in a gallery
-						if ( $total_images > 1 ) {
-							if ( isset( $attachments[ ++$k ] ) ) {
+						if ( $the_bootstrap_total_images > 1 ) {
+							if ( isset( $the_bootstrap_attachments[ ++$the_bootstrap_k ] ) ) {
 								// get the URL of the next image attachment
-								$next_attachment_url = get_attachment_link( $attachments[ $k ]->ID );
+								$next_attachment_url = get_attachment_link( $the_bootstrap_attachments[ $the_bootstrap_k ]->ID );
 							}
 							else {
 								// or get the URL of the first image attachment
-								$next_attachment_url = get_attachment_link( $attachments[ 0 ]->ID );
+								$the_bootstrap_next_attachment_url = get_attachment_link( $the_bootstrap_attachments[ 0 ]->ID );
 							}
 						} else {
 							// or, if there's only 1 image, get the URL of the image
-							$next_attachment_url = wp_get_attachment_url();
+							$the_bootstrap_next_attachment_url = wp_get_attachment_url();
 						}
 					?>
-					<a href="<?php echo $next_attachment_url; ?>" title="<?php the_title_attribute(); ?>" rel="attachment" class="thumbnail">
+					<a href="<?php echo $the_bootstrap_next_attachment_url; ?>" title="<?php the_title_attribute(); ?>" rel="attachment" class="thumbnail">
 						<?php echo wp_get_attachment_image( $post->ID, 'full' ); ?>
 					</a>
 
@@ -93,7 +93,7 @@ the_post();
 		</article><!-- #post-<?php the_ID(); ?> -->
 	</div><!-- #content -->
 </section><!-- #primary -->
-<div id="attachment-comment" class="span8"><?php comments_template( '', true ); ?></div>
+<div id="attachment-comment" class="span8"><?php comments_template(); ?></div>
 <?php
 get_sidebar( 'image' );
 get_footer();
