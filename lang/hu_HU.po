@@ -1,0 +1,690 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Ohronus <ochronus@ochronus.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#@ the-bootstrap
+#: 404.php:18
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "Hát ez elég kellemetlen..."
+
+#@ the-bootstrap
+#: 404.php:22
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help."
+msgstr "Úgy néz ki nem találom amit keresel. Esetleg próbálkozz új kereséssel, vagy az alábbi linkekkel."
+
+#@ the-bootstrap
+#: 404.php:30
+msgid "Most Used Categories"
+msgstr "A legtöbbet használt kategóriák"
+
+#@ the-bootstrap
+#: archive.php:27
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Napi archívum: %s"
+
+#@ the-bootstrap
+#: archive.php:29
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Havi archívum: %s"
+
+#@ the-bootstrap
+#: archive.php:31
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Éves archívum: %s"
+
+#@ the-bootstrap
+#: archive.php:33
+msgid "Blog Archives"
+msgstr "Blog archívum"
+
+#@ the-bootstrap
+#: author.php:20
+#, php-format
+msgid "Author Archives: %s"
+msgstr "Szerzők archívuma: %s"
+
+#@ the-bootstrap
+#: author.php:28
+#: partials/content-single.php:38
+#, php-format
+msgid "About %s"
+msgstr "%s profilja"
+
+#@ the-bootstrap
+#: category.php:20
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Kategória-archívum: %s"
+
+#@ the-bootstrap
+#: comments.php:19
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Ez a cikk jelszóvédett. Kérlek írd be a jelszót a hozzászólások megtekintéséhez."
+
+#@ the-bootstrap
+#: comments.php:29
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Egy hozzászólás van ehhez: &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s hozzászólás van ehhez: &ldquo;%2$s&rdquo;"
+
+#@ the-bootstrap
+#: inc/template-tags.php:75
+msgid "Comment navigation"
+msgstr "Hozzászólások navigálása"
+
+#@ the-bootstrap
+#: inc/template-tags.php:76
+msgid "&larr; Newer Comments"
+msgstr "&larr; Frissebb hozzászólások"
+
+#@ the-bootstrap
+#: inc/template-tags.php:77
+msgid "Older Comments &rarr;"
+msgstr "Régebbi hozzászólások &larr;"
+
+#@ the-bootstrap
+#: comments.php:45
+msgid "Comments are closed."
+msgstr "Ehhez a cikkhez jelenleg nem lehet hozzászólni."
+
+#@ the-bootstrap
+#: comments.php:49
+msgctxt "noun"
+msgid "Comment"
+msgstr "Hozzászólás"
+
+#@ the-bootstrap
+#: comments.php:51
+#, php-format
+msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes: %s"
+msgstr "Az alábbi <abbr title=\"HyperText Markup Language\">HTML</abbr> tageket használhatod: %s"
+
+#@ the-bootstrap
+#: comments.php:55
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "<a href=\"%s\">Be kell jelentkezned</a> hogy hozzászólhass."
+
+#@ the-bootstrap
+#: comments.php:56
+#, php-format
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out?</a>"
+msgstr "Üdv, <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Kijelentkezem\">Kijelentkezés</a>"
+
+#@ the-bootstrap
+#: functions.php:279
+#, php-format
+msgid "&copy; %1$s <a href=\"%2$s\">%3$s</a>, all rights reserved."
+msgstr "&copy; %1$s <a href=\"%2$s\">%3$s</a>, minden jog fenntartva."
+
+#@ the-bootstrap
+#: footer.php:21
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#@ the-bootstrap
+#: footer.php:22
+msgid "Semantic Personal Publishing Platform"
+msgstr "Semantic Personal Publishing Platform"
+
+#@ the-bootstrap
+#: footer.php:24
+#, php-format
+msgctxt "WordPress"
+msgid "Proudly powered by %s"
+msgstr "Proudly powered by %s"
+
+#@ the-bootstrap
+#: footer.php:30
+#, php-format
+msgid "%d queries. %s seconds."
+msgstr "%d Abfragen. %s Sekunden."
+
+#@ the-bootstrap
+#: functions.php:79
+msgid "Main Navigation"
+msgstr "Hauptnavigation"
+
+#@ the-bootstrap
+#: functions.php:125
+msgid "Main Sidebar"
+msgstr "Haupt Sidebar"
+
+#@ the-bootstrap
+#: functions.php:134
+msgid "Image Sidebar"
+msgstr "Bilder Sitebar"
+
+#@ the-bootstrap
+#: inc/template-tags.php:95
+#, php-format
+msgid "<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
+msgstr "<span class=\"sep\">Veröffentlicht am </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> von </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
+
+#@ the-bootstrap
+#: inc/template-tags.php:101
+#, php-format
+msgid "View all posts by %s"
+msgstr "%s minden cikke"
+
+#@ the-bootstrap
+#: inc/template-tags.php:107
+msgid "<strong>1</strong> Reply"
+msgstr "<strong>1</strong> Hozzászólás"
+
+#@ the-bootstrap
+#: inc/template-tags.php:107
+msgid "<strong>%</strong> Replies"
+msgstr "<strong>%</strong> Hozzászólás"
+
+#@ the-bootstrap
+#: functions.php:435
+#: functions.php:461
+#: image.php:52
+#: inc/template-tags.php:111
+#: partials/content-page.php:21
+msgid "Edit"
+msgstr "Szerkesztés"
+
+#@ the-bootstrap
+#: inc/template-tags.php:135
+msgid "Next page"
+msgstr "Következő lap"
+
+#@ the-bootstrap
+#: inc/template-tags.php:136
+msgid "Previous page"
+msgstr "Előző lap"
+
+#@ the-bootstrap
+#: inc/template-tags.php:150
+#: inc/template-tags.php:164
+msgid "Pages:"
+msgstr "Lapok:"
+
+#@ the-bootstrap
+#: functions.php:322
+#: partials/content-aside.php:28
+#: partials/content-image.php:16
+#: partials/content-page.php:18
+#: partials/content-status.php:19
+#: partials/content.php:41
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Olvasd tovább <span class=\"meta-nav\">&rarr;</span>"
+
+#@ the-bootstrap
+#: functions.php:434
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#@ the-bootstrap
+#. translators: 1: comment author, 2: date and time
+#: functions.php:452
+#, php-format
+msgid "%1$s <span class=\"says\">said</span> on %2$s:"
+msgstr "%1$s <span class=\"says\">írta</span> ekkor: %2$s:"
+
+#@ the-bootstrap
+#. translators: 1: date, 2: time
+#: functions.php:458
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s ekkor: %2$s"
+
+#@ the-bootstrap
+#: functions.php:465
+msgid "Your comment is awaiting moderation."
+msgstr "A hozzászólásod moderálásra vár."
+
+#@ the-bootstrap
+#: functions.php:474
+msgid "Reply <span>&darr;</span>"
+msgstr "Válaszolok <span>&darr;</span>"
+
+#@ the-bootstrap
+#: functions.php:538
+msgid "Name"
+msgstr "Név"
+
+#@ the-bootstrap
+#: functions.php:541
+#: functions.php:567
+msgid "required"
+msgstr "kötelező"
+
+#@ the-bootstrap
+#: functions.php:564
+msgid "Email"
+msgstr "E-Mail"
+
+#@ the-bootstrap
+#: functions.php:567
+msgid "will not be published"
+msgstr "nem lesz látható"
+
+#@ the-bootstrap
+#: functions.php:588
+msgid "Website"
+msgstr "Weboldal"
+
+#@ the-bootstrap
+#: functions.php:753
+#, php-format
+msgid "%d comment"
+msgid_plural "%d comments"
+msgstr[0] "%d Hozzászólás"
+msgstr[1] "%d Hozzászólás"
+
+#@ the-bootstrap
+#: functions.php:815
+msgid "This post is password protected. To view it please enter your password below:"
+msgstr "Ez a cikk jelszóvédett. Kérlek írd be a jelszavad hogy elolvashasd:"
+
+#@ the-bootstrap
+#: functions.php:815
+msgid "Password:"
+msgstr "Jelszó:"
+
+#@ the-bootstrap
+#: functions.php:815
+msgid "Submit"
+msgstr "Mehet"
+
+#@ the-bootstrap
+#: header.php:54
+msgid "Main menu"
+msgstr "Főmenü"
+
+#@ the-bootstrap
+#: header.php:55
+msgid "Skip to primary content"
+msgstr "Zum Inhalt wechseln"
+
+#@ the-bootstrap
+#: header.php:56
+msgid "Skip to secondary content"
+msgstr "Zum sekund&auml;ren Inhalt wechseln"
+
+#@ the-bootstrap
+#: image.php:45
+msgid "image"
+msgid_plural "images"
+msgstr[0] "Kép"
+msgstr[1] "Képek"
+
+#@ the-bootstrap
+#: image.php:53
+msgid "Leave a comment"
+msgstr "Szólj hozzá"
+
+#@ the-bootstrap
+#: image.php:56
+msgid "&laquo; Previous Photo"
+msgstr "&laquo; Előző kép"
+
+#@ the-bootstrap
+#: image.php:58
+msgid "Next Photo &raquo;"
+msgstr "Következő kép &raquo;"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:28
+msgid "The Bootstrap Image Meta Widget"
+msgstr "The Bootstrap Bild Meta Widget"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:30
+msgid "Displays meta information on image attachment pages"
+msgstr "Meta-információkat jelenít meg a képpel rendelkező oldalakon"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:52
+msgid "Info"
+msgstr "Info"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:60
+msgid "Created:"
+msgstr "Létrehozva:"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:64
+msgid "Full size:"
+msgstr "Teljes méret:"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:65
+#, php-format
+msgid "%s pixels"
+msgstr "%s Pixel"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:68
+msgid "Aperture:"
+msgstr "Apertúra:"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:73
+msgid "Focal length:"
+msgstr "Fókusztávolság:"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:78
+msgid "Iso:"
+msgstr "ISO:"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:83
+msgid "Shutter:"
+msgstr "Záridő:"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:102
+msgid "Camera:"
+msgstr "Fényképezőgép:"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:151
+msgid "Title:"
+msgstr "Cím:"
+
+#@ the-bootstrap
+#: partials/content-aside.php:16
+#: partials/content-gallery.php:16
+#: partials/content.php:15
+#: partials/content.php:20
+#, php-format
+msgid "Permalink to %s"
+msgstr "Permalink ehhez: %s"
+
+#@ the-bootstrap
+#: partials/content-gallery.php:48
+#, php-format
+msgid "This gallery contains <strong>%1$s photo</strong>."
+msgid_plural "This gallery contains <strong>%1$s photos</strong>."
+msgstr[0] "Ez a galéria <strong>%1$s képet</strong> tartalmaz."
+msgstr[1] "Ez a galéria <strong>%1$s képet</strong> tartalmaz."
+
+#@ the-bootstrap
+#: partials/content-no-results.php:13
+msgid "Nothing Found"
+msgstr "Sajnos nincs találat"
+
+#@ the-bootstrap
+#: partials/content-no-results.php:18
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Sajnos nincs találat ami megfelelne a keresési feltételeknek. Próbálkozz más kulcsszavakkal."
+
+#@ the-bootstrap
+#: partials/content-no-results.php:20
+msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
+msgstr "Sajnos nincs találat a kért archívumban. Próbálkozz a kereséssel."
+
+#@ the-bootstrap
+#: comments.php:53
+#: inc/template-tags.php:107
+msgid "Leave a reply"
+msgstr "Szólj hozzá"
+
+#@ the-bootstrap
+#: partials/content-single.php:26
+#: partials/content.php:50
+#, php-format
+msgid "Posted in %1$s."
+msgstr "Kategóriák: %1$s."
+
+#@ the-bootstrap
+#: partials/content-single.php:27
+#: partials/content-single.php:31
+#: partials/content.php:51
+msgctxt "used between list items, there is a space after the comma"
+msgid ", "
+msgstr ", "
+
+#@ the-bootstrap
+#: partials/content-single.php:30
+msgid "Tagged "
+msgstr "Címkék:"
+
+#@ the-bootstrap
+#: partials/content-single.php:46
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "%s összes cikke <span class=\"meta-nav\">&rarr;</span>"
+
+#@ the-bootstrap
+#: partials/content.php:16
+msgid "Featured"
+msgstr "Kiemelt"
+
+#@ the-bootstrap
+#: search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Találatok erre: %s"
+
+#@ the-bootstrap
+#: inc/template-tags.php:199
+#: inc/template-tags.php:200
+#: searchform.php:12
+#: searchform.php:14
+msgid "Search"
+msgstr "Keresés"
+
+#@ the-bootstrap
+#: single.php:23
+msgid "Post navigation"
+msgstr "Cikk navigáció"
+
+#@ the-bootstrap
+#: tag.php:20
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Címke archívum: %s"
+
+#@ the-bootstrap
+#: comments.php:54
+#, php-format
+msgid "Leave a reply to %s"
+msgstr "Válaszolj erre: %s"
+
+#@ the-bootstrap
+#: functions.php:80
+msgid "Header Menu"
+msgstr "Fejléc-menü"
+
+#@ the-bootstrap
+#: functions.php:81
+msgid "Footer Menu"
+msgstr "Lábléc-menü"
+
+#@ the-bootstrap
+#: partials/content-gallery.php:72
+msgctxt "carousel-control"
+msgid "&lsaquo;"
+msgstr "&lsaquo;"
+
+#@ the-bootstrap
+#: partials/content-gallery.php:73
+msgctxt "carousel-control"
+msgid "&rsaquo;"
+msgstr "&lsaquo;"
+
+#@ the-bootstrap
+#: searchform.php:15
+msgid "Go"
+msgstr "Mehet"
+
+#@ the-bootstrap
+#: functions.php:135
+msgid "Shown on image attachment pages."
+msgstr "Mutassa a képet tartalmazó oldalakon."
+
+#@ the-bootstrap
+#: inc/theme-customizer.php:25
+#: inc/theme-options.php:22
+#: inc/theme-options.php:23
+#: inc/theme-options.php:145
+msgid "Theme Options"
+msgstr "Theme opciók"
+
+#@ the-bootstrap
+#: inc/theme-customizer.php:40
+#: inc/theme-options.php:79
+msgid "Default Layout"
+msgstr "Alapértelmezett elrendezés"
+
+#@ the-bootstrap
+#: inc/theme-options.php:80
+msgid "Navigation Bar"
+msgstr "Navigációs sor"
+
+#@ the-bootstrap
+#: inc/theme-customizer.php:45
+#: inc/theme-options.php:202
+msgid "Content on left"
+msgstr "Tartalom balra"
+
+#@ the-bootstrap
+#: inc/theme-customizer.php:46
+#: inc/theme-options.php:206
+msgid "Content on right"
+msgstr "Tartalom jobbra"
+
+#@ the-bootstrap
+#: inc/theme-customizer.php:52
+#: inc/theme-options.php:84
+msgid "Add site name to navigation bar."
+msgstr "Az oldal nevének navigációs sorhoz adása."
+
+#@ the-bootstrap
+#: inc/theme-customizer.php:60
+#: inc/theme-options.php:89
+msgid "Add searchform to navigation bar."
+msgstr "Keresés navigációs sorhoz adása."
+
+#@ the-bootstrap
+#: inc/theme-options.php:289
+msgid "The Bootstrap Theme Options"
+msgstr "The Bootstrap Theme Opciók"
+
+#@ the-bootstrap
+#: inc/theme-options.php:337
+#, php-format
+msgid "Settings saved. <a href=\"%s\">Visit your site</a> to see how it looks."
+msgstr "A beállítások elmentve. <a href=\"%s\">Ellenőrizd a site-on.</a> "
+
+#@ the-bootstrap
+#: inc/theme-options.php:363
+msgid "Help spread the word!"
+msgstr "Terjeszd az igét!"
+
+#@ the-bootstrap
+#: inc/theme-options.php:365
+#, php-format
+msgctxt "Plugin Name"
+msgid "Want to help make this Theme even better? All donations are used to improve %1$s, so donate $20, $50 or $100 now!"
+msgstr "Szeretnéd támogatni a %1$s theme fejleszőtit? Megteheted $20, $50 vagy $100 összegben!"
+
+#@ the-bootstrap
+#: inc/theme-options.php:372
+msgid "Or you could:"
+msgstr "Vagy:"
+
+#@ the-bootstrap
+#: inc/theme-options.php:374
+msgid "Rate the Theme 5&#9733; on WordPress.org"
+msgstr "Értékelheted a theme-et a WordPress.org-on 5&#9733; "
+
+#@ the-bootstrap
+#: inc/theme-options.php:375
+msgid "Blog about it &amp; link to the Theme page"
+msgstr "Cikket is írhatsz róla, benne linkkel a theme weboldalára"
+
+#@ the-bootstrap
+#: inc/theme-options.php:400
+msgid "News from Konstantin"
+msgstr "Neuigkeiten von Konstantin"
+
+#@ the-bootstrap
+#: inc/theme-options.php:404
+msgid "No news items, feed might be broken..."
+msgstr "Keine Neuigkeiten, Feed k&ouml;nnte nicht funktionieren&ellipsis;"
+
+#@ the-bootstrap
+#: inc/theme-options.php:410
+msgid "Follow Konstantin on Twitter"
+msgstr "Folge Konstantin auf Twitter"
+
+#@ the-bootstrap
+#: inc/theme-options.php:411
+msgid "Subscribe via RSS"
+msgstr "RSS feliratkozás"
+
+#@ the-bootstrap
+#: single.php:24
+msgid "Next Post"
+msgstr "Következő cikk"
+
+#@ the-bootstrap
+#: single.php:25
+msgid "Previous Post"
+msgstr "Előző cikk"
+
+#@ the-bootstrap
+#: 404.php:33
+#, php-format
+msgctxt "%1$s: smilie"
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Próbálkozz a havi archívumban. %1$s"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:90
+#: inc/the-bootstrap-image-meta-widget.php:92
+#: inc/the-bootstrap-image-meta-widget.php:95
+#, php-format
+msgid "%d sec."
+msgstr "%d mp."
+
+#@ the-bootstrap
+#: inc/theme-customizer.php:68
+#: inc/theme-options.php:92
+msgid "Navigation Bar Position"
+msgstr "Navigációs sor helyzete"
+
+#@ the-bootstrap
+#: inc/theme-customizer.php:73
+#: inc/theme-options.php:97
+msgid "Static."
+msgstr "Statikus."
+
+#@ the-bootstrap
+#: inc/theme-customizer.php:74
+#: inc/theme-options.php:101
+msgid "Fixed on top."
+msgstr "Felülre rögzítve."
+
+#@ the-bootstrap
+#: inc/theme-customizer.php:75
+#: inc/theme-options.php:105
+msgid "Fixed at bottom."
+msgstr "Alulra rögzítve."
+
