@@ -73,6 +73,7 @@ For more information on SemVer, please visit [http://semver.org/].
 * Displays a message to administrators, when no menu has ben set for the main navigation
 * Added Japanese translation. Props Yoichi Kikuchi
 * Fixed a layout bug for attachment pages on narrow screens
+* Fixed a bug where the header image height was not adjusted on narrow screens
 
 = 1.6.0 =
 * Added a Gallery Widget for sidebars
