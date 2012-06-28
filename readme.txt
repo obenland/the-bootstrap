@@ -37,6 +37,7 @@ Currently available in:
 * English
 * French
 * German
+* Hungarian
 * Japanese
 * Russian
 
