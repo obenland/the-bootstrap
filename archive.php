@@ -42,7 +42,7 @@ get_header(); ?>
 				}
 				the_bootstrap_content_nav();
 			else :
-				get_template_part( '/partials/content', 'no-results' );
+				get_template_part( '/partials/content', 'not-found' );
 			endif; ?>
 
 			</div><!-- #content -->

@@ -1,7 +1,7 @@
 <?php
-/** content-no-results.php
+/** content-not-found.php
  *
- * The template for displaying a 'Noting found' message.
+ * The template for displaying a 'Nothing found' message.
  *
  * @author		Konstantin Obenland
  * @package		The Bootstrap
@@ -25,5 +25,5 @@
 <?php
 
 
-/* End of file no-results.php */
-/* Location: ./wp-content/themes/the-bootstrap/partials/content-no-results.php */
+/* End of file content-not-found.php */
+/* Location: ./wp-content/themes/the-bootstrap/partials/content-not-found.php */

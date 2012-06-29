@@ -5,7 +5,7 @@ Tags:				black, blue, white, light, two-columns, left-sidebar, right-sidebar, fl
 Donate link:		https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=542W6XT4PLT4L
 Requires at least:	3.3.0
 Tested up to:		3.4.1
-Stable tag:			1.7.0
+Stable tag:			1.7.1
 
 A WordPress Theme based on Bootstrap, from Twitter
 
@@ -29,7 +29,7 @@ The exceptions to this license are as follows:
 * Bootstrap by Twitter is licensed under the GPL-compatible [Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0)
 * The script html5.js is licensed under [MIT](http://www.opensource.org/licenses/mit-license.php)
 * Respond.js: Copyright 2011: Scott Jehl, scottjehl.com. Dual licensed under the MIT or GPL Version 2 licenses.
-* Twitter Icon: [https://twitter.com/about/resources/logos]
+* Twitter Icon: https://twitter.com/about/resources/logos
 
 
 ### Translations 

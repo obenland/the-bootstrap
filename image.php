@@ -42,7 +42,7 @@ the_post();
 					sprintf(
 						'%d %s',
 						$the_bootstrap_total_images,
-						_n('image', 'images', $the_bootstrap_total_images, 'the-bootstrap')
+						_n( 'image', 'images', $the_bootstrap_total_images, 'the-bootstrap' )
 					)
 				); ?>
 				</a>
