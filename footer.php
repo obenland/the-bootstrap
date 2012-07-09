@@ -5,8 +5,10 @@
  * @package		The Bootstrap
  * @since		1.0.0	- 05.02.2012
  */
-?>
+
+				tha_footer_before(); ?>
 				<footer id="colophon" role="contentinfo" class="span12">
+					<?php tha_footer_top(); ?>
 					<div id="page-footer" class="well clearfix">
 						<?php wp_nav_menu( array(
 							'container'			=>	'nav',
@@ -24,7 +26,9 @@
 								rel="generator"><?php printf( _x( 'Proudly powered by %s', 'WordPress', 'the-bootstrap' ), 'WordPress' ); ?></a>
 						</div>
 					</div><!-- #page-footer .well .clearfix -->
+					<?php tha_footer_bottom(); ?>
 				</footer><!-- #colophon -->
+				<?php tha_footer_after(); ?>
 			</div><!-- #page -->
 		</div><!-- .container -->
 	<!-- <?php printf( __( '%d queries. %s seconds.', 'the-bootstrap' ), get_num_queries(), timer_stop(0, 3) ); ?> -->

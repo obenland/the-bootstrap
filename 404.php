@@ -10,10 +10,15 @@
 
 get_header(); ?>
 
-<div id="primary" class="span8">
-	<div id="content" role="main">
+<section id="primary" class="span8">
 
+	<?php tha_content_before(); ?>
+	<div id="content" role="main">
+		<?php tha_content_top(); ?>
+		
+		<?php tha_entry_before(); ?>
 		<article id="post-0" class="post error404 not-found">
+			<?php tha_entry_top(); ?>
 			<header class="page-header">
 				<h1 class="entry-title"><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'the-bootstrap' ); ?></h1>
 			</header><!-- .page-header -->
@@ -41,10 +46,14 @@ get_header(); ?>
 				the_widget( 'WP_Widget_Tag_Cloud' ); ?>
 
 			</div><!-- .entry-content -->
+			<?php tha_entry_bottom(); ?>
 		</article><!-- #post-0 .post .error404 .not-found -->
-
+		<?php tha_entry_after(); ?>
+		
+		<?php tha_content_bottom(); ?>
 	</div><!-- #content -->
-</div><!-- #primary -->
+	<?php tha_content_after(); ?>
+</section><!-- #primary -->
 
 <?php
 get_sidebar();

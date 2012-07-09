@@ -7,8 +7,12 @@
  * @package		The Bootstrap
  * @since		1.0.0 - 05.02.2012
  */
-?>
+
+
+tha_entry_before(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php tha_entry_top(); ?>
+	
 	<header class="page-header">
 	<?php if ( is_sticky() ) : ?>
 		<hgroup>
@@ -52,8 +56,10 @@
 			);
 		} // End if ?>
 	</footer><!-- #entry-meta -->
+	
+	<?php tha_entry_bottom(); ?>
 </article><!-- #post-<?php the_ID(); ?> -->
-<?php
+<?php tha_entry_after();
 
 
 /* End of file content.php */

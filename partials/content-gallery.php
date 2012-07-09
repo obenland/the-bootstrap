@@ -9,8 +9,12 @@
  * @package		The Bootstrap
  * @since		1.0.0 - 07.02.2012
  */
-?>
+
+
+tha_entry_before(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php tha_entry_top(); ?>
+	
 	<header class="page-header">
 		<hgroup>
 			<?php the_title( '<h2 class="entry-title"><a href="' . get_permalink() .'" title="' . sprintf( esc_attr__( 'Permalink to %s', 'the-bootstrap' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark">', '</a></h2>' ); ?>
@@ -75,8 +79,10 @@
 				
 		<?php endif; /* if images */ ?>
 	</div><!-- .entry-content -->
+	
+	<?php tha_entry_bottom(); ?>
 </article><!-- #post-<?php the_ID(); ?> -->
-<?php
+<?php tha_entry_after();
 
 
 /* End of file content-gallery.php */

@@ -5,9 +5,12 @@
  * @package		The Bootstrap
  * @since		1.0.0	- 05.02.2012
  */
-?>
+
+tha_sidebars_before(); ?>
 <section id="secondary" class="widget-area span4" role="complementary">
-	<?php if ( ! dynamic_sidebar( 'main' ) ) {
+	<?php tha_sidebar_top();
+	
+	if ( ! dynamic_sidebar( 'main' ) ) {
 		the_widget( 'WP_Widget_Archives', array(
 			'count'		=>	0,
 			'dropdown'	=>	0
@@ -23,9 +26,11 @@
 			'before_title'	=>	'<h3 class="widget-title">',
 			'after_title'	=>	'</h3>',
 		) );
-	} // end sidebar widget area ?>
+	} // end sidebar widget area
+	
+	tha_sidebar_bottom(); ?>
 </section><!-- #secondary .widget-area -->
-<?php
+<?php tha_sidebars_after();
 
 
 /* End of file sidebar.php */

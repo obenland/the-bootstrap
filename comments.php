@@ -12,8 +12,11 @@
  * @since		1.0.0 - 05.02.2012
  */
 
+tha_comments_before();
 
 comment_form();
+
+tha_comments_after();
 
 
 /* End of file comments.php */

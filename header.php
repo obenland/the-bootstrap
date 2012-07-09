@@ -12,20 +12,24 @@
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes(); ?>>
 	<head>
+		<?php tha_head_top(); ?>
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		
 		<title><?php wp_title( '&laquo;', true, 'right' ); ?></title>
 		
+		<?php tha_head_bottom(); ?>
 		<?php wp_head(); ?>
 	</head>
 	
 	<body <?php body_class(); ?>>
 		<div class="container">
 			<div id="page" class="hfeed row">
+				<?php tha_header_before(); ?>
 				<header id="branding" role="banner" class="span12">
-					<?php wp_nav_menu( array(
+					<?php tha_header_top();
+					wp_nav_menu( array(
 						'container'			=>	'nav',
 						'container_class'	=>	'subnav clearfix',
 						'theme_location'	=>	'header-menu',
@@ -84,9 +88,11 @@
 					</nav><!-- #access -->
 					<?php if ( function_exists( 'yoast_breadcrumb' ) ) {
 						yoast_breadcrumb( '<nav id="breadcrumb" class="breadcrumb">', '</nav>' );
-					} ?>
+					}
+					tha_header_bottom(); ?>
 				</header><!-- #branding --><?php
-			
+				tha_header_after();
+				
 
 /* End of file header.php */
 /* Location: ./wp-content/themes/the-bootstrap/header.php */

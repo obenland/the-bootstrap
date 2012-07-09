@@ -26,6 +26,8 @@ function the_bootstrap_setup() {
 	load_theme_textdomain( 'the-bootstrap', get_template_directory() . '/lang' );
 	
 	add_theme_support( 'automatic-feed-links' );
+	
+	add_theme_support( 'post-thumbnails' );
 
 	add_theme_support( 'post-formats', array(
 		'aside',
@@ -38,7 +40,7 @@ function the_bootstrap_setup() {
 		'video'
 	) );
 	
-	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'tha_hooks', array( 'all' ) );
 	
 	/**
 	 * Custom Theme Options
@@ -64,6 +66,11 @@ function the_bootstrap_setup() {
 	 * Custom Nav Menu handler for the Navbar.
 	 */
 	require_once( get_template_directory() . '/inc/nav-menu-walker.php' );
+	
+	/**
+	 * Theme Hook Alliance
+	 */
+	require_if_theme_supports( 'tha_hooks', get_template_directory() . '/inc/tha-theme-hooks.php' );
 	
 	/**
 	 * Including three menu (header-menu, primary and footer-menu).
