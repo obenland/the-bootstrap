@@ -181,7 +181,7 @@ function thsc_button( $atts, $content = null ) {
 		default: ;
 	}
 
-	$tag = ($atts['link'] != '') ? 'a' : 'div';
+	$tag = ($atts['link'] != '') ? 'a' : 'button';
 	$button = '<' . $tag;
 	if ($atts['link'] != '') $button .= ' href="' . $atts['link'] . '"';
 	if ($atts['id'] != '') $button .= ' id="' . $atts['id'] . '"';
