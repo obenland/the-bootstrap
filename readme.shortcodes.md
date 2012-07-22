@@ -50,7 +50,7 @@ Example:
 
 ### Buttons and Button Groups
 
-Use `[button]` to display a <a> (anchor) or <button> components.  Use `button_group` to join multiple buttons together as one composite component.
+Use `[button]` to display a A (anchor) or BUTTON html components.  Use `button_group` to join multiple buttons together as one composite component.
 
  - _Opptional_ attribute `link="_yoururl_"` sets the button as an anchor.
  - _Opptional_ attribute `size="_size_"` sets the button size, where _size_ is one of: `mini`, `small` or `large`
