@@ -1011,5 +1011,14 @@ function _the_bootstrap_version() {
 }
 
 
+/**
+ * Include Bootstrap shortcodes
+ *
+ * @author	Vino Rodrigues
+ * @since	1.8.0
+ */
+require_once( get_template_directory() . '/inc/shortcodes.php');
+
+
 /* End of file functions.php */
 /* Location: ./wp-content/themes/the-bootstrap/functions.php */
