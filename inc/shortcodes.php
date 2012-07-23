@@ -17,19 +17,25 @@
 
 function _thsc_fix_atts($atts, $defaults = NULL) {
 	if (is_array($atts)) {
-			foreach($atts as $name => $value ) {
-				if (is_numeric($name)) {
-					$atts[$value] = true;
-					unset($atts[$name]);
-					continue;
-				}
+		foreach($atts as $name => $value ) {
+			if (is_numeric($name)) {
+				$atts[$value] = true;
+				unset($atts[$name]);
+				continue;
 			}
-		if (!is_null($defaults))
-			return shortcode_atts( $defaults, array_change_key_case($atts, CASE_LOWER) );
-		else
-			return array_change_key_case($atts, CASE_LOWER);
-	} else
-		return array($atts => true);  // empty array
+		}
+		$atts = array_change_key_case($atts, CASE_LOWER);
+	} elseif (!empty($atts)) {
+		$atts = array($atts => true);  // $atts was a string, change to array
+	} else {
+		$atts = array();
+	}
+
+	if (!is_null($defaults)) {
+		return shortcode_atts( $defaults, array_change_key_case($atts, CASE_LOWER) );
+	} else {
+		return $atts;
+	}
 }
 
 function _thsc_getclass($atts, $class = '') {
@@ -158,13 +164,15 @@ function thsc_button_grp( $atts, $content = null ) {
 
 function thsc_button( $atts, $content = null ) {
 	$atts = _thsc_fix_atts($atts, array(
-		'link' => '',  // creates a-link
+		'link' => '',  // create a->href
+		'action' => '',  // create onclick event
 		'size' => '',  // mini, small or large
 		'type' => '',  // primary, danger, warning, success, info or inverse
    		'id' => '',
    		'title' => '',
 		));
 	$class = 'btn';
+
 	switch (strtolower($atts['size'])) {
 		case 'mini': $class .= ' btn-mini'; break;
 		case 'small': $class .= ' btn-samll'; break;
@@ -184,6 +192,7 @@ function thsc_button( $atts, $content = null ) {
 	$tag = ($atts['link'] != '') ? 'a' : 'button';
 	$button = '<' . $tag;
 	if ($atts['link'] != '') $button .= ' href="' . $atts['link'] . '"';
+	if ($atts['action'] != '') $button .= ' onclick="' . $atts['action'] . '"';
 	if ($atts['id'] != '') $button .= ' id="' . $atts['id'] . '"';
 	$button .= ' class="' . _thsc_getclass($atts, $class) . '"';
 	if ($atts['title'] != '') $button .= ' title="' . $atts['title'] . '"';

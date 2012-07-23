@@ -150,6 +150,9 @@ function the_bootstrap_widgets_init() {
 	
 	include_once( 'inc/the-bootstrap-gallery-widget.php' );
 	register_widget( 'The_Bootstrap_Gallery_Widget' );
+
+	include_once( 'inc/the-bootstrap-navlist-widget.php' );
+	register_widget( 'The_Bootstrap_Navlist_Widget' );
 }
 add_action( 'widgets_init', 'the_bootstrap_widgets_init' );
 
@@ -1017,7 +1020,7 @@ function _the_bootstrap_version() {
  * @author	Vino Rodrigues
  * @since	1.8.0
  */
-require_once( get_template_directory() . '/inc/shortcodes.php');
+require_once( 'inc/shortcodes.php');
 
 
 /* End of file functions.php */
