@@ -14,7 +14,7 @@
 							'container'			=>	'nav',
 							'container_class'	=>	'subnav',
 							'theme_location'	=>	'footer-menu',
-							'menu_class'		=>	'nav nav-pills pull-left',
+							'menu_class'		=>	'credits nav nav-pills pull-left',
 							'depth'				=>	1,
 							'fallback_cb'		=>	'the_bootstrap_credits'
 						) );

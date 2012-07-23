@@ -28,5 +28,6 @@ tha_entry_before(); ?>
 </article><!-- #post-<?php the_ID(); ?> -->
 <?php tha_entry_after();
 
+
 /* End of file content-page.php */
 /* Location: ./wp-content/themes/the-bootstrap/partials/content-page.php */

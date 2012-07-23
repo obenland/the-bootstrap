@@ -305,7 +305,7 @@ if ( ! function_exists( 'the_bootstrap_credits' ) ) :
  */
 function the_bootstrap_credits() {
 	printf(
-		__('&copy; %1$s <a href="%2$s">%3$s</a>, all rights reserved.', 'the-bootstrap'),
+		'<span class="credits alignleft">' . __( '&copy; %1$s <a href="%2$s">%3$s</a>, all rights reserved.', 'the-bootstrap' ) . '</span>',
 		date( 'Y' ),
 		home_url( '/' ),
 		get_bloginfo( 'name' )

@@ -4,7 +4,7 @@ Tags:				black, blue, white, light, two-columns, left-sidebar, right-sidebar, fl
 Donate link:		https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=542W6XT4PLT4L
 Requires at least:	3.3.0
 Tested up to:		3.4.1
-Stable tag:			1.8.0
+Stable tag:			1.8.1
 
 A WordPress Theme based on Bootstrap, from Twitter
 
@@ -67,7 +67,11 @@ For more information on SemVer, please visit [http://semver.org/].
 
 == Changelog ==
 
-= 1.7.2 =
+= 1.8.1 =
+* Fixed an alignment-bug in the footer for webkit-browsers
+* Fixed a bug where gallery thumbnails were only 1px wide on mobile devices
+
+= 1.8.0 =
 * Adds support for the Theme Hook Alliance project. Props @zamoose
 * Reintroduce Glyphicon Icon support. See https://github.com/twitter/bootstrap/issues/3942#issuecomment-6844728
 
