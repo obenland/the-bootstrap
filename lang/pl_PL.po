@@ -1,0 +1,695 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Patryk Orwat <meshuga27 . gmail dot com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: Polish\n"
+"X-Poedit-Country: Poland\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: 404.php:18
+#@ the-bootstrap
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "Kłopotliwa sytuacja, co nie?."
+
+#: 404.php:22
+#@ the-bootstrap
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help."
+msgstr "Nie udało się znaleźć tego, czego szukasz. Być może wyszukiwanie lub jeden z poniższych odnośników przyniesie lepsze rezultaty."
+
+#: 404.php:30
+#@ the-bootstrap
+msgid "Most Used Categories"
+msgstr "Najczęściej używane kategorie"
+
+#: archive.php:27
+#, php-format
+#@ the-bootstrap
+msgid "Daily Archives: %s"
+msgstr "Dzienne archiwum: %s"
+
+#: archive.php:29
+#, php-format
+#@ the-bootstrap
+msgid "Monthly Archives: %s"
+msgstr "Miesięczne archiwum: %s"
+
+#: archive.php:31
+#, php-format
+#@ the-bootstrap
+msgid "Yearly Archives: %s"
+msgstr "Roczne archiwum: %s"
+
+#: archive.php:33
+#@ the-bootstrap
+msgid "Blog Archives"
+msgstr "Archiwa bloga"
+
+#: author.php:20
+#, php-format
+#@ the-bootstrap
+msgid "Author Archives: %s"
+msgstr "Archiwa autora: %s"
+
+#: author.php:28
+#: partials/content-single.php:38
+#, php-format
+#@ the-bootstrap
+msgid "About %s"
+msgstr "O %s"
+
+#: category.php:20
+#, php-format
+#@ the-bootstrap
+msgid "Category Archives: %s"
+msgstr "Archiwa kategorii: %s"
+
+#: comments.php:19
+#@ the-bootstrap
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Ten wpis jest chroniony hasłem &mdash; wprowadź je, aby zobaczyć komentarze do niego."
+
+#: comments.php:29
+#, php-format
+#@ the-bootstrap
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Jedna myśl nt. &bdquo;%2$s&rdquo;"
+msgstr[1] "%1$s myśli nt. &bdquo;%2$s&rdquo;"
+msgstr[2] "%1$s myśli nt. &bdquo;%2$s&rdquo;"
+
+#: inc/template-tags.php:75
+#@ the-bootstrap
+msgid "Comment navigation"
+msgstr "Nawigacja po komentarzach"
+
+#: inc/template-tags.php:76
+#@ the-bootstrap
+msgid "&larr; Newer Comments"
+msgstr "Nowsze komentarze &rarr;"
+
+#: inc/template-tags.php:77
+#@ the-bootstrap
+msgid "Older Comments &rarr;"
+msgstr "&larr; Starsze komentarze"
+
+#: comments.php:45
+#@ the-bootstrap
+msgid "Comments are closed."
+msgstr "Możliwość komentowania jest wyłączona."
+
+#: comments.php:49
+#@ the-bootstrap
+msgctxt "noun"
+msgid "Comment"
+msgstr "Komentarz"
+
+#: comments.php:51
+#, php-format
+#@ the-bootstrap
+msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes: %s"
+msgstr "Możesz używać tagów i atrybutów <abbr title=\"HyperText Markup Language\">HTML</abbr>: %s"
+
+#: comments.php:55
+#, php-format
+#@ the-bootstrap
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Musisz być zalogowany aby móc komentować."
+
+#: comments.php:56
+#, php-format
+#@ the-bootstrap
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out?</a>"
+msgstr "Zalogowany jako <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Wyloguj się z tego konta\">Wylogować się?</a>"
+
+#: functions.php:279
+#, php-format
+#@ the-bootstrap
+msgid "&copy; %1$s <a href=\"%2$s\">%3$s</a>, all rights reserved."
+msgstr "&copy; %1$s <a href=\"%2$s\">%3$s</a>, wszystkie prawa zastrzeżone."
+
+#: footer.php:21
+#@ the-bootstrap
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#: footer.php:22
+#@ the-bootstrap
+msgid "Semantic Personal Publishing Platform"
+msgstr "Semantic Personal Publishing Platform"
+
+#: footer.php:24
+#, php-format
+#@ the-bootstrap
+msgctxt "WordPress"
+msgid "Proudly powered by %s"
+msgstr "Dumnie wspierane przez WordPressa"
+
+#: footer.php:30
+#, php-format
+#@ the-bootstrap
+msgid "%d queries. %s seconds."
+msgstr "%d zapytań. %s sekund."
+
+#: functions.php:79
+#@ the-bootstrap
+msgid "Main Navigation"
+msgstr "Nawigacja główna"
+
+#: functions.php:125
+#@ the-bootstrap
+msgid "Main Sidebar"
+msgstr "Główny panel boczny"
+
+#: functions.php:134
+#@ the-bootstrap
+msgid "Image Sidebar"
+msgstr "Panel boczny na zdjęcia"
+
+#: inc/template-tags.php:95
+#, php-format
+#@ the-bootstrap
+msgid "<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
+msgstr "<span class=\"sep\">Opublikowano </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\">Autor: </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
+
+#: inc/template-tags.php:101
+#, php-format
+#@ the-bootstrap
+msgid "View all posts by %s"
+msgstr "Zobacz wszystkie wpisy, których autorem jest %s"
+
+#: inc/template-tags.php:107
+#@ the-bootstrap
+msgid "<strong>1</strong> Reply"
+msgstr "<b>1</b> odpowiedź"
+
+#: inc/template-tags.php:107
+#@ the-bootstrap
+msgid "<strong>%</strong> Replies"
+msgstr "<b>%</b> odpowiedzi"
+
+#: functions.php:435
+#: functions.php:461
+#: image.php:52
+#: inc/template-tags.php:111
+#: partials/content-page.php:21
+#@ the-bootstrap
+msgid "Edit"
+msgstr "Edytuj"
+
+#: inc/template-tags.php:135
+#@ the-bootstrap
+msgid "Next page"
+msgstr "Następna strona"
+
+#: inc/template-tags.php:136
+#@ the-bootstrap
+msgid "Previous page"
+msgstr "Poprzednia strona"
+
+#: inc/template-tags.php:150
+#: inc/template-tags.php:164
+#@ the-bootstrap
+msgid "Pages:"
+msgstr "Stron:"
+
+#: functions.php:322
+#: partials/content-aside.php:28
+#: partials/content-image.php:16
+#: partials/content-page.php:18
+#: partials/content-status.php:19
+#: partials/content.php:41
+#@ the-bootstrap
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Czytaj dalej <span class=\"meta-nav\">&rarr;</span>"
+
+#: functions.php:434
+#@ the-bootstrap
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#. translators: 1: comment author, 2: date and time
+#: functions.php:452
+#, php-format
+#@ the-bootstrap
+msgid "%1$s <span class=\"says\">napisał</span> on %2$s:"
+msgstr "%1$s <span class=\"says\">sagte</span> am %2$s:"
+
+#. translators: 1: date, 2: time
+#: functions.php:458
+#, php-format
+#@ the-bootstrap
+msgid "%1$s at %2$s"
+msgstr "%1$s o %2$s"
+
+#: functions.php:465
+#@ the-bootstrap
+msgid "Your comment is awaiting moderation."
+msgstr "Twój komentarz oczekuje na moderację."
+
+#: functions.php:474
+#@ the-bootstrap
+msgid "Reply <span>&darr;</span>"
+msgstr "Odpowiedz <span>&darr;</span>"
+
+#: functions.php:538
+#@ the-bootstrap
+msgid "Name"
+msgstr "Nazwa"
+
+#: functions.php:541
+#: functions.php:567
+#@ the-bootstrap
+msgid "required"
+msgstr "wymagane"
+
+#: functions.php:564
+#@ the-bootstrap
+msgid "Email"
+msgstr "Email"
+
+#: functions.php:567
+#@ the-bootstrap
+msgid "will not be published"
+msgstr "Nie zostanie opublikowane"
+
+#: functions.php:588
+#@ the-bootstrap
+msgid "Website"
+msgstr "Strona internetowa"
+
+#: functions.php:753
+#, php-format
+#@ the-bootstrap
+msgid "%d comment"
+msgid_plural "%d comments"
+msgstr[0] "%d Komentarz"
+msgstr[1] "%d Komentarzy"
+
+#: functions.php:815
+#@ the-bootstrap
+msgid "This post is password protected. To view it please enter your password below:"
+msgstr "Ten wpis jest chroniony hasłem &mdash; wprowadź je, aby zobaczyć wpis."
+
+#: functions.php:815
+#@ the-bootstrap
+msgid "Password:"
+msgstr "Hasło:"
+
+#: functions.php:815
+#@ the-bootstrap
+msgid "Submit"
+msgstr "Wyślij"
+
+#: header.php:54
+#@ the-bootstrap
+msgid "Main menu"
+msgstr "Menu główne"
+
+#: header.php:55
+#@ the-bootstrap
+msgid "Skip to primary content"
+msgstr "Przeskocz do tekstu"
+
+#: header.php:56
+#@ the-bootstrap
+msgid "Skip to secondary content"
+msgstr "Przeskocz do widgetów"
+
+#: image.php:45
+#@ the-bootstrap
+msgid "image"
+msgid_plural "images"
+msgstr[0] "Zdjęcie"
+msgstr[1] "Zdjęcia"
+
+#: image.php:53
+#@ the-bootstrap
+msgid "Leave a comment"
+msgstr "Skomentuj"
+
+#: image.php:56
+#@ the-bootstrap
+msgid "&laquo; Previous Photo"
+msgstr "&laquo; Poprzednie zdjęcie"
+
+#: image.php:58
+#@ the-bootstrap
+msgid "Next Photo &raquo;"
+msgstr "Następne zdjęcie &raquo;"
+
+#: inc/the-bootstrap-image-meta-widget.php:28
+#@ the-bootstrap
+msgid "The Bootstrap Image Meta Widget"
+msgstr "The Bootstrap Image Meta Widget"
+
+#: inc/the-bootstrap-image-meta-widget.php:30
+#@ the-bootstrap
+msgid "Displays meta information on image attachment pages"
+msgstr "Wyświetlaj dodatkowe informacje o zdjęciu na stronie dodatków"
+
+#: inc/the-bootstrap-image-meta-widget.php:52
+#@ the-bootstrap
+msgid "Info"
+msgstr "Info"
+
+#: inc/the-bootstrap-image-meta-widget.php:60
+#@ the-bootstrap
+msgid "Created:"
+msgstr "Utworzono:"
+
+#: inc/the-bootstrap-image-meta-widget.php:64
+#@ the-bootstrap
+msgid "Full size:"
+msgstr "Pełny rozmiar:"
+
+#: inc/the-bootstrap-image-meta-widget.php:65
+#, php-format
+#@ the-bootstrap
+msgid "%s pixels"
+msgstr "%s pikseli"
+
+#: inc/the-bootstrap-image-meta-widget.php:68
+#@ the-bootstrap
+msgid "Aperture:"
+msgstr "Apertura:"
+
+#: inc/the-bootstrap-image-meta-widget.php:73
+#@ the-bootstrap
+msgid "Focal length:"
+msgstr "Ogniskowa:"
+
+#: inc/the-bootstrap-image-meta-widget.php:78
+#@ the-bootstrap
+msgid "Iso:"
+msgstr "ISO:"
+
+#: inc/the-bootstrap-image-meta-widget.php:83
+#@ the-bootstrap
+msgid "Shutter:"
+msgstr "Migawka:"
+
+#: inc/the-bootstrap-image-meta-widget.php:102
+#@ the-bootstrap
+msgid "Camera:"
+msgstr "Aparat:"
+
+#: inc/the-bootstrap-image-meta-widget.php:151
+#@ the-bootstrap
+msgid "Title:"
+msgstr "Tytuł:"
+
+#: partials/content-aside.php:16
+#: partials/content-gallery.php:16
+#: partials/content.php:15
+#: partials/content.php:20
+#, php-format
+#@ the-bootstrap
+msgid "Permalink to %s"
+msgstr "Link do %s"
+
+#: partials/content-gallery.php:48
+#, php-format
+#@ the-bootstrap
+msgid "This gallery contains <strong>%1$s photo</strong>."
+msgid_plural "This gallery contains <strong>%1$s photos</strong>."
+msgstr[0] "Galeria zawiera <strong>%1$s zdjęcie</strong>."
+msgstr[1] "Galeria zawiera <strong>%1$s zdjęć</strong>."
+
+#: partials/content-no-results.php:13
+#@ the-bootstrap
+msgid "Nothing Found"
+msgstr "Niczego nie znaleziono"
+
+#: partials/content-no-results.php:18
+#@ the-bootstrap
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Przepraszamy, ale nic nie zostało dopasowane do Twoich kryteriów wyszukiwania. Proszę spróbować ponownie, korzystając z innych słów kluczowych."
+
+#: partials/content-no-results.php:20
+#@ the-bootstrap
+msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
+msgstr "Przepraszamy, ale nie znaleziono niczego w wybranym archiwum. Być może użycie wyszukiwarki przyniesie oczekiwany rezultat."
+
+#: comments.php:53
+#: inc/template-tags.php:107
+#@ the-bootstrap
+msgid "Leave a reply"
+msgstr "Napisz odpowiedź"
+
+#: partials/content-single.php:26
+#: partials/content.php:50
+#, php-format
+#@ the-bootstrap
+msgid "Posted in %1$s."
+msgstr "Opublikowano %1$s."
+
+#: partials/content-single.php:27
+#: partials/content-single.php:31
+#: partials/content.php:51
+#@ the-bootstrap
+msgctxt "used between list items, there is a space after the comma"
+msgid ", "
+msgstr ", "
+
+#: partials/content-single.php:30
+#@ the-bootstrap
+msgid "Tagged "
+msgstr "Oznaczono "
+
+#: partials/content-single.php:46
+#, php-format
+#@ the-bootstrap
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Zobacz wszystkie wpisy, których autorem jest %s <span class=\"meta-nav\">&rarr;</span>"
+
+#: partials/content.php:16
+#@ the-bootstrap
+msgid "Featured"
+msgstr "Polecany"
+
+#: search.php:19
+#, php-format
+#@ the-bootstrap
+msgid "Search Results for: %s"
+msgstr "Wyniki wyszukiwania dla zapytania &#8222;%s&#8221;"
+
+#: inc/template-tags.php:199
+#: inc/template-tags.php:200
+#: searchform.php:12
+#: searchform.php:14
+#@ the-bootstrap
+msgid "Search"
+msgstr "Szukaj"
+
+#: single.php:23
+#@ the-bootstrap
+msgid "Post navigation"
+msgstr "Nawigacja po wpisach"
+
+#: tag.php:20
+#, php-format
+#@ the-bootstrap
+msgid "Tag Archives: %s"
+msgstr "Archiwa tagu: %s"
+
+#: comments.php:54
+#, php-format
+#@ the-bootstrap
+msgid "Leave a reply to %s"
+msgstr "Skomentuj %s"
+
+#: functions.php:80
+#@ the-bootstrap
+msgid "Header Menu"
+msgstr "Menu w nagłówku"
+
+#: functions.php:81
+#@ the-bootstrap
+msgid "Footer Menu"
+msgstr "Menu w stopce"
+
+#: partials/content-gallery.php:72
+#@ the-bootstrap
+msgctxt "carousel-control"
+msgid "&lsaquo;"
+msgstr "&lsaquo;"
+
+#: partials/content-gallery.php:73
+#@ the-bootstrap
+msgctxt "carousel-control"
+msgid "&rsaquo;"
+msgstr "&lsaquo;"
+
+#: searchform.php:15
+#@ the-bootstrap
+msgid "Go"
+msgstr "Idź"
+
+#: functions.php:135
+#@ the-bootstrap
+msgid "Shown on image attachment pages."
+msgstr "Pokazany na stronach załączników graficznych."
+
+#: inc/theme-customizer.php:25
+#: inc/theme-options.php:22
+#: inc/theme-options.php:23
+#: inc/theme-options.php:145
+#@ the-bootstrap
+msgid "Theme Options"
+msgstr "Opcje tematu"
+
+#: inc/theme-customizer.php:40
+#: inc/theme-options.php:79
+#@ the-bootstrap
+msgid "Default Layout"
+msgstr "Standardowy układ treści"
+
+#: inc/theme-options.php:80
+#@ the-bootstrap
+msgid "Navigation Bar"
+msgstr "Pasek nawigacyjny"
+
+#: inc/theme-customizer.php:45
+#: inc/theme-options.php:202
+#@ the-bootstrap
+msgid "Content on left"
+msgstr "Zawartość po lewej"
+
+#: inc/theme-customizer.php:46
+#: inc/theme-options.php:206
+#@ the-bootstrap
+msgid "Content on right"
+msgstr "Zawartość po prawej"
+
+#: inc/theme-customizer.php:52
+#: inc/theme-options.php:84
+#@ the-bootstrap
+msgid "Add site name to navigation bar."
+msgstr "Dodaj nazwę strony do paska nawigacyjnego."
+
+#: inc/theme-customizer.php:60
+#: inc/theme-options.php:89
+#@ the-bootstrap
+msgid "Add searchform to navigation bar."
+msgstr "Dodaj formularz szukania do paska nawigacyjnego."
+
+#: inc/theme-options.php:289
+#@ the-bootstrap
+msgid "The Bootstrap Theme Options"
+msgstr "Opcje tematu Bootstrap"
+
+#: inc/theme-options.php:337
+#, php-format
+#@ the-bootstrap
+msgid "Settings saved. <a href=\"%s\">Visit your site</a> to see how it looks."
+msgstr "Ustawienia zapisane. <a href=\"%s\">Odwiedź swoją stronę</a> aby zobaczyć jak wygląda."
+
+#: inc/theme-options.php:363
+#@ the-bootstrap
+msgid "Help spread the word!"
+msgstr "Pomóż zdobywać świat!"
+
+#: inc/theme-options.php:365
+#, php-format
+#@ the-bootstrap
+msgctxt "Plugin Name"
+msgid "Want to help make this Theme even better? All donations are used to improve %1$s, so donate $20, $50 or $100 now!"
+msgstr "Chcesz pomóc w tworzeniu tego tematu? Wszystkie datki są wykorzystywane są do pracy nad nim. Prosimy, przekaż 20$, 50$ lub 100$!"
+
+#: inc/theme-options.php:372
+#@ the-bootstrap
+msgid "Or you could:"
+msgstr "Albo możesz:"
+
+#: inc/theme-options.php:374
+#@ the-bootstrap
+msgid "Rate the Theme 5&#9733; on WordPress.org"
+msgstr "Oceń ten temat na 5&#9733; na WordPress.org"
+
+#: inc/theme-options.php:375
+#@ the-bootstrap
+msgid "Blog about it &amp; link to the Theme page"
+msgstr "Bloguj o tym i linkuj do strony tematu"
+
+#: inc/theme-options.php:400
+#@ the-bootstrap
+msgid "News from Konstantin"
+msgstr "Newsy od Konstantina"
+
+#: inc/theme-options.php:404
+#@ the-bootstrap
+msgid "No news items, feed might be broken..."
+msgstr "Brak newsów, link może być uszkodzony "
+
+#: inc/theme-options.php:410
+#@ the-bootstrap
+msgid "Follow Konstantin on Twitter"
+msgstr "Śledź Konstantina na Twitterze"
+
+#: inc/theme-options.php:411
+#@ the-bootstrap
+msgid "Subscribe via RSS"
+msgstr "Subskrybuj przez RSS"
+
+#: single.php:24
+#@ the-bootstrap
+msgid "Next Post"
+msgstr "Następna notatka"
+
+#: single.php:25
+#@ the-bootstrap
+msgid "Previous Post"
+msgstr "Poprzednia notatka"
+
+#: 404.php:33
+#, php-format
+#@ the-bootstrap
+msgctxt "%1$s: smilie"
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Spróbuj poszukać w miesięcznym archiwum. %1$s"
+
+#: inc/the-bootstrap-image-meta-widget.php:90
+#: inc/the-bootstrap-image-meta-widget.php:92
+#: inc/the-bootstrap-image-meta-widget.php:95
+#, php-format
+#@ the-bootstrap
+msgid "%d sec."
+msgstr "%d sek."
+
+#: inc/theme-customizer.php:68
+#: inc/theme-options.php:92
+#@ the-bootstrap
+msgid "Navigation Bar Position"
+msgstr "Pozycja paska nawigacyjnego"
+
+#: inc/theme-customizer.php:73
+#: inc/theme-options.php:97
+#@ the-bootstrap
+msgid "Static."
+msgstr "static (statyczna)"
+
+#: inc/theme-customizer.php:74
+#: inc/theme-options.php:101
+#@ the-bootstrap
+msgid "Fixed on top."
+msgstr "Fixed on top (ustalona na górze)"
+
+#: inc/theme-customizer.php:75
+#: inc/theme-options.php:105
+#@ the-bootstrap
+msgid "Fixed at bottom."
+msgstr "Fixed at bottm (ustalona na dole)"
+
