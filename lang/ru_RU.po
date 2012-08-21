@@ -1,95 +1,89 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: The Bootstrap Russian Translation\n"
+"Project-Id-Version: The Bootstrap v1.8.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
+"PO-Revision-Date: 2012-08-19 08:23:09+0000\n"
 "Last-Translator: Dmitry Serzhenko <dmitry@serzhenko.me>\n"
 "Language-Team: Dmitry Serzhenko <dmitry@serzhenko.me>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n==1) ? 0 : (n%10==1 && n%100!=11) ? 3 : ((n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20)) ? 1 : 2);\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
-"X-Textdomain-Support: yes\n"
-"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-Language: Russian\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Bookmarks: \n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
 
+#: 404.php:23
 #@ the-bootstrap
-#: 404.php:19
 msgid "This is somewhat embarrassing, isn&rsquo;t it?"
 msgstr "Упс, произошло что-то не то…"
 
+#: 404.php:27
 #@ the-bootstrap
-#: 404.php:23
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help."
 msgstr "Похоже, мы не можем найти того, что Вы ищете. Возможно, поиск или одна из ссылок ниже могут Вам помочь."
 
+#: 404.php:35
 #@ the-bootstrap
-#: 404.php:30
 msgid "Most Used Categories"
 msgstr "Наиболее часто используемые категории"
 
-#@ the-bootstrap
-#. translators: %1$s: smilie
-#: 404.php:44
+#: archive.php:30
 #, php-format
-msgid "Try looking in the monthly archives. %1$s"
-msgstr "Попробуйте заглянуть в архивы по месяцам. %1$s"
-
 #@ the-bootstrap
-#: archive.php:28
-#, php-format
 msgid "Daily Archives: %s"
 msgstr "Архивы по дням %s"
 
-#@ the-bootstrap
-#: archive.php:30
+#: archive.php:32
 #, php-format
+#@ the-bootstrap
 msgid "Monthly Archives: %s"
 msgstr "Архивы по месяцам: %s"
 
-#@ the-bootstrap
-#: archive.php:32
+#: archive.php:34
 #, php-format
+#@ the-bootstrap
 msgid "Yearly Archives: %s"
 msgstr "Архивы по годам: %s"
 
+#: archive.php:36
 #@ the-bootstrap
-#: archive.php:34
 msgid "Blog Archives"
 msgstr "Архив записей"
 
-#@ the-bootstrap
-#: author.php:21
+#: author.php:23
 #, php-format
+#@ the-bootstrap
 msgid "Author Archives: %s"
 msgstr "Архивы по автору: %s"
 
-#@ the-bootstrap
-#: author.php:29
-#: partials/content-single.php:39
+#: author.php:31
+#: partials/content-single.php:45
 #, php-format
+#@ the-bootstrap
 msgid "About %s"
 msgstr "О %s"
 
-#@ the-bootstrap
-#: category.php:21
+#: category.php:23
 #, php-format
+#@ the-bootstrap
 msgid "Category Archives: %s"
 msgstr "Архивы по категориям: %s"
 
+#: functions.php:488
 #@ the-bootstrap
-#: comments.php:20
 msgid "This post is password protected. Enter the password to view any comments."
 msgstr "Эта запись защищена паролем. Введите, пожалуйста, пароль, чтобы просматривать и/или комментировать её."
 
-#@ the-bootstrap
-#: comments.php:31
+#: functions.php:498
 #, php-format
+#@ the-bootstrap
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "Одна мысль о &laquo;%2$s&raquo;"
@@ -97,212 +91,209 @@ msgstr[1] "%1$s мысли о &laquo;%2$s&raquo;"
 msgstr[2] "%1$s мыслей о &laquo;%2$s&raquo;"
 msgstr[3] "%1$s мысль о &laquo;%2$s&raquo;"
 
+#: inc/template-tags.php:75
 #@ the-bootstrap
-#: comments.php:38
-#: comments.php:50
 msgid "Comment navigation"
 msgstr "Навигация по комментариям"
 
+#: inc/template-tags.php:76
 #@ the-bootstrap
-#: comments.php:39
-#: comments.php:51
 msgid "&larr; Newer Comments"
 msgstr "&larr; Следующие комментариии"
 
+#: inc/template-tags.php:77
 #@ the-bootstrap
-#: comments.php:40
-#: comments.php:52
 msgid "Older Comments &rarr;"
 msgstr "Предыдущие комментарии &rarr;"
 
+#: functions.php:528
 #@ the-bootstrap
-#: comments.php:60
 msgid "Comments are closed."
 msgstr "Комментарии закрыты."
 
+#: functions.php:546
 #@ the-bootstrap
-#: comments.php:64
 msgctxt "noun"
 msgid "Comment"
 msgstr "Комментировать"
 
-#@ the-bootstrap
-#: comments.php:66
+#: functions.php:548
 #, php-format
+#@ the-bootstrap
 msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes: %s"
 msgstr "Вы можете использовать <abbr title=\"HyperText Markup Language\">HTML</abbr>-тэги и атрибуты: %s"
 
-#@ the-bootstrap
-#: comments.php:70
+#: functions.php:552
 #, php-format
+#@ the-bootstrap
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr "Необходимо <a href=\"%s\">авторизоваться</a>, чтобы оставлять комментарии."
 
-#@ the-bootstrap
-#: comments.php:71
+#: functions.php:553
 #, php-format
+#@ the-bootstrap
 msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out?</a>"
 msgstr "лВы вошли как <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Выйти\">Выйти?</a>"
 
-#@ the-bootstrap
-#: functions.php:232
+#: functions.php:308
 #, php-format
+#@ the-bootstrap
 msgid "&copy; %1$s <a href=\"%2$s\">%3$s</a>, all rights reserved."
 msgstr "&copy; %1$s <a href=\"%2$s\">%3$s</a>, все права защищены."
 
+#: footer.php:23
 #@ the-bootstrap
-#: footer.php:22
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
+#: footer.php:24
 #@ the-bootstrap
-#: footer.php:23
 msgid "Semantic Personal Publishing Platform"
 msgstr "Современная персональная платформа для публикаций"
 
-#@ the-bootstrap
-#: footer.php:25
+#: footer.php:26
 #, php-format
+#@ the-bootstrap
 msgctxt "WordPress"
 msgid "Proudly powered by %s"
 msgstr "На основе технологий %s"
 
-#@ the-bootstrap
-#: footer.php:31
+#: footer.php:34
 #, php-format
+#@ the-bootstrap
 msgid "%d queries. %s seconds."
 msgstr "%d запросов. %s секунд."
 
+#: functions.php:84
 #@ the-bootstrap
-#: functions.php:61
 msgid "Main Navigation"
 msgstr "Основная навигация"
 
+#: functions.php:130
 #@ the-bootstrap
-#: functions.php:107
 msgid "Main Sidebar"
 msgstr "Основная боковая панель"
 
+#: functions.php:139
 #@ the-bootstrap
-#: functions.php:116
 msgid "Image Sidebar"
 msgstr "Боковая панель изображений"
 
-#@ the-bootstrap
-#: inc/template-tags.php:69
+#: inc/template-tags.php:95
 #, php-format
+#@ the-bootstrap
 msgid "<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
 msgstr "<span class=\"sep\">Опубликовано </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> автором </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
 
-#@ the-bootstrap
-#: inc/template-tags.php:75
+#: inc/template-tags.php:101
 #, php-format
+#@ the-bootstrap
 msgid "View all posts by %s"
 msgstr "Все записи автора %s"
 
+#: inc/template-tags.php:107
 #@ the-bootstrap
-#: inc/template-tags.php:81
 msgid "<strong>1</strong> Reply"
 msgstr "<strong>1</strong> комментарий"
 
+#: inc/template-tags.php:107
 #@ the-bootstrap
-#: inc/template-tags.php:81
 msgid "<strong>%</strong> Replies"
 msgstr "<strong>%</strong> комментариев"
 
-#@ the-bootstrap
-#: functions.php:387
-#: functions.php:413
+#: functions.php:584
+#: functions.php:609
 #: image.php:55
-#: inc/template-tags.php:85
-#: partials/content-page.php:22
+#: inc/template-tags.php:111
+#: partials/content-page.php:25
+#@ the-bootstrap
 msgid "Edit"
 msgstr "Редактировать"
 
+#: inc/template-tags.php:135
 #@ the-bootstrap
-#: inc/template-tags.php:109
 msgid "Next page"
 msgstr "Следующая страница"
 
+#: inc/template-tags.php:136
 #@ the-bootstrap
-#: inc/template-tags.php:110
 msgid "Previous page"
 msgstr "Предыдущая страница"
 
+#: inc/template-tags.php:150
+#: inc/template-tags.php:164
 #@ the-bootstrap
-#: inc/template-tags.php:124
-#: inc/template-tags.php:138
 msgid "Pages:"
 msgstr "Страницы:"
 
+#: functions.php:351
+#: partials/content-aside.php:31
+#: partials/content-image.php:20
+#: partials/content-page.php:22
+#: partials/content-status.php:22
+#: partials/content.php:45
 #@ the-bootstrap
-#: functions.php:274
-#: partials/content-aside.php:29
-#: partials/content-image.php:17
-#: partials/content-page.php:19
-#: partials/content-status.php:31
-#: partials/content.php:38
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Читать далее <span class=\"meta-nav\">&rarr;</span>"
 
+#: functions.php:583
 #@ the-bootstrap
-#: functions.php:386
 msgid "Pingback:"
 msgstr "Упоминания:"
 
-#@ the-bootstrap
 #. translators: 1: comment author, 2: date and time
-#: functions.php:404
+#: functions.php:600
 #, php-format
+#@ the-bootstrap
 msgid "%1$s <span class=\"says\">said</span> on %2$s:"
 msgstr "%1$s <span class=\"says\">сказал</span> %2$s:"
 
-#@ the-bootstrap
 #. translators: 1: date, 2: time
-#: functions.php:410
+#: functions.php:606
 #, php-format
+#@ the-bootstrap
 msgid "%1$s at %2$s"
 msgstr "%1$s в %2$s"
 
+#: functions.php:613
 #@ the-bootstrap
-#: functions.php:417
 msgid "Your comment is awaiting moderation."
 msgstr "Ваш комментарий ожидает модерации."
 
+#: functions.php:622
 #@ the-bootstrap
-#: functions.php:426
 msgid "Reply <span>&darr;</span>"
 msgstr "Ответить <span>&darr;</span>"
 
+#: functions.php:684
 #@ the-bootstrap
-#: functions.php:490
 msgid "Name"
 msgstr "Имя"
 
+#: functions.php:687
+#: functions.php:713
 #@ the-bootstrap
-#: functions.php:493
-#: functions.php:519
 msgid "required"
 msgstr "обязательно"
 
+#: functions.php:710
 #@ the-bootstrap
-#: functions.php:516
 msgid "Email"
 msgstr "Электропочта"
 
+#: functions.php:713
 #@ the-bootstrap
-#: functions.php:519
 msgid "will not be published"
 msgstr "не будет опубликовано"
 
+#: functions.php:734
 #@ the-bootstrap
-#: functions.php:540
 msgid "Website"
 msgstr "Website"
 
-#@ the-bootstrap
-#: functions.php:716
+#: functions.php:899
 #, php-format
+#@ the-bootstrap
 msgid "%d comment"
 msgid_plural "%d comments"
 msgstr[0] "%d комментарий"
@@ -310,38 +301,38 @@ msgstr[1] "%d комментария"
 msgstr[2] "%d комментариев"
 msgstr[3] "%d комментарий"
 
+#: functions.php:961
 #@ the-bootstrap
-#: functions.php:782
 msgid "This post is password protected. To view it please enter your password below:"
 msgstr "Эта запись защищена паролем. Введите, пожалуйста, пароль, чтобы просматривать её."
 
+#: functions.php:961
 #@ the-bootstrap
-#: functions.php:782
 msgid "Password:"
 msgstr "Пароль:"
 
+#: functions.php:961
 #@ the-bootstrap
-#: functions.php:782
 msgid "Submit"
 msgstr "Отправить"
 
+#: header.php:56
 #@ the-bootstrap
-#: header.php:57
 msgid "Main menu"
 msgstr "Основное меню"
 
+#: header.php:57
 #@ the-bootstrap
-#: header.php:58
 msgid "Skip to primary content"
 msgstr "Перейти к основному содержимому"
 
+#: header.php:58
 #@ the-bootstrap
-#: header.php:59
 msgid "Skip to secondary content"
 msgstr "Перейти к дополнительному содержимому"
 
+#: image.php:48
 #@ the-bootstrap
-#: image.php:47
 msgid "image"
 msgid_plural "images"
 msgstr[0] "Изображение"
@@ -349,95 +340,95 @@ msgstr[1] "Изображения"
 msgstr[2] "Изображения"
 msgstr[3] "Изображения"
 
-#@ the-bootstrap
 #: image.php:56
+#@ the-bootstrap
 msgid "Leave a comment"
 msgstr "Комментировать"
 
-#@ the-bootstrap
 #: image.php:59
+#@ the-bootstrap
 msgid "&laquo; Previous Photo"
 msgstr "&larr; Предыдущее фото"
 
-#@ the-bootstrap
 #: image.php:61
+#@ the-bootstrap
 msgid "Next Photo &raquo;"
 msgstr "Следующее фото &rarr;"
 
+#: inc/the-bootstrap-image-meta-widget.php:28
 #@ the-bootstrap
-#: inc/the-bootstrap-image-meta-widget.php:27
 msgid "The Bootstrap Image Meta Widget"
 msgstr "Метаинформация изображения"
 
+#: inc/the-bootstrap-image-meta-widget.php:30
 #@ the-bootstrap
-#: inc/the-bootstrap-image-meta-widget.php:29
 msgid "Displays meta information on image attachment pages"
 msgstr "Отображает метаинформацию изображений"
 
+#: inc/the-bootstrap-image-meta-widget.php:52
 #@ the-bootstrap
-#: inc/the-bootstrap-image-meta-widget.php:51
 msgid "Info"
 msgstr "Информация"
 
+#: inc/the-bootstrap-image-meta-widget.php:60
 #@ the-bootstrap
-#: inc/the-bootstrap-image-meta-widget.php:59
 msgid "Created:"
 msgstr "Создано:"
 
+#: inc/the-bootstrap-image-meta-widget.php:64
 #@ the-bootstrap
-#: inc/the-bootstrap-image-meta-widget.php:63
 msgid "Full size:"
 msgstr "Полный размер:"
 
-#@ the-bootstrap
-#: inc/the-bootstrap-image-meta-widget.php:64
+#: inc/the-bootstrap-image-meta-widget.php:65
 #, php-format
+#@ the-bootstrap
 msgid "%s pixels"
 msgstr "%s пикселей"
 
+#: inc/the-bootstrap-image-meta-widget.php:68
 #@ the-bootstrap
-#: inc/the-bootstrap-image-meta-widget.php:67
 msgid "Aperture:"
 msgstr "Диафрагма:"
 
+#: inc/the-bootstrap-image-meta-widget.php:73
 #@ the-bootstrap
-#: inc/the-bootstrap-image-meta-widget.php:72
 msgid "Focal length:"
 msgstr "Фокус:"
 
+#: inc/the-bootstrap-image-meta-widget.php:78
 #@ the-bootstrap
-#: inc/the-bootstrap-image-meta-widget.php:77
 msgid "Iso:"
 msgstr "ISO:"
 
+#: inc/the-bootstrap-image-meta-widget.php:83
 #@ the-bootstrap
-#: inc/the-bootstrap-image-meta-widget.php:82
 msgid "Shutter:"
 msgstr "Выдержка:"
 
+#: inc/the-bootstrap-image-meta-widget.php:102
 #@ the-bootstrap
-#: inc/the-bootstrap-image-meta-widget.php:101
 msgid "Camera:"
 msgstr "Камера:"
 
+#: inc/the-bootstrap-image-meta-widget.php:151
 #@ the-bootstrap
-#: inc/the-bootstrap-image-meta-widget.php:152
 msgid "Title:"
 msgstr "Название:"
 
-#@ the-bootstrap
-#: partials/content-aside.php:17
-#: partials/content-gallery.php:17
-#: partials/content-status.php:17
-#: partials/content.php:16
-#: partials/content.php:21
+#: inc/the-bootstrap-gallery-widget.php:65
+#: partials/content-aside.php:19
+#: partials/content-gallery.php:20
+#: partials/content.php:19
+#: partials/content.php:24
 #, php-format
+#@ the-bootstrap
 msgid "Permalink to %s"
 msgstr "Постоянная ссылка: %s"
 
-#@ the-bootstrap
-#: partials/content-gallery.php:49
+#: partials/content-gallery.php:52
 #, php-format
+#@ the-bootstrap
 msgid "This gallery contains <strong>%1$s photo</strong>."
 msgid_plural "This gallery contains <strong>%1$s photos</strong>."
 msgstr[0] "Галерея содержит <strong>%1$s фото</strong>."
@@ -445,136 +436,297 @@ msgstr[1] "Галерея содержит <strong>%1$s фото</strong>."
 msgstr[2] "Галерея содержит <strong>%1$s фото</strong>."
 msgstr[3] "Галерея содержит <strong>%1$s фото</strong>."
 
+#: partials/content-not-found.php:17
 #@ the-bootstrap
-#: partials/content-no-results.php:14
 msgid "Nothing Found"
 msgstr "Ничего не найдено."
 
+#: partials/content-not-found.php:22
 #@ the-bootstrap
-#: partials/content-no-results.php:19
 msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
 msgstr "К сожалению, по Вашему запросу ничего не найдено. Попробуйте, пожалуйста, указать другие ключевые слова."
 
+#: partials/content-not-found.php:24
 #@ the-bootstrap
-#: partials/content-no-results.php:21
 msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
 msgstr "К сожалению, в запрошенном архиве ничего нет. Возможно, поиск поможет найти интересующую запись."
 
+#: functions.php:550
+#: inc/template-tags.php:107
 #@ the-bootstrap
-#: comments.php:68
-#: inc/template-tags.php:81
 msgid "Leave a reply"
 msgstr "Комментарии"
 
-#@ the-bootstrap
-#: partials/content-single.php:29
-#: partials/content.php:47
+#: partials/content-single.php:30
+#: partials/content.php:54
 #, php-format
+#@ the-bootstrap
 msgid "Posted in %1$s."
 msgstr "Рубрика: %1$s."
 
+#: partials/content-single.php:31
+#: partials/content-single.php:35
+#: partials/content.php:55
 #@ the-bootstrap
-#: partials/content-single.php:30
-#: partials/content-single.php:34
-#: partials/content.php:48
 msgctxt "used between list items, there is a space after the comma"
 msgid ", "
 msgstr ", "
 
+#: partials/content-single.php:34
 #@ the-bootstrap
-#: partials/content-single.php:33
 msgid "Tagged "
 msgstr "Метки: "
 
-#@ the-bootstrap
-#: partials/content-single.php:47
+#: partials/content-single.php:53
 #, php-format
+#@ the-bootstrap
 msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Посмотреть все записи автора %s <span class=\"meta-nav\">&rarr;</span>"
 
+#: partials/content.php:20
 #@ the-bootstrap
-#: partials/content.php:17
 msgid "Featured"
 msgstr "Избранное"
 
-#@ the-bootstrap
-#: search.php:20
+#: search.php:21
 #, php-format
+#@ the-bootstrap
 msgid "Search Results for: %s"
 msgstr "Результаты поиска: %s"
 
-#@ the-bootstrap
-#: searchform.php:13
+#: inc/template-tags.php:199
+#: inc/template-tags.php:200
+#: searchform.php:12
 #: searchform.php:14
+#@ the-bootstrap
 msgid "Search"
 msgstr "Поиск"
 
+#: single.php:26
 #@ the-bootstrap
-#: sidebar.php:14
-msgid "Archives"
-msgstr "Архивы"
-
-#@ the-bootstrap
-#: sidebar.php:21
-msgid "Meta"
-msgstr "Мета"
-
-#@ the-bootstrap
-#: single.php:25
 msgid "Post navigation"
 msgstr "Навигация по записям"
 
-#@ the-bootstrap
-#: single.php:26
-msgid "<span class=\"meta-nav\">&larr;</span> Next Post"
-msgstr "<span class=\"meta-nav\">&larr;</span> Следующая запись"
-
-#@ the-bootstrap
-#: single.php:27
-msgid "Previous Post <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Предыдущая запись <span class=\"meta-nav\">&rarr;</span>"
-
-#@ the-bootstrap
-#: tag.php:21
+#: tag.php:23
 #, php-format
+#@ the-bootstrap
 msgid "Tag Archives: %s"
 msgstr "Архив метки: %s"
 
-#@ the-bootstrap
-#: comments.php:69
+#: functions.php:551
 #, php-format
+#@ the-bootstrap
 msgid "Leave a reply to %s"
 msgstr "Оставить комментарий на %s"
 
+#: functions.php:85
 #@ the-bootstrap
-#: functions.php:62
 msgid "Header Menu"
 msgstr "Меню заголовка"
 
+#: functions.php:86
 #@ the-bootstrap
-#: functions.php:63
 msgid "Footer Menu"
 msgstr "Меню подвала"
 
+#: inc/the-bootstrap-gallery-widget.php:85
+#: partials/content-gallery.php:76
 #@ the-bootstrap
-#: partials/content-gallery.php:73
 msgctxt "carousel-control"
 msgid "&lsaquo;"
 msgstr "&lsaquo;"
 
+#: inc/the-bootstrap-gallery-widget.php:86
+#: partials/content-gallery.php:77
 #@ the-bootstrap
-#: partials/content-gallery.php:74
 msgctxt "carousel-control"
 msgid "&rsaquo;"
-msgstr "&lsaquo;"
+msgstr "&rsaquo;"
 
-#@ the-bootstrap
 #: searchform.php:15
+#@ the-bootstrap
 msgid "Go"
 msgstr "&rarr;"
 
+#: functions.php:140
 #@ the-bootstrap
-#: functions.php:117
 msgid "Shown on image attachment pages."
 msgstr "Отображается на страницах изображений."
+
+#: 404.php:38
+#, php-format
+#@ the-bootstrap
+msgctxt "%1$s: smilie"
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: functions.php:430
+#, php-format
+#@ the-bootstrap
+msgid "You have not defined a navigation menu for the Main Navigation. Please visit the <a href=\"%1$s\">menus page</a> to manage your menus."
+msgstr "Вы не определена меню навигации для основной навигации. Пожалуйста, посетите <a href=\"%1$s\">меню страницы</a> для управления меню."
+
+#: inc/the-bootstrap-gallery-widget.php:28
+#@ the-bootstrap
+msgid "The Bootstrap Gallery Widget"
+msgstr "Виджет Bootstrap галерее"
+
+#: inc/the-bootstrap-gallery-widget.php:30
+#@ the-bootstrap
+msgid "Displays gallery images of a specified post with the Gallery post format."
+msgstr "Отображение галереи изображений указанный пост с форматом сообщение галерее."
+
+#: inc/the-bootstrap-gallery-widget.php:142
+#, php-format
+#@ the-bootstrap
+msgid "No galleries have been created yet. <a href=\"%s\">Create some</a>."
+msgstr "Нет галереи были созданы. <a href=\"%s\">Создайте несколько</a>."
+
+#: inc/the-bootstrap-gallery-widget.php:147
+#@ the-bootstrap
+msgid "Select Gallery:"
+msgstr "Выберите Галерея:"
+
+#: inc/the-bootstrap-image-meta-widget.php:90
+#: inc/the-bootstrap-image-meta-widget.php:92
+#: inc/the-bootstrap-image-meta-widget.php:95
+#, php-format
+#@ the-bootstrap
+msgid "%d sec."
+msgstr "%d сек."
+
+#: inc/theme-customizer.php:28
+#: inc/theme-options.php:22
+#: inc/theme-options.php:23
+#: inc/theme-options.php:145
+#@ the-bootstrap
+msgid "Theme Options"
+msgstr "Тема параметры"
+
+#: inc/theme-customizer.php:43
+#: inc/theme-options.php:79
+#@ the-bootstrap
+msgid "Default Layout"
+msgstr ""
+
+#: inc/theme-customizer.php:48
+#: inc/theme-options.php:202
+#@ the-bootstrap
+msgid "Content on left"
+msgstr ""
+
+#: inc/theme-customizer.php:49
+#: inc/theme-options.php:206
+#@ the-bootstrap
+msgid "Content on right"
+msgstr ""
+
+#: inc/theme-customizer.php:55
+#: inc/theme-options.php:84
+#@ the-bootstrap
+msgid "Add site name to navigation bar."
+msgstr ""
+
+#: inc/theme-customizer.php:63
+#: inc/theme-options.php:89
+#@ the-bootstrap
+msgid "Add searchform to navigation bar."
+msgstr ""
+
+#: inc/theme-customizer.php:71
+#: inc/theme-options.php:92
+#@ the-bootstrap
+msgid "Navigation Bar Position"
+msgstr ""
+
+#: inc/theme-customizer.php:76
+#: inc/theme-options.php:97
+#@ the-bootstrap
+msgid "Static."
+msgstr ""
+
+#: inc/theme-customizer.php:77
+#: inc/theme-options.php:101
+#@ the-bootstrap
+msgid "Fixed on top."
+msgstr ""
+
+#: inc/theme-customizer.php:78
+#: inc/theme-options.php:105
+#@ the-bootstrap
+msgid "Fixed at bottom."
+msgstr ""
+
+#: inc/theme-options.php:80
+#@ the-bootstrap
+msgid "Navigation Bar"
+msgstr ""
+
+#: inc/theme-options.php:290
+#@ the-bootstrap
+msgid "The Bootstrap Theme Options"
+msgstr ""
+
+#: inc/theme-options.php:338
+#, php-format
+#@ the-bootstrap
+msgid "Settings saved. <a href=\"%s\">Visit your site</a> to see how it looks."
+msgstr ""
+
+#: inc/theme-options.php:367
+#@ the-bootstrap
+msgid "Help spread the word!"
+msgstr ""
+
+#: inc/theme-options.php:369
+#, php-format
+#@ the-bootstrap
+msgctxt "Plugin Name"
+msgid "Want to help make this Theme even better? All donations are used to improve %1$s, so donate $20, $50 or $100 now!"
+msgstr ""
+
+#: inc/theme-options.php:376
+#@ the-bootstrap
+msgid "Or you could:"
+msgstr ""
+
+#: inc/theme-options.php:378
+#@ the-bootstrap
+msgid "Rate the Theme 5&#9733; on WordPress.org"
+msgstr ""
+
+#: inc/theme-options.php:379
+#@ the-bootstrap
+msgid "Blog about it &amp; link to the Theme page"
+msgstr ""
+
+#: inc/theme-options.php:407
+#@ the-bootstrap
+msgid "News from Konstantin"
+msgstr ""
+
+#: inc/theme-options.php:411
+#@ the-bootstrap
+msgid "No news items, feed might be broken..."
+msgstr ""
+
+#: inc/theme-options.php:417
+#@ the-bootstrap
+msgid "Follow Konstantin on Twitter"
+msgstr ""
+
+#: inc/theme-options.php:418
+#@ the-bootstrap
+msgid "Subscribe via RSS"
+msgstr ""
+
+#: single.php:27
+#@ the-bootstrap
+msgid "Next Post"
+msgstr ""
+
+#: single.php:28
+#@ the-bootstrap
+msgid "Previous Post"
+msgstr ""
 
