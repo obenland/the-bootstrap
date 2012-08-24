@@ -98,8 +98,8 @@ add_action( 'after_setup_theme', 'the_bootstrap_setup' );
  */
 function the_bootstrap_options() {
 	return (object) wp_parse_args(
-			get_option( 'the_bootstrap_theme_options', array() ),
-			the_bootstrap_get_default_theme_options()
+		get_option( 'the_bootstrap_theme_options', array() ),
+		the_bootstrap_get_default_theme_options()
 	);
 }
 
@@ -114,11 +114,11 @@ function the_bootstrap_options() {
  */
 function the_bootstrap_get_default_theme_options() {
 	$default_theme_options	=	array(
-			'theme_layout'		=>	'content-sidebar',
-			'navbar_site_name'	=>	false,
-			'navbar_searchform'	=>	true,
-			'navbar_inverse'	=>	true,
-			'navbar_position'	=>	'static',
+		'theme_layout'		=>	'content-sidebar',
+		'navbar_site_name'	=>	false,
+		'navbar_searchform'	=>	true,
+		'navbar_inverse'	=>	true,
+		'navbar_position'	=>	'static',
 	);
 
 	return apply_filters( 'the_bootstrap_default_theme_options', $default_theme_options );
@@ -377,10 +377,13 @@ endif;
  * @return	string
  */
 function the_bootstrap_wp_title( $title, $sep ) {
-	$title .= get_bloginfo( 'name' );
 	
-	if ( is_front_page() ) {
-		$title .= " {$sep} " . get_bloginfo( 'description' );
+	if ( ! is_feed() ) {
+		$title .= get_bloginfo( 'name' );
+		
+		if ( is_front_page() ) {
+			$title .= " {$sep} " . get_bloginfo( 'description' );
+		}
 	}
 
 	return $title;
