@@ -69,6 +69,9 @@ For more information on SemVer, please visit [http://semver.org/].
 == Changelog ==
 
 = 2.0.0 =
+
+THIS IS A MAJOR RELEASE, BREAKING BACKWARD COMPATIBILITY IN SOME PLACES
+
 * Updated Twitter Bootstrap to 2.1
 * Updated Russian translation to fix a bug in the carousel navigation
 * Added French translation. Props Narine
