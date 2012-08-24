@@ -41,11 +41,13 @@ function the_bootstrap_setup() {
 	) );
 	
 	add_theme_support( 'tha_hooks', array( 'all' ) );
-	
-	/**
-	 * Custom Theme Options
-	 */
-	require_once( get_template_directory() . '/inc/theme-options.php' );
+
+	if ( version_compare( get_bloginfo( 'version' ), '3.4', '<' ) )
+		// Custom Theme Options
+		require_once( get_template_directory() . '/inc/theme-options.php' );
+	else
+		// Implement the Theme Customizer script
+		require_once( get_template_directory() . '/inc/theme-customizer.php' );
 	
 	/**
 	 * Custom template tags for this theme.
@@ -56,11 +58,6 @@ function the_bootstrap_setup() {
 	 * Implement the Custom Header feature
 	 */
 	require_once( get_template_directory() . '/inc/custom-header.php' );
-	
-	/**
-	 * Implement the Theme Customizer script
-	 */
-	require_once( get_template_directory() . '/inc/theme-customizer.php' );
 	
 	/**
 	 * Custom Nav Menu handler for the Navbar.
@@ -89,6 +86,60 @@ function the_bootstrap_setup() {
 } // the_bootstrap_setup
 endif;
 add_action( 'after_setup_theme', 'the_bootstrap_setup' );
+
+
+/**
+ * Returns the options object for The Bootstrap.
+ *
+ * @author	Automattic
+ * @since	1.3.0 - 06.04.2012
+ *
+ * @return	stdClass	Theme Options
+ */
+function the_bootstrap_options() {
+	return (object) wp_parse_args(
+			get_option( 'the_bootstrap_theme_options', array() ),
+			the_bootstrap_get_default_theme_options()
+	);
+}
+
+
+/**
+ * Returns the default options for The Bootstrap.
+ *
+ * @author	Automattic
+ * @since	1.3.0 - 06.04.2012
+ *
+ * @return	void
+ */
+function the_bootstrap_get_default_theme_options() {
+	$default_theme_options	=	array(
+			'theme_layout'		=>	'content-sidebar',
+			'navbar_site_name'	=>	false,
+			'navbar_searchform'	=>	true,
+			'navbar_inverse'	=>	true,
+			'navbar_position'	=>	'static',
+	);
+
+	return apply_filters( 'the_bootstrap_default_theme_options', $default_theme_options );
+}
+
+
+/**
+ * Adds The Bootstrap layout classes to the array of body classes.
+ *
+ * @author	WordPress.org
+ * @since	1.3.0 - 06.04.2012
+ *
+ * @return	void
+ */
+function the_bootstrap_layout_classes( $existing_classes ) {
+	$classes = array( the_bootstrap_options()->theme_layout );
+	$classes = apply_filters( 'the_bootstrap_layout_classes', $classes );
+
+	return array_merge( $existing_classes, $classes );
+}
+add_filter( 'body_class', 'the_bootstrap_layout_classes' );
 
 
 /**

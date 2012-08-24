@@ -24,9 +24,13 @@ function the_bootstrap_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport	= 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 	
-	$wp_customize->add_section( 'the_bootstrap_theme_options', array(
-		'title'		=>	__( 'Theme Options', 'the-bootstrap' ),
+	$wp_customize->add_section( 'the_bootstrap_theme_layout', array(
+		'title'		=>	__( 'Layout', 'the-bootstrap' ),
 		'priority'	=>	99,
+	) );
+	$wp_customize->add_section( 'the_bootstrap_navbar_options', array(
+			'title'		=>	__( 'Navbar Options', 'the-bootstrap' ),
+			'priority'	=>	101,
 	) );
 	
 	// Add settings
@@ -41,7 +45,7 @@ function the_bootstrap_customize_register( $wp_customize ) {
 	// Theme Layout
 	$wp_customize->add_control( 'the_bootstrap_theme_layout', array(
 		'label'		=>	__( 'Default Layout', 'the-bootstrap' ),
-		'section'	=>	'the_bootstrap_theme_options',
+		'section'	=>	'the_bootstrap_theme_layout',
 		'settings'	=>	'the_bootstrap_theme_options[theme_layout]',
 		'type'		=>	'radio',
 		'choices'	=>	array(
@@ -53,7 +57,7 @@ function the_bootstrap_customize_register( $wp_customize ) {
 	// Sitename in Navbar
 	$wp_customize->add_control( 'the_bootstrap_navbar_site_name', array(
 		'label'		=>	__( 'Add site name to navigation bar.', 'the-bootstrap' ),
-		'section'	=>	'the_bootstrap_theme_options',
+		'section'	=>	'the_bootstrap_navbar_options',
 		'settings'	=>	'the_bootstrap_theme_options[navbar_site_name]',
 		'type'		=>	'checkbox',
 	) );
@@ -61,15 +65,23 @@ function the_bootstrap_customize_register( $wp_customize ) {
 	// Searchform in Navbar
 	$wp_customize->add_control( 'the_bootstrap_navbar_searchform', array(
 		'label'		=>	__( 'Add searchform to navigation bar.', 'the-bootstrap' ),
-		'section'	=>	'the_bootstrap_theme_options',
+		'section'	=>	'the_bootstrap_navbar_options',
 		'settings'	=>	'the_bootstrap_theme_options[navbar_searchform]',
+		'type'		=>	'checkbox',
+	) );
+	
+	// Navbar Colors
+	$wp_customize->add_control( 'the_bootstrap_navbar_inverse', array(
+		'label'		=>	__( 'Use inverse color on navigation bar.', 'the-bootstrap' ),
+		'section'	=>	'the_bootstrap_navbar_options',
+		'settings'	=>	'the_bootstrap_theme_options[navbar_inverse]',
 		'type'		=>	'checkbox',
 	) );
 	
 	// Navbar Position
 	$wp_customize->add_control( 'the_bootstrap_navbar_position', array(
 		'label'		=>	__( 'Navigation Bar Position', 'the-bootstrap' ),
-		'section'	=>	'the_bootstrap_theme_options',
+		'section'	=>	'the_bootstrap_navbar_options',
 		'settings'	=>	'the_bootstrap_theme_options[navbar_position]',
 		'type'		=>	'radio',
 		'choices'	=>	array(

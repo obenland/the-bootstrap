@@ -153,42 +153,6 @@ add_action( 'admin_bar_menu', 'the_bootstrap_admin_bar_menu', 61 ); //Appearance
 
 
 /**
- * Returns the options object for The Bootstrap.
- *
- * @author	Automattic
- * @since	1.3.0 - 06.04.2012
- *
- * @return	stdClass	Theme Options
- */
-function the_bootstrap_options() {
-	return (object) wp_parse_args(
-		get_option( 'the_bootstrap_theme_options', array() ),
-		the_bootstrap_get_default_theme_options()
-	);
-}
-
-
-/**
- * Returns the default options for The Bootstrap.
- *
- * @author	Automattic
- * @since	1.3.0 - 06.04.2012
- * 
- * @return	void
- */
-function the_bootstrap_get_default_theme_options() {
-	$default_theme_options	=	array(
-		'theme_layout'		=>	'content-sidebar',
-		'navbar_site_name'	=>	false,
-		'navbar_searchform'	=>	true,
-		'navbar_position'	=>	'static',
-	);
-
-	return apply_filters( 'the_bootstrap_default_theme_options', $default_theme_options );
-} 
-
-
-/**
  * Returns an array of layout options registered for Twenty Eleven.
  *
  * @author	WordPress.org
@@ -331,9 +295,10 @@ function the_bootstrap_theme_options_validate( $input ) {
 	if ( isset( $input['navbar_position'] ) AND in_array( $input['navbar_position'], array('static', 'navbar-fixed-top', 'navbar-fixed-bottom') ) )
 		$output['navbar_position']	=	$input['navbar_position'];
 	
-	$output['navbar_site_name']		=	isset( $input['navbar_site_name'] );
-	$output['navbar_searchform']	=	isset( $input['navbar_searchform'] );
-
+	$output['navbar_inverse']		=	isset( $input['navbar_inverse'] ) AND $input['navbar_inverse'];
+	$output['navbar_site_name']		=	isset( $input['navbar_site_name'] ) AND $input['navbar_site_name'];
+	$output['navbar_searchform']	=	isset( $input['navbar_searchform'] ) AND $input['navbar_searchform'];
+	
 	if ( ! get_settings_errors() ) {
 		add_settings_error( 'the-bootstrap-options', 'settings_updated', sprintf( __( 'Settings saved. <a href="%s">Visit your site</a> to see how it looks.', 'the-bootstrap' ), home_url( '/' ) ), 'updated' );
 	}
@@ -463,27 +428,6 @@ function _the_bootstrap_fetch_feed( $feed_url ) {
 	}
 	return $rss_items;
 }
-
-
-///////////////////////////////////////////////////////////////////////////////
-// FRONT END
-///////////////////////////////////////////////////////////////////////////////
-
-/**
- * Adds The Bootstrap layout classes to the array of body classes.
- *
- * @author	WordPress.org
- * @since	1.3.0 - 06.04.2012
- * 
- * @return	void
- */
-function the_bootstrap_layout_classes( $existing_classes ) {
-	$classes = array( the_bootstrap_options()->theme_layout );
-	$classes = apply_filters( 'the_bootstrap_layout_classes', $classes );
-
-	return array_merge( $existing_classes, $classes );
-}
-add_filter( 'body_class', 'the_bootstrap_layout_classes' );
 
 
 /* End of file theme-options.php */
