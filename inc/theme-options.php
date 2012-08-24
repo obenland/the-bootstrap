@@ -295,7 +295,6 @@ function the_bootstrap_theme_options_validate( $input ) {
 	if ( isset( $input['navbar_position'] ) AND in_array( $input['navbar_position'], array('static', 'navbar-fixed-top', 'navbar-fixed-bottom') ) )
 		$output['navbar_position']	=	$input['navbar_position'];
 	
-	$output['navbar_inverse']		=	isset( $input['navbar_inverse'] ) AND $input['navbar_inverse'];
 	$output['navbar_site_name']		=	isset( $input['navbar_site_name'] ) AND $input['navbar_site_name'];
 	$output['navbar_searchform']	=	isset( $input['navbar_searchform'] ) AND $input['navbar_searchform'];
 	
