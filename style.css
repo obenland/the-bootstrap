@@ -243,7 +243,7 @@ img.wp-smiley {
 }
 
 #site-generator a {
-	background: url("images/wordpress.png") no-repeat scroll left center transparent;
+	background: url("img/wordpress.png") no-repeat scroll left center transparent;
 	color: #787878;
 	display: inline-block;
 	line-height: 16px;

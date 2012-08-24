@@ -200,11 +200,11 @@ function the_bootstrap_layouts() {
 	$layout_options	=	array(
 		'content-sidebar'	=>	array(
 			'label'		=>	__( 'Content on left', 'the-bootstrap' ),
-			'thumbnail'	=>	get_template_directory_uri() . '/images/content-sidebar.png',
+			'thumbnail'	=>	get_template_directory_uri() . '/img/content-sidebar.png',
 		),
 		'sidebar-content'	=>	array(
 			'label'		=>	__( 'Content on right', 'the-bootstrap' ),
-			'thumbnail' =>	get_template_directory_uri() . '/images/sidebar-content.png',
+			'thumbnail' =>	get_template_directory_uri() . '/img/sidebar-content.png',
 		),
 	);
 

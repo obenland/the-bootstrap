@@ -22,10 +22,10 @@
     padding-left: 20px;
 }
 .obenland-wp div.inside li.rss {
-	background-image: url("../../../../wp-includes/images/rss.png");
+	background-image: url("../img/rss.png");
 }
 .obenland-wp div.inside li.twitter {
-	background-image: url("../images/twitter.png");
+	background-image: url("../img/twitter.png");
 }
 
 #wpcontent select option {
