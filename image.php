@@ -40,12 +40,11 @@ the_post();
 			<span class="gallery-link pull-left">
 				<a href="<?php echo get_permalink( $post->post_parent ); ?>">
 				<?php printf(
-					'&laquo; %1$s (%2$s)',
+					_x( '&laquo; %1$s (%2$s)', 'Post title, amount of images', 'the-bootstrap' ),
 					get_the_title( $post->post_parent ),
 					sprintf(
-						'%d %s',
-						$total_images,
-						_n( 'image', 'images', $total_images, 'the-bootstrap' )
+						_nx( '%d image', '%d images', $total_images, 'Amount of images', 'the-bootstrap' ),
+						$total_images
 					)
 				); ?>
 				</a>
