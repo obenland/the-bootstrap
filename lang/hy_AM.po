@@ -1,0 +1,580 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Bootstrap Armenian Translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Instigate Sytems <info@artsakh.instigate.am>\n"
+"Language-Team: Narine Poghosyan <haynariko91@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1) ? 0 : (n%10==1 && n%100!=11) ? 3 : ((n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20)) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: Armenian\n"
+"X-Poedit-Country: Armenia\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#@ the-bootstrap
+#: 404.php:19
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "Դուք դիմել եք սխալ հասցեով"
+
+#@ the-bootstrap
+#: 404.php:23
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help."
+msgstr "Մենք չենք կարող գտնել այն ինչ Դուք փնտրում եք։ Ձեզ կարող է օգնել որոնումը կամ ստորև նշված հղումները։"
+
+#@ the-bootstrap
+#: 404.php:30
+msgid "Most Used Categories"
+msgstr "Հաճախ օգտագործվող կատեգորիաներ"
+
+#@ the-bootstrap
+#. translators: %1$s: smilie
+#: 404.php:44
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Փորձեք նայել արխիվում ըստ ամիսների։ %1$s"
+
+#@ the-bootstrap
+#: archive.php:28
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Արխիվները ըստ օրերի․ %s"
+
+#@ the-bootstrap
+#: archive.php:30
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Արխիվները ըստ ամիսների․ %s"
+
+#@ the-bootstrap
+#: archive.php:32
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Արխիվներ ըստ տարիների․ %s"
+
+#@ the-bootstrap
+#: archive.php:34
+msgid "Blog Archives"
+msgstr "Գրառումների արխիվ"
+
+#@ the-bootstrap
+#: author.php:21
+#, php-format
+msgid "Author Archives: %s"
+msgstr "Արխիվներ ըստ հեղինակի․ %s"
+
+#@ the-bootstrap
+#: author.php:29
+#: partials/content-single.php:39
+#, php-format
+msgid "About %s"
+msgstr "%s մասին"
+
+#@ the-bootstrap
+#: category.php:21
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Արխիվներն ըստ կատեգորիաների․ %s"
+
+#@ the-bootstrap
+#: comments.php:20
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Այս գրառումը պաշտպանված է գաղտնաբառով։ Խնդրում եմ ներմուծեք գաղտնագիրը ան տեսնելու կամ մեկնաբանելու համար։"
+
+#@ the-bootstrap
+#: comments.php:31
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Մեկ միտք  &laquo;%2$s&raquo; մասին"
+msgstr[1] "%1$s մտքեր &laquo;%2$s&raquo; մասին"
+msgstr[2] "%1$s мыслей о &laquo;%2$s&raquo;"
+msgstr[3] "%1$s միտք  &laquo;%2$s&raquo; մասին"
+
+#@ the-bootstrap
+#: comments.php:38
+#: comments.php:50
+msgid "Comment navigation"
+msgstr "Նավարկում մեկնաբանություններով"
+
+#@ the-bootstrap
+#: comments.php:39
+#: comments.php:51
+msgid "&larr; Newer Comments"
+msgstr "&larr; Հաջորդ մեկնաբանությունները"
+
+#@ the-bootstrap
+#: comments.php:40
+#: comments.php:52
+msgid "Older Comments &rarr;"
+msgstr "Նախորդ մեկնաբանությունները &rarr;"
+
+#@ the-bootstrap
+#: comments.php:60
+msgid "Comments are closed."
+msgstr "Մեկնաբանությունները փակված են."
+
+#@ the-bootstrap
+#: comments.php:64
+msgctxt "noun"
+msgid "Comment"
+msgstr "Մեկնաբանել"
+
+#@ the-bootstrap
+#: comments.php:66
+#, php-format
+msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes: %s"
+msgstr "Դուք կարող եք օգտագործել <abbr title=\"HyperText Markup Language\">HTML</abbr>-տեգեր և ատրիբուտներ: %s"
+
+#@ the-bootstrap
+#: comments.php:70
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Մեկնաբանություն թողնելու համար անհրաժեշտ է <a href=\"%s\">նույնականանալ</a>."
+
+#@ the-bootstrap
+#: comments.php:71
+#, php-format
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out?</a>"
+msgstr "Դուք մուտք եք գործել որպես՝ <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Ելք\">Ելք</a>"
+
+#@ the-bootstrap
+#: functions.php:232
+#, php-format
+msgid "&copy; %1$s <a href=\"%2$s\">%3$s</a>, all rights reserved."
+msgstr "&copy; %1$s <a href=\"%2$s\">%3$s</a>, Բոլոր իրավունքները պաշտպանված են։"
+
+#@ the-bootstrap
+#: footer.php:22
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#@ the-bootstrap
+#: footer.php:23
+msgid "Semantic Personal Publishing Platform"
+msgstr "Ժամանակակից պրոֆեսիոնալ հարթակ հրատարակման համար"
+
+#@ the-bootstrap
+#: footer.php:25
+#, php-format
+msgctxt "WordPress"
+msgid "Proudly powered by %s"
+msgstr "Հիմնված տեխնոլոգիայի վրա %s"
+
+#@ the-bootstrap
+#: footer.php:31
+#, php-format
+msgid "%d queries. %s seconds."
+msgstr "%d դիմում. %s վայրկյան."
+
+#@ the-bootstrap
+#: functions.php:61
+msgid "Main Navigation"
+msgstr "Գլխավոր նավարկում"
+
+#@ the-bootstrap
+#: functions.php:107
+msgid "Main Sidebar"
+msgstr "Հիմնական կողմնային վահանակ"
+
+#@ the-bootstrap
+#: functions.php:116
+msgid "Image Sidebar"
+msgstr "Նկարների կողմնային վահանակ"
+
+#@ the-bootstrap
+#: inc/template-tags.php:69
+#, php-format
+msgid "<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
+msgstr "<span class=\"sep\">Հրապարակված է </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span><span class=\"by-author\"> <span class=\"sep\">-ի կողմից </span>"
+
+#@ the-bootstrap
+#: inc/template-tags.php:75
+#, php-format
+msgid "View all posts by %s"
+msgstr "Հեղինակի բոլոր գրառումները %s"
+
+#@ the-bootstrap
+#: inc/template-tags.php:81
+msgid "<strong>1</strong> Reply"
+msgstr "<strong>1</strong> Մեկնաբանություն"
+
+#@ the-bootstrap
+#: inc/template-tags.php:81
+msgid "<strong>%</strong> Replies"
+msgstr "<strong>%</strong> Մեկնաբանություններ"
+
+#@ the-bootstrap
+#: functions.php:387
+#: functions.php:413
+#: image.php:55
+#: inc/template-tags.php:85
+#: partials/content-page.php:22
+msgid "Edit"
+msgstr "Խմբագրել"
+
+#@ the-bootstrap
+#: inc/template-tags.php:109
+msgid "Next page"
+msgstr "Հաջորդ էջ"
+
+#@ the-bootstrap
+#: inc/template-tags.php:110
+msgid "Previous page"
+msgstr "Նախորդ էջ"
+
+#@ the-bootstrap
+#: inc/template-tags.php:124
+#: inc/template-tags.php:138
+msgid "Pages:"
+msgstr "Էջեր:"
+
+#@ the-bootstrap
+#: functions.php:274
+#: partials/content-aside.php:29
+#: partials/content-image.php:17
+#: partials/content-page.php:19
+#: partials/content-status.php:31
+#: partials/content.php:38
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "կարդալ ավելին <span class=\"meta-nav\">&rarr;</span>"
+
+#@ the-bootstrap
+#: functions.php:386
+msgid "Pingback:"
+msgstr "Նշագրում․"
+
+#@ the-bootstrap
+#. translators: 1: comment author, 2: date and time
+#: functions.php:404
+#, php-format
+msgid "%1$s <span class=\"says\">said</span> on %2$s:"
+msgstr "%1$s <span class=\"says\">ասել է</span> %2$s:"
+
+#@ the-bootstrap
+#. translators: 1: date, 2: time
+#: functions.php:410
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s в %2$s"
+
+#@ the-bootstrap
+#: functions.php:417
+msgid "Your comment is awaiting moderation."
+msgstr "Ձեր հաղորդագրությունը սպասում է հաստատման։"
+
+#@ the-bootstrap
+#: functions.php:426
+msgid "Reply <span>&darr;</span>"
+msgstr "Պատասխանել <span>&darr;</span>"
+
+#@ the-bootstrap
+#: functions.php:490
+msgid "Name"
+msgstr "Անուն"
+
+#@ the-bootstrap
+#: functions.php:493
+#: functions.php:519
+msgid "required"
+msgstr "պարտադիր"
+
+#@ the-bootstrap
+#: functions.php:516
+msgid "Email"
+msgstr "Էլեկտրոնային փոստ"
+
+#@ the-bootstrap
+#: functions.php:519
+msgid "will not be published"
+msgstr "չի հրապարակվի"
+
+#@ the-bootstrap
+#: functions.php:540
+msgid "Website"
+msgstr "Վեբ էջ"
+
+#@ the-bootstrap
+#: functions.php:716
+#, php-format
+msgid "%d comment"
+msgid_plural "%d comments"
+msgstr[0] "%d մեկնաբանություն"
+msgstr[1] "%d մեկնաբանություն"
+msgstr[2] "%d մեկնաբանություններ"
+msgstr[3] "%d մեկնաբանություն"
+
+#@ the-bootstrap
+#: functions.php:782
+msgid "This post is password protected. To view it please enter your password below:"
+msgstr "Այս գրառումը պաշտպանված է գաղտնաբառով ։ Այն տեսնելու համար խնդրում ենք մուտքագրեք գաղտնաբառը ։"
+
+#@ the-bootstrap
+#: functions.php:782
+msgid "Password:"
+msgstr "Գաղտնաբառ:"
+
+#@ the-bootstrap
+#: functions.php:782
+msgid "Submit"
+msgstr "Ուղարկել"
+
+#@ the-bootstrap
+#: header.php:57
+msgid "Main menu"
+msgstr "Գլխավոր մենյու"
+
+#@ the-bootstrap
+#: header.php:58
+msgid "Skip to primary content"
+msgstr "Անցնել հիմնական բովանդակությանը"
+
+#@ the-bootstrap
+#: header.php:59
+msgid "Skip to secondary content"
+msgstr "Անցնել լրացուցիչ բովանդակությանը"
+
+#@ the-bootstrap
+#: image.php:47
+msgid "image"
+msgid_plural "images"
+msgstr[0] "նկար"
+msgstr[1] "նկար"
+msgstr[2] "նկար"
+msgstr[3] "նկար"
+
+#@ the-bootstrap
+#: image.php:56
+msgid "Leave a comment"
+msgstr "Մեկնաբանել"
+
+#@ the-bootstrap
+#: image.php:59
+msgid "&laquo; Previous Photo"
+msgstr "&larr; Նախորդ նկարը"
+
+#@ the-bootstrap
+#: image.php:61
+msgid "Next Photo &raquo;"
+msgstr "Հաջորդ նկարը &rarr;"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:27
+msgid "The Bootstrap Image Meta Widget"
+msgstr "Նակրների մետատվյալներ"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:29
+msgid "Displays meta information on image attachment pages"
+msgstr "Ցուցադրվում է նկարների մետաինֆորմացիան"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:51
+msgid "Info"
+msgstr "Տեղեկույթ"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:59
+msgid "Created:"
+msgstr "Ստեղծված է՝"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:63
+msgid "Full size:"
+msgstr "Լրիվ չափով․"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:64
+#, php-format
+msgid "%s pixels"
+msgstr "%s պիքսել"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:67
+msgid "Aperture:"
+msgstr "Դիոֆրագմա․"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:72
+msgid "Focal length:"
+msgstr "Կիզակետ․"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:77
+msgid "Iso:"
+msgstr "ISO:"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:82
+msgid "Shutter:"
+msgstr "Հատված:"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:101
+msgid "Camera:"
+msgstr "Տեսախցիկ․"
+
+#@ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:152
+msgid "Title:"
+msgstr "Վերնագիր․"
+
+#@ the-bootstrap
+#: partials/content-aside.php:17
+#: partials/content-gallery.php:17
+#: partials/content-status.php:17
+#: partials/content.php:16
+#: partials/content.php:21
+#, php-format
+msgid "Permalink to %s"
+msgstr "Մշտական հղում․ %s"
+
+#@ the-bootstrap
+#: partials/content-gallery.php:49
+#, php-format
+msgid "This gallery contains <strong>%1$s photo</strong>."
+msgid_plural "This gallery contains <strong>%1$s photos</strong>."
+msgstr[0] "Պատկերասրահը պարունակում է  <strong>%1$s նկար </strong>."
+msgstr[1] "Պատկերասրահը պարունակում է <strong>%1$s նկար </strong>."
+msgstr[2] "Պատկերասրահը պարունակում էт <strong>%1$s նկար </strong>."
+msgstr[3] "Պատկերասրահը պարունակում է <strong>%1$s նկար </strong>."
+
+#@ the-bootstrap
+#: partials/content-no-results.php:14
+msgid "Nothing Found"
+msgstr "Ոչինչ չի գտնվել"
+
+#@ the-bootstrap
+#: partials/content-no-results.php:19
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Ներողություն, բայց Ձեր որոնմանը համապատասխան ոչինչ չի գտնվել։ Խնդրում ենք մուտքագրել այլ բանալիային բառ։"
+
+#@ the-bootstrap
+#: partials/content-no-results.php:21
+msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
+msgstr "Ցավոք, հարցված արխիվում ոչինչ չկա։ Հնարավոր է, որ որոնումը օգնի Ձեզ գտնել հետաքրքրող գրառումը։"
+
+#@ the-bootstrap
+#: comments.php:68
+#: inc/template-tags.php:81
+msgid "Leave a reply"
+msgstr "Թողնել մեկնաբանություն"
+
+#@ the-bootstrap
+#: partials/content-single.php:29
+#: partials/content.php:47
+#, php-format
+msgid "Posted in %1$s."
+msgstr "Ավելացված է %1$s-ում։"
+
+#@ the-bootstrap
+#: partials/content-single.php:30
+#: partials/content-single.php:34
+#: partials/content.php:48
+msgctxt "used between list items, there is a space after the comma"
+msgid ", "
+msgstr ", "
+
+#@ the-bootstrap
+#: partials/content-single.php:33
+msgid "Tagged "
+msgstr "Պիտակներ․"
+
+#@ the-bootstrap
+#: partials/content-single.php:47
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Տեսնել հեղինակի բոլոր գրառումները %s <span class=\"meta-nav\">&rarr;</span>"
+
+#@ the-bootstrap
+#: partials/content.php:17
+msgid "Featured"
+msgstr "Ընտրյալներ"
+
+#@ the-bootstrap
+#: search.php:20
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Որոնման արդյունքը ըստ․ %s"
+
+#@ the-bootstrap
+#: searchform.php:13
+#: searchform.php:14
+msgid "Search"
+msgstr "Որոնել"
+
+#@ the-bootstrap
+#: sidebar.php:14
+msgid "Archives"
+msgstr "Արխիվներ"
+
+#@ the-bootstrap
+#: sidebar.php:21
+msgid "Meta"
+msgstr "Մետա"
+
+#@ the-bootstrap
+#: single.php:25
+msgid "Post navigation"
+msgstr "Նավարկում գրառումներով"
+
+#@ the-bootstrap
+#: single.php:26
+msgid "Next Post"
+msgstr "Հաջորդ"
+
+#@ the-bootstrap
+#: single.php:27
+msgid "Previous Post"
+msgstr "Նախորդ"
+
+#@ the-bootstrap
+#: tag.php:21
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Պիտակների արխիվ․ %s"
+
+#@ the-bootstrap
+#: comments.php:69
+#, php-format
+msgid "Leave a reply to %s"
+msgstr "Թողնել մեկնաբանություն %s"
+
+#@ the-bootstrap
+#: functions.php:62
+msgid "Header Menu"
+msgstr "Գլխագիր մենյու"
+
+#@ the-bootstrap
+#: functions.php:63
+msgid "Footer Menu"
+msgstr "Էջատակ մենյու"
+
+#@ the-bootstrap
+#: partials/content-gallery.php:73
+msgctxt "carousel-control"
+msgid "&lsaquo;"
+msgstr "&lsaquo;"
+
+#@ the-bootstrap
+#: partials/content-gallery.php:74
+msgctxt "carousel-control"
+msgid "&rsaquo;"
+msgstr "&lsaquo;"
+
+#@ the-bootstrap
+#: searchform.php:15
+msgid "Go"
+msgstr "&rarr;"
+
+#@ the-bootstrap
+#: functions.php:117
+msgid "Shown on image attachment pages."
+msgstr "Էջերից արտապատկերել նկարներ"
+
