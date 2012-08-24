@@ -73,10 +73,6 @@ body > .container {
 	margin: 0 20px 0 0;
 }
 
-.navbar-fixed-top {
-	position: fixed;
-}
-
 
 /* =Page
 -------------------------------------------------------------- */
@@ -85,10 +81,6 @@ body > .container {
 	background-color: #FFFFFF;
 	margin-right: -20px;
 	padding: 14px 0 0;
-}
-
-.page-header {
-	margin: 0 0 18px;
 }
 
 #header-image {
@@ -292,34 +284,18 @@ table .label {
 	color: #FFFFFF;
 }
 
-.navbar .btn, .navbar .btn-group {
-    margin: 5px;
-}
-
 .navbar-search {
 	height: 34px;
 }
 
 .pagination span {
 	background-color: #f5f5f5;
-	border: 1px solid #ddd;
-	border-left-width: 0;
 	color: #999999;
 	cursor: default;
-	float: left;
-	line-height: 34px;
-	padding: 0 14px;
-}
-.pagination span.dots,
-.pagination a {
-	background-color: #FFFFFF;
 }
 
-.pagination li:first-child span {
-  border-left-width: 1px;
-  -webkit-border-radius: 3px 0 0 3px;
-  -moz-border-radius: 3px 0 0 3px;
-  border-radius: 3px 0 0 3px;
+.pagination span.dots {
+	background-color: #FFFFFF;
 }
 
 
