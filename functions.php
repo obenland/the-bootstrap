@@ -866,14 +866,14 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 		'itemtag'		=>	'figure',
 		'icontag'		=>	'div',
 		'captiontag'	=>	'figcaption',
-		'columns'		=>	4,
+		'columns'		=>	3,
 		'size'			=>	'thumbnail',
 		'include'		=>	'',
 		'exclude'		=>	''
 	), $attr ) );
 
 
-	$id = intval($id);
+	$id = intval( $id );
 	if ( 'RAND' == $order )
 		$orderby = 'none';
 
@@ -914,7 +914,7 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 		) );
 	}
 
-	if ( empty($attachments) )
+	if ( empty( $attachments ) )
 		return;
 
 	if ( is_feed() ) {
@@ -923,14 +923,18 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 			$output .= wp_get_attachment_link( $att_id, $size, true ) . "\n";
 		return $output;
 	}
+	
+	
 
 	$itemtag	=	tag_escape( $itemtag );
 	$captiontag	=	tag_escape( $captiontag );
-	$columns	=	intval( $columns );
+	$columns	=	intval( min( array( 8, $columns ) ) );
 	$float		=	(is_rtl()) ? 'right' : 'left';
 
+	if ( 4 > $columns )
+		$size = 'full';
+	
 	$selector	=	"gallery-{$instance}";
-
 	$size_class	=	sanitize_html_class( $size );
 	$output		=	"<ul id='$selector' class='gallery galleryid-{$id} gallery-columns-{$columns} gallery-size-{$size_class} thumbnails'>";
 
@@ -945,8 +949,9 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 		
 		$link = wp_get_attachment_link( $id, $size, ! ( isset( $attr['link'] ) AND 'file' == $attr['link'] ) );
 		$clear_class = ( 0 == $i++ % $columns ) ? ' clear' : '';
+		$span = 'span' . floor( 8 / $columns );
 		
-		$output .= "<li class='span2{$clear_class}'><{$itemtag} class='gallery-item'>";
+		$output .= "<li class='{$span}{$clear_class}'><{$itemtag} class='gallery-item'>";
 		$output .= "<{$icontag} class='gallery-icon'>{$link}</{$icontag}>\n";
 			
 		if ( $captiontag AND ( 0 < $comments OR trim( $attachment->post_excerpt ) ) ) {

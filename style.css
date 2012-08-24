@@ -224,6 +224,19 @@ img.wp-smiley {
 	padding: 0;
 }
 
+.gallery-columns-3.thumbnails [class*="span"] {
+	width: 29.3%;
+}
+.gallery-columns-5.thumbnails [class*="span"] {
+	width: 15.9%;
+}
+.gallery-columns-6.thumbnails [class*="span"] {
+	width: 12.6%;
+}
+.gallery-columns-7.thumbnails [class*="span"] {
+	width: 10.2%;
+}
+
 
 /* =Footer
 -------------------------------------------------------------- */
@@ -395,14 +408,37 @@ a img.alignleft {
 	.carousel .item > img {
 		width: 100%;
 	}
-	.thumbnails > li:nth-child(4n+1) {
+	.thumbnails > li {
+		float: left;
+		margin-left: 20px;
+	}
+	.gallery-columns-2.thumbnails > li:nth-child(2n+1),
+	.gallery-columns-3.thumbnails > li:nth-child(3n+1),
+	.gallery-columns-4.thumbnails > li:nth-child(4n+1),
+	.gallery-columns-5.thumbnails > li:nth-child(5n+1),
+	.gallery-columns-6.thumbnails > li:nth-child(6n+1),
+	.gallery-columns-7.thumbnails > li:nth-child(7n+1),
+	.gallery-columns-8.thumbnails > li:nth-child(8n+1),
+	.gallery-columns-1.thumbnails > li {
 		margin-left:0;
 	}
-	.thumbnails [class*="span"] {
-		width: 21%;
+	.gallery-columns-2.thumbnails [class*="span"] {
+		width: 47.4%;
 	}
-	.thumbnail > img {
-		width: auto;
+	.gallery-columns-3.thumbnails [class*="span"] {
+		width: 29.9%;
+	}
+	.gallery-columns-4.thumbnails [class*="span"] {
+		width: 21.2%;
+	}
+	.gallery-columns-6.thumbnails [class*="span"] {
+		width: 12.4%;
+	}
+	.gallery-columns-7.thumbnails [class*="span"] {
+		width: 9.9%;
+	}
+	.gallery-columns-8.thumbnails [class*="span"] {
+		width: 8.7%;
 	}
 	.sidebar-content #primary,
 	.sidebar-content #attachment-comment {
