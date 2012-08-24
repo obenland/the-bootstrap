@@ -479,7 +479,7 @@ function the_bootstrap_main_menu_fallback() {
 		) );
 		?>
 		<span id="menu-alert" class="alert fade in">
-			<button class="close" data-dismiss="alert" href="#">&times;</button>
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
 			<?php printf(
 				__( 'You have not defined a navigation menu for the Main Navigation. Please visit the <a href="%1$s">menus page</a> to manage your menus.', 'the-bootstrap' ),
 				admin_url( 'nav-menus.php' )
