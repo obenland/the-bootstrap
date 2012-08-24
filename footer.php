@@ -15,8 +15,9 @@
 							'container_class'	=>	'subnav',
 							'theme_location'	=>	'footer-menu',
 							'menu_class'		=>	'credits nav nav-pills pull-left',
-							'depth'				=>	1,
-							'fallback_cb'		=>	'the_bootstrap_credits'
+							'depth'				=>	2,
+							'fallback_cb'		=>	'the_bootstrap_credits',
+							'walker'			=>	new The_Bootstrap_Nav_Walker,
 						) );
 						?>
 						<div id="site-generator"<?php echo has_nav_menu('footer-menu') ? ' class="footer-nav-menu"' : ''; ?>>

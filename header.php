@@ -34,8 +34,9 @@
 						'container_class'	=>	'subnav clearfix',
 						'theme_location'	=>	'header-menu',
 						'menu_class'		=>	'nav nav-pills pull-right',
-						'depth'				=>	1,
-						'fallback_cb'		=>	false
+						'depth'				=>	2,
+						'fallback_cb'		=>	false,
+						'walker'			=>	new The_Bootstrap_Nav_Walker,
 					) ); ?>
 					<hgroup>
 						<h1 id="site-title">
