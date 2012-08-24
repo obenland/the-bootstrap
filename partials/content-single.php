@@ -26,14 +26,14 @@ tha_entry_before(); ?>
 
 	<footer class="entry-footer">
 		<?php
-		printf(
-			'<span class="cat-links">' . __( 'Posted in %1$s.', 'the-bootstrap' ) . '</span>',
-			get_the_category_list( _x( ', ', 'used between list items, there is a space after the comma', 'the-bootstrap' ) )
-		);
-		the_tags(
-			'<br class="sep" /><span class="tag-links">' . __( 'Tagged ', 'the-bootstrap' ) . '</span>',
-			_x( ', ', 'used between list items, there is a space after the comma', 'the-bootstrap' )
-		); ?>
+		$categories_list = get_the_category_list( _x( ', ', 'used between list items, there is a space after the comma', 'the-bootstrap' ) );
+		$tags_list = get_the_tag_list( '', _x( ', ', 'used between list items, there is a space after the comma', 'the-bootstrap' ) );
+		
+		if ( $categories_list )
+			printf( '<span class="cat-links block">' . __( 'Posted in %1$s.', 'the-bootstrap' ) . '</span>', $categories_list );
+		if ( $tags_list )
+			printf( '<span class="tag-links block">' . __( 'Tagged %1$s.', 'the-bootstrap' ) . '</span>', $tags_list );
+		?>
 	</footer><!-- .entry-footer -->
 	
 	<?php tha_entry_bottom(); ?>

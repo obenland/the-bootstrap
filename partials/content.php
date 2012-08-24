@@ -49,12 +49,11 @@ tha_entry_before(); ?>
 
 	<footer class="entry-meta">
 		<?php
-		if ( 'post' == get_post_type() ) { // Hide category text for pages on Search
-			printf(
-				'<span class="cat-links">' . __( 'Posted in %1$s.', 'the-bootstrap' ) . '</span>',
-				get_the_category_list( _x( ', ', 'used between list items, there is a space after the comma', 'the-bootstrap' ) )
-			);
-		} // End if ?>
+		$categories_list = get_the_category_list( _x( ', ', 'used between list items, there is a space after the comma', 'the-bootstrap' ) );
+
+		if ( 'post' == get_post_type() AND $categories_list ) // Hide category text for pages on Search
+			printf( '<span class="cat-links block">' . __( 'Posted in %1$s.', 'the-bootstrap' ) . '</span>', $categories_list );
+		?>
 	</footer><!-- #entry-meta -->
 	
 	<?php tha_entry_bottom(); ?>
