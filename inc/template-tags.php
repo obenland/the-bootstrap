@@ -30,12 +30,12 @@ function the_bootstrap_content_nav() {
 
 	$paged			=	( get_query_var( 'paged' ) ) ? intval( get_query_var( 'paged' ) ) : 1;
 
-	$pagenum_link	=	get_pagenum_link();
+	$pagenum_link	=	html_entity_decode( get_pagenum_link() );
 	$query_args		=	array();
-	$url_parts		=	parse_url( $pagenum_link );
+	$url_parts		=	explode( '?', $pagenum_link );
 	
-	if ( isset( $url_parts['query'] ) ) {
-		wp_parse_str( $url_parts['query'], $query_args );
+	if ( isset( $url_parts[1] ) ) {
+		wp_parse_str( $url_parts[1], $query_args );
 	}
 	$pagenum_link	=	remove_query_arg( array_keys( $query_args ), $pagenum_link );
 	$pagenum_link	=	trailingslashit( $pagenum_link ) . '%_%';
@@ -50,7 +50,7 @@ function the_bootstrap_content_nav() {
 		'current'	=>	$paged,
 		'mid_size'	=>	3,
 		'type'		=>	'list',
-		'add_args'	=>	$query_args
+		'add_args'	=>	array_map( 'urlencode', $query_args )
 	) );
 
 	if ( $links ) {
@@ -222,6 +222,9 @@ function the_bootstrap_navbar_class() {
 
 	if ( 'static' != the_bootstrap_options()->navbar_position )
 		$classes[]	=	the_bootstrap_options()->navbar_position;
+	
+	if ( the_bootstrap_options()->navbar_inverse )
+		$classes[]	=	'navbar-inverse';
 	
 	apply_filters( 'the_bootstrap_navbar_classes', $classes );
 
