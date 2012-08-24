@@ -828,7 +828,7 @@ add_filter( 'wp_get_attachment_link', 'the_bootstrap_get_attachment_link', 10, 6
  */
 function the_bootstrap_post_classes( $classes ) {
 
-	if ( is_sticky() AND ! is_single() ) {
+	if ( is_sticky() AND is_home() ) {
 		$classes[] = 'hero-unit';
 	}
 	
