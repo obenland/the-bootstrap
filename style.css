@@ -130,6 +130,10 @@ article.page {
 	margin: 0 auto;
 }
 
+.entry-content .twitter-tweet-rendered {
+    max-width: 100% !important;
+}
+
 
 /* =Comments
 -------------------------------------------------------------- */
