@@ -74,6 +74,7 @@ THIS IS A MAJOR RELEASE, BREAKING BACKWARD COMPATIBILITY IN SOME PLACES
 
 * Theme Options will only be available for outdated WordPress versions and will be removed in the future. Going Customizer all the way!
 * Updated Twitter Bootstrap to 2.1
+* Updated html5shiv to 3.6.1
 * Updated Russian translation to fix a bug in the carousel navigation
 * Added French translation. Props Narine
 * Navbar menues now support a third level of menu items
