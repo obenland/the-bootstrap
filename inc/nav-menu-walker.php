@@ -28,7 +28,7 @@ class The_Bootstrap_Nav_Walker extends Walker_Nav_Menu {
 		$classes[] = 'menu-item-' . $item->ID;
 
 		if ( $args->has_children ) {
-			$classes[] = 'dropdown';
+			$classes[] = ( 1 > $depth) ? 'dropdown': 'dropdown-submenu';
 			$li_attributes .= ' data-dropdown="dropdown"';
 		}
 
@@ -48,7 +48,7 @@ class The_Bootstrap_Nav_Walker extends Walker_Nav_Menu {
 
 		$item_output	=	$args->before . '<a' . $attributes . '>';
 		$item_output	.=	$args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
-		$item_output	.=	( $args->has_children ) ? ' <b class="caret"></b>' : '';
+		$item_output	.=	( $args->has_children AND 1 > $depth ) ? ' <b class="caret"></b>' : '';
 		$item_output	.=	'</a>' . $args->after;
 
 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );

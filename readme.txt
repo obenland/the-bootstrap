@@ -16,8 +16,8 @@ The Bootstrap is fully compatible with WordPress SEO by Yoast!
 
 Please note:
 
-Due to design restrictions in Bootstrap, the navigation menu can only be two levels deep, while parent menu items only serves as a headline for the child menu items and can not be accessed over the navigation menu.
-The Footer Menu is best suitable for short menues with just a few links. It replaces the credits section, once a menu has been assigned to the location. It will hold only top level nav items.
+Due to design restrictions in Bootstrap, the navigation menu can "only" be three levels deep, while parent menu items only serves as a headline for the child menu items and can not be accessed over the navigation menu.
+The Footer Menu is best suitable for short menues with just a few links. It replaces the credits section, once a menu has been assigned to the location.
 To take advantage of all the possibilites Bootstrap has to offer, Bootstrap requires jQuery 1.7, which does not come with WordPress versions prior to 3.3.0. Consider adding a plugin that provides the lates version of jQuery, if you want to use this Theme with WordPress 3.2.1 or lower.
 
 = License =
@@ -72,10 +72,19 @@ For more information on SemVer, please visit [http://semver.org/].
 
 THIS IS A MAJOR RELEASE, BREAKING BACKWARD COMPATIBILITY IN SOME PLACES
 
+* Theme Options will only be available for outdated WordPress versions and will be removed in the future. Going Customizer all the way!
 * Updated Twitter Bootstrap to 2.1
 * Updated Russian translation to fix a bug in the carousel navigation
 * Added French translation. Props Narine
+* Navbar menues now support a third level of menu items
+* Nav-pill menues now also support a second and third level of menu items
+* Improved support for all possible amounts of gallery columns, limiting at eight
 * Improved pagination to handle query strings better
+* Twitter status embeds are now responsive, too. Props @kovshenin
+* Now only shows category and tags when there are any, pending core implementation
+* Fixed undefined variable notice in image.php
+* Order of words in image navigation can now be localized
+* Various other small improvements
 
 = 1.8.2 =
 * Added missing classname change to style.min.css

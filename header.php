@@ -34,7 +34,7 @@
 						'container_class'	=>	'subnav clearfix',
 						'theme_location'	=>	'header-menu',
 						'menu_class'		=>	'nav nav-pills pull-right',
-						'depth'				=>	2,
+						'depth'				=>	3,
 						'fallback_cb'		=>	false,
 						'walker'			=>	new The_Bootstrap_Nav_Walker,
 					) ); ?>
@@ -74,7 +74,7 @@
 										<?php wp_nav_menu( array(
 											'theme_location'	=>	'primary',
 											'menu_class'		=>	'nav',
-											'depth'				=>	2,
+											'depth'				=>	3,
 											'fallback_cb'		=>	'the_bootstrap_main_menu_fallback',
 											'walker'			=>	new The_Bootstrap_Nav_Walker,
 										) ); 
