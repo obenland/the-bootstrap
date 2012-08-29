@@ -129,11 +129,6 @@ article.page {
 	font-size: inherit;
 }
 
-.entry-attachment figure {
-	display: table;
-	margin: 0 auto;
-}
-
 .entry-content .twitter-tweet-rendered {
     max-width: 100% !important;
 }
@@ -185,10 +180,6 @@ article.page {
 	word-wrap: break-word;
 }
 
-.widget img {
-	height: auto;
-}
-
 .widget .wp-caption {
 	display: inline-block;
 }
@@ -201,24 +192,13 @@ article.page {
 	margin: 0 20px 20px 0;
 }
 
+.entry-attachment .thumbnail.attachment-table {
+	display: table;
+	margin: 0 auto;
+}
+
 .thumbnail > img {
-	width: 100%;
 	width: auto\9; /* Cure IE8 max-width bug */
-}
-
-header img,
-.entry-content img,
-.comment-content img,
-.widget img {
-	max-width: 100%; /* Fluid images for posts, comments, and widgets */
-}
-
-header img,
-img[class*="align"],
-img[class*="wp-image-"],
-img[class*="attachment-"],
-img[class*="avatar"] {
-	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 }
 
 img.wp-smiley {
@@ -323,11 +303,7 @@ table .label {
 /* =WordPress Core
 -------------------------------------------------------------- */
 
-.alignnone {
-    margin: 5px 20px 20px 0;
-}
-
-.aligncenter, div.aligncenter {
+.aligncenter {
     display:block;
     margin: 0 auto 20px;
 }
@@ -340,18 +316,6 @@ table .label {
 .alignleft {
     float:left;
     margin: 0 20px 20px 0;
-}
-
-a img.alignright {
-    margin: 5px 0 20px 20px;
-}
-
-a img.alignnone {
-    margin: 5px 20px 20px 0;
-}
-
-a img.alignleft {
-    margin: 5px 20px 20px 0;
 }
 
 .wp-caption {
@@ -379,10 +343,6 @@ a img.alignleft {
 
 .wp-caption.alignright {
     margin: 5px 0 20px 20px;
-}
-
-.wp-caption.aligncenter {
-    text-align: center;
 }
 
 .sticky {}

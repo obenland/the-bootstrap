@@ -82,8 +82,11 @@ the_post();
 							// or, if there's only 1 image, get the URL of the image
 							$next_attachment_url = wp_get_attachment_url();
 						}
+						
+						list( $src, $width, $height ) = wp_get_attachment_image_src( $post->ID, 'full' );
+						$link_class = ( $GLOBALS['content_width'] > $width ) ? ' attachment-table' : '';
 					?>
-					<a href="<?php echo $next_attachment_url; ?>" title="<?php the_title_attribute(); ?>" rel="attachment" class="thumbnail">
+					<a href="<?php echo $next_attachment_url; ?>" title="<?php the_title_attribute(); ?>" rel="attachment" class="thumbnail<?php echo $link_class; ?>">
 						<?php echo wp_get_attachment_image( $post->ID, 'full' ); ?>
 					</a>
 

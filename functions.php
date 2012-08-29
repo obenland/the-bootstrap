@@ -999,7 +999,7 @@ function the_bootstrap_img_caption_shortcode( $empty, $attr, $content ) {
 	}
 
 	return '<figure ' . $id . 'class="wp-caption thumbnail ' . $align . '" style="width: '.$width.'px;">
-				' . do_shortcode( $content ) . '
+				' . do_shortcode( str_replace( 'class="thumbnail', 'class="', $content ) ) . '
 				<figcaption class="wp-caption-text">' . $caption . '</figcaption>
 			</figure>';
 }
@@ -1045,6 +1045,53 @@ function the_bootstrap_widget_categories_dropdown_args( $args ) {
 	return $args;
 }
 add_filter( 'widget_categories_dropdown_args', 'the_bootstrap_widget_categories_dropdown_args' );
+
+
+/**
+ * Adds the .thumbnail class when images are sent to editor
+ * 
+ * @author	Konstantin Obenland
+ * @since	2.0.0 - 29.08.2012
+ * 
+ * @param	string	$html
+ * @param	int		$id
+ * @param	string	$caption
+ * @param	string	$title
+ * @param	string	$align
+ * @param	string	$url
+ * @param	string	$size
+ * @param	string	$alt
+ * 
+ * @return	string	Image HTML
+ */
+function the_bootstrap_image_send_to_editor( $html, $id, $caption, $title, $align, $url, $size, $alt ) {
+	if ( $url ) {
+		$html = str_replace( '<a ', '<a class="thumbnail" ', $html );
+	} else {
+		$html = str_replace( 'class="', 'class="thumbnail ', $html );
+	}
+
+	return $html;
+}
+add_filter( 'image_send_to_editor', 'the_bootstrap_image_send_to_editor', 10, 8 );
+
+
+/**
+ * Adjusts content_width value for full-width and single image attachment
+ * templates, and when there are no active widgets in the sidebar.
+ *
+ * @author	WordPress.org
+ * @since	2.0.0 - 29.08.2012
+ * 
+ * @return	void
+ */
+function the_bootstrap_content_width() {
+	if ( is_attachment() ) {
+		global $content_width;
+		$content_width = 940;
+	}
+}
+add_action( 'template_redirect', 'the_bootstrap_content_width' );
 
 
 /**
