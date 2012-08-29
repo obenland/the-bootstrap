@@ -31,7 +31,7 @@ get_header(); ?>
 				<?php echo get_avatar( $author->user_email, apply_filters( 'the-bootstrap_author_bio_avatar_size', 70 ) ); ?>
 			</div><!-- #author-avatar -->
 			<div id="author-description" class="span7">
-				<?php $author->description; ?>
+				<?php echo $author->description; ?>
 			</div><!-- #author-description	-->
 		</div><!-- #author-info -->
 		<?php endif;
