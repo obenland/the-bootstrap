@@ -465,46 +465,6 @@ add_filter( 'wp_page_menu_args', 'the_bootstrap_page_menu_args' );
 
 
 /**
- * Shows a notice to admins, when no menu has been defined yet.
- *
- * @author	Konstantin Obenland
- * @since	1.7.0 - 11.06.2012
- *
- * @return	void
- */
-function the_bootstrap_main_menu_fallback() {
-	if ( current_user_can( 'edit_theme_options' ) AND ! get_user_meta( get_current_user_id(), 'the_bootstrap_dismiss_menu_message', true ) ) {
-		wp_localize_script( 'the-bootstrap', 'the_bootstrap', array(
-			'ajax_url'	=>	admin_url( 'admin-ajax' )
-		) );
-		?>
-		<span id="menu-alert" class="alert fade in">
-			<button type="button" class="close" data-dismiss="alert">&times;</button>
-			<?php printf(
-				__( 'You have not defined a navigation menu for the Main Navigation. Please visit the <a href="%1$s">menus page</a> to manage your menus.', 'the-bootstrap' ),
-				admin_url( 'nav-menus.php' )
-			); ?>
-		</span>
-		<?php
-	}
-}
-
-
-/**
- * Update dismiss status in user meta
- *
- * @author	Konstantin Obenland
- * @since	1.7.0 - 11.06.2012
- *
- * @return	void
- */
-function the_bootstrap_dismiss_menu() {
-	update_user_meta( get_current_user_id(), 'the_bootstrap_dismiss_menu_message', true );
-}
-add_action( 'wp_ajax_the_bootstrap_dismiss_menu', 'the_bootstrap_dismiss_menu' );
-
-
-/**
  * Filter in a link to a content ID attribute for the next/previous image links on image attachment pages
  *
  * @author	Automattic
