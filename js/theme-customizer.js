@@ -38,7 +38,7 @@ jQuery( function( $ ) {
 	wp.customize( 'the_bootstrap_theme_options[navbar_position]', function( value ) {
 		value.bind( function( to ) {
 			$( '.navbar' ).removeClass( 'navbar-fixed-top navbar-fixed-bottom' );
-			$( 'body > .container' ).css( 'margin', '18px auto !important;' );
+			$( 'body > .container' ).css( 'margin', '18px auto' );
 			if ( 'static' != to ) {
 				jQuery( '.navbar' ).addClass( to );
 				var margin = ( 'navbar-fixed-top' == to ) ? 'margin-top' : 'margin-bottom';

@@ -330,7 +330,7 @@ function the_bootstrap_print_styles() {
 	
 	if ( 'static' != the_bootstrap_options()->navbar_position ) {
 		$top_bottom	=	str_replace( 'navbar-fixed-', '', the_bootstrap_options()->navbar_position );
-		$css		=	"body > .container{margin-{$top_bottom}:68px !important}@media(min-width: 980px){body > .container{margin-{$top_bottom}:58px !important}}";
+		$css		=	"body > .container{margin-{$top_bottom}:68px;}@media(min-width: 980px){body > .container{margin-{$top_bottom}:58px;}}";
 	
 		if ( is_admin_bar_showing() AND 'top' == $top_bottom )
 			$css	.=	'.navbar.navbar-fixed-top{margin-top:28px;}';

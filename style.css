@@ -273,6 +273,11 @@ table .label {
 /* =Bootstrap Adjustments
 -------------------------------------------------------------- */
 
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+	position: fixed;
+}
+
 #comment,
 .thumbnail {
 	-moz-box-sizing: border-box;
