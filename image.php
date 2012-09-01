@@ -52,8 +52,7 @@ the_post();
 			<span class="nav-links pull-right">
 				<?php
 				edit_post_link( __( 'Edit', 'the-bootstrap' ), ' <span class="edit-link label">', '</span><span class="sep">&nbsp;</span>' );
-				$reply	=	__( 'Leave a comment', 'the-bootstrap' );
-				comments_popup_link( $reply, $reply );
+				the_bootstrap_comments_link( __( 'Leave a comment', 'the-bootstrap' ) );
 				if ( isset($attachments[$k-1]) )
 					echo ' &mdash; <a href="' . get_permalink( $attachments[$k-1]->ID ) . '">' . __( '&laquo; Previous Photo', 'the-bootstrap' ) . '</a>';
 				if ( isset($attachments[$k+1]) )

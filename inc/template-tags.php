@@ -233,5 +233,59 @@ function the_bootstrap_navbar_class() {
 endif;
 
 
+if ( ! function_exists( 'the_bootstrap_comments_link' ) ) :
+/**
+ * Displays the link to the comments popup window for the current post ID.
+ *
+ * Is not meant to be displayed on single posts and pages. Should be used on the
+ * lists of posts
+ *
+ * @since	2.0.0 - 01.09.2012
+ *
+ * @param	string	$zero		The string to display when no comments
+ * @param	string	$one		The string to display when only one comment is available
+ * @param	string	$more		The string to display when there are more than one comment
+ * @param	string	$css_class	The CSS class to use for comments
+ * @param	string	$none		The string to display when comments have been turned off
+ * 
+ * @return	void
+ */
+function the_bootstrap_comments_link( $zero = false, $one = false, $more = false, $css_class = '', $none = false ) {
+	$number = get_comments_number();
+	$class  = empty( $css_class ) ? '' : ' class="' . esc_attr( $css_class ) . '"';
+	
+	if ( false === $zero ) $zero = __( 'No Comments' );
+	if ( false === $one  ) $one  = __( '1 Comment' );
+	if ( false === $more ) $more = __( '% Comments' );
+	if ( false === $none ) $none = __( 'Comments Off' );
+
+	if ( 0 == $number AND ! comments_open() AND ! pings_open() ) {
+		echo '<span' . $class . '>' . $none . '</span>';
+		return;
+	}
+
+	if ( post_password_required() ) {
+		echo '<span' . $class . '>' . __( 'Enter your password to view comments.' ) . '</span>';
+		return;
+	}
+	
+	if ( 1 < $number )
+		$comments_number = str_replace( '%', number_format_i18n( $number ), $more );
+	else
+		$comments_number = ( 0 == $number ) ? $zero : $one;
+	
+	$link = sprintf( '<a href="%1$s"%2$s%3s title="%4$s">%5$s</a>',
+		( 0 == $number ) ? '#respond' : '#comments',
+		$class,
+		apply_filters( 'comments_popup_link_attributes', '' ),
+		esc_attr( sprintf( __( 'Comment on %s' ), the_title_attribute( array('echo' => 0 ) ) ) ),
+		apply_filters( 'comments_number', $comments_number, $number )
+	);
+	
+	echo apply_filters( 'the_bootstrap_comments_link', $link, $zero, $one, $more, $css_class, $none );
+}
+endif;
+
+
 /* End of file template-tags.php */
 /* Location: ./wp-content/themes/the-bootstrap/inc/template-tags.php */
