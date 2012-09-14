@@ -838,7 +838,6 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 		$orderby = 'none';
 
 	if ( $include ) {
-		$include = preg_replace( '/[^0-9,]+/', '', $include );
 		$_attachments = get_posts( array(
 			'include'			=>	$include,
 			'post_status'		=>	'inherit',
@@ -853,7 +852,6 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 			$attachments[$val->ID] = $_attachments[$key];
 		}
 	} elseif ( $exclude ) {
-		$exclude = preg_replace( '/[^0-9,]+/', '', $exclude );
 		$attachments = get_children( array(
 			'post_parent'		=>	$id,
 			'exclude'			=>	$exclude,
