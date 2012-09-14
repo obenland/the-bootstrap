@@ -76,8 +76,8 @@ THIS IS A MAJOR RELEASE, BREAKING BACKWARD COMPATIBILITY IN SOME PLACES
 * Updated Twitter Bootstrap to 2.1
 * Updated html5shiv to 3.6.1
 * Updated Russian translation to fix a bug in the carousel navigation
-* Added French translation. Props Narine
-* Navbar menues now support a third level of menu items
+* Added Armenian translation. Props Narine
+* Navbar menue now supports a third level of menu items
 * Nav-pill menues now also support a second and third level of menu items
 * Improved support for all possible amounts of gallery columns, limiting at eight
 * Improved pagination to handle query strings better
