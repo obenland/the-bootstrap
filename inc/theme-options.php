@@ -88,7 +88,11 @@ function the_bootstrap_theme_options_init() {
 			'value'			=>	the_bootstrap_options()->navbar_searchform,
 			'description'	=>	__( 'Add searchform to navigation bar.', 'the-bootstrap' )
 		)
-	) );
+		(object) array(
+			'name'			=>	'navbar_inverse',
+			'value'			=>	the_bootstrap_options()->navbar_inverse,
+			'description'	=>	__( 'Make navigation bar background dark.', 'the-bootstrap' )
+		)	) );
 	add_settings_field( 'navbar-position', __( 'Navigation Bar Position', 'the-bootstrap' ), 'the_bootstrap_settings_field_radio', 'theme_options', 'general', array(
 		'name'		=>	'navbar_position',
 		'options'	=>	array(
