@@ -24,8 +24,24 @@ get_header(); ?>
 		
 		<nav id="nav-single" class="pager">
 			<h3 class="assistive-text"><?php _e( 'Post navigation', 'the-bootstrap' ); ?></h3>
-			<span class="next"><?php next_post_link( '%link', sprintf( '%1$s <span class="meta-nav">&rarr;</span>', __( 'Next Post', 'the-bootstrap' ) ) ); ?></span>
-			<span class="previous"><?php previous_post_link( '%link', sprintf( '<span class="meta-nav">&larr;</span> %1$s', __( 'Previous Post', 'the-bootstrap' ) ) ); ?></span>
+			<?php 
+				$prev_post = get_previous_post();
+				if (!empty($prev_post)) {
+			?>
+					<a class="pull-left" href="<?php echo get_permalink( $prev_post->ID ); ?>" rel="prev">
+						<span class="meta-nav">&larr;</span>
+						<?php echo __( 'Previous Post', 'the-bootstrap' ) ?>
+					</a>
+				<?php } ?>
+			<?php 
+				$next_post = get_next_post();
+				if (!empty($next_post)) {
+			?>
+					<a class="pull-right" href="<?php echo get_permalink( $next_post->ID ); ?>" rel="next">
+						<?php echo __( 'Next Post', 'the-bootstrap' ) ?>
+						<span class="meta-nav">&rarr;</span>
+					</a>
+				<?php } ?>	
 		</nav><!-- #nav-single -->
 		
 		<?php tha_content_bottom(); ?>
