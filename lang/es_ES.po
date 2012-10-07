@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: The Bootstrap v2.0.0\n"
+"Project-Id-Version: The Bootstrap v3.0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2012-10-03 21:16:43+0000\n"
+"PO-Revision-Date: 2012-10-07 21:43:54+0000\n"
 "Last-Translator: zerquix18 <malbertoa_11@hotmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -29,43 +29,39 @@ msgstr "Esto es algo embarazoso, ¿no?"
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help."
 msgstr "No hay nada para lo que estás buscando, para ayudarte un poco, algunos enlaces debajo, podrán ayudar."
 
-#: 404.php:38
-#@ the-bootstrap
-msgid "Try looking in the monthly archives."
-msgstr "Prueba buscando los archivos mensuales %1$s"
-
 #: author.php:23
+#, php-format
 #@ the-bootstrap
 msgid "Author Archives: %s"
 msgstr "Archivos del autor: %s"
 
 #: author.php:31
-#@ the-boostrap
+#: partials/content-single.php:45
+#, php-format
+#@ the-bootstrap
 msgid "About %s"
 msgstr "Acerca de %s"
 
-#: category.php:23
-#@ the-bootstrap
-msgid "Category Archives %s"
-msgstr "Archivos en la categoría %s"
-
 #: archive.php:30
-#@ the-boostrap
+#, php-format
+#@ the-bootstrap
 msgid "Daily Archives: %s"
 msgstr "Archivos diarios: %s"
 
 #: archive.php:32
-#@ the-boostrap
+#, php-format
+#@ the-bootstrap
 msgid "Monthly Archives: %s"
 msgstr "Archivos mensuales: %s"
 
 #: archive.php:34
-#@ the-boostrap
+#, php-format
+#@ the-bootstrap
 msgid "Yearly Archives: %s"
 msgstr "Archivos anuales: %s"
 
 #: archive.php:36
-#@ the-boostrap
+#@ the-bootstrap
 msgid "Blog Archives"
 msgstr "Archivos del blog"
 
@@ -74,12 +70,8 @@ msgstr "Archivos del blog"
 msgid "Semantic Personal Publishing Platform"
 msgstr "Plataforma semántica de publicación personal"
 
-#: footer.php:27
-#@ the-boostrap
-msgid "Proudly powered by %s"
-msgstr "Funciona con %s"
-
 #: footer.php:35
+#, php-format
 #@ the-bootstrap
 msgid "%d queries. %s seconds."
 msgstr "%d solicitudes. %s segundos"
@@ -99,23 +91,23 @@ msgstr "Menú de cabecera"
 msgid "Footer Menu"
 msgstr "Menú de pies"
 
-#: functions.php:181
+#: functions.php:182
 #@ the-bootstrap
 msgid "Main Sidebar"
 msgstr "Barra lateral principal"
 
-#: functions.php:190
+#: functions.php:191
 #@ the-bootstrap
 msgid "Image Sidebar"
 msgstr "Imagen de la Barra Lateral"
 
-#: functions.php:359
+#: functions.php:423
 #, php-format
 #@ the-bootstrap
 msgid "&copy; %1$s <a href=\"%2$s\">%3$s</a>, all rights reserved."
 msgstr "&copy; %1$s <a href=\"\"%2$s\">%3$s</a>, todos los derechos reservados"
 
-#: functions.php:405
+#: functions.php:469
 #: partials/content-aside.php:31
 #: partials/content-image.php:20
 #: partials/content-page.php:22
@@ -125,12 +117,12 @@ msgstr "&copy; %1$s <a href=\"\"%2$s\">%3$s</a>, todos los derechos reservados"
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Continuar leyendo... <span class=\"meta-nav\">&rarr;</span>"
 
-#: functions.php:502
+#: functions.php:566
 #@ the-bootstrap
 msgid "This post is password protected. Enter the password to view any comments."
 msgstr "Este artículo está protegido por contraseña. Ingresa la contraseña para ver los comentarios."
 
-#: functions.php:512
+#: functions.php:576
 #, php-format
 #@ the-bootstrap
 msgid "One thought on &ldquo;%2$s&rdquo;"
@@ -138,106 +130,108 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "Una respuesta en &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s respuestas en &ldquo;%2$s&rdquo;"
 
-#: functions.php:542
+#: functions.php:606
 #@ the-bootstrap
 msgid "Comments are closed."
 msgstr "Los comentarios están cerrados"
 
-#: functions.php:562
+#: functions.php:626
 #, php-format
 #@ the-bootstrap
 msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes: %s"
 msgstr "Puedes usar <abbr title=\"HyperText Markup Language\">HTML</abbr> para artibutos: %s"
 
-#: functions.php:564
-#: inc/template-tags.php:107
+#: functions.php:628
+#: inc/template-tags.php:122
 #@ the-bootstrap
 msgid "Leave a reply"
 msgstr "Deja una respuesta"
 
-#: functions.php:565
+#: functions.php:629
 #, php-format
 #@ the-bootstrap
 msgid "Leave a reply to %s"
 msgstr "Dejar una respuesta a %s"
 
-#: functions.php:566
+#: functions.php:630
 #, php-format
 #@ the-bootstrap
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr "Necesitas estar <a href=\"%s\">logueado</a> para publicar un comentario."
 
-#: functions.php:567
+#: functions.php:631
 #, php-format
 #@ the-bootstrap
 msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out?</a>"
 msgstr "Sesión iniciada como <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Cerrar sesión de esta cuenta\"> ¿Cerrar sesión? </a>"
 
-#: functions.php:597
+#: functions.php:661
 #@ the-bootstrap
 msgid "Pingback:"
 msgstr "Pingback:"
 
-#: functions.php:598
-#: functions.php:623
+#: functions.php:662
+#: functions.php:687
 #: image.php:54
-#: inc/template-tags.php:111
+#: inc/template-tags.php:126
 #: partials/content-page.php:25
 #@ the-bootstrap
 msgid "Edit"
 msgstr "Editar"
 
 #. translators: 1: comment author, 2: date and time
-#: functions.php:614
+#. translators: 1: comment author, 2: date and time
+#: functions.php:678
 #, php-format
 #@ the-bootstrap
 msgid "%1$s <span class=\"says\">said</span> on %2$s:"
 msgstr "%1$s <span class=\"says\"> dijo </span> en %2$s:"
 
 #. translators: 1: date, 2: time
-#: functions.php:620
+#. translators: 1: date, 2: time
+#: functions.php:684
 #, php-format
 #@ the-bootstrap
 msgid "%1$s at %2$s"
 msgstr "%1$s a las %2$s"
 
-#: functions.php:627
+#: functions.php:691
 #@ the-bootstrap
 msgid "Your comment is awaiting moderation."
 msgstr "Tu comentario está pendiente de moderación."
 
-#: functions.php:636
+#: functions.php:700
 #@ the-bootstrap
 msgid "Reply <span>&darr;</span>"
 msgstr "Responder <span>&darr;</span>"
 
-#: functions.php:698
+#: functions.php:762
 #@ the-bootstrap
 msgid "Name"
 msgstr "Nombre"
 
-#: functions.php:701
-#: functions.php:727
+#: functions.php:765
+#: functions.php:791
 #@ the-bootstrap
 msgid "required"
 msgstr "requerido"
 
-#: functions.php:724
+#: functions.php:788
 #@ the-bootstrap
 msgid "Email"
 msgstr "Email"
 
-#: functions.php:727
+#: functions.php:791
 #@ the-bootstrap
 msgid "will not be published"
 msgstr "no será publicado"
 
-#: functions.php:748
+#: functions.php:812
 #@ the-bootstrap
 msgid "Website"
 msgstr "Sitio Web"
 
-#: functions.php:918
+#: functions.php:980
 #, php-format
 #@ the-bootstrap
 msgid "%d comment"
@@ -245,17 +239,17 @@ msgid_plural "%d comments"
 msgstr[0] "%d comentario"
 msgstr[1] "%d comentarios"
 
-#: functions.php:980
+#: functions.php:1042
 #@ the-bootstrap
 msgid "This post is password protected. To view it please enter your password below:"
 msgstr "Este post está protegido por contraseña, para verlo ingresa la contraseña:"
 
-#: functions.php:980
+#: functions.php:1042
 #@ the-bootstrap
 msgid "Password:"
 msgstr "Contrase&tilde;a:"
 
-#: functions.php:980
+#: functions.php:1042
 #@ the-bootstrap
 msgid "Submit"
 msgstr "Enviar"
@@ -321,78 +315,72 @@ msgstr "&larr; Nuevos comentarios"
 msgid "Older Comments &rarr;"
 msgstr "Comentarios anteriores &rarr;"
 
-#: inc/template-tags.php:95
-#, php-format
-#@ the-bootstrap
-msgid "<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
-msgstr "<span class=\"sep\">Publicado el </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> por </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
-
-#: inc/template-tags.php:101
+#: inc/template-tags.php:113
 #, php-format
 #@ the-bootstrap
 msgid "View all posts by %s"
 msgstr "Ver todos las publicaciones por %s"
 
-#: inc/template-tags.php:107
+#: inc/template-tags.php:122
 #@ the-bootstrap
 msgid "<strong>1</strong> Reply"
 msgstr "<strong>1</strong> Respuesta"
 
-#: inc/template-tags.php:107
+#: inc/template-tags.php:122
 #@ the-bootstrap
 msgid "<strong>%</strong> Replies"
 msgstr "<strong>%</strong> Respuestas"
 
-#: inc/template-tags.php:135
+#: inc/template-tags.php:150
 #@ the-bootstrap
 msgid "Next page"
 msgstr "Siguiente página"
 
-#: inc/template-tags.php:136
+#: inc/template-tags.php:151
 #@ the-bootstrap
 msgid "Previous page"
 msgstr "Página anterior"
 
-#: inc/template-tags.php:150
-#: inc/template-tags.php:164
+#: inc/template-tags.php:165
+#: inc/template-tags.php:179
 #@ the-bootstrap
 msgid "Pages:"
 msgstr "Páginas:"
 
-#: inc/template-tags.php:199
-#: inc/template-tags.php:200
+#: inc/template-tags.php:214
+#: inc/template-tags.php:215
 #: searchform.php:12
 #: searchform.php:14
 #@ the-bootstrap
 msgid "Search"
 msgstr "Buscar"
 
-#: inc/template-tags.php:257
+#: inc/template-tags.php:272
 #@ default
 msgid "No Comments"
 msgstr ""
 
-#: inc/template-tags.php:258
+#: inc/template-tags.php:273
 #@ default
 msgid "1 Comment"
 msgstr ""
 
-#: inc/template-tags.php:259
+#: inc/template-tags.php:274
 #@ default
 msgid "% Comments"
 msgstr ""
 
-#: inc/template-tags.php:260
+#: inc/template-tags.php:275
 #@ default
 msgid "Comments Off"
 msgstr ""
 
-#: inc/template-tags.php:268
+#: inc/template-tags.php:283
 #@ default
 msgid "Enter your password to view comments."
 msgstr ""
 
-#: inc/template-tags.php:281
+#: inc/template-tags.php:296
 #, php-format
 #@ default
 msgid "Comment on %s"
@@ -451,7 +439,7 @@ msgstr "Meta Imagen Widget The Boostrap"
 #: inc/the-bootstrap-image-meta-widget.php:30
 #@ the-bootstrap
 msgid "Displays meta information on image attachment pages"
-msgstr ""
+msgstr "Muestra información de la meta en las páginas de fijación de imagen"
 
 #: inc/the-bootstrap-image-meta-widget.php:52
 #@ the-bootstrap
@@ -487,7 +475,7 @@ msgstr "Longitud Focal:"
 #: inc/the-bootstrap-image-meta-widget.php:78
 #@ the-bootstrap
 msgid "Iso:"
-msgstr ""
+msgstr "Iso:"
 
 #: inc/the-bootstrap-image-meta-widget.php:83
 #@ the-bootstrap
@@ -522,60 +510,60 @@ msgstr "Disposición"
 msgid "Navbar Options"
 msgstr "Opciones de barra de navegación"
 
-#: inc/theme-customizer.php:47
+#: inc/theme-customizer.php:69
 #: inc/theme-options.php:79
 #@ the-bootstrap
 msgid "Default Layout"
 msgstr "Disposición predeterminada"
 
-#: inc/theme-customizer.php:52
+#: inc/theme-customizer.php:74
 #: inc/theme-options.php:166
 #@ the-bootstrap
 msgid "Content on left"
 msgstr "Contenido a la izquierda"
 
-#: inc/theme-customizer.php:53
+#: inc/theme-customizer.php:75
 #: inc/theme-options.php:170
 #@ the-bootstrap
 msgid "Content on right"
 msgstr "Contenido a la derecha"
 
-#: inc/theme-customizer.php:59
+#: inc/theme-customizer.php:81
 #: inc/theme-options.php:84
 #@ the-bootstrap
 msgid "Add site name to navigation bar."
 msgstr "Añadir nombre del sitio a la barra de navegación"
 
-#: inc/theme-customizer.php:67
+#: inc/theme-customizer.php:89
 #: inc/theme-options.php:89
 #@ the-bootstrap
 msgid "Add searchform to navigation bar."
 msgstr "Añadir buscador a la barra de navegación."
 
-#: inc/theme-customizer.php:75
+#: inc/theme-customizer.php:97
 #@ the-bootstrap
 msgid "Use inverse color on navigation bar."
 msgstr "Usar color inverso en la barra de navegación."
 
-#: inc/theme-customizer.php:83
+#: inc/theme-customizer.php:105
 #: inc/theme-options.php:92
 #@ the-bootstrap
 msgid "Navigation Bar Position"
 msgstr "Posición de la barra de navegación."
 
-#: inc/theme-customizer.php:88
+#: inc/theme-customizer.php:110
 #: inc/theme-options.php:97
 #@ the-bootstrap
 msgid "Static."
 msgstr "Estática"
 
-#: inc/theme-customizer.php:89
+#: inc/theme-customizer.php:111
 #: inc/theme-options.php:101
 #@ the-bootstrap
 msgid "Fixed on top."
 msgstr "Fija en la parte superior."
 
-#: inc/theme-customizer.php:90
+#: inc/theme-customizer.php:112
 #: inc/theme-options.php:105
 #@ the-bootstrap
 msgid "Fixed at bottom."
@@ -722,12 +710,12 @@ msgstr "Ir"
 msgid "Post navigation"
 msgstr "Navegación de posts"
 
-#: single.php:27
+#: single.php:34
 #@ the-bootstrap
 msgid "Next Post"
 msgstr "Siguiente Post"
 
-#: single.php:28
+#: single.php:30
 #@ the-bootstrap
 msgid "Previous Post"
 msgstr "Post anterior"
@@ -737,4 +725,56 @@ msgstr "Post anterior"
 #@ the-bootstrap
 msgid "Tag Archives: %s"
 msgstr "Archivos en la categoría"
+
+#: 404.php:35
+#@ the-bootstrap
+msgid "Most Used Categories"
+msgstr "Categorías más usados"
+
+#: 404.php:38
+#, php-format
+#@ the-bootstrap
+msgctxt "%1$s: smilie"
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Trate de buscar en los archivos mensuales. %1$s"
+
+#: category.php:23
+#, php-format
+#@ the-bootstrap
+msgid "Category Archives: %s"
+msgstr "Archivos de la categoría: %s"
+
+#: footer.php:24
+#@ the-bootstrap
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: footer.php:27
+#, php-format
+#@ the-bootstrap
+msgctxt "WordPress"
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: functions.php:192
+#@ the-bootstrap
+msgid "Shown on image attachment pages."
+msgstr "Se muestra en las páginas de fijación de imagen."
+
+#: functions.php:624
+#@ the-bootstrap
+msgctxt "noun"
+msgid "Comment"
+msgstr "Comentario"
+
+#: inc/template-tags.php:117
+#, php-format
+#@ the-bootstrap
+msgid "Posted on %1$s by %2$s"
+msgstr "Publicado el %1$s por %2$s"
+
+#: inc/theme-customizer.php:47
+#@ the-bootstrap
+msgid "Skin"
+msgstr "Piel"
 
