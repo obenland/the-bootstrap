@@ -5,7 +5,7 @@
  * Description:	A WordPress Theme based on Bootstrap, from Twitter. It features a 100% responsive layout, a superb gallery and image handling with a custom image meta widget and carousel for gallery post-formats, the Glyphicon Icon set, a clean and simple design and a lot more! The Bootstrap runs on HTML5 and CSS3, a 12-column grid and comes with custom jQuery plugins. See the Bootstrap documentation on GitHub for reference.
  * Author:		Konstantin Obenland
  * Author URI:	http://en.wp.obenland.it/
- * Version:		2.1.0
+ * Version:		3.0.0
  * Tags:		black, blue, white, light, custom-background, custom-header, custom-menu, featured-images, flexible-header, flexible-width, full-width-template, left-sidebar, microformats, post-formats, right-sidebar, sticky-post, theme-options, threaded-comments, translation-ready, two-columns
  * Text Domain:	the-bootstrap
  * Domain Path:	/lang
@@ -33,6 +33,10 @@
 
 /* =Elements
 -------------------------------------------------------------- */
+
+body {
+	background: inherit;
+}
 
 blockquote cite:before {
     content: '\2014 \00A0';
@@ -354,6 +358,207 @@ table .label {
 .bypostauthor {}
 
 
+/* =Amelia
+-------------------------------------------------------------- */
+.amelia-bootstrap .navbar .btn,
+.amelia-bootstrap .navbar .btn-group {
+	padding: 7px 10px;
+}
+
+.amelia-bootstrap .icon-bar {
+	margin: 0;
+}
+
+.amelia-bootstrap #page {
+	background-color: #0F8790;
+}
+
+.amelia-bootstrap .label .post-edit-link,
+.amelia-bootstrap .label .comment-edit-link {
+	color: inherit;
+}
+
+.amelia-bootstrap .pagination span.dots {
+	background-color: #F5F5F5;
+}
+
+.amelia-bootstrap .pager a,
+.amelia-bootstrap .pager span,
+.cerulean-bootstrap .pager a,
+.cerulean-bootstrap .pager span,
+.cyborg-bootstrap .pager a,
+.cyborg-bootstrap .pager span,
+.journal-bootstrap .pager a,
+.journal-bootstrap .pager span,
+.readable-bootstrap .pager a,
+.readable-bootstrap .pager span,
+.simplex-bootstrap .pager a,
+.simplex-bootstrap .pager span,
+.slate-bootstrap .pager a,
+.slate-bootstrap .pager span,
+.spacelab-bootstrap .pager a,
+.spacelab-bootstrap .pager span,
+.spruce-bootstrap .pager a,
+.spruce-bootstrap .pager span,
+.superhero-bootstrap .pager a,
+.superhero-bootstrap .pager span,
+.united-bootstrap .pager a,
+.united-bootstrap .pager span {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+}
+
+.amelia-bootstrap .pager > a,
+.amelia-bootstrap .pager > span,
+.cerulean-bootstrap .pager > a,
+.cerulean-bootstrap .pager > span,
+.cyborg-bootstrap .pager > a,
+.cyborg-bootstrap .pager > span,
+.journal-bootstrap .pager > a,
+.journal-bootstrap .pager > span,
+.readable-bootstrap .pager > a,
+.readable-bootstrap .pager > span,
+.simplex-bootstrap .pager > a,
+.simplex-bootstrap .pager > span,
+.slate-bootstrap .pager > a,
+.slate-bootstrap .pager > span,
+.spacelab-bootstrap .pager > a,
+.spacelab-bootstrap .pager > span,
+.spruce-bootstrap .pager > a,
+.spruce-bootstrap .pager > span,
+.superhero-bootstrap .pager > a,
+.superhero-bootstrap .pager > span,
+.united-bootstrap .pager > a,
+.united-bootstrap .pager > span {
+    border: 1px solid #DDDDDD;
+    border-radius: 15px 15px 15px 15px;
+    padding: 5px 14px;
+}
+
+.amelia-bootstrap .pager .previous,
+.cerulean-bootstrap .pager .previous,
+.cyborg-bootstrap .pager .previous,
+.journal-bootstrap .pager .previous,
+.readable-bootstrap .pager .previous,
+.simplex-bootstrap .pager .previous,
+.slate-bootstrap .pager .previous,
+.spacelab-bootstrap .pager .previous,
+.spruce-bootstrap .pager .previous,
+.superhero-bootstrap .pager .previous,
+.united-bootstrap .pager .previous {
+    float: left;
+}
+
+.amelia-bootstrap .pager .next,
+.cerulean-bootstrap .pager .next,
+.cyborg-bootstrap .pager .next,
+.journal-bootstrap .pager .next,
+.readable-bootstrap .pager .next,
+.simplex-bootstrap .pager .next,
+.slate-bootstrap .pager .next,
+.spacelab-bootstrap .pager .next,
+.spruce-bootstrap .pager .next,
+.superhero-bootstrap .pager .next,
+.united-bootstrap .pager .next {
+    float: right;
+}
+
+
+/* =Cyborg
+-------------------------------------------------------------- */
+
+.cyborg-bootstrap #page {
+	background-color: #121417;
+}
+
+.cyborg-bootstrap .pager span {
+    background-color: #060606;
+}
+
+.cyborg-bootstrap .pager span:hover,
+.cyborg-bootstrap .pager span:hover span,
+.cyborg-bootstrap .pager span:hover a,
+.cyborg-bootstrap .pager a:hover {
+    background-color: #33B5E5;
+}
+
+
+/* =Readable
+-------------------------------------------------------------- */
+
+.readable-bootstrap #page {
+	background-color: #FAFDFA;
+}
+
+.readable-bootstrap .label,
+.readable-bootstrap .label:hover {
+	background-color: #999999;
+}
+
+.readable-bootstrap .nav-pills > li > a {
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+}
+
+
+/* =Simplex
+-------------------------------------------------------------- */
+
+.simplex-bootstrap #page {
+	background-color: #F7F7F7;
+}
+
+
+/* =Slate
+-------------------------------------------------------------- */
+
+.slate-bootstrap #page {
+	background-color: #272B30;
+}
+
+.slate-bootstrap .pagination > ul > li:not(.disabled) a:hover {
+	border-left: 0;
+}
+
+.slate-bootstrap .pager span {
+	background-color: #3A3F44;
+}
+
+
+/* =Spruce
+-------------------------------------------------------------- */
+
+.spruce-bootstrap #page {
+	background-color: #90A38F;
+}
+
+.spruce-bootstrap .pager span {
+	background-color: #748C73;
+}
+
+.spruce-bootstrap .pagination span.dots,
+.spruce-bootstrap .pagination li.current > span {
+    background-color: #687E68;
+}
+
+.spruce-bootstrap #site-generator a {
+	color: #F5F3DC;
+}
+
+
+/* =Superhero
+-------------------------------------------------------------- */
+
+.superhero-bootstrap #page {
+	background-color: #2A333C;
+}
+
+.superhero-bootstrap .pager span {
+	background-color: #45515F;
+}
+
+
 /* =Responsiveness
 -------------------------------------------------------------- */
 
@@ -455,6 +660,7 @@ table .label {
 		display: table;
 	}
 }
+
 
 
 /* End of file style.css */
