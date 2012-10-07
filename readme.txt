@@ -4,7 +4,7 @@ Tags:				black, blue, white, light, two-columns, left-sidebar, right-sidebar, fl
 Donate link:		https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=542W6XT4PLT4L
 Requires at least:	3.3.0
 Tested up to:		3.4.2
-Stable tag:			2.1.0
+Stable tag:			3.0.0
 
 A WordPress Theme based on Bootstrap, from Twitter
 
@@ -38,7 +38,9 @@ Currently available in:
 * French
 * German
 * Hungarian
+* Italian
 * Japanese
+* Spanish
 * Russian
 
 
@@ -68,8 +70,13 @@ For more information on SemVer, please visit [http://semver.org/].
 
 == Changelog ==
 
-= 2.1.0 =
+= 3.0.0 =
 
+THIS IS A MAJOR RELEASE, BREAKING BACKWARD COMPATIBILITY IN SOME PLACES
+
+* Updated Twitter Bootstrap to 2.1.1
+* Added Italian translation. Props @gimmy
+* Added Spanish translation. Props @Zerquix18
 
 = 2.0.0 =
 
