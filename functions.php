@@ -78,9 +78,9 @@ function the_bootstrap_setup() {
 	 * @see		http://codex.wordpress.org/Function_Reference/register_nav_menus
 	 */
 	register_nav_menus( array(
-		'primary'		=>	__( 'Main Navigation', 'the-bootstrap' ),
-		'header-menu'  	=>	__( 'Header Menu', 'the-bootstrap' ),
-		'footer-menu' 	=>	__( 'Footer Menu', 'the-bootstrap' )
+		'primary'     => __( 'Main Navigation', 'the-bootstrap' ),
+		'header-menu' => __( 'Header Menu', 'the-bootstrap' ),
+		'footer-menu' => __( 'Footer Menu', 'the-bootstrap' )
 	) );
 
 } // the_bootstrap_setup
@@ -154,7 +154,7 @@ add_filter( 'body_class', 'the_bootstrap_layout_classes' );
 function the_bootstrap_custom_background_setup() {
 
 	$args = apply_filters( 'the_bootstrap_custom_background_args',  array(
-		'default-color'	=>	'EFEFEF',
+		'default-color' => 'EFEFEF',
 	) );
 
 	add_theme_support( 'custom-background', $args );
@@ -179,22 +179,22 @@ add_action( 'after_setup_theme', 'the_bootstrap_custom_background_setup' );
 function the_bootstrap_widgets_init() {
 
 	register_sidebar( array(
-		'name'			=>	__( 'Main Sidebar', 'the-bootstrap' ),
-		'id'			=>	'main',
-		'before_widget'	=>	'<aside id="%1$s" class="widget well %2$s">',
-		'after_widget'	=>	'</aside>',
-		'before_title'	=>	'<h2 class="widget-title">',
-		'after_title'	=>	'</h2>',
+		'name'          => __( 'Main Sidebar', 'the-bootstrap' ),
+		'id'            => 'main',
+		'before_widget' => '<aside id="%1$s" class="widget well %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
 	) );
 
 	register_sidebar( array(
-		'name'			=>	__( 'Image Sidebar', 'the-bootstrap' ),
-		'description'	=>	__( 'Shown on image attachment pages.', 'the-bootstrap' ),
-		'id'			=>	'image',
-		'before_widget'	=>	'<aside id="%1$s" class="widget well %2$s">',
-		'after_widget'	=>	'</aside>',
-		'before_title'	=>	'<h2 class="widget-title">',
-		'after_title'	=>	'</h2>',
+		'name'          => __( 'Image Sidebar', 'the-bootstrap' ),
+		'description'   => __( 'Shown on image attachment pages.', 'the-bootstrap' ),
+		'id'            => 'image',
+		'before_widget' => '<aside id="%1$s" class="widget well %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
 	) );
 
 	include_once( 'inc/the-bootstrap-image-meta-widget.php' );
@@ -218,7 +218,7 @@ function the_bootstrap_register_scripts_styles() {
 
 	if ( ! is_admin() ) {
 		$theme_version = _the_bootstrap_version();
-		$bootswatch_version = '2.1.1';
+		$bootswatch_version = '2.2.1';
 		$protocol = is_ssl() ? 'https' : 'http';
 		$suffix = ( defined( 'SCRIPT_DEBUG' ) AND SCRIPT_DEBUG ) ? '' : '.min';
 
@@ -393,11 +393,11 @@ function the_bootstrap_print_styles() {
 	}
 
 	if ( 'static' != the_bootstrap_options()->navbar_position ) {
-		$top_bottom	=	str_replace( 'navbar-fixed-', '', the_bootstrap_options()->navbar_position );
-		$css		=	"body > .container{margin-{$top_bottom}:68px;}@media(min-width: 980px){body > .container{margin-{$top_bottom}:58px;}}";
+		$top_bottom = str_replace( 'navbar-fixed-', '', the_bootstrap_options()->navbar_position );
+		$css        = "body > .container{margin-{$top_bottom}:68px;}@media(min-width: 980px){body > .container{margin-{$top_bottom}:58px;}}";
 
 		if ( is_admin_bar_showing() AND 'top' == $top_bottom )
-			$css	.=	'.navbar.navbar-fixed-top{margin-top:28px;}';
+			$css .= '.navbar.navbar-fixed-top{margin-top:28px;}';
 
 		if ( function_exists( 'wp_add_inline_style' ) )
 			wp_add_inline_style( 'the-bootstrap', $css );
@@ -602,7 +602,7 @@ add_action( 'comment_form_comments_closed', 'the_bootstrap_comments_list', 1 );
  * @return	void
  */
 function the_bootstrap_comments_closed() {
-	if ( ! is_page() AND post_type_supports( get_post_type(), 'comments' ) ) : ?>
+	if ( ! is_page() AND post_type_supports( get_post_type(), 'comments' ) AND ! post_password_required() ) : ?>
 		<p class="nocomments"><?php _e( 'Comments are closed.', 'the-bootstrap' ); ?></p>
 	<?php endif;
 }
@@ -621,14 +621,14 @@ add_action( 'comment_form_comments_closed', 'the_bootstrap_comments_closed' );
  */
 function the_bootstrap_comment_form_defaults( $defaults ) {
 	return wp_parse_args( array(
-		'comment_field'			=>	'<div class="comment-form-comment control-group"><label class="control-label" for="comment">' . _x( 'Comment', 'noun', 'the-bootstrap' ) . '</label><div class="controls"><textarea class="span7" id="comment" name="comment" rows="8" aria-required="true"></textarea></div></div>',
-		'comment_notes_before'	=>	'',
-		'comment_notes_after'	=>	'<div class="form-allowed-tags control-group"><label class="control-label">' . sprintf( __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s', 'the-bootstrap' ), '</label><div class="controls"><pre>' . allowed_tags() . '</pre></div>' ) . '</div>
-									 <div class="form-actions">',
-		'title_reply'			=>	'<legend>' . __( 'Leave a reply', 'the-bootstrap' ) . '</legend>',
-		'title_reply_to'		=>	'<legend>' . __( 'Leave a reply to %s', 'the-bootstrap' ). '</legend>',
-		'must_log_in'			=>	'<div class="must-log-in control-group controls">' . sprintf( __( 'You must be <a href="%s">logged in</a> to post a comment.', 'the-bootstrap' ), wp_login_url( apply_filters( 'the_permalink', get_permalink( get_the_ID() ) ) ) ) . '</div>',
-		'logged_in_as'			=>	'<div class="logged-in-as control-group controls">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>', 'the-bootstrap' ), admin_url( 'profile.php' ), wp_get_current_user()->display_name, wp_logout_url( apply_filters( 'the_permalink', get_permalink( get_the_ID() ) ) ) ) . '</div>',
+		'comment_field'        => '<div class="comment-form-comment control-group"><label class="control-label" for="comment">' . _x( 'Comment', 'noun', 'the-bootstrap' ) . '</label><div class="controls"><textarea class="span7" id="comment" name="comment" rows="8" aria-required="true"></textarea></div></div>',
+		'comment_notes_before' => '',
+		'comment_notes_after'  => '<div class="form-allowed-tags control-group"><label class="control-label">' . sprintf( __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s', 'the-bootstrap' ), '</label><div class="controls"><pre>' . allowed_tags() . '</pre></div>' ) . '</div>
+								   <div class="form-actions">',
+		'title_reply'          => '<legend>' . __( 'Leave a reply', 'the-bootstrap' ) . '</legend>',
+		'title_reply_to'       => '<legend>' . __( 'Leave a reply to %s', 'the-bootstrap' ). '</legend>',
+		'must_log_in'          => '<div class="must-log-in control-group controls">' . sprintf( __( 'You must be <a href="%s">logged in</a> to post a comment.', 'the-bootstrap' ), wp_login_url( apply_filters( 'the_permalink', get_permalink( get_the_ID() ) ) ) ) . '</div>',
+		'logged_in_as'         => '<div class="logged-in-as control-group controls">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>', 'the-bootstrap' ), admin_url( 'profile.php' ), wp_get_current_user()->display_name, wp_logout_url( apply_filters( 'the_permalink', get_permalink( get_the_ID() ) ) ) ) . '</div>',
 	), $defaults );
 }
 add_filter( 'comment_form_defaults', 'the_bootstrap_comment_form_defaults' );
@@ -697,9 +697,9 @@ function the_bootstrap_comment( $comment, $args, $depth ) {
 					<?php
 					comment_text();
 					comment_reply_link( array_merge( $args, array(
-						'reply_text'	=>	__( 'Reply <span>&darr;</span>', 'the-bootstrap' ),
-						'depth'			=>	$depth,
-						'max_depth'		=>	$args['max_depth']
+						'reply_text' => __( 'Reply <span>&darr;</span>', 'the-bootstrap' ),
+						'depth'      => $depth,
+						'max_depth'  => $args['max_depth']
 					) ) ); ?>
 				</div><!-- .comment-content -->
 			</article><!-- #comment-<?php comment_ID(); ?> .comment -->
@@ -754,9 +754,9 @@ add_action( 'comment_form', 'the_bootstrap_comment_form' );
  * @return	string
  */
 function the_bootstrap_comment_form_field_author( $html ) {
-	$commenter	=	wp_get_current_commenter();
-	$req		=	get_option( 'require_name_email' );
-	$aria_req	=	( $req ? " aria-required='true'" : '' );
+	$commenter = wp_get_current_commenter();
+	$req       = get_option( 'require_name_email' );
+	$aria_req  = ( $req ? " aria-required='true'" : '' );
 
 	return	'<div class="comment-form-author control-group">
 				<label for="author" class="control-label">' . __( 'Name', 'the-bootstrap' ) . '</label>
@@ -780,9 +780,9 @@ add_filter( 'comment_form_field_author', 'the_bootstrap_comment_form_field_autho
  * @return	string
  */
 function the_bootstrap_comment_form_field_email( $html ) {
-	$commenter	=	wp_get_current_commenter();
-	$req		=	get_option( 'require_name_email' );
-	$aria_req	=	( $req ? " aria-required='true'" : '' );
+	$commenter = wp_get_current_commenter();
+	$req       = get_option( 'require_name_email' );
+	$aria_req  = ( $req ? " aria-required='true'" : '' );
 
 	return	'<div class="comment-form-email control-group">
 				<label for="email" class="control-label">' . __( 'Email', 'the-bootstrap' ) . '</label>
@@ -806,7 +806,7 @@ add_filter( 'comment_form_field_email', 'the_bootstrap_comment_form_field_email'
  * @return	string
  */
 function the_bootstrap_comment_form_field_url( $html ) {
-	$commenter	=	wp_get_current_commenter();
+	$commenter = wp_get_current_commenter();
 
 	return	'<div class="comment-form-url control-group">
 				<label for="url" class="control-label">' . __( 'Website', 'the-bootstrap' ) . '</label>
@@ -835,7 +835,7 @@ add_filter( 'comment_form_field_url', 'the_bootstrap_comment_form_field_url');
  * @return	string
  */
 function the_bootstrap_get_attachment_link( $link, $id, $size, $permalink, $icon, $text ) {
-	return ( ! $text ) ? str_replace( '<a ', '<a class="thumbnail" ', $link ) : $link;
+	return str_replace( '<a ', '<a class="thumbnail" ', $link );
 }
 add_filter( 'wp_get_attachment_link', 'the_bootstrap_get_attachment_link', 10, 6 );
 
@@ -884,16 +884,16 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 	}
 
 	extract( shortcode_atts( array(
-		'order'			=>	'ASC',
-		'orderby'		=>	'menu_order ID',
-		'id'			=>	$post->ID,
-		'itemtag'		=>	'figure',
-		'icontag'		=>	'div',
-		'captiontag'	=>	'figcaption',
-		'columns'		=>	3,
-		'size'			=>	'thumbnail',
-		'include'		=>	'',
-		'exclude'		=>	''
+		'order'      => 'ASC',
+		'orderby'    => 'menu_order ID',
+		'id'         => $post->ID,
+		'itemtag'    => 'figure',
+		'icontag'    => 'div',
+		'captiontag' => 'figcaption',
+		'columns'    => 3,
+		'size'       => 'thumbnail',
+		'include'    => '',
+		'exclude'    => ''
 	), $attr ) );
 
 
@@ -903,12 +903,12 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 
 	if ( $include ) {
 		$_attachments = get_posts( array(
-			'include'			=>	$include,
-			'post_status'		=>	'inherit',
-			'post_type'			=>	'attachment',
-			'post_mime_type'	=>	'image',
-			'order'				=>	$order,
-			'orderby'			=>	$orderby
+			'include'        => $include,
+			'post_status'    => 'inherit',
+			'post_type'      => 'attachment',
+			'post_mime_type' => 'image',
+			'order'          => $order,
+			'orderby'        => $orderby
 		) );
 
 		$attachments = array();
@@ -917,22 +917,22 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 		}
 	} elseif ( $exclude ) {
 		$attachments = get_children( array(
-			'post_parent'		=>	$id,
-			'exclude'			=>	$exclude,
-			'post_status'		=>	'inherit',
-			'post_type'			=>	'attachment',
-			'post_mime_type'	=>	'image',
-			'order'				=>	$order,
-			'orderby'			=>	$orderby
+			'post_parent'    => $id,
+			'exclude'        => $exclude,
+			'post_status'    => 'inherit',
+			'post_type'      => 'attachment',
+			'post_mime_type' => 'image',
+			'order'          => $order,
+			'orderby'        => $orderby
 		) );
 	} else {
 		$attachments = get_children( array(
-			'post_parent'		=>	$id,
-			'post_status'		=>	'inherit',
-			'post_type'			=>	'attachment',
-			'post_mime_type'	=>	'image',
-			'order'				=>	$order,
-			'orderby'			=>	$orderby
+			'post_parent'    => $id,
+			'post_status'    => 'inherit',
+			'post_type'      => 'attachment',
+			'post_mime_type' => 'image',
+			'order'          => $order,
+			'orderby'        => $orderby
 		) );
 	}
 
@@ -948,25 +948,25 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 
 
 
-	$itemtag	=	tag_escape( $itemtag );
-	$captiontag	=	tag_escape( $captiontag );
-	$columns	=	intval( min( array( 8, $columns ) ) );
-	$float		=	(is_rtl()) ? 'right' : 'left';
+	$itemtag    = tag_escape( $itemtag );
+	$captiontag = tag_escape( $captiontag );
+	$columns    = intval( min( array( 8, $columns ) ) );
+	$float      = (is_rtl()) ? 'right' : 'left';
 
 	if ( 4 > $columns )
 		$size = 'full';
 
-	$selector	=	"gallery-{$instance}";
-	$size_class	=	sanitize_html_class( $size );
-	$output		=	"<ul id='$selector' class='gallery galleryid-{$id} gallery-columns-{$columns} gallery-size-{$size_class} thumbnails'>";
+	$selector   = "gallery-{$instance}";
+	$size_class = sanitize_html_class( $size );
+	$output     = "<ul id='$selector' class='gallery galleryid-{$id} gallery-columns-{$columns} gallery-size-{$size_class} thumbnails'>";
 
 	$i = 0;
 	foreach ( $attachments as $id => $attachment ) {
 		$comments = get_comments( array(
-			'post_id'	=>	$id,
-			'count'		=>	true,
-			'type'		=>	'comment',
-			'status'	=>	'approve'
+			'post_id' => $id,
+			'count'   => true,
+			'type'    => 'comment',
+			'status'  => 'approve'
 		) );
 
 		$link = wp_get_attachment_link( $id, $size, ! ( isset( $attr['link'] ) AND 'file' == $attr['link'] ) );
@@ -977,10 +977,10 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 		$output .= "<{$icontag} class='gallery-icon'>{$link}</{$icontag}>\n";
 
 		if ( $captiontag AND ( 0 < $comments OR trim( $attachment->post_excerpt ) ) ) {
-			$comments	=	( 0 < $comments ) ? sprintf( _n('%d comment', '%d comments', $comments, 'the-bootstrap'), $comments ) : '';
-			$excerpt	=	wptexturize( $attachment->post_excerpt );
-			$out		=	($comments AND $excerpt) ? " $excerpt <br /> $comments " : " $excerpt$comments ";
-			$output		.=	"<{$captiontag} class='wp-caption-text gallery-caption'>{$out}</{$captiontag}>\n";
+			$comments = ( 0 < $comments ) ? sprintf( _n('%d comment', '%d comments', $comments, 'the-bootstrap'), $comments ) : '';
+			$excerpt  = wptexturize( $attachment->post_excerpt );
+			$out      = ($comments AND $excerpt) ? " $excerpt <br /> $comments " : " $excerpt$comments ";
+			$output  .= "<{$captiontag} class='wp-caption-text gallery-caption'>{$out}</{$captiontag}>\n";
 		}
 		$output .= "</{$itemtag}></li>\n";
 	}
@@ -1006,10 +1006,10 @@ add_filter( 'post_gallery', 'the_bootstrap_post_gallery', 10, 2 );
 function the_bootstrap_img_caption_shortcode( $empty, $attr, $content ) {
 
 	extract( shortcode_atts( array(
-		'id'		=>	'',
-		'align'		=>	'alignnone',
-		'width'		=>	'',
-		'caption'	=>	''
+		'id'      => '',
+		'align'   => 'alignnone',
+		'width'   => '',
+		'caption' => ''
 	), $attr ) );
 
 	if ( 1 > (int) $width OR empty( $caption ) ) {
@@ -1057,11 +1057,11 @@ add_filter( 'the_password_form', 'the_bootstrap_the_password_form' );
 function the_bootstrap_widget_categories_dropdown_args( $args ) {
 	if ( is_404() ) {
 		$args	=	wp_parse_args( $args, array(
-			'orderby'		=>	'count',
-			'order'			=>	'DESC',
-			'show_count'	=>	1,
-			'title_li'		=>	'',
-			'number'		=>	10
+			'orderby'    => 'count',
+			'order'      => 'DESC',
+			'show_count' => 1,
+			'title_li'   => '',
+			'number'     => 10
 		) );
 	}
 	return $args;
@@ -1087,8 +1087,12 @@ add_filter( 'widget_categories_dropdown_args', 'the_bootstrap_widget_categories_
  * @return	string	Image HTML
  */
 function the_bootstrap_image_send_to_editor( $html, $id, $caption, $title, $align, $url, $size, $alt ) {
+	global $content_width;
+	list( $src, $width, $height ) = wp_get_attachment_image_src( $id, $size );
+	$center = ( 'center' == $align AND $width < $content_width ) ? ' attachment-table': '';
+
 	if ( $url ) {
-		$html = str_replace( '<a ', '<a class="thumbnail" ', $html );
+		$html = str_replace( '<a ', '<a class="clear thumbnail align'. $align . $center .'" ', $html );
 	} else {
 		$html = str_replace( 'class="', 'class="thumbnail ', $html );
 	}
@@ -1128,11 +1132,11 @@ add_action( 'template_redirect', 'the_bootstrap_content_width' );
 function _the_bootstrap_version() {
 
 	if ( function_exists( 'wp_get_theme' ) ) {
-		$theme_version	=	wp_get_theme()->get( 'Version' );
+		$theme_version = wp_get_theme()->get( 'Version' );
 	}
 	else {
-		$theme_data		=	get_theme_data( get_template_directory() . '/style.css' );
-		$theme_version	=	$theme_data['Version'];
+		$theme_data    = get_theme_data( get_template_directory() . '/style.css' );
+		$theme_version = $theme_data['Version'];
 	}
 
 	return $theme_version;

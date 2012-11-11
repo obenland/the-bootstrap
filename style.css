@@ -196,7 +196,7 @@ article.page {
 	margin: 0 20px 20px 0;
 }
 
-.entry-attachment .thumbnail.attachment-table {
+.thumbnail.attachment-table {
 	display: table;
 	margin: 0 auto;
 }
@@ -295,6 +295,7 @@ table .label {
 }
 
 .navbar-search {
+	float: right;
 	height: 34px;
 }
 
@@ -325,6 +326,11 @@ table .label {
 .alignleft {
     float:left;
     margin: 0 20px 20px 0;
+}
+.thumbnail > img.aligncenter,
+.thumbnail > img.alignleft,
+.thumbnail > img.alignright {
+	margin: 0;
 }
 
 .wp-caption {

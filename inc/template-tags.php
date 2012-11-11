@@ -28,29 +28,29 @@ if ( ! function_exists( 'the_bootstrap_content_nav' ) ) :
 function the_bootstrap_content_nav() {
 	global $wp_query, $wp_rewrite;
 
-	$paged			=	( get_query_var( 'paged' ) ) ? intval( get_query_var( 'paged' ) ) : 1;
+	$paged        = ( get_query_var( 'paged' ) ) ? intval( get_query_var( 'paged' ) ) : 1;
 
-	$pagenum_link	=	html_entity_decode( get_pagenum_link() );
-	$query_args		=	array();
-	$url_parts		=	explode( '?', $pagenum_link );
+	$pagenum_link = html_entity_decode( get_pagenum_link() );
+	$query_args   = array();
+	$url_parts    = explode( '?', $pagenum_link );
 
 	if ( isset( $url_parts[1] ) ) {
 		wp_parse_str( $url_parts[1], $query_args );
 	}
-	$pagenum_link	=	remove_query_arg( array_keys( $query_args ), $pagenum_link );
-	$pagenum_link	=	trailingslashit( $pagenum_link ) . '%_%';
+	$pagenum_link = remove_query_arg( array_keys( $query_args ), $pagenum_link );
+	$pagenum_link = trailingslashit( $pagenum_link ) . '%_%';
 
-	$format			=	( $wp_rewrite->using_index_permalinks() AND ! strpos( $pagenum_link, 'index.php' ) ) ? 'index.php/' : '';
-	$format			.=	$wp_rewrite->using_permalinks() ? user_trailingslashit( 'page/%#%', 'paged' ) : '?paged=%#%';
+	$format       = ( $wp_rewrite->using_index_permalinks() AND ! strpos( $pagenum_link, 'index.php' ) ) ? 'index.php/' : '';
+	$format      .= $wp_rewrite->using_permalinks() ? user_trailingslashit( 'page/%#%', 'paged' ) : '?paged=%#%';
 
 	$links	=	paginate_links( array(
-		'base'		=>	$pagenum_link,
-		'format'	=>	$format,
-		'total'		=>	$wp_query->max_num_pages,
-		'current'	=>	$paged,
-		'mid_size'	=>	3,
-		'type'		=>	'list',
-		'add_args'	=>	array_map( 'urlencode', $query_args )
+		'base'     => $pagenum_link,
+		'format'   => $format,
+		'total'    => $wp_query->max_num_pages,
+		'current'  => $paged,
+		'mid_size' => 3,
+		'type'     => 'list',
+		'add_args' => array_map( 'urlencode', $query_args )
 	) );
 
 	if ( $links ) {
@@ -144,13 +144,13 @@ if ( ! function_exists( 'the_bootstrap_link_pages' ) ) :
  * @return	string
  */
 function the_bootstrap_link_pages( $args = array() ) {
-	wp_link_pages( array( 'echo' => 0 ));
+	wp_link_pages( array( 'echo' => 0 ) );
 	$defaults = array(
-		'next_or_number'	=> 'number',
-		'nextpagelink'		=> __('Next page', 'the-bootstrap'),
-		'previouspagelink'	=> __('Previous page', 'the-bootstrap'),
-		'pagelink'			=> '%',
-		'echo'				=> true
+		'next_or_number'   => 'number',
+		'nextpagelink'     => __( 'Next page', 'the-bootstrap' ),
+		'previouspagelink' => __( 'Previous page', 'the-bootstrap' ),
+		'pagelink'         => '%',
+		'echo'             => true
 	);
 
 	$r = wp_parse_args( $args, $defaults );
@@ -162,7 +162,7 @@ function the_bootstrap_link_pages( $args = array() ) {
 	$output = '';
 	if ( $multipage ) {
 		if ( 'number' == $next_or_number ) {
-			$output .= '<nav class="pagination clear"><ul><li><span class="dots">' . __('Pages:', 'the-bootstrap') . '</span></li>';
+			$output .= '<nav class="pagination pagination-small clear"><ul><li><span class="dots">' . __( 'Pages:', 'the-bootstrap' ) . '</span></li>';
 			for ( $i = 1; $i < ($numpages + 1); $i++ ) {
 				$j = str_replace( '%', $i, $pagelink );
 				if ( ($i != $page) || ((!$more) && ($page!=1)) ) {
@@ -176,7 +176,7 @@ function the_bootstrap_link_pages( $args = array() ) {
 			$output .= '</ul></nav>';
 		} else {
 			if ( $more ) {
-				$output .= '<nav class="pagination clear"><ul><li><span class="dots">' . __('Pages:', 'the-bootstrap') . '</span></li>';
+				$output .= '<nav class="pagination pagination-small clear"><ul><li><span class="dots">' . __( 'Pages:', 'the-bootstrap' ) . '</span></li>';
 				$i = $page - 1;
 				if ( $i && $more ) {
 					$output .= '<li>' . _wp_link_page( $i ) . $previouspagelink. '</a></li>';
@@ -210,7 +210,7 @@ if ( ! function_exists( 'the_bootstrap_navbar_searchform' ) ) :
 * @return	void
 */
 function the_bootstrap_navbar_searchform( $echo = true ) {
-	$searchform = '	<form id="searchform" class="navbar-search pull-right" method="get" action="' . esc_url( home_url( '/' ) ) . '">
+	$searchform = '	<form id="searchform" class="navbar-search" method="get" action="' . esc_url( home_url( '/' ) ) . '">
 						<label for="s" class="assistive-text hidden">' . __( 'Search', 'the-bootstrap' ) . '</label>
 						<input type="search" class="search-query" name="s" id="s" placeholder="' . esc_attr__( 'Search', 'the-bootstrap' ) . '" />
 					</form>';
@@ -233,13 +233,13 @@ if ( ! function_exists( 'the_bootstrap_navbar_class' ) ) :
  * @return	void
  */
 function the_bootstrap_navbar_class() {
-	$classes	=	array( 'navbar' );
+	$classes = array( 'navbar' );
 
 	if ( 'static' != the_bootstrap_options()->navbar_position )
-		$classes[]	=	the_bootstrap_options()->navbar_position;
+		$classes[] = the_bootstrap_options()->navbar_position;
 
 	if ( the_bootstrap_options()->navbar_inverse )
-		$classes[]	=	'navbar-inverse';
+		$classes[] = 'navbar-inverse';
 
 	apply_filters( 'the_bootstrap_navbar_classes', $classes );
 

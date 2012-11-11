@@ -22,17 +22,19 @@ get_header(); ?>
 			comments_template();
 		} ?>
 
-		<nav id="nav-single" class="pager">
+		<nav id="nav-single">
 			<h3 class="assistive-text"><?php _e( 'Post navigation', 'the-bootstrap' ); ?></h3>
-			<?php
-			previous_post_link( '%link', sprintf(
-				'<span class="previous"><span class="meta-nav">&larr;</span> %1$s</span>',
-				__( 'Previous Post', 'the-bootstrap' )
-			) );
-			next_post_link( '%link', sprintf(
-				'<span class="next">%1$s <span class="meta-nav">&rarr;</span></span>',
-				__( 'Next Post', 'the-bootstrap' )
-			) ); ?>
+			<ul class="pager">
+				<?php
+				previous_post_link( '<li class="previous">%link</li>', sprintf(
+					'<span class="meta-nav">&larr;</span> %1$s',
+					__( 'Previous Post', 'the-bootstrap' )
+				) );
+				next_post_link( '<li class="next">%link</li>', sprintf(
+					'%1$s <span class="meta-nav">&rarr;</span>',
+					__( 'Next Post', 'the-bootstrap' )
+				) ); ?>
+			</ul>
 		</nav><!-- #nav-single -->
 
 		<?php tha_content_bottom(); ?>
