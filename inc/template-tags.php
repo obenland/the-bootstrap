@@ -1,9 +1,9 @@
 <?php
 /** template-tags.php
- * 
+ *
  * Implementation of the Custom Header feature
  * http://codex.wordpress.org/Custom_Headers
- * 
+ *
  * @author		Konstantin Obenland
  * @package		The Bootstrap
  * @since		1.2.4 - 07.04.2012
@@ -28,29 +28,29 @@ if ( ! function_exists( 'the_bootstrap_content_nav' ) ) :
 function the_bootstrap_content_nav() {
 	global $wp_query, $wp_rewrite;
 
-	$paged			=	( get_query_var( 'paged' ) ) ? intval( get_query_var( 'paged' ) ) : 1;
+	$paged        = ( get_query_var( 'paged' ) ) ? intval( get_query_var( 'paged' ) ) : 1;
 
-	$pagenum_link	=	html_entity_decode( get_pagenum_link() );
-	$query_args		=	array();
-	$url_parts		=	explode( '?', $pagenum_link );
-	
+	$pagenum_link = html_entity_decode( get_pagenum_link() );
+	$query_args   = array();
+	$url_parts    = explode( '?', $pagenum_link );
+
 	if ( isset( $url_parts[1] ) ) {
 		wp_parse_str( $url_parts[1], $query_args );
 	}
-	$pagenum_link	=	remove_query_arg( array_keys( $query_args ), $pagenum_link );
-	$pagenum_link	=	trailingslashit( $pagenum_link ) . '%_%';
-	
-	$format			=	( $wp_rewrite->using_index_permalinks() AND ! strpos( $pagenum_link, 'index.php' ) ) ? 'index.php/' : '';
-	$format			.=	$wp_rewrite->using_permalinks() ? user_trailingslashit( 'page/%#%', 'paged' ) : '?paged=%#%';
-	
+	$pagenum_link = remove_query_arg( array_keys( $query_args ), $pagenum_link );
+	$pagenum_link = trailingslashit( $pagenum_link ) . '%_%';
+
+	$format       = ( $wp_rewrite->using_index_permalinks() AND ! strpos( $pagenum_link, 'index.php' ) ) ? 'index.php/' : '';
+	$format      .= $wp_rewrite->using_permalinks() ? user_trailingslashit( 'page/%#%', 'paged' ) : '?paged=%#%';
+
 	$links	=	paginate_links( array(
-		'base'		=>	$pagenum_link,
-		'format'	=>	$format,
-		'total'		=>	$wp_query->max_num_pages,
-		'current'	=>	$paged,
-		'mid_size'	=>	3,
-		'type'		=>	'list',
-		'add_args'	=>	array_map( 'urlencode', $query_args )
+		'base'     => $pagenum_link,
+		'format'   => $format,
+		'total'    => $wp_query->max_num_pages,
+		'current'  => $paged,
+		'mid_size' => 3,
+		'type'     => 'list',
+		'add_args' => array_map( 'urlencode', $query_args )
 	) );
 
 	if ( $links ) {
@@ -92,15 +92,30 @@ if ( ! function_exists( 'the_bootstrap_posted_on' ) ) :
 * @return	void
 */
 function the_bootstrap_posted_on() {
-	printf( __( '<span class="sep">Posted on </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'the-bootstrap' ),
-			esc_url( get_permalink() ),
-			esc_attr( get_the_time() ),
-			esc_attr( get_the_date( 'c' ) ),
-			esc_html( get_the_date() ),
-			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_attr( sprintf( __( 'View all posts by %s', 'the-bootstrap' ), get_the_author() ) ),
-			get_the_author()
+
+	$time_string = ( get_the_time( 'U' ) == get_the_modified_time( 'U' ) )
+				 ? '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s" pubdate>%4$s</time></a>'
+				 : '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published" datetime="%3$s" pubdate>%4$s</time><time class="assistive-text updated" datetime="%5$s">%6$s</time></a>';
+
+	$time = sprintf(
+		$time_string . '<span class="by-author"> <span class="sep">',
+		esc_url( get_permalink() ),
+		esc_attr( get_the_time() ),
+		esc_attr( get_the_date( 'c' ) ),
+		esc_html( get_the_date() ),
+		esc_attr( get_the_modified_date( 'c' ) ),
+		esc_html( get_the_modified_date() )
 	);
+
+	$author = sprintf(
+		'</span><span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span></span>',
+		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+		esc_attr( sprintf( __( 'View all posts by %s', 'the-bootstrap' ), get_the_author() ) ),
+		get_the_author()
+	);
+
+	printf( __( 'Posted on %1$s by %2$s', 'the-bootstrap' ), $time, $author );
+
 	if ( comments_open() AND ! post_password_required() ) { ?>
 		<span class="sep"> | </span>
 		<span class="comments-link">
@@ -129,13 +144,13 @@ if ( ! function_exists( 'the_bootstrap_link_pages' ) ) :
  * @return	string
  */
 function the_bootstrap_link_pages( $args = array() ) {
-	wp_link_pages( array( 'echo' => 0 ));
+	wp_link_pages( array( 'echo' => 0 ) );
 	$defaults = array(
-		'next_or_number'	=> 'number',
-		'nextpagelink'		=> __('Next page', 'the-bootstrap'),
-		'previouspagelink'	=> __('Previous page', 'the-bootstrap'),
-		'pagelink'			=> '%',
-		'echo'				=> true
+		'next_or_number'   => 'number',
+		'nextpagelink'     => __( 'Next page', 'the-bootstrap' ),
+		'previouspagelink' => __( 'Previous page', 'the-bootstrap' ),
+		'pagelink'         => '%',
+		'echo'             => true
 	);
 
 	$r = wp_parse_args( $args, $defaults );
@@ -147,7 +162,7 @@ function the_bootstrap_link_pages( $args = array() ) {
 	$output = '';
 	if ( $multipage ) {
 		if ( 'number' == $next_or_number ) {
-			$output .= '<nav class="pagination clear"><ul><li><span class="dots">' . __('Pages:', 'the-bootstrap') . '</span></li>';
+			$output .= '<nav class="pagination pagination-small clear"><ul><li><span class="dots">' . __( 'Pages:', 'the-bootstrap' ) . '</span></li>';
 			for ( $i = 1; $i < ($numpages + 1); $i++ ) {
 				$j = str_replace( '%', $i, $pagelink );
 				if ( ($i != $page) || ((!$more) && ($page!=1)) ) {
@@ -156,12 +171,12 @@ function the_bootstrap_link_pages( $args = array() ) {
 				if ($i == $page) {
 					$output .= '<li class="current"><span>' . $j . '</span></li>';
 				}
-				
+
 			}
 			$output .= '</ul></nav>';
 		} else {
 			if ( $more ) {
-				$output .= '<nav class="pagination clear"><ul><li><span class="dots">' . __('Pages:', 'the-bootstrap') . '</span></li>';
+				$output .= '<nav class="pagination pagination-small clear"><ul><li><span class="dots">' . __( 'Pages:', 'the-bootstrap' ) . '</span></li>';
 				$i = $page - 1;
 				if ( $i && $more ) {
 					$output .= '<li>' . _wp_link_page( $i ) . $previouspagelink. '</a></li>';
@@ -189,13 +204,13 @@ if ( ! function_exists( 'the_bootstrap_navbar_searchform' ) ) :
 *
 * @author	Konstantin Obenland
 * @since	1.5,0 - 14.05.2012
-* 
+*
 * @param	bool	$echo	Optional. Whether to echo the form
 *
 * @return	void
 */
 function the_bootstrap_navbar_searchform( $echo = true ) {
-	$searchform = '	<form id="searchform" class="navbar-search pull-right" method="get" action="' . esc_url( home_url( '/' ) ) . '">
+	$searchform = '	<form id="searchform" class="navbar-search" method="get" action="' . esc_url( home_url( '/' ) ) . '">
 						<label for="s" class="assistive-text hidden">' . __( 'Search', 'the-bootstrap' ) . '</label>
 						<input type="search" class="search-query" name="s" id="s" placeholder="' . esc_attr__( 'Search', 'the-bootstrap' ) . '" />
 					</form>';
@@ -218,14 +233,14 @@ if ( ! function_exists( 'the_bootstrap_navbar_class' ) ) :
  * @return	void
  */
 function the_bootstrap_navbar_class() {
-	$classes	=	array( 'navbar' );
+	$classes = array( 'navbar' );
 
 	if ( 'static' != the_bootstrap_options()->navbar_position )
-		$classes[]	=	the_bootstrap_options()->navbar_position;
-	
+		$classes[] = the_bootstrap_options()->navbar_position;
+
 	if ( the_bootstrap_options()->navbar_inverse )
-		$classes[]	=	'navbar-inverse';
-	
+		$classes[] = 'navbar-inverse';
+
 	apply_filters( 'the_bootstrap_navbar_classes', $classes );
 
 	echo 'class="' . join( ' ', $classes ) . '"';
@@ -247,13 +262,13 @@ if ( ! function_exists( 'the_bootstrap_comments_link' ) ) :
  * @param	string	$more		The string to display when there are more than one comment
  * @param	string	$css_class	The CSS class to use for comments
  * @param	string	$none		The string to display when comments have been turned off
- * 
+ *
  * @return	void
  */
 function the_bootstrap_comments_link( $zero = false, $one = false, $more = false, $css_class = '', $none = false ) {
 	$number = get_comments_number();
 	$class  = empty( $css_class ) ? '' : ' class="' . esc_attr( $css_class ) . '"';
-	
+
 	if ( false === $zero ) $zero = __( 'No Comments' );
 	if ( false === $one  ) $one  = __( '1 Comment' );
 	if ( false === $more ) $more = __( '% Comments' );
@@ -268,12 +283,12 @@ function the_bootstrap_comments_link( $zero = false, $one = false, $more = false
 		echo '<span' . $class . '>' . __( 'Enter your password to view comments.' ) . '</span>';
 		return;
 	}
-	
+
 	if ( 1 < $number )
 		$comments_number = str_replace( '%', number_format_i18n( $number ), $more );
 	else
 		$comments_number = ( 0 == $number ) ? $zero : $one;
-	
+
 	$link = sprintf( '<a href="%1$s"%2$s%3s title="%4$s">%5$s</a>',
 		( 0 == $number ) ? '#respond' : '#comments',
 		$class,
@@ -281,7 +296,7 @@ function the_bootstrap_comments_link( $zero = false, $one = false, $more = false
 		esc_attr( sprintf( __( 'Comment on %s' ), the_title_attribute( array('echo' => 0 ) ) ) ),
 		apply_filters( 'comments_number', $comments_number, $number )
 	);
-	
+
 	echo apply_filters( 'the_bootstrap_comments_link', $link, $zero, $one, $more, $css_class, $none );
 }
 endif;
