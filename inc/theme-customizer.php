@@ -50,6 +50,7 @@ function the_bootstrap_customize_register( $wp_customize ) {
 		'type'		=>	'radio',
 		'choices'	=>	array(
 			'twitter-bootstrap'   => 'Twitter',
+			'child-bootstrap'     => 'Child Theme',
 			'amelia-bootstrap'    => 'Amelia',
 			'cerulean-bootstrap'  => 'Cerulean',
 			'cyborg-bootstrap'    => 'Cyborg',
