@@ -221,13 +221,23 @@ function the_bootstrap_register_scripts_styles() {
 		$bootswatch_version = '2.2.1';
 		$protocol = is_ssl() ? 'https' : 'http';
 		$suffix = ( defined( 'SCRIPT_DEBUG' ) AND SCRIPT_DEBUG ) ? '' : '.min';
+		
+		/**
+		 *  Determine correct uri for bootstrap css and js based on options
+		 */
+		if (the_bootstrap_options()->bootswatch == 'child-bootstrap'){
+			$dir_uri = get_stylesheet_directory_uri();
+		}
+		else{
+			$dir_uri = get_template_directory_uri();
+		}
 
 		/**
 		 * Scripts
 		 */
 		wp_register_script(
 			'twitter-bootstrap',
-			get_template_directory_uri() . "/js/bootstrap{$suffix}.js",
+			$dir_uri . "/js/bootstrap{$suffix}.js",
 			array('jquery'),
 			'2.1.1',
 			true
@@ -246,68 +256,68 @@ function the_bootstrap_register_scripts_styles() {
 		 */
 		switch ( the_bootstrap_options()->bootswatch ) {
 			case 'twitter-bootstrap':
-				wp_register_style( 'twitter-bootstrap', get_template_directory_uri() . "/css/bootstrap{$suffix}.css", array(), '2.1.1' );
+				wp_register_style( 'twitter-bootstrap', $dir_uri . "/css/bootstrap{$suffix}.css", array(), '2.1.1' );
 				break;
 
 			case 'amelia-bootstrap':
 				wp_register_style( 'amelia-lobster-font', "$protocol://fonts.googleapis.com/css?family=Lobster", array(), null );
 				wp_register_style( 'amelia-cabin-font', "$protocol://fonts.googleapis.com/css?family=Cabin:400,700", array(), null );
-				wp_register_style( 'amelia-bootstrap', get_template_directory_uri() . "/css/amelia{$suffix}.css", array( 'amelia-lobster-font', 'amelia-cabin-font' ), $bootswatch_version );
+				wp_register_style( 'amelia-bootstrap', $dir_uri . "/css/amelia{$suffix}.css", array( 'amelia-lobster-font', 'amelia-cabin-font' ), $bootswatch_version );
 				break;
 
 			case 'cerulean-bootstrap':
 				wp_register_style( 'cerulean-telex-font', "$protocol://fonts.googleapis.com/css?family=Telex", array(), null );
-				wp_register_style( 'cerulean-bootstrap', get_template_directory_uri() . "/css/cerulean{$suffix}.css", array( 'cerulean-telex-font' ), $bootswatch_version );
+				wp_register_style( 'cerulean-bootstrap', $dir_uri . "/css/cerulean{$suffix}.css", array( 'cerulean-telex-font' ), $bootswatch_version );
 				break;
 
 			case 'cyborg-bootstrap':
 				wp_register_style( 'cyborg-droid-sans-font', "$protocol://fonts.googleapis.com/css?family=Droid+Sans:400,700", array(), null );
-				wp_register_style( 'cyborg-bootstrap', get_template_directory_uri() . "/css/cyborg{$suffix}.css", array( 'cyborg-droid-sans-font' ), $bootswatch_version );
+				wp_register_style( 'cyborg-bootstrap', $dir_uri . "/css/cyborg{$suffix}.css", array( 'cyborg-droid-sans-font' ), $bootswatch_version );
 				break;
 
 			case 'journal-bootstrap':
 				wp_register_style( 'journal-news-cycle-font', "$protocol://fonts.googleapis.com/css?family=News+Cycle:400,700", array(), null );
-				wp_register_style( 'journal-bootstrap', get_template_directory_uri() . "/css/journal{$suffix}.css", array( 'journal-news-cycle-font' ), $bootswatch_version );
+				wp_register_style( 'journal-bootstrap', $dir_uri . "/css/journal{$suffix}.css", array( 'journal-news-cycle-font' ), $bootswatch_version );
 				break;
 
 			case 'readable-bootstrap':
-				wp_register_style( 'readable-bootstrap', get_template_directory_uri() . "/css/readable{$suffix}.css", array(), $bootswatch_version );
+				wp_register_style( 'readable-bootstrap', $dir_uri . "/css/readable{$suffix}.css", array(), $bootswatch_version );
 				break;
 
 			case 'simplex-bootstrap':
 				wp_register_style( 'simplex-josefin-sans-font', "$protocol://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700", array(), null );
-				wp_register_style( 'simplex-bootstrap', get_template_directory_uri() . "/css/simplex{$suffix}.css", array( 'simplex-josefin-sans-font' ), $bootswatch_version );
+				wp_register_style( 'simplex-bootstrap', $dir_uri . "/css/simplex{$suffix}.css", array( 'simplex-josefin-sans-font' ), $bootswatch_version );
 				break;
 
 			case 'slate-bootstrap':
-				wp_register_style( 'slate-bootstrap', get_template_directory_uri() . "/css/slate{$suffix}.css", array(), $bootswatch_version );
+				wp_register_style( 'slate-bootstrap', $dir_uri . "/css/slate{$suffix}.css", array(), $bootswatch_version );
 				break;
 
 			case 'spacelab-bootstrap':
 				wp_register_style( 'spacelab-muli-font', "$protocol://fonts.googleapis.com/css?family=Muli", array(), null );
-				wp_register_style( 'spacelab-bootstrap', get_template_directory_uri() . "/css/spacelab{$suffix}.css", array( 'spacelab-muli-font' ), $bootswatch_version );
+				wp_register_style( 'spacelab-bootstrap', $dir_uri . "/css/spacelab{$suffix}.css", array( 'spacelab-muli-font' ), $bootswatch_version );
 				break;
 
 			case 'spruce-bootstrap':
 				wp_register_style( 'spruce-josefin-slab-font', "$protocol://fonts.googleapis.com/css?family=Josefin+Slab:400,700", array(), null );
-				wp_register_style( 'spruce-bootstrap', get_template_directory_uri() . "/css/spruce{$suffix}.css", array( 'spruce-josefin-slab-font' ), $bootswatch_version );
+				wp_register_style( 'spruce-bootstrap', $dir_uri . "/css/spruce{$suffix}.css", array( 'spruce-josefin-slab-font' ), $bootswatch_version );
 				break;
 
 			case 'superhero-bootstrap':
 				wp_register_style( 'superhero-oswald-font', "$protocol://fonts.googleapis.com/css?family=Oswald", array(), null );
 				wp_register_style( 'superhero-noticia-text-font', "$protocol://fonts.googleapis.com/css?family=Noticia+Text", array(), null );
-				wp_register_style( 'superhero-bootstrap', get_template_directory_uri() . "/css/superhero{$suffix}.css", array( 'superhero-oswald-font', 'superhero-noticia-text-font' ), $bootswatch_version );
+				wp_register_style( 'superhero-bootstrap', $dir_uri . "/css/superhero{$suffix}.css", array( 'superhero-oswald-font', 'superhero-noticia-text-font' ), $bootswatch_version );
 				break;
 
 			case 'united-bootstrap':
 				wp_register_style( 'united-ubuntu-font', "$protocol://fonts.googleapis.com/css?family=Ubuntu", array(), null );
-				wp_register_style( 'united-bootstrap', get_template_directory_uri() . "/css/united{$suffix}.css", array( 'united-ubuntu-font' ), $bootswatch_version );
+				wp_register_style( 'united-bootstrap', $dir_uri . "/css/united{$suffix}.css", array( 'united-ubuntu-font' ), $bootswatch_version );
 				break;
 		}
 
 		wp_enqueue_style(
 			'twitter-bootstrap-responsive',
-			get_template_directory_uri() . "/css/bootstrap-responsive{$suffix}.css",
+			$dir_uri . "/css/bootstrap-responsive{$suffix}.css",
 			array( the_bootstrap_options()->bootswatch ),
 			'2.1.1'
 		);
