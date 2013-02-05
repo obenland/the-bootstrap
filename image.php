@@ -33,7 +33,7 @@ the_post();
 <section id="primary" class="image-attachment span12">
 
 	<?php tha_content_before(); ?>
-	<div id="content" role="main">
+	<main id="content" role="main">
 		<?php tha_content_top(); ?>
 
 		<nav id="nav-single" class="well clearfix">
@@ -101,7 +101,7 @@ the_post();
 		<?php tha_entry_after(); ?>
 		
 		<?php tha_content_bottom(); ?>
-	</div><!-- #content -->
+	</main><!-- #content -->
 	<?php tha_content_after(); ?>
 </section><!-- #primary -->
 <div id="attachment-comment" class="span8"><?php comments_template(); ?></div>
