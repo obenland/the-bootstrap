@@ -13,7 +13,7 @@ get_header(); ?>
 <section id="primary" class="span8">
 
 	<?php tha_content_before(); ?>
-	<div id="content" role="main">
+	<main id="content" role="main">
 		<?php tha_content_top(); ?>
 		
 		<?php tha_entry_before(); ?>
@@ -51,7 +51,7 @@ get_header(); ?>
 		<?php tha_entry_after(); ?>
 		
 		<?php tha_content_bottom(); ?>
-	</div><!-- #content -->
+	</main><!-- #content -->
 	<?php tha_content_after(); ?>
 </section><!-- #primary -->
 
