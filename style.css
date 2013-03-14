@@ -2,10 +2,10 @@
  * 
  * Theme Name:	The Bootstrap
  * Theme URI:	http://en.wp.obenland.it/the-bootstrap/
- * Description:	A WordPress Theme based on Bootstrap, from Twitter. It features a 100% responsive layout, a superb gallery and image handling with a custom image meta widget and carousel for gallery post-formats, the Glyphicon Icon set, a clean and simple design and a lot more! The Bootstrap runs on HTML5 and CSS3, a 12-column grid and comes with custom jQuery plugins. See the Bootstrap documentation on GitHub for reference.
+ * Description:	A WordPress Theme based on Bootstrap, from Twitter. It features a 100% responsive layout, a superb gallery and image handling with a custom image meta widget and carousel for gallery post-formats, the Glyphicon Icon set, a clean and simple design and a lot more! The Bootstrap runs on HTML5 and CSS3, a 12-column grid and comes with custom jQuery plugins, eleven Bootswatch skins and is translated in ten languages. See the Bootstrap documentation on GitHub for reference.
  * Author:		Konstantin Obenland
  * Author URI:	http://en.wp.obenland.it/
- * Version:		2.0.0
+ * Version:		3.0.0
  * Tags:		black, blue, white, light, custom-background, custom-header, custom-menu, featured-images, flexible-header, flexible-width, full-width-template, left-sidebar, microformats, post-formats, right-sidebar, sticky-post, theme-options, threaded-comments, translation-ready, two-columns
  * Text Domain:	the-bootstrap
  * Domain Path:	/lang
@@ -33,6 +33,10 @@
 
 /* =Elements
 -------------------------------------------------------------- */
+
+body {
+	background: inherit;
+}
 
 blockquote cite:before {
     content: '\2014 \00A0';
@@ -192,7 +196,7 @@ article.page {
 	margin: 0 20px 20px 0;
 }
 
-.entry-attachment .thumbnail.attachment-table {
+.thumbnail.attachment-table {
 	display: table;
 	margin: 0 auto;
 }
@@ -291,6 +295,7 @@ table .label {
 }
 
 .navbar-search {
+	float: right;
 	height: 34px;
 }
 
@@ -321,6 +326,11 @@ table .label {
 .alignleft {
     float:left;
     margin: 0 20px 20px 0;
+}
+.thumbnail > img.aligncenter,
+.thumbnail > img.alignleft,
+.thumbnail > img.alignright {
+	margin: 0;
 }
 
 .wp-caption {
@@ -455,6 +465,7 @@ table .label {
 		display: table;
 	}
 }
+
 
 
 /* End of file style.css */
