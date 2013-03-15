@@ -258,7 +258,7 @@ function the_bootstrap_register_scripts_styles() {
 		wp_register_style(
 			'the-bootstrap',
 			get_template_directory_uri() . "/style{$suffix}.css",
-			array('tw-bootstrap', 'tw-bootstrap-mq'),
+			array('tw-bootstrap'),
 			$theme_version
 		);
 	}
