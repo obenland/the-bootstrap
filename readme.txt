@@ -33,9 +33,11 @@ I will be more than happy to update the Theme with new locales, as soon as I rec
 Currently available in:
 
 * Armenian
+* Catalan
 * Dutch
 * English
 * French
+* Galician
 * German
 * Hungarian
 * Italian
@@ -79,6 +81,7 @@ THIS IS A MAJOR RELEASE, BREAKING BACKWARD COMPATIBILITY IN SOME PLACES
 * Added Italian translation. Props gimmy.
 * Added Spanish translation. Props Zerquix18.
 * Added Portuguese translation. Props raphaelsuzuki.
+* Added Catalan and Galician translation. Props joker-x.
 
 = 2.0.0 =
 

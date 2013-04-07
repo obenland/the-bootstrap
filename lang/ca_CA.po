@@ -1,0 +1,541 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: tema-hacktivistas\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-04 03:49+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: dardok <dardok@riseup.net>\n"
+"Language-Team: hacktivistas <ivan@sinanimodelucro.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: SPAIN\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: author.php:23
+#, php-format
+msgid "Author Archives: %s"
+msgstr "Arxiu per autor: %s"
+
+#: author.php:31
+#, php-format
+msgid "About %s"
+msgstr "Sobre %s"
+
+#: header.php:57
+msgid "Main menu"
+msgstr "Menú principal"
+
+#: header.php:58
+msgid "Skip to primary content"
+msgstr "Saltar al contingut principal"
+
+#: header.php:59
+msgid "Skip to secondary content"
+msgstr "Saltar al contingut secundari"
+
+#: footer.php:24
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#: footer.php:35
+#, php-format
+msgid "%d queries. %s seconds."
+msgstr "%d consultes en %s segons."
+
+#: tag.php:23
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Arxiu por etiquetes: %s"
+
+#: archive.php:30
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Arxiu diari: %s"
+
+#: archive.php:32
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Arxiu mensual: %s"
+
+#: archive.php:34
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Arxiu anual: %s"
+
+#: archive.php:36
+msgid "Blog Archives"
+msgstr "Arxiu del Blog"
+
+#: category.php:23
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Arxiu per categoríes: %s"
+
+#: 404.php:23
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "¡Fot el camp!"
+
+#: 404.php:27
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help."
+msgstr "No trobem res del que estas buscant. Proba amb algun enllaç de sota."
+
+#: 404.php:35
+msgid "Most Used Categories"
+msgstr "Categoríes més utilitzades"
+
+#: search.php:21
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Resultat de la búsqueda: %s"
+
+#: single.php:26
+msgid "Post navigation"
+msgstr "Navegació d'articles"
+
+#: single.php:27
+msgid "Next Post"
+msgstr "Article següent"
+
+#: single.php:28
+msgid "Previous Post"
+msgstr "Article previ"
+
+#: searchform.php:12
+msgid "Search"
+msgstr "Buscar"
+
+#: searchform.php:15
+msgid "Go"
+msgstr "Anar"
+
+#: image.php:54
+msgid "Edit"
+msgstr "Editar"
+
+#: image.php:55
+msgid "Leave a comment"
+msgstr "Deixar un comentari"
+
+#: image.php:57
+msgid "&laquo; Previous Photo"
+msgstr "&laquo; Foto anterior"
+
+#: image.php:59
+msgid "Next Photo &raquo;"
+msgstr "Foto següent &raquo;"
+
+#: functions.php:81
+msgid "Main Navigation"
+msgstr "Menú de navegació"
+
+#: functions.php:82
+msgid "Header Menu"
+msgstr "Menú de capçalera"
+
+#: functions.php:83
+msgid "Footer Menu"
+msgstr "Menú de peu de página"
+
+#: functions.php:181
+msgid "Main Sidebar"
+msgstr "Panell lateral"
+
+#: functions.php:190
+msgid "Image Sidebar"
+msgstr "Panell d'imatge"
+
+#: functions.php:191
+msgid "Shown on image attachment pages."
+msgstr "Mostar a págines adjuntes d'imatge."
+
+#: functions.php:405
+#: partials/content-aside.php:31
+#: partials/content.php:45
+#: partials/content-page.php:22
+#: partials/content-image.php:20
+#: partials/content-status.php:22
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Continua llegint <span class=\"meta-nav\">&rarr;</span>"
+
+#: functions.php:502
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Aquest article està protegit amb contrasenya. Introdueix-la per a veure els comentaris."
+
+#: functions.php:512
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Un pensament en &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s pensaments en &ldquo;%2$s&rdquo;"
+
+#: functions.php:542
+msgid "Comments are closed."
+msgstr "Els comentaris estan tancats"
+
+#: functions.php:562
+#, php-format
+msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes: %s"
+msgstr "Pots utilitzar aquestes etiquetes <abbr title=\"HyperText Markup Language\">HTML</abbr>: %s"
+
+#: functions.php:564
+msgid "Leave a reply"
+msgstr "Deixar una resposta"
+
+#: functions.php:565
+#, php-format
+msgid "Leave a reply to %s"
+msgstr "Deixar una resposta a %s"
+
+#: functions.php:566
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Necessites <a href=\"%s\">ingressar</a> per enviar un comentari."
+
+#: functions.php:567
+#, php-format
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out?</a>"
+msgstr "Ingressat com <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Sortir del teu compte\">¿Sortir?</a>"
+
+#: functions.php:597
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: functions.php:614
+#, php-format
+msgid "%1$s <span class=\"says\">said</span> on %2$s:"
+msgstr "%1$s <span class=\"says\">va dir</span> a %2$s:"
+
+#: functions.php:620
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s a %2$s"
+
+#: functions.php:627
+msgid "Your comment is awaiting moderation."
+msgstr "El teu comentari es publicarà quan l'aprovi un moderador."
+
+#: functions.php:636
+msgid "Reply <span>&darr;</span>"
+msgstr "Respondre <span>&darr;</span>"
+
+#: functions.php:698
+msgid "Name"
+msgstr "Nom"
+
+#: functions.php:701
+#: functions.php:727
+msgid "required"
+msgstr "obligatori"
+
+#: functions.php:724
+msgid "Email"
+msgstr "Adreça electrònica"
+
+#: functions.php:727
+msgid "will not be published"
+msgstr "no serà publicat"
+
+#: functions.php:748
+msgid "Website"
+msgstr "Pàgina web"
+
+#: functions.php:918
+#, php-format
+msgid "%d comment"
+msgid_plural "%d comments"
+msgstr[0] "%d comentari"
+msgstr[1] "%d comentaris"
+
+#: functions.php:980
+msgid "This post is password protected. To view it please enter your password below:"
+msgstr "Aquest article està protegit amb contrasenya:"
+
+#: functions.php:980
+msgid "Password:"
+msgstr "Contrasenya:"
+
+#: functions.php:980
+msgid "Submit"
+msgstr "Enviar"
+
+#: partials/content-not-found.php:17
+msgid "Nothing Found"
+msgstr "No trobat"
+
+#: partials/content-not-found.php:22
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Cap resultat ha coincidit amb els seus criteris de búsqueda. Intenta-ho amb unes altres paraules."
+
+#: partials/content-not-found.php:24
+msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
+msgstr "Disculpi, no han sigut trobats resultats a l'arxiu requerit. Potser buscant trobi relacions."
+
+#: partials/content.php:20
+msgid "Featured"
+msgstr "Destacada"
+
+#: partials/content.php:55
+#: partials/content-single.php:33
+#, php-format
+msgid "Posted in %1$s."
+msgstr "Publicat a %1$s."
+
+#: partials/content-single.php:35
+#, php-format
+msgid "Tagged %1$s."
+msgstr "Etiquetat %1$s."
+
+#: partials/content-single.php:53
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Veure totes les entrades per %s <span class=\"meta-nav\">&rarr;</span>"
+
+#: partials/content-gallery.php:52
+#, php-format
+msgid "This gallery contains <strong>%1$s photo</strong>."
+msgid_plural "This gallery contains <strong>%1$s photos</strong>."
+msgstr[0] "Aquesta galería conté <strong>%1$s foto</strong>."
+msgstr[1] "Aquesta galería conté <strong>%1$s fotos</strong>."
+
+#: inc/the-bootstrap-gallery-widget.php:28
+msgid "The Bootstrap Gallery Widget"
+msgstr "Widget galería bootstrap"
+
+#: inc/the-bootstrap-gallery-widget.php:30
+msgid "Displays gallery images of a specified post with the Gallery post format."
+msgstr "Mostrar galería d'imatges d'una entrada específica amb format d'entrada com galería"
+
+#: inc/the-bootstrap-gallery-widget.php:142
+#, php-format
+msgid "No galleries have been created yet. <a href=\"%s\">Create some</a>."
+msgstr "Encara no han sigut trobades galeries. <a href=\"%s\">Crear-ne una</a>."
+
+#: inc/the-bootstrap-gallery-widget.php:147
+msgid "Select Gallery:"
+msgstr "Seleccions galería:"
+
+#: inc/the-bootstrap-image-meta-widget.php:28
+msgid "The Bootstrap Image Meta Widget"
+msgstr "Widget meta imatge bootstrap"
+
+#: inc/the-bootstrap-image-meta-widget.php:30
+msgid "Displays meta information on image attachment pages"
+msgstr "Mostrar informació meta sobre l'imatge a les pàgines d'imatge adjunta"
+
+#: inc/the-bootstrap-image-meta-widget.php:52
+msgid "Info"
+msgstr "Info"
+
+#: inc/the-bootstrap-image-meta-widget.php:60
+msgid "Created:"
+msgstr "Creat:"
+
+#: inc/the-bootstrap-image-meta-widget.php:64
+msgid "Full size:"
+msgstr "Tamany complet:"
+
+#: inc/the-bootstrap-image-meta-widget.php:65
+#, php-format
+msgid "%s pixels"
+msgstr "%s píxels"
+
+#: inc/the-bootstrap-image-meta-widget.php:68
+msgid "Aperture:"
+msgstr "Obertura:"
+
+#: inc/the-bootstrap-image-meta-widget.php:73
+msgid "Focal length:"
+msgstr "Distància focal:"
+
+#: inc/the-bootstrap-image-meta-widget.php:78
+msgid "Iso:"
+msgstr "Iso:"
+
+#: inc/the-bootstrap-image-meta-widget.php:83
+msgid "Shutter:"
+msgstr "Obturador:"
+
+#: inc/the-bootstrap-image-meta-widget.php:90
+#: inc/the-bootstrap-image-meta-widget.php:92
+#: inc/the-bootstrap-image-meta-widget.php:95
+#, php-format
+msgid "%d sec."
+msgstr "%d seg."
+
+#: inc/the-bootstrap-image-meta-widget.php:102
+msgid "Camera:"
+msgstr "Càmera:"
+
+#: inc/the-bootstrap-image-meta-widget.php:151
+msgid "Title:"
+msgstr "Títol:"
+
+#: inc/theme-options.php:22
+#: inc/theme-options.php:23
+#: inc/theme-options.php:145
+msgid "Theme Options"
+msgstr "Opcions de la plantilla"
+
+#: inc/theme-options.php:79
+#: inc/theme-customizer.php:47
+msgid "Default Layout"
+msgstr "Disposició per defecte"
+
+#: inc/theme-options.php:80
+msgid "Navigation Bar"
+msgstr "Barra de Navegació"
+
+#: inc/theme-options.php:84
+#: inc/theme-customizer.php:59
+msgid "Add site name to navigation bar."
+msgstr "Afegir nom del lloc a la barra de navegació."
+
+#: inc/theme-options.php:89
+#: inc/theme-customizer.php:67
+msgid "Add searchform to navigation bar."
+msgstr "Afegir formulari de búsqueda a la barra de navegació."
+
+#: inc/theme-options.php:92
+#: inc/theme-customizer.php:83
+msgid "Navigation Bar Position"
+msgstr "Posició de la barra de navegació"
+
+#: inc/theme-options.php:97
+#: inc/theme-customizer.php:88
+msgid "Static."
+msgstr "Estàtica"
+
+#: inc/theme-options.php:101
+#: inc/theme-customizer.php:89
+msgid "Fixed on top."
+msgstr "Fixat a dalt."
+
+#: inc/theme-options.php:105
+#: inc/theme-customizer.php:90
+msgid "Fixed at bottom."
+msgstr "Fixat a baix."
+
+#: inc/theme-options.php:166
+#: inc/theme-customizer.php:52
+msgid "Content on left"
+msgstr "Contingut cap a l'esquerra"
+
+#: inc/theme-options.php:170
+#: inc/theme-customizer.php:53
+msgid "Content on right"
+msgstr "Contingut cap a la dreta"
+
+#: inc/theme-options.php:302
+#, php-format
+msgid "Settings saved. <a href=\"%s\">Visit your site</a> to see how it looks."
+msgstr "Preferències guardades. <a href=\"%s\">Visiti el lloc</a> per veure com llueix ara."
+
+#: inc/theme-options.php:340
+msgid "Or you could:"
+msgstr "O tu podríes:"
+
+#: inc/theme-options.php:342
+msgid "Rate the Theme 5&#9733; on WordPress.org"
+msgstr "Qualifica aquest theme &#9733; a wordpress.org"
+
+#: inc/theme-options.php:343
+msgid "Blog about it &amp; link to the Theme page"
+msgstr "Sobre aquest blog &amp; enllaç a la pàgina del theme"
+
+#: inc/theme-options.php:375
+msgid "No news items, feed might be broken..."
+msgstr "No hi nous temes, el 'feed' podría estar trencat... "
+
+#: inc/theme-options.php:381
+msgid "Follow Konstantin on Twitter"
+msgstr "Segueix a Konstantin a twitter"
+
+#: inc/theme-options.php:382
+msgid "Subscribe via RSS"
+msgstr "Subscriures vía RSS"
+
+#: inc/theme-customizer.php:28
+msgid "Layout"
+msgstr "Plantilla"
+
+#: inc/theme-customizer.php:32
+msgid "Navbar Options"
+msgstr "Opcions de la barra de navegació"
+
+#: inc/theme-customizer.php:75
+msgid "Use inverse color on navigation bar."
+msgstr "Utilitzar color invers a la barra de navegació."
+
+#: inc/template-tags.php:75
+msgid "Comment navigation"
+msgstr "Navegació de comentaris."
+
+#: inc/template-tags.php:76
+msgid "&larr; Newer Comments"
+msgstr "&larr; Comentaris més nous."
+
+#: inc/template-tags.php:77
+msgid "Older Comments &rarr;"
+msgstr "Comentaris més antics &rarr;"
+
+#: inc/template-tags.php:95
+#, php-format
+msgid "<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
+msgstr "<span class=\"sep\"></span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> por </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
+
+#: inc/template-tags.php:101
+#, php-format
+msgid "View all posts by %s"
+msgstr "Veure totes les entrades de %s"
+
+#: inc/template-tags.php:107
+msgid "<strong>1</strong> Reply"
+msgstr "<strong>1</strong> Resposta"
+
+#: inc/template-tags.php:107
+msgid "<strong>%</strong> Replies"
+msgstr "<strong>%</strong> Respostes"
+
+#: inc/template-tags.php:135
+msgid "Next page"
+msgstr "Pàgina següent"
+
+#: inc/template-tags.php:136
+msgid "Previous page"
+msgstr "Pàgina anterior"
+
+#: inc/template-tags.php:150
+#: inc/template-tags.php:164
+msgid "Pages:"
+msgstr "Pàgines:"
+
+#: inc/template-tags.php:257
+msgid "No Comments"
+msgstr "Sense comentaris"
+
+#: inc/template-tags.php:258
+msgid "1 Comment"
+msgstr "1 Comentari"
+
+#: inc/template-tags.php:259
+msgid "% Comments"
+msgstr "% Comentaris"
+
+#: inc/template-tags.php:260
+msgid "Comments Off"
+msgstr "Comentaris tancats"
+
+#: inc/template-tags.php:268
+msgid "Enter your password to view comments."
+msgstr "Introdueix la teva contrasenya per veure els comentaris."
+
+#: inc/template-tags.php:281
+#, php-format
+msgid "Comment on %s"
+msgstr "Comentari sobre %s"
+
