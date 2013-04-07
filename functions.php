@@ -1138,5 +1138,11 @@ function _the_bootstrap_version() {
 }
 
 
+/**
+ * Load Jetpack compatibility file.
+ */
+require_once( get_template_directory() . '/inc/jetpack.php' );
+
+
 /* End of file functions.php */
 /* Location: ./wp-content/themes/the-bootstrap/functions.php */
