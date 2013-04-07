@@ -41,6 +41,7 @@ Currently available in:
 * Italian
 * Japanese
 * Spanish
+* Portugese (Brazilian)
 * Russian
 
 
@@ -74,9 +75,10 @@ For more information on SemVer, please visit [http://semver.org/].
 
 THIS IS A MAJOR RELEASE, BREAKING BACKWARD COMPATIBILITY IN SOME PLACES
 
-* Updated Twitter Bootstrap to 2.1.1
-* Added Italian translation. Props @gimmy
-* Added Spanish translation. Props @Zerquix18
+* Updated Twitter Bootstrap to 2.3.1
+* Added Italian translation. Props gimmy.
+* Added Spanish translation. Props Zerquix18.
+* Added Portuguese translation. Props raphaelsuzuki.
 
 = 2.0.0 =
 

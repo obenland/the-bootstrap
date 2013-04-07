@@ -41,6 +41,7 @@ Currently available in:
 * German
 * Hungarian
 * Japanese
+* Portugese (Brazilian)
 * Russian
 
 
