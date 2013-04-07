@@ -625,8 +625,8 @@ function the_bootstrap_comment_form_defaults( $defaults ) {
 		'comment_notes_before' => '',
 		'comment_notes_after'  => '<div class="form-allowed-tags control-group"><label class="control-label">' . sprintf( __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s', 'the-bootstrap' ), '</label><div class="controls"><pre>' . allowed_tags() . '</pre></div>' ) . '</div>
 								   <div class="form-actions">',
-		'title_reply'          => '<legend>' . __( 'Leave a reply', 'the-bootstrap' ) . '</legend>',
-		'title_reply_to'       => '<legend>' . __( 'Leave a reply to %s', 'the-bootstrap' ). '</legend>',
+		'title_reply'          => '<span class="legend">' . __( 'Leave a reply', 'the-bootstrap' ) . '</span>',
+		'title_reply_to'       => '<span class="legend">' . __( 'Leave a reply to %s', 'the-bootstrap' ). '</span>',
 		'must_log_in'          => '<div class="must-log-in control-group controls">' . sprintf( __( 'You must be <a href="%s">logged in</a> to post a comment.', 'the-bootstrap' ), wp_login_url( apply_filters( 'the_permalink', get_permalink( get_the_ID() ) ) ) ) . '</div>',
 		'logged_in_as'         => '<div class="logged-in-as control-group controls">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>', 'the-bootstrap' ), admin_url( 'profile.php' ), wp_get_current_user()->display_name, wp_logout_url( apply_filters( 'the_permalink', get_permalink( get_the_ID() ) ) ) ) . '</div>',
 	), $defaults );
@@ -1039,7 +1039,7 @@ add_filter( 'img_caption_shortcode', 'the_bootstrap_img_caption_shortcode', 10, 
  * @return	string	The Bootstrap password form
  */
 function the_bootstrap_the_password_form( $form ) {
-	return '<form class="post-password-form form-horizontal" action="' . add_query_arg( array( 'action' => 'postpass' ), home_url( 'wp-login.php' ) ) . '" method="post"><legend>'. __( 'This post is password protected. To view it please enter your password below:', 'the-bootstrap' ) . '</legend><div class="control-group"><label class="control-label" for="post-password-' . get_the_ID() . '">' . __( 'Password:', 'the-bootstrap' ) .'</label><div class="controls"><input name="post_password" id="post-password-' . get_the_ID() . '" type="password" size="20" /></div></div><div class="form-actions"><button type="submit" class="post-password-submit submit btn btn-primary">' . __( 'Submit', 'the-bootstrap' ) . '</button></div></form>';
+	return '<form class="post-password-form form-horizontal" action="' . add_query_arg( array( 'action' => 'postpass' ), home_url( 'wp-login.php' ) ) . '" method="post"><p class="post-password-legend">'. __( 'This post is password protected. To view it please enter your password below:', 'the-bootstrap' ) . '</p><div class="control-group"><label class="control-label" for="post-password-' . get_the_ID() . '">' . __( 'Password:', 'the-bootstrap' ) .'</label><div class="controls"><input name="post_password" id="post-password-' . get_the_ID() . '" type="password" size="20" /></div></div><div class="form-actions"><button type="submit" class="post-password-submit submit btn btn-primary">' . __( 'Submit', 'the-bootstrap' ) . '</button></div></form>';
 }
 add_filter( 'the_password_form', 'the_bootstrap_the_password_form' );
 
