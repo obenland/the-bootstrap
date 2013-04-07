@@ -666,7 +666,7 @@ function the_bootstrap_comment( $comment, $args, $depth ) {
 		$offset	=	$depth - 1;
 		$span	=	7 - $offset; ?>
 
-		<li  id="li-comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
+		<li id="li-comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
 			<article id="comment-<?php comment_ID(); ?>" class="comment row">
 				<div class="comment-author-avatar span1<?php if ($offset) echo " offset{$offset}"; ?>">
 					<?php echo get_avatar( $comment, 70 ); ?>
@@ -685,7 +685,7 @@ function the_bootstrap_comment( $comment, $args, $depth ) {
 								)
 							);
 							edit_comment_link( __( 'Edit', 'the-bootstrap' ), '<span class="sep">&nbsp;</span><span class="edit-link label">', '</span>' ); ?>
-					</p><!-- .comment-author .vcard -->
+					</p><!-- .comment-author -->
 
 					<?php if ( ! $comment->comment_approved ) : ?>
 					<div class="comment-awaiting-moderation alert alert-info"><em><?php _e( 'Your comment is awaiting moderation.', 'the-bootstrap' ); ?></em></div>
@@ -702,7 +702,7 @@ function the_bootstrap_comment( $comment, $args, $depth ) {
 						'max_depth'  => $args['max_depth']
 					) ) ); ?>
 				</div><!-- .comment-content -->
-			</article><!-- #comment-<?php comment_ID(); ?> .comment -->
+			</article><!-- #comment-## -->
 
 	<?php endif; // comment_type
 }
