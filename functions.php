@@ -1070,32 +1070,27 @@ add_filter( 'widget_categories_dropdown_args', 'the_bootstrap_widget_categories_
 
 
 /**
- * Adds the .thumbnail class when images are sent to editor
+ * Adds the .thumbnail class when images are sent to editor.
  *
- * @author	Konstantin Obenland
- * @since	2.0.0 - 29.08.2012
+ * @author Konstantin Obenland
+ * @since  2.0.0 - 29.08.2012
  *
- * @param	string	$html
- * @param	int		$id
- * @param	string	$caption
- * @param	string	$title
- * @param	string	$align
- * @param	string	$url
- * @param	string	$size
- * @param	string	$alt
+ * @param  string $html
+ * @param  int    $id
+ * @param  string $caption
+ * @param  string $title
+ * @param  string $align
+ * @param  string $url
+ * @param  string $size
+ * @param  string $alt
  *
- * @return	string	Image HTML
+ * @return string Image HTML
  */
 function the_bootstrap_image_send_to_editor( $html, $id, $caption, $title, $align, $url, $size, $alt ) {
-	global $content_width;
-	list( $src, $width, $height ) = wp_get_attachment_image_src( $id, $size );
-	$center = ( 'center' == $align AND $width < $content_width ) ? ' attachment-table': '';
-
-	if ( $url ) {
-		$html = str_replace( '<a ', '<a class="clear thumbnail align'. $align . $center .'" ', $html );
-	} else {
+	if ( $url )
+		$html = str_replace( '<a ', '<a class="thumbnail align'. $align .'" ', $html );
+	else
 		$html = str_replace( 'class="', 'class="thumbnail ', $html );
-	}
 
 	return $html;
 }
