@@ -196,12 +196,8 @@ article.page {
 	margin: 0 20px 20px 0;
 }
 
-.thumbnail:not(.alignleft),
-.thumbnail:not(.alignright) {
-	display: table;
-}
-
 .thubmnail.aligncenter {
+	display: table;
 	margin: 0 auto;
 }
 
@@ -566,6 +562,20 @@ table .label {
 
 .superhero-bootstrap .pager span {
 	background-color: #45515F;
+}
+
+
+/* =JetPack
+-------------------------------------------------------------- */
+
+/* Hides navigation links and site footer when infinite scroll is active */
+.infinite-scroll .pagination,
+.infinite-scroll.neverending #colophon {
+	display: none;
+}
+/* Shows the footer again in case all posts have been loaded */
+.infinity-end.neverending #colophon {
+	display: block;
 }
 
 

@@ -20,7 +20,7 @@ get_header(); ?>
 	<?php tha_content_before(); ?>
 	<div id="content" role="main">
 		<?php tha_content_top();
-		
+
 		if ( have_posts() ) {
 			while ( have_posts() ) {
 				the_post();
@@ -31,7 +31,7 @@ get_header(); ?>
 		else {
 			get_template_part( '/partials/content', 'not-found' );
 		}
-	
+
 		tha_content_bottom(); ?>
 	</div><!-- #content -->
 	<?php tha_content_after(); ?>

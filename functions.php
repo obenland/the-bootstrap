@@ -822,22 +822,20 @@ add_filter( 'comment_form_field_url', 'the_bootstrap_comment_form_field_url');
  * Adjusts an attechment link to hold the class of 'thumbnail' and make it look
  * pretty
  *
- * @author	Konstantin Obenland
- * @since	1.0.0 - 05.02.2012
+ * @author Konstantin Obenland
+ * @since  1.0.0 - 05.02.2012
  *
- * @param	string	$link
- * @param	int		$id			Post ID.
- * @param	string	$size		Default is 'thumbnail'. Size of image, either array or string.
- * @param	bool	$permalink	Default is false. Whether to add permalink to image.
- * @param	bool	$icon		Default is false. Whether to include icon.
- * @param	string	$text		Default is false. If string, then will be link text.
+ * @param  string $link
  *
- * @return	string
+ * @return string
  */
-function the_bootstrap_get_attachment_link( $link, $id, $size, $permalink, $icon, $text ) {
-	return str_replace( '<a ', '<a class="thumbnail" ', $link );
+function the_bootstrap_get_attachment_link( $link ) {
+	if ( ! stripos( $link, '&times;' ) )
+		$link = str_replace( '<a ', '<a class="thumbnail" ', $link );
+
+	return $link;
 }
-add_filter( 'wp_get_attachment_link', 'the_bootstrap_get_attachment_link', 10, 6 );
+add_filter( 'wp_get_attachment_link', 'the_bootstrap_get_attachment_link' );
 
 
 /**
@@ -894,7 +892,7 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 		'size'       => 'thumbnail',
 		'include'    => '',
 		'exclude'    => ''
-	), $attr ) );
+	), $attr, 'gallery' ) );
 
 
 	$id = intval( $id );
@@ -958,7 +956,8 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 
 	$selector   = "gallery-{$instance}";
 	$size_class = sanitize_html_class( $size );
-	$output     = "<ul id='$selector' class='gallery galleryid-{$id} gallery-columns-{$columns} gallery-size-{$size_class} thumbnails'>";
+	$output     = "<div id='$selector' class='gallery galleryid-{$id} gallery-columns-{$columns} gallery-size-{$size_class} thumbnails'>";
+	$output = apply_filters( 'gallery_style', $output );
 
 	$i = 0;
 	foreach ( $attachments as $id => $attachment ) {
@@ -968,12 +967,16 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 			'type'    => 'comment',
 			'status'  => 'approve'
 		) );
+		$image_meta  = wp_get_attachment_metadata( $id );
+		$orientation = '';
+		if ( isset( $image_meta['height'], $image_meta['width'] ) )
+			$orientation = ( $image_meta['height'] > $image_meta['width'] ) ? 'portrait' : 'landscape';
 
 		$link = wp_get_attachment_link( $id, $size, ! ( isset( $attr['link'] ) AND 'file' == $attr['link'] ) );
 		$clear_class = ( 0 == $i++ % $columns ) ? ' clear' : '';
 		$span = 'span' . floor( 8 / $columns );
 
-		$output .= "<li class='{$span}{$clear_class}'><{$itemtag} class='gallery-item'>";
+		$output .= "<div class='{$span}{$clear_class} {$orientation}'><{$itemtag} class='gallery-item'>";
 		$output .= "<{$icontag} class='gallery-icon'>{$link}</{$icontag}>\n";
 
 		if ( $captiontag AND ( 0 < $comments OR trim( $attachment->post_excerpt ) ) ) {
@@ -982,13 +985,13 @@ function the_bootstrap_post_gallery( $content, $attr ) {
 			$out      = ($comments AND $excerpt) ? " $excerpt <br /> $comments " : " $excerpt$comments ";
 			$output  .= "<{$captiontag} class='wp-caption-text gallery-caption'>{$out}</{$captiontag}>\n";
 		}
-		$output .= "</{$itemtag}></li>\n";
+		$output .= "</{$itemtag}></div>\n";
 	}
-	$output .= "</ul>\n";
+	$output .= "</div>\n";
 
 	return $output;
 }
-add_filter( 'post_gallery', 'the_bootstrap_post_gallery', 10, 2 );
+add_filter( 'post_gallery', 'the_bootstrap_post_gallery', 1001, 2 );
 
 
 /**
