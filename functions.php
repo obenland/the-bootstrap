@@ -183,8 +183,8 @@ function the_bootstrap_widgets_init() {
 		'id'            => 'main',
 		'before_widget' => '<aside id="%1$s" class="widget well clearfix %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
 	) );
 
 	register_sidebar( array(
