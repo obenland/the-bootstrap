@@ -39,14 +39,14 @@ body {
 }
 
 blockquote cite:before {
-    content: '\2014 \00A0';
+	content: '\2014 \00A0';
 }
 
 blockquote cite {
-    color: #999999;
-    display: block;
-    font-size: 13px;
-    line-height: 18px;
+	color: #999999;
+	display: block;
+	font-size: 13px;
+	line-height: 18px;
 }
 
 figure {
@@ -62,8 +62,8 @@ h1, h2, h3, h4, h5, h6, .clear {
 -------------------------------------------------------------- */
 
 .assistive-text {
-    clip: rect(1px, 1px, 1px, 1px);
-    position: absolute !important;
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
 }
 
 body > .container {
@@ -134,7 +134,7 @@ article.page {
 }
 
 .entry-content .twitter-tweet-rendered {
-    max-width: 100% !important;
+	max-width: 100% !important;
 }
 
 
@@ -144,7 +144,7 @@ article.page {
 #comments-title {
 	border-bottom: 1px solid #EEEEEE;
 	font-size: 19.5px;
-    margin: 0 0 27px;
+	margin: 0 0 27px;
 }
 
 #comment,
@@ -196,8 +196,12 @@ article.page {
 	margin: 0 20px 20px 0;
 }
 
-.thumbnail.attachment-table {
+.thumbnail:not(.alignleft),
+.thumbnail:not(.alignright) {
 	display: table;
+}
+
+.thubmnail.aligncenter {
 	margin: 0 auto;
 }
 
@@ -270,7 +274,7 @@ table .label {
 
 .comment-subscription-form > label {
 	min-height: 18px;
-    padding-left: 18px;
+	padding-left: 18px;
 }
 
 
@@ -314,18 +318,18 @@ table .label {
 -------------------------------------------------------------- */
 
 .aligncenter {
-    display:block;
-    margin: 0 auto 20px;
+	display:block;
+	margin: 0 auto 20px;
 }
 
 .alignright {
-    float:right;
-    margin: 0 0 20px 20px;
+	float:right;
+	margin: 0 0 20px 20px;
 }
 
 .alignleft {
-    float:left;
-    margin: 0 20px 20px 0;
+	float:left;
+	margin: 0 20px 20px 0;
 }
 .thumbnail > img.aligncenter,
 .thumbnail > img.alignleft,
@@ -349,15 +353,15 @@ table .label {
 }
 
 .wp-caption.alignnone {
-    margin: 5px 20px 20px 0;
+	margin: 5px 20px 20px 0;
 }
 
 .wp-caption.alignleft {
-    margin: 5px 20px 20px 0;
+	margin: 5px 20px 20px 0;
 }
 
 .wp-caption.alignright {
-    margin: 5px 0 20px 20px;
+	margin: 5px 0 20px 20px;
 }
 
 .sticky {}
@@ -410,9 +414,9 @@ table .label {
 .superhero-bootstrap .pager span,
 .united-bootstrap .pager a,
 .united-bootstrap .pager span {
-    border: 0;
-    border-radius: 0;
-    padding: 0;
+	border: 0;
+	border-radius: 0;
+	padding: 0;
 }
 
 .amelia-bootstrap .pager > a,
@@ -437,9 +441,9 @@ table .label {
 .superhero-bootstrap .pager > span,
 .united-bootstrap .pager > a,
 .united-bootstrap .pager > span {
-    border: 1px solid #DDDDDD;
-    border-radius: 15px 15px 15px 15px;
-    padding: 5px 14px;
+	border: 1px solid #DDDDDD;
+	border-radius: 15px 15px 15px 15px;
+	padding: 5px 14px;
 }
 
 .amelia-bootstrap .pager .previous,
@@ -453,7 +457,7 @@ table .label {
 .spruce-bootstrap .pager .previous,
 .superhero-bootstrap .pager .previous,
 .united-bootstrap .pager .previous {
-    float: left;
+	float: left;
 }
 
 .amelia-bootstrap .pager .next,
@@ -467,7 +471,7 @@ table .label {
 .spruce-bootstrap .pager .next,
 .superhero-bootstrap .pager .next,
 .united-bootstrap .pager .next {
-    float: right;
+	float: right;
 }
 
 
@@ -479,14 +483,14 @@ table .label {
 }
 
 .cyborg-bootstrap .pager span {
-    background-color: #060606;
+	background-color: #060606;
 }
 
 .cyborg-bootstrap .pager span:hover,
 .cyborg-bootstrap .pager span:hover span,
 .cyborg-bootstrap .pager span:hover a,
 .cyborg-bootstrap .pager a:hover {
-    background-color: #33B5E5;
+	background-color: #33B5E5;
 }
 
 
@@ -545,7 +549,7 @@ table .label {
 
 .spruce-bootstrap .pagination span.dots,
 .spruce-bootstrap .pagination li.current > span {
-    background-color: #687E68;
+	background-color: #687E68;
 }
 
 .spruce-bootstrap #site-generator a {
