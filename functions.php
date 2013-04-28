@@ -213,7 +213,8 @@ add_action( 'widgets_init', 'the_bootstrap_widgets_init' );
  *
  * @return	void
  */
-function the_bootstrap_register_scripts_styles() {
+    if ( ! function_exists ('the_bootstrap_register_scripts_styles') {
+        function the_bootstrap_register_scripts_styles() {
 
 	if ( ! is_admin() ) {
 		$theme_version = _the_bootstrap_version();
@@ -256,7 +257,7 @@ function the_bootstrap_register_scripts_styles() {
 		);
 	}
 }
-add_action( 'init', 'the_bootstrap_register_scripts_styles' );
+        add_action( 'init', 'the_bootstrap_register_scripts_styles' ); }
 
 
 /**
