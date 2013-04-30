@@ -1,0 +1,704 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Bootstrap\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: getSource <ronni@getsource.dk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: da_DK\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ the-bootstrap
+#: 404.php:18
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "Dette er en smule pinligt, er det ikke?"
+
+# @ the-bootstrap
+#: 404.php:22
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching, or one of the links below, can help."
+msgstr "Det lader til vi ikke kan finde den side du søger. Forsøg igen"
+
+# @ the-bootstrap
+#: 404.php:30
+msgid "Most Used Categories"
+msgstr "Mest benyttede kategorier"
+
+# @ the-bootstrap
+#: archive.php:27
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Dagligt Arkiv: %s"
+
+# @ the-bootstrap
+#: archive.php:29
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Månedelige Arkiver %s"
+
+# @ the-bootstrap
+#: archive.php:31
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Årligt Arkiver %s"
+
+# @ the-bootstrap
+#: archive.php:33
+msgid "Blog Archives"
+msgstr "Blog-Arkiver"
+
+# @ the-bootstrap
+#: author.php:20
+#, php-format
+msgid "Author Archives: %s"
+msgstr "Forfatter Arkiv: %s"
+
+# @ the-bootstrap
+#: author.php:28 partials/content-single.php:38
+#, php-format
+msgid "About %s"
+msgstr "Omkring %s"
+
+# @ the-bootstrap
+#: category.php:20
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Kategori Arkiv: %s"
+
+# @ the-bootstrap
+#: comments.php:19
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr "Denne side er kodeords beskyttet. Indtastkoden for at nogle kommentar."
+
+# @ the-bootstrap
+#: comments.php:29
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "En tanke om &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s tanker om &ldquo;%2$s&rdquo;"
+
+# @ the-bootstrap
+#: inc/template-tags.php:75
+msgid "Comment navigation"
+msgstr "Kommentar-Navigation"
+
+# @ the-bootstrap
+#: inc/template-tags.php:76
+msgid "&larr; Newer Comments"
+msgstr "&larr; Nyere Kommentar"
+
+# @ the-bootstrap
+#: inc/template-tags.php:77
+msgid "Older Comments &rarr;"
+msgstr "Ældre Kommentar &larr;"
+
+# @ the-bootstrap
+#: comments.php:45
+msgid "Comments are closed."
+msgstr "Der er lukket for kommentar."
+
+# @ the-bootstrap
+#: comments.php:49
+msgctxt "noun"
+msgid "Comment"
+msgstr "Kommentar"
+
+# @ the-bootstrap
+#: comments.php:51
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+"Du kan bruge følgende <abbr title=\"HyperText Markup Language\">HTML</abbr>- "
+"tags og attributter: %s"
+
+# @ the-bootstrap
+#: comments.php:55
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Du skal være <a href=\"%s\">logget ind</a> for at skrive en kommentar."
+
+# @ the-bootstrap
+#: comments.php:56
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"Logget ind som <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out "
+"af denne konti\">Log ud?</a>"
+
+# @ the-bootstrap
+#: functions.php:279
+#, php-format
+msgid "&copy; %1$s <a href=\"%2$s\">%3$s</a>, all rights reserved."
+msgstr "&copy; %1$s <a href=\"%2$s\">%3$s</a>"
+
+# @ the-bootstrap
+#: footer.php:21
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+# @ the-bootstrap
+#: footer.php:22
+msgid "Semantic Personal Publishing Platform"
+msgstr "Personlig Semantisk Udgivnings Platform"
+
+# @ the-bootstrap
+#: footer.php:24
+#, php-format
+msgctxt "WordPress"
+msgid "Proudly powered by %s"
+msgstr "Stolt bygget med %s"
+
+# @ the-bootstrap
+#: footer.php:30
+#, php-format
+msgid "%d queries. %s seconds."
+msgstr "%d forespørgsler. %s sekunder."
+
+# @ the-bootstrap
+#: functions.php:79
+msgid "Main Navigation"
+msgstr "Primær Navigation"
+
+# @ the-bootstrap
+#: functions.php:125
+msgid "Main Sidebar"
+msgstr "Primær Sidebar"
+
+# @ the-bootstrap
+#: functions.php:134
+msgid "Image Sidebar"
+msgstr "Billede Sidebar"
+
+# @ the-bootstrap
+#: inc/template-tags.php:95
+#, php-format
+msgid ""
+"<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" rel="
+"\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</"
+"time></a><span class=\"by-author\"> <span class=\"sep\"> by </span> <span "
+"class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" "
+"rel=\"author\">%7$s</a></span></span>"
+msgstr ""
+"<span class=\"sep\">Skrevet den </span><a href=\"%1$s\" title=\"%2$s\" rel="
+"\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</"
+"time></a><span class=\"by-author\"> <span class=\"sep\"> af </span> <span "
+"class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" "
+"rel=\"author\">%7$s</a></span></span>"
+
+# @ the-bootstrap
+#: inc/template-tags.php:101
+#, php-format
+msgid "View all posts by %s"
+msgstr "Vis alle indlæg af %s"
+
+# @ the-bootstrap
+#: inc/template-tags.php:107
+msgid "<strong>1</strong> Reply"
+msgstr "<strong>1</strong> Besvar"
+
+# @ the-bootstrap
+#: inc/template-tags.php:107
+msgid "<strong>%</strong> Replies"
+msgstr "<strong>%</strong> Kommenter"
+
+# @ the-bootstrap
+#: functions.php:435 functions.php:461 image.php:52 inc/template-tags.php:111
+#: partials/content-page.php:21
+msgid "Edit"
+msgstr "Rediger"
+
+# @ the-bootstrap
+#: inc/template-tags.php:135
+msgid "Next page"
+msgstr "Næste side"
+
+# @ the-bootstrap
+#: inc/template-tags.php:136
+msgid "Previous page"
+msgstr "Forrige side"
+
+# @ the-bootstrap
+#: inc/template-tags.php:150 inc/template-tags.php:164
+msgid "Pages:"
+msgstr "Sider:"
+
+# @ the-bootstrap
+#: functions.php:322 partials/content-aside.php:28
+#: partials/content-image.php:16 partials/content-page.php:18
+#: partials/content-status.php:19 partials/content.php:41
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Forsæt læsning <span class=\"meta-nav\">&rarr;</span>"
+
+# @ the-bootstrap
+#: functions.php:434
+msgid "Pingback:"
+msgstr "Pingback:"
+
+# @ the-bootstrap
+#. translators: 1: comment author, 2: date and time
+#: functions.php:452
+#, php-format
+msgid "%1$s <span class=\"says\">said</span> on %2$s:"
+msgstr "%1$s <span class=\"says\">sagde</span> om %2$s:"
+
+# @ the-bootstrap
+#. translators: 1: date, 2: time
+#: functions.php:458
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s ved %2$s"
+
+# @ the-bootstrap
+#: functions.php:465
+msgid "Your comment is awaiting moderation."
+msgstr "Din kommentar afventer godkendelse"
+
+# @ the-bootstrap
+#: functions.php:474
+msgid "Reply <span>&darr;</span>"
+msgstr "Besvar <span>&darr;</span>"
+
+# @ the-bootstrap
+#: functions.php:538
+msgid "Name"
+msgstr "Navn"
+
+# @ the-bootstrap
+#: functions.php:541 functions.php:567
+msgid "required"
+msgstr "Nødvendig"
+
+# @ the-bootstrap
+#: functions.php:564
+msgid "Email"
+msgstr "E-Mail"
+
+# @ the-bootstrap
+#: functions.php:567
+msgid "will not be published"
+msgstr "vil ikke blive udgivet"
+
+# @ the-bootstrap
+#: functions.php:588
+msgid "Website"
+msgstr "Hjemmeside"
+
+# @ the-bootstrap
+#: functions.php:753
+#, php-format
+msgid "%d comment"
+msgid_plural "%d comments"
+msgstr[0] "%d Kommentar"
+msgstr[1] "%d kommentar"
+
+# @ the-bootstrap
+#: functions.php:815
+msgid ""
+"This post is password protected. To view it please enter your password below:"
+msgstr ""
+"Dette indlæg er kodeords beskyttet. Indtast venligst din kode forneden for "
+"at se den."
+
+# @ the-bootstrap
+#: functions.php:815
+msgid "Password:"
+msgstr "Adgangskode:"
+
+# @ the-bootstrap
+#: functions.php:815
+msgid "Submit"
+msgstr "Afsend"
+
+# @ the-bootstrap
+#: header.php:54
+msgid "Main menu"
+msgstr "Hovedmenu"
+
+# @ the-bootstrap
+#: header.php:55
+msgid "Skip to primary content"
+msgstr "Hop til primært indhold"
+
+# @ the-bootstrap
+#: header.php:56
+msgid "Skip to secondary content"
+msgstr "Hop til sekundært indhold"
+
+# @ the-bootstrap
+#: image.php:45
+msgid "image"
+msgid_plural "images"
+msgstr[0] "Billede"
+msgstr[1] "Billeder"
+
+# @ the-bootstrap
+#: image.php:53
+msgid "Leave a comment"
+msgstr "Efterlad en kommentar"
+
+# @ the-bootstrap
+#: image.php:56
+msgid "&laquo; Previous Photo"
+msgstr "&laquo; Forrige Foto"
+
+# @ the-bootstrap
+#: image.php:58
+msgid "Next Photo &raquo;"
+msgstr "Næste Photo &raquo;"
+
+# @ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:28
+msgid "The Bootstrap Image Meta Widget"
+msgstr "The Bootstrap Billede Meta Widget"
+
+# @ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:30
+msgid "Displays meta information on image attachment pages"
+msgstr "Viser meta information på billedets vedhæftnings sider"
+
+# @ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:52
+msgid "Info"
+msgstr "Info"
+
+# @ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:60
+msgid "Created:"
+msgstr "Skabt:"
+
+# @ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:64
+msgid "Full size:"
+msgstr "Fuld størrelse:"
+
+# @ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:65
+#, php-format
+msgid "%s pixels"
+msgstr "%s pixels"
+
+# @ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:68
+msgid "Aperture:"
+msgstr "Blænde:"
+
+# @ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:73
+msgid "Focal length:"
+msgstr "Fokus længden:"
+
+# @ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:78
+msgid "Iso:"
+msgstr "Iso:"
+
+# @ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:83
+msgid "Shutter:"
+msgstr "Belichtungsdauer:"
+
+# @ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:102
+msgid "Camera:"
+msgstr "Kamera:"
+
+# @ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:151
+msgid "Title:"
+msgstr "Titel:"
+
+# @ the-bootstrap
+#: partials/content-aside.php:16 partials/content-gallery.php:16
+#: partials/content.php:15 partials/content.php:20
+#, php-format
+msgid "Permalink to %s"
+msgstr "Permalink til %s"
+
+# @ the-bootstrap
+#: partials/content-gallery.php:48
+#, php-format
+msgid "This gallery contains <strong>%1$s photo</strong>."
+msgid_plural "This gallery contains <strong>%1$s photos</strong>."
+msgstr[0] "Dette galleri indeholder <strong>%1$s Foto</strong>."
+msgstr[1] "Dette galleri indeholder <strong>%1$s Fotos</strong>."
+
+# @ the-bootstrap
+#: partials/content-no-results.php:13
+msgid "Nothing Found"
+msgstr "Intet Fundet"
+
+# @ the-bootstrap
+#: partials/content-no-results.php:18
+msgid ""
+"Sorry, but nothing matched your search criteria. Please try again with some "
+"different keywords."
+msgstr ""
+"Beklager, intet matchede dit søge kriterie. Forsøg venligst igen med nogle "
+"andre søgeord."
+
+# @ the-bootstrap
+#: partials/content-no-results.php:20
+msgid ""
+"Apologies, but no results were found for the requested archive. Perhaps "
+"searching will help find a related post."
+msgstr ""
+"Beklager, men ingen resultater blev fundet for det anmodede arkiv. Søgning "
+"vil muligvis hjælpe med at finde et relateret indlæg."
+
+# @ the-bootstrap
+#: comments.php:53 inc/template-tags.php:107
+msgid "Leave a reply"
+msgstr "Efterlad en besvarelse"
+
+# @ the-bootstrap
+#: partials/content-single.php:26 partials/content.php:50
+#, php-format
+msgid "Posted in %1$s."
+msgstr "Udgivet under %1$s."
+
+# @ the-bootstrap
+#: partials/content-single.php:27 partials/content-single.php:31
+#: partials/content.php:51
+msgctxt "used between list items, there is a space after the comma"
+msgid ", "
+msgstr ", "
+
+# @ the-bootstrap
+#: partials/content-single.php:30
+msgid "Tagged "
+msgstr "Tagget"
+
+# @ the-bootstrap
+#: partials/content-single.php:46
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Se alle indlæg fra %s <span class=\"meta-nav\">&rarr;</span>"
+
+# @ the-bootstrap
+#: partials/content.php:16
+msgid "Featured"
+msgstr "Udvalgte"
+
+# @ the-bootstrap
+#: search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Søge Resultater for: %s"
+
+# @ the-bootstrap
+#: inc/template-tags.php:199 inc/template-tags.php:200 searchform.php:12
+#: searchform.php:14
+msgid "Search"
+msgstr "Søg"
+
+# @ the-bootstrap
+#: single.php:23
+msgid "Post navigation"
+msgstr "Artikel navigation"
+
+# @ the-bootstrap
+#: tag.php:20
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Tag Arkiver: %s"
+
+# @ the-bootstrap
+#: comments.php:54
+#, php-format
+msgid "Leave a reply to %s"
+msgstr "Efterlad en besvarelse til %s"
+
+# @ the-bootstrap
+#: functions.php:80
+msgid "Header Menu"
+msgstr "Header Menu"
+
+# @ the-bootstrap
+#: functions.php:81
+msgid "Footer Menu"
+msgstr "Footer Menu"
+
+# @ the-bootstrap
+#: partials/content-gallery.php:72
+msgctxt "carousel-control"
+msgid "&lsaquo;"
+msgstr "&lsaquo;"
+
+# @ the-bootstrap
+#: partials/content-gallery.php:73
+msgctxt "carousel-control"
+msgid "&rsaquo;"
+msgstr "&lsaquo;"
+
+# @ the-bootstrap
+#: searchform.php:15
+msgid "Go"
+msgstr "Gå"
+
+# @ the-bootstrap
+#: functions.php:135
+msgid "Shown on image attachment pages."
+msgstr "Vis på billede vedhæftnings sider"
+
+# @ the-bootstrap
+#: inc/theme-customizer.php:25 inc/theme-options.php:22
+#: inc/theme-options.php:23 inc/theme-options.php:145
+msgid "Theme Options"
+msgstr "Tema Indstillinger"
+
+# @ the-bootstrap
+#: inc/theme-customizer.php:40 inc/theme-options.php:79
+msgid "Default Layout"
+msgstr "Standard Layout"
+
+# @ the-bootstrap
+#: inc/theme-options.php:80
+msgid "Navigation Bar"
+msgstr "Navigationsbar"
+
+# @ the-bootstrap
+#: inc/theme-customizer.php:45 inc/theme-options.php:202
+msgid "Content on left"
+msgstr "Indhold til venstre"
+
+# @ the-bootstrap
+#: inc/theme-customizer.php:46 inc/theme-options.php:206
+msgid "Content on right"
+msgstr "Indhold til højre"
+
+# @ the-bootstrap
+#: inc/theme-customizer.php:52 inc/theme-options.php:84
+msgid "Add site name to navigation bar."
+msgstr "Tilføj side navn til navigationbar."
+
+# @ the-bootstrap
+#: inc/theme-customizer.php:60 inc/theme-options.php:89
+msgid "Add searchform to navigation bar."
+msgstr "Tilføj søgekasse til navigationsbar."
+
+# @ the-bootstrap
+#: inc/theme-options.php:289
+msgid "The Bootstrap Theme Options"
+msgstr "The Bootstrap Theme Indstillinger"
+
+# @ the-bootstrap
+#: inc/theme-options.php:337
+#, php-format
+msgid "Settings saved. <a href=\"%s\">Visit your site</a> to see how it looks."
+msgstr ""
+"Indstillinger gemt. <a href=\"%s\">Besøg din side</a> for at se hvordan det "
+"ser ud"
+
+# @ the-bootstrap
+#: inc/theme-options.php:363
+msgid "Help spread the word!"
+msgstr "Hjælp med at sprede budskabet!"
+
+# @ the-bootstrap
+#: inc/theme-options.php:365
+#, php-format
+msgctxt "Plugin Name"
+msgid ""
+"Want to help make this Theme even better? All donations are used to improve "
+"%1$s, so donate $20, $50 or $100 now!"
+msgstr ""
+"Vil du hjælpe med at lave dette tema endnu bedre? All donationer are brugt "
+"til at forbedre %1$s, så doner enten $20, $50 eller $100!"
+
+# @ the-bootstrap
+#: inc/theme-options.php:372
+msgid "Or you could:"
+msgstr "Eller du kan:"
+
+# @ the-bootstrap
+#: inc/theme-options.php:374
+msgid "Rate the Theme 5&#9733; on WordPress.org"
+msgstr "Vurder dette tema 5&#9733; på WordPress.org"
+
+# @ the-bootstrap
+#: inc/theme-options.php:375
+msgid "Blog about it &amp; link to the Theme page"
+msgstr "Blog om det &amp; link til Tema siden"
+
+# @ the-bootstrap
+#: inc/theme-options.php:400
+msgid "News from Konstantin"
+msgstr "Nyheder fra Konstantin"
+
+# @ the-bootstrap
+#: inc/theme-options.php:404
+msgid "No news items, feed might be broken..."
+msgstr "Ingen nyheder, feedet kan være istykker.."
+
+# @ the-bootstrap
+#: inc/theme-options.php:410
+msgid "Follow Konstantin on Twitter"
+msgstr "Følg Konstantin på Twitter"
+
+# @ the-bootstrap
+#: inc/theme-options.php:411
+msgid "Subscribe via RSS"
+msgstr "Abonner via RSS"
+
+# @ the-bootstrap
+#: single.php:24
+msgid "Next Post"
+msgstr "Næste Artikel"
+
+# @ the-bootstrap
+#: single.php:25
+msgid "Previous Post"
+msgstr "Forrige Artikel"
+
+# @ the-bootstrap
+#: 404.php:33
+#, php-format
+msgctxt "%1$s: smilie"
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Prøv at kigge i det månedelige arkiv. %1$s"
+
+# @ the-bootstrap
+#: inc/the-bootstrap-image-meta-widget.php:90
+#: inc/the-bootstrap-image-meta-widget.php:92
+#: inc/the-bootstrap-image-meta-widget.php:95
+#, php-format
+msgid "%d sec."
+msgstr "%d Sek."
+
+# @ the-bootstrap
+#: inc/theme-customizer.php:68 inc/theme-options.php:92
+msgid "Navigation Bar Position"
+msgstr "Position for Navigationsbar"
+
+# @ the-bootstrap
+#: inc/theme-customizer.php:73 inc/theme-options.php:97
+msgid "Static."
+msgstr "Statisk."
+
+# @ the-bootstrap
+#: inc/theme-customizer.php:74 inc/theme-options.php:101
+msgid "Fixed on top."
+msgstr "Fikseret på toppen."
+
+# @ the-bootstrap
+#: inc/theme-customizer.php:75 inc/theme-options.php:105
+msgid "Fixed at bottom."
+msgstr "Fikseret i bunden."
