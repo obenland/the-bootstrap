@@ -1,9 +1,9 @@
 <?php
 /** the-bootstrap-image-meta-widget.php
  *
- * @author	Konstantin Obenland
- * @package	The Bootstrap
- * @since	1.1.0 - 08.03.2012
+ * @author  Konstantin Obenland
+ * @package The Bootstrap
+ * @since   1.1.0 - 08.03.2012
  */
 
 
@@ -17,17 +17,17 @@ class The_Bootstrap_Image_Meta_Widget extends WP_Widget {
 	/**
 	 * Constructor
 	 *
-	 * @author	Konstantin Obenland
-	 * @since	1.1.0 - 08.03.2012
-	 * @access	public
+	 * @author Konstantin Obenland
+	 * @since  1.1.0 - 08.03.2012
+	 * @access public
 	 *
-	 * @return	The_Bootstrap_Image_Meta_Widget
+	 * @return The_Bootstrap_Image_Meta_Widget
 	 */
 	public function __construct() {
 
 		parent::__construct( 'the-bootstrap-image-meta', __( 'The Bootstrap Image Meta Widget', 'the-bootstrap' ), array(
-			'classname'		=>	'the-bootstrap-image-meta',
-			'description'	=>	__( 'Displays meta information on image attachment pages', 'the-bootstrap' )
+			'classname'   => 'the-bootstrap-image-meta',
+			'description' => __( 'Displays meta information on image attachment pages', 'the-bootstrap' ),
 		) );
 	}
 
@@ -35,22 +35,22 @@ class The_Bootstrap_Image_Meta_Widget extends WP_Widget {
 	/**
 	 * Displays the widget content
 	 *
-	 * @author	Konstantin Obeland
-	 * @since	1.1.0 - 08.03.2012
-	 * @access	public
+	 * @author Konstantin Obeland
+	 * @since  1.1.0 - 08.03.2012
+	 * @access public
 	 *
-	 * @param	array	$args
-	 * @param	array	$instance
+	 * @param  array $args
+	 * @param  array $instance
 	 *
-	 * @return	void
+	 * @return void
 	 */
 	public function widget( $args, $instance ) {
 
 		if ( is_attachment() ) {
 			extract( $args );
 
-			$title		=	apply_filters( 'widget_title', empty($instance['title'] ) ? __( 'Info', 'the-bootstrap' ) : $instance['title'] );
-			$image_meta	=	wp_get_attachment_metadata();
+			$title      = apply_filters( 'widget_title', empty($instance['title'] ) ? __( 'Info', 'the-bootstrap' ) : $instance['title'] );
+			$image_meta = wp_get_attachment_metadata();
 
 			echo $before_widget . $before_title . $title . $after_title;
 
@@ -85,12 +85,8 @@ class The_Bootstrap_Image_Meta_Widget extends WP_Widget {
 				<?php
 					// shutter speed handler
 					if ( ( 1 / $image_meta['image_meta']['shutter_speed'] ) > 1 ) {
-					echo "1/";
-						if ( number_format_i18n( ( 1 / $image_meta['image_meta']['shutter_speed'] ), 1 ) ==  number_format_i18n( ( 1 / $image_meta['image_meta']['shutter_speed'] ), 0 ) ) {
-							printf( __( '%d sec.', 'the-bootstrap' ), number_format_i18n( ( 1 / $image_meta['image_meta']['shutter_speed'] ), 0, '.', '' ) );
-						} else {
-							printf( __( '%d sec.', 'the-bootstrap' ), number_format_i18n( ( 1 / $image_meta['image_meta']['shutter_speed'] ), 1, '.', '' ) );
-						}
+						$decimal = ( number_format_i18n( ( 1 / $image_meta['image_meta']['shutter_speed'] ), 1 ) ==  number_format_i18n( ( 1 / $image_meta['image_meta']['shutter_speed'] ), 0 ) ) ? 0 : 1;
+						printf( __( '1/%d sec.', 'the-bootstrap' ), number_format_i18n( ( 1 / $image_meta['image_meta']['shutter_speed'] ), $decimal, '.', '' ) );
 					} else {
 						printf( __( '%d sec.', 'the-bootstrap' ), number_format_i18n( $image_meta['image_meta']['shutter_speed'] ) );
 					}
@@ -114,19 +110,18 @@ class The_Bootstrap_Image_Meta_Widget extends WP_Widget {
 	/**
 	 * Updates the widget settings
 	 *
-	 * @author	Konstantin Obenland
-	 * @since	1.1.0 - 08.03.2012
-	 * @access	public
+	 * @author Konstantin Obenland
+	 * @since  1.1.0 - 08.03.2012
+	 * @access public
 	 *
-	 * @param	array	$new_instance
-	 * @param	array	$old_instance
+	 * @param  array $new_instance
+	 * @param  array $old_instance
 	 *
-	 * @return	array
+	 * @return array
 	 */
 	public function update( $new_instance, $old_instance ) {
-
-		$instance			=	$old_instance;
-		$instance['title']	=	strip_tags( $new_instance['title'] );
+		$instance          = $old_instance;
+		$instance['title'] = strip_tags( $new_instance['title'] );
 
 		return $instance;
 	}
@@ -135,17 +130,17 @@ class The_Bootstrap_Image_Meta_Widget extends WP_Widget {
 	/**
 	 * Displays the widget's settings form
 	 *
-	 * @author	Konstantin Obenland
-	 * @since	1.1.0 - 08.03.2012
-	 * @access	public
+	 * @author Konstantin Obenland
+	 * @since  1.1.0 - 08.03.2012
+	 * @access public
 	 *
-	 * @param	array	$instance
+	 * @param  array $instance
 	 *
-	 * @return	void
+	 * @return void
 	 */
 	public function form( $instance ) {
-		$instance	=	wp_parse_args( (array) $instance, array(
-			'title'	=>	'',
+		$instance = wp_parse_args( (array) $instance, array(
+			'title' => '',
 		) );
 		?>
 		<p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'the-bootstrap' ); ?>
@@ -154,7 +149,6 @@ class The_Bootstrap_Image_Meta_Widget extends WP_Widget {
 		<?php
 	}
 } // End of class The_Bootstrap_Image_Meta_Widget
-
 
 
 /* End of file the-bootstrap-image-meta-widget.php */

@@ -4,9 +4,9 @@
  * Implementation of the Custom Header feature
  * http://codex.wordpress.org/Custom_Headers
  *
- * @author		Konstantin Obenland
- * @package		The Bootstrap
- * @since		1.2.4 - 07.04.2012
+ * @author  Konstantin Obenland
+ * @package The Bootstrap
+ * @since   1.2.4 - 07.04.2012
  */
 
 
@@ -20,10 +20,10 @@ if ( ! function_exists( 'the_bootstrap_content_nav' ) ) :
  * A pagination many developers buy (code) expensively with Plugins like
  * WP Pagenavi. No need! WordPress has it all!
  *
- * @author	Konstantin Obenland
- * @since	1.0.0 - 05.02.2012
+ * @author Konstantin Obenland
+ * @since  1.0.0 - 05.02.2012
  *
- * @return	void
+ * @return void
  */
 function the_bootstrap_content_nav() {
 	global $wp_query, $wp_rewrite;
@@ -43,7 +43,7 @@ function the_bootstrap_content_nav() {
 	$format       = ( $wp_rewrite->using_index_permalinks() AND ! strpos( $pagenum_link, 'index.php' ) ) ? 'index.php/' : '';
 	$format      .= $wp_rewrite->using_permalinks() ? user_trailingslashit( 'page/%#%', 'paged' ) : '?paged=%#%';
 
-	$links	=	paginate_links( array(
+	$links = paginate_links( array(
 		'base'     => $pagenum_link,
 		'format'   => $format,
 		'total'    => $wp_query->max_num_pages,
@@ -64,10 +64,10 @@ if ( ! function_exists( 'the_bootstrap_comment_nav' ) ) :
 /**
  * Display navigation to next/previous comments pages when applicable
  *
- * @author	Konstantin Obenland
- * @since	1.5.0 - 19.05.2012
+ * @author Konstantin Obenland
+ * @since  1.5.0 - 19.05.2012
  *
- * @return	void
+ * @return void
  */
 function the_bootstrap_comment_nav() {
 	if ( get_comment_pages_count() > 1 AND get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
@@ -86,10 +86,10 @@ if ( ! function_exists( 'the_bootstrap_posted_on' ) ) :
  * Prints HTML with meta information for the current post-date/time and author,
 * comment and edit link
 *
-* @author	Konstantin Obenland
-* @since	1.0.0 - 05.02.2012
+* @author Konstantin Obenland
+* @since  1.0.0 - 05.02.2012
 *
-* @return	void
+* @return void
 */
 function the_bootstrap_posted_on() {
 
@@ -134,14 +134,14 @@ if ( ! function_exists( 'the_bootstrap_link_pages' ) ) :
  *
  * It's basically the wp_link_pages() function, altered to fit to the Bootstrap
  * markup needs for paginations (unordered list).
- * @see		wp_link_pages()
+ * @see    wp_link_pages()
  *
- * @author	Konstantin Obenland
- * @since	1.1.0 - 09.03.2012
+ * @author Konstantin Obenland
+ * @since  1.1.0 - 09.03.2012
  *
- * @param	array	$args
+ * @param  array$args
  *
- * @return	string
+ * @return string
  */
 function the_bootstrap_link_pages( $args = array() ) {
 	wp_link_pages( array( 'echo' => 0 ) );
@@ -150,7 +150,7 @@ function the_bootstrap_link_pages( $args = array() ) {
 		'nextpagelink'     => __( 'Next page', 'the-bootstrap' ),
 		'previouspagelink' => __( 'Previous page', 'the-bootstrap' ),
 		'pagelink'         => '%',
-		'echo'             => true
+		'echo'             => true,
 	);
 
 	$r = wp_parse_args( $args, $defaults );
@@ -190,8 +190,9 @@ function the_bootstrap_link_pages( $args = array() ) {
 		}
 	}
 
-	if ( $echo )
+	if ( $echo ) {
 		echo $output;
+	}
 
 	return $output;
 }
@@ -202,12 +203,12 @@ if ( ! function_exists( 'the_bootstrap_navbar_searchform' ) ) :
 /**
  * Returns or echoes searchform mark up, specifically for the navbar.
 *
-* @author	Konstantin Obenland
-* @since	1.5,0 - 14.05.2012
+* @author Konstantin Obenland
+* @since  1.5,0 - 14.05.2012
 *
-* @param	bool	$echo	Optional. Whether to echo the form
+* @param bool $echo Optional. Whether to echo the form
 *
-* @return	void
+* @return void
 */
 function the_bootstrap_navbar_searchform( $echo = true ) {
 	$searchform = '	<form id="searchform" class="navbar-search" method="get" action="' . esc_url( home_url( '/' ) ) . '">
@@ -215,8 +216,9 @@ function the_bootstrap_navbar_searchform( $echo = true ) {
 						<input type="search" class="search-query" name="s" id="s" placeholder="' . esc_attr__( 'Search', 'the-bootstrap' ) . '" />
 					</form>';
 
-	if ( $echo )
+	if ( $echo ) {
 		echo $searchform;
+	}
 
 	return $searchform;
 }
@@ -227,10 +229,10 @@ if ( ! function_exists( 'the_bootstrap_navbar_class' ) ) :
 /**
  * Adds The Bootstrap navbar classes
  *
- * @author	WordPress.org
- * @since	1.4.0 - 12.05.2012
+ * @author WordPress.org
+ * @since  1.4.0 - 12.05.2012
  *
- * @return	void
+ * @return void
  */
 function the_bootstrap_navbar_class() {
 	$classes = array( 'navbar' );
@@ -255,15 +257,15 @@ if ( ! function_exists( 'the_bootstrap_comments_link' ) ) :
  * Is not meant to be displayed on single posts and pages. Should be used on the
  * lists of posts
  *
- * @since	2.0.0 - 01.09.2012
+ * @since  2.0.0 - 01.09.2012
  *
- * @param	string	$zero		The string to display when no comments
- * @param	string	$one		The string to display when only one comment is available
- * @param	string	$more		The string to display when there are more than one comment
- * @param	string	$css_class	The CSS class to use for comments
- * @param	string	$none		The string to display when comments have been turned off
+ * @param  string $zero      The string to display when no comments
+ * @param  string $one       The string to display when only one comment is available
+ * @param  string $more      The string to display when there are more than one comment
+ * @param  string $css_class The CSS class to use for comments
+ * @param  string $none      The string to display when comments have been turned off
  *
- * @return	void
+ * @return void
  */
 function the_bootstrap_comments_link( $zero = false, $one = false, $more = false, $css_class = '', $none = false ) {
 	$number = get_comments_number();
