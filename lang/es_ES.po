@@ -1,0 +1,581 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2014-04-16 14:54-0430\n"
+"PO-Revision-Date: 2014-04-16 19:12-0430\n"
+"Last-Translator: \n"
+"Language-Team: <zerquix18 <malbertoa_11@hotmail.com>>\n"
+"Language: Español\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_e;_x\n"
+"X-Poedit-Basepath: /home/zerquix18/Público/the-bootstrap-master/\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions.php:81
+msgid "Main Navigation"
+msgstr "Navegación Principal"
+
+#: functions.php:82
+msgid "Header Menu"
+msgstr "Menú de la cabecera"
+
+#: functions.php:83
+msgid "Footer Menu"
+msgstr "Menú del pie de la página"
+
+#: functions.php:181
+msgid "Main Sidebar"
+msgstr "Barra lateral principal"
+
+#: functions.php:190
+msgid "Image Sidebar"
+msgstr "Barra lateral de imagen"
+
+#: functions.php:191
+msgid "Shown on image attachment pages."
+msgstr "Mostrada en las páginas de imágenes subidas."
+
+#: functions.php:359
+#, php-format
+msgid "&copy; %1$s <a href=\"%2$s\">%3$s</a>, all rights reserved."
+msgstr "&copy; %1$s <a href=\"%2$s\">%3$s</a>, todos los derechos reservados."
+
+#: functions.php:405 partials/content-image.php:20
+#: partials/content-page.php:22 partials/content-status.php:22
+#: partials/content.php:45 partials/content-aside.php:31
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Continuar leyendo <span class=\"meta-nav\">&rarr;</span>"
+
+#: functions.php:502
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr ""
+"Este post está protegido con contraseña. Ingresa la contraseña para ver los "
+"comentarios."
+
+#: functions.php:542
+msgid "Comments are closed."
+msgstr "Los comentarios están cerrados."
+
+#: functions.php:560
+msgid "Comment"
+msgstr "Comentar"
+
+#: functions.php:562
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+"Puedes usar estas etiquetas y atributos <abbr title=\"HyperText Markup "
+"Language\">HTML</abbr>: %s"
+
+#: functions.php:564 inc/template-tags.php:107
+msgid "Leave a reply"
+msgstr "Dejar una respuesta"
+
+#: functions.php:565
+#, php-format
+msgid "Leave a reply to %s"
+msgstr "Dejar una respuesta a %s"
+
+#: functions.php:566
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Debes <a href=\"%s\">iniciar sesión</a> para publicar comentario."
+
+#: functions.php:567
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"Sesión iniciada como: <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title="
+"\"Cerrar sesión de esta cuenta\">¿Cerrar sesión?</a>"
+
+#: functions.php:597
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: functions.php:598 functions.php:623 image.php:54
+#: partials/content-page.php:25 inc/template-tags.php:111
+msgid "Edit"
+msgstr "Editar"
+
+#: functions.php:614
+#, php-format
+msgid "%1$s <span class=\"says\">said</span> on %2$s:"
+msgstr "%1$s <span class=\"says\">dijo</span> en %2$s:"
+
+#: functions.php:620
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "El %1$s a las %2$s"
+
+#: functions.php:627
+msgid "Your comment is awaiting moderation."
+msgstr "Tu comentario está pendiente de moderación."
+
+#: functions.php:636
+msgid "Reply <span>&darr;</span>"
+msgstr "Responder <span>&darr;</span>"
+
+#: functions.php:698
+msgid "Name"
+msgstr "Nombre"
+
+#: functions.php:701 functions.php:727
+msgid "required"
+msgstr "requerido"
+
+#: functions.php:724
+msgid "Email"
+msgstr "Email"
+
+#: functions.php:727
+msgid "will not be published"
+msgstr "no será publicado"
+
+#: functions.php:748
+msgid "Website"
+msgstr "Sitio web"
+
+#: functions.php:980
+msgid ""
+"This post is password protected. To view it please enter your password below:"
+msgstr ""
+"Este post está protegido por contraseña. Para verlo, por favor ingresa la "
+"contraseña debajo:"
+
+#: functions.php:980
+msgid "Password:"
+msgstr "Contraseña:"
+
+#: functions.php:980
+msgid "Submit"
+msgstr "Enviar"
+
+#: search.php:21
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Resultados de la búsqueda para: %s"
+
+#: 404.php:23
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "Esto es un poco embarazoso, ¿o no?"
+
+#: 404.php:27
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching, or one of the links below, can help."
+msgstr ""
+"Parece que no pudimos encontrar lo que estás buscando. Tal vez otra "
+"búsqueda, o uno de los enlaces debajo pueda ayudar."
+
+#: 404.php:35
+msgid "Most Used Categories"
+msgstr "Categorías más usadas"
+
+#: 404.php:38
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Trata buscando los archivos mensuales. %1$s"
+
+#: header.php:57
+msgid "Main menu"
+msgstr "Menú principal"
+
+#: header.php:58
+msgid "Skip to primary content"
+msgstr "Saltar al contenido principal"
+
+#: header.php:59
+msgid "Skip to secondary content"
+msgstr "Saltar al contenido secundario"
+
+#: category.php:23
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Archivos por categoría: %s"
+
+#: image.php:43
+#, php-format
+msgid "&laquo; %1$s (%2$s)"
+msgstr "&laquo; %1$s (%2$s)"
+
+#: image.php:55
+msgid "Leave a comment"
+msgstr "Dejar un comentario"
+
+#: image.php:57
+msgid "&laquo; Previous Photo"
+msgstr "&laquo; Foto previa"
+
+#: image.php:59
+msgid "Next Photo &raquo;"
+msgstr "Foto siguiente &raquo;"
+
+#: tag.php:23
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Archivos en la categoría: %s"
+
+#: archive.php:30
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Archivos diarios: %s"
+
+#: archive.php:32
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Archivos mensuales: %s"
+
+#: archive.php:34
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Archivos anuales: %s"
+
+#: archive.php:36
+msgid "Blog Archives"
+msgstr "Archivos del blog"
+
+#: footer.php:24
+msgid "http://wordpress.org/"
+msgstr "http://es.wordpress.org/"
+
+#: footer.php:27
+#, php-format
+msgid "Proudly powered by %s"
+msgstr "Funciona con: %s"
+
+#: footer.php:35
+#, php-format
+msgid "%d queries. %s seconds."
+msgstr "%d solicitudes. %s segundos."
+
+#: author.php:23
+#, php-format
+msgid "Author Archives: %s"
+msgstr "Archivos del autor: %s"
+
+#: author.php:31 partials/content-single.php:45
+#, php-format
+msgid "About %s"
+msgstr "Acerca de %s"
+
+#: single.php:26
+msgid "Post navigation"
+msgstr "Navegación de posts"
+
+#: single.php:27
+msgid "Next Post"
+msgstr "Siguiente post"
+
+#: single.php:28
+msgid "Previous Post"
+msgstr "Post anterior"
+
+#: searchform.php:12 inc/template-tags.php:199
+msgid "Search"
+msgstr "Buscar"
+
+#: searchform.php:15
+msgid "Go"
+msgstr "Ir"
+
+#: partials/content-single.php:29 partials/content-single.php:30
+#: partials/content.php:52
+msgid ", "
+msgstr ", "
+
+#: partials/content-single.php:33 partials/content.php:55
+#, php-format
+msgid "Posted in %1$s."
+msgstr "Publicado el %1$s"
+
+#: partials/content-single.php:35
+#, php-format
+msgid "Tagged %1$s."
+msgstr "Etiquetado en %1$s."
+
+#: partials/content-single.php:53
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Ver todos los posts por %s <span class=\"meta-nav\">&rarr;</span>"
+
+#: partials/content-not-found.php:17
+msgid "Nothing Found"
+msgstr "No se encontró nada"
+
+#: partials/content-not-found.php:22
+msgid ""
+"Sorry, but nothing matched your search criteria. Please try again with some "
+"different keywords."
+msgstr ""
+"Lo siento, pero nada coincidió con tu criterio de búsqueda. Por favor, "
+"prueba de nuevo con diferentes palabras clave."
+
+#: partials/content-not-found.php:24
+msgid ""
+"Apologies, but no results were found for the requested archive. Perhaps "
+"searching will help find a related post."
+msgstr ""
+"Disculpa, pero no se encontraron resultados para el archivo solicitado. "
+"Quizás otra búsqueda ayudará a encontrar un post relacionado."
+
+#: partials/content.php:20
+msgid "Featured"
+msgstr "Destacado"
+
+#: inc/the-bootstrap-image-meta-widget.php:28
+msgid "The Bootstrap Image Meta Widget"
+msgstr "El Widget de Imagen Meta de The Bootstrap"
+
+#: inc/the-bootstrap-image-meta-widget.php:30
+msgid "Displays meta information on image attachment pages"
+msgstr "Muestra información meta en páginas de imágenes subidas."
+
+#: inc/the-bootstrap-image-meta-widget.php:52
+msgid "Info"
+msgstr "Info"
+
+#: inc/the-bootstrap-image-meta-widget.php:60
+msgid "Created:"
+msgstr "Creado:"
+
+#: inc/the-bootstrap-image-meta-widget.php:64
+msgid "Full size:"
+msgstr "Tamaño completo:"
+
+#: inc/the-bootstrap-image-meta-widget.php:65
+#, php-format
+msgid "%s pixels"
+msgstr "%s píxeles"
+
+#: inc/the-bootstrap-image-meta-widget.php:68
+msgid "Aperture:"
+msgstr "Apertura:"
+
+#: inc/the-bootstrap-image-meta-widget.php:73
+msgid "Focal length:"
+msgstr "Longitud focal:"
+
+#: inc/the-bootstrap-image-meta-widget.php:78
+msgid "Iso:"
+msgstr "Iso:"
+
+#: inc/the-bootstrap-image-meta-widget.php:83
+msgid "Shutter:"
+msgstr "Obturador:"
+
+#: inc/the-bootstrap-image-meta-widget.php:90
+#: inc/the-bootstrap-image-meta-widget.php:92
+#: inc/the-bootstrap-image-meta-widget.php:95
+#, php-format
+msgid "%d sec."
+msgstr "%d seg."
+
+#: inc/the-bootstrap-image-meta-widget.php:102
+msgid "Camera:"
+msgstr "Cámara:"
+
+#: inc/the-bootstrap-image-meta-widget.php:151
+msgid "Title:"
+msgstr "Título:"
+
+#: inc/template-tags.php:75
+msgid "Comment navigation"
+msgstr "Navegación de comentarios"
+
+#: inc/template-tags.php:76
+msgid "&larr; Newer Comments"
+msgstr "&larr; Comentarios nuevos"
+
+#: inc/template-tags.php:77
+msgid "Older Comments &rarr;"
+msgstr "Comentarios anteriores &rarr;"
+
+#: inc/template-tags.php:95
+#, php-format
+msgid ""
+"<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" rel="
+"\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</"
+"time></a><span class=\"by-author\"> <span class=\"sep\"> by </span> <span "
+"class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" "
+"rel=\"author\">%7$s</a></span></span>"
+msgstr ""
+"<span class=\"sep\">Publicado el </span><a href=\"%1$s\" title=\"%2$s\" rel="
+"\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</"
+"time></a><span class=\"by-author\"> <span class=\"sep\"> por </span> <span "
+"class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" "
+"rel=\"author\">%7$s</a></span></span>"
+
+#: inc/template-tags.php:101
+#, php-format
+msgid "View all posts by %s"
+msgstr "Ver todos los posts por %s"
+
+#: inc/template-tags.php:107
+msgid "<strong>1</strong> Reply"
+msgstr "<strong>1</strong> Respuesta"
+
+#: inc/template-tags.php:107
+msgid "<strong>%</strong> Replies"
+msgstr "<strong>%</strong> Respuestas"
+
+#: inc/template-tags.php:135
+msgid "Next page"
+msgstr "Siguiente página"
+
+#: inc/template-tags.php:136
+msgid "Previous page"
+msgstr "Página anterior"
+
+#: inc/template-tags.php:150 inc/template-tags.php:164
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: inc/template-tags.php:257
+msgid "No Comments"
+msgstr "No hay comentarios"
+
+#: inc/template-tags.php:258
+msgid "1 Comment"
+msgstr "1 comentario"
+
+#: inc/template-tags.php:259
+msgid "% Comments"
+msgstr "% comentarios"
+
+#: inc/template-tags.php:260
+msgid "Comments Off"
+msgstr "Comentarios desactivados"
+
+#: inc/template-tags.php:268
+msgid "Enter your password to view comments."
+msgstr "Ingresa tu contraseña para ver los comentarios."
+
+#: inc/template-tags.php:281
+#, php-format
+msgid "Comment on %s"
+msgstr "Comentario en %s"
+
+#: inc/theme-options.php:22 inc/theme-options.php:23 inc/theme-options.php:145
+msgid "Theme Options"
+msgstr "Opciones del tema"
+
+#: inc/theme-options.php:79 inc/theme-customizer.php:47
+msgid "Default Layout"
+msgstr "Disposición predeterminada"
+
+#: inc/theme-options.php:80
+msgid "Navigation Bar"
+msgstr "Barra de navegación"
+
+#: inc/theme-options.php:84 inc/theme-customizer.php:59
+msgid "Add site name to navigation bar."
+msgstr "Agregar el nombre del sitio a la barra de navegación"
+
+#: inc/theme-options.php:89 inc/theme-customizer.php:67
+msgid "Add searchform to navigation bar."
+msgstr "Agregar cuadro de búsqueda a la barra de navegación"
+
+#: inc/theme-options.php:92 inc/theme-customizer.php:83
+msgid "Navigation Bar Position"
+msgstr "Posición de la barra de navegación"
+
+#: inc/theme-options.php:97 inc/theme-customizer.php:88
+msgid "Static."
+msgstr "Estática"
+
+#: inc/theme-options.php:101 inc/theme-customizer.php:89
+msgid "Fixed on top."
+msgstr "Fija en la parte superior"
+
+#: inc/theme-options.php:105 inc/theme-customizer.php:90
+msgid "Fixed at bottom."
+msgstr "Fija en la parte inferior."
+
+#: inc/theme-options.php:166 inc/theme-customizer.php:52
+msgid "Content on left"
+msgstr "Contenido a la izquierda"
+
+#: inc/theme-options.php:170 inc/theme-customizer.php:53
+msgid "Content on right"
+msgstr "Contenido a la derecha"
+
+#: inc/theme-options.php:302
+#, php-format
+msgid "Settings saved. <a href=\"%s\">Visit your site</a> to see how it looks."
+msgstr ""
+"Ajustes guardados. <a href=\"%s\">Visita tu sitio</a> para ver cómo luce."
+
+#: inc/theme-options.php:333
+#, php-format
+msgid ""
+"Want to help make this Theme even better? All donations are used to improve "
+"%1$s, so donate $20, $50 or $100 now!"
+msgstr ""
+"¿Quieres contribuir para mejorar este tema? Todas las donaciones son usadas "
+"para mejorar %1$s, ¡así que dona $20, $50 o $100 ahora!"
+
+#: inc/theme-options.php:340
+msgid "Or you could:"
+msgstr "O podrías:"
+
+#: inc/theme-options.php:342
+msgid "Rate the Theme 5&#9733; on WordPress.org"
+msgstr "Valorar el tema &#9733; en WordPress.org"
+
+#: inc/theme-options.php:343
+msgid "Blog about it &amp; link to the Theme page"
+msgstr "Publicar sobre esto &amp; enlazar a la página del tema"
+
+#: inc/theme-options.php:375
+msgid "No news items, feed might be broken..."
+msgstr "No hay noticias, el feed puede estar roto..."
+
+#: inc/theme-options.php:381
+msgid "Follow Konstantin on Twitter"
+msgstr "Sigue a Konstantin en Twitter"
+
+#: inc/theme-options.php:382
+msgid "Subscribe via RSS"
+msgstr "Suscribir vía RSS"
+
+#: inc/the-bootstrap-gallery-widget.php:28
+msgid "The Bootstrap Gallery Widget"
+msgstr "Widget de galería de The Boostrap"
+
+#: inc/the-bootstrap-gallery-widget.php:30
+msgid ""
+"Displays gallery images of a specified post with the Gallery post format."
+msgstr ""
+"Muestra galerías de imágenes de un post específico con el formato de "
+"galerías."
+
+#: inc/the-bootstrap-gallery-widget.php:142
+#, php-format
+msgid "No galleries have been created yet. <a href=\"%s\">Create some</a>."
+msgstr "No se han creado galerías todavía. <a href=\"%s\">Crea una</a>."
+
+#: inc/the-bootstrap-gallery-widget.php:147
+msgid "Select Gallery:"
+msgstr "Selecciona la galería:"
+
+#: inc/theme-customizer.php:28
+msgid "Layout"
+msgstr "Disposición"
+
+#: inc/theme-customizer.php:32
+msgid "Navbar Options"
+msgstr "Opciones de la barra de navegación"
+
+#: inc/theme-customizer.php:75
+msgid "Use inverse color on navigation bar."
+msgstr "Usar color inverso en la barra de navegación"
