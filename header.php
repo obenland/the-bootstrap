@@ -14,6 +14,11 @@
 	<head>
 		<?php tha_head_top(); ?>
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
+		
+		<!-- New special options <ir> ################################################ -->
+		<link href = "<?php bloginfo('stylesheet_directory') ?>/css/special-options.css"
+			  rel = "stylesheet">
+		
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		
@@ -24,20 +29,33 @@
 	</head>
 	
 	<body <?php body_class(); ?>>
-		<div class="container">
+		<div class="container-fluid"> <!-- <ir> ###################################### -->
 			<div id="page" class="hfeed row">
 				<?php tha_header_before(); ?>
-				<header id="branding" role="banner" class="span12">
+				<header id="branding" role="banner" class="row"> <!-- <ir> ########### -->
 					<?php tha_header_top();
 					wp_nav_menu( array(
 						'container'			=>	'nav',
-						'container_class'	=>	'subnav clearfix',
+						'container_class'	=>	'subnav clearfix special-nav',/* <ir> ##*/
 						'theme_location'	=>	'header-menu',
 						'menu_class'		=>	'nav nav-pills pull-right',
 						'depth'				=>	3,
 						'fallback_cb'		=>	false,
 						'walker'			=>	new The_Bootstrap_Nav_Walker,
-					) ); ?>
+					) );
+					
+					/* New special menu <ir> ########################################## */
+					wp_nav_menu(array(
+						'container'			=>	'nav',
+						'container_class'	=>	'subnav clearfix special-nav2',
+						'theme_location'	=>	'language-menu',
+						'menu_class'		=>	'nav nav-pills pull-right',
+						'depth'				=>	3,
+						'fallback_cb'		=>	false,
+						'walker'			=>	new The_Bootstrap_Nav_Walker,
+					));
+					
+					?>
 					<hgroup>
 						<h1 id="site-title">
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">

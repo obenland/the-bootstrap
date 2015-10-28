@@ -80,7 +80,11 @@ function the_bootstrap_setup() {
 	register_nav_menus( array(
 		'primary'		=>	__( 'Main Navigation', 'the-bootstrap' ),
 		'header-menu'  	=>	__( 'Header Menu', 'the-bootstrap' ),
-		'footer-menu' 	=>	__( 'Footer Menu', 'the-bootstrap' )
+		'footer-menu' 	=>	__( 'Footer Menu', 'the-bootstrap' ),
+		
+		/* New special menu <ir> ###################################################### */
+		'language-menu' =>	__( 'Menú de idiomas', 'the-bootstrap' )
+		
 	) );
 	
 } // the_bootstrap_setup
@@ -254,6 +258,7 @@ function the_bootstrap_register_scripts_styles() {
 			array('tw-bootstrap'),
 			$theme_version
 		);
+		
 	}
 }
 add_action( 'init', 'the_bootstrap_register_scripts_styles' );
@@ -1075,6 +1080,52 @@ function _the_bootstrap_version() {
 	
 	return $theme_version;
 }
+
+// <ir> ##################################################################################
+function the_bootstrap_special_customize_css() {
+	$option = get_theme_mod('special_menu_align', 'left');
+	if($option === 'left' || $option === 'right') {
+		if($option === 'left') {
+			$menu = 'left';
+			$searchform = 'right';
+		}
+		elseif($option === 'right') {
+			$menu = 'right';
+			$searchform = 'left';
+		}
+		?><style type = "text/css">
+			.navbar-inner .nav {
+				float: <?php print $menu ?> !important;
+			}
+			div.navbar-inner form {
+				float: <?php print $searchform ?> !important;
+			}
+		</style><?php
+	}
+	elseif($option === 'center') {
+		?><style type = "text/css">
+			.navbar-inner .nav {
+				left: 50% !important;
+			}
+			.navbar-inner .nav > li {
+				position: relative !important;
+				right: 50% !important;
+			}
+		</style><?php
+	}
+    ?><style type = "text/css">
+		#page { 
+			background: <?php echo get_theme_mod('special_background_color', '#000000'); ?> !important;
+		}
+		.navbar-inner {
+			background: <?php echo get_theme_mod('special_menu_color', '#1B1B1B'); ?> !important;
+		}
+		#site-title {
+			text-align: <?php echo get_theme_mod('special_title_align', 'left'); ?> !important;
+		}
+    </style><?php
+}
+add_action('wp_head', 'the_bootstrap_special_customize_css');
 
 
 /* End of file functions.php */

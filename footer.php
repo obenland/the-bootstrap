@@ -7,7 +7,7 @@
  */
 
 				tha_footer_before(); ?>
-				<footer id="colophon" role="contentinfo" class="span12">
+				<footer id="colophon" role="contentinfo" class="row"> <!-- <ir> ###### -->
 					<?php tha_footer_top(); ?>
 					<div id="page-footer" class="well clearfix">
 						<?php wp_nav_menu( array(

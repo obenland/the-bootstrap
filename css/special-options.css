@@ -1,0 +1,40 @@
+body > div.container-fluid {
+	padding: 0px !important;
+}
+
+
+.dropdown:hover > ul {
+	display:block !important;
+}
+
+
+.special-nav {
+	float: right !important;
+}
+
+
+.special-nav2 {
+	float: left !important;
+}
+
+
+#branding {
+	margin: 0px !important;
+}
+
+
+#colophon {
+	margin: 0px !important;
+	clear: both !important;
+}
+
+
+#page {
+	padding: 10px !important;
+	margin: 0px !important;
+}
+
+
+#primary {
+	margin: 0px !important;
+}

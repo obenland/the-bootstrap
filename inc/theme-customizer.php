@@ -42,6 +42,36 @@ function the_bootstrap_customize_register( $wp_customize ) {
 		) );
 	}
 	
+	// New special settings <ir> #########################################################
+	$wp_customize->add_setting('special_background_color', array(
+		'default' 		=> '#FFFFFF',
+		'transport'   	=> 'refresh',
+	));
+	
+	// New special settings <ir> #########################################################
+	$wp_customize->add_setting('special_menu_color', array(
+		'default' 		=> '#1B1B1B',
+		'transport'   	=> 'refresh',
+	));
+	
+	// New special settings <ir> #########################################################
+	$wp_customize->add_setting('special_title_align', array(
+		'default' 		=> '#left',
+		'transport'   	=> 'refresh',
+	));
+	
+	// New special settings <ir> #########################################################
+	$wp_customize->add_setting('special_menu_align', array(
+		'default' 		=> '#left',
+		'transport'   	=> 'refresh',
+	));
+	
+	// New special settings <ir> #########################################################
+	$wp_customize->add_setting('special_sidebar', array(
+		'default' 		=> 'true',
+		'transport' 	=> 'refresh',
+	));
+
 	// Theme Layout
 	$wp_customize->add_control( 'the_bootstrap_theme_layout', array(
 		'label'		=>	__( 'Default Layout', 'the-bootstrap' ),
@@ -90,6 +120,56 @@ function the_bootstrap_customize_register( $wp_customize ) {
 			'navbar-fixed-bottom'	=>	__( 'Fixed at bottom.', 'the-bootstrap' ),
 		),
 	) );
+
+	// New special control <ir> ##########################################################
+	$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'link_color',
+		array(
+			'label'        	=> __('Color del fondo', 'the_bootstrap'),
+			'section'    	=> 'colors',
+			'settings'   	=> 'special_background_color',
+		)
+	));
+
+	// New special control <ir> ##########################################################
+	$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'link_color2',
+		array(
+			'label'        	=> __('Color del menú', 'the_bootstrap'),
+			'section'    	=> 'colors',
+			'settings'   	=> 'special_menu_color',
+		)
+	));
+	
+	// New special control <ir> ##########################################################
+	$wp_customize->add_control('special_title_align', array(
+		'choices' 	=> array(
+			'left'	=> 'Izquierda',
+			'center'=> 'Centrar',
+			'right' => 'Derecha',
+		),
+		'label' 	=> __('Alineación del título'),
+		'section' 	=> 'title_tagline',
+		'type' 		=> 'select',
+	));
+	
+	// New special control <ir> ##########################################################
+	$wp_customize->add_control('special_menu_align', array(
+		'choices' 	=> array(
+			'left'	=> 'Izquierda',
+			'center'=> 'Centrar',
+			'right' => 'Derecha',
+		),
+		'label' 	=> __('Alineación del menú principal'),
+		'section' 	=> 'the_bootstrap_navbar_options',
+		'type' 		=> 'select',
+	));
+	
+	// New special control <ir> ##########################################################
+	$wp_customize->add_control('special_sidebar', array(
+		'label' 	=> __('Barra lateral'),
+		'section' 	=> 'the_bootstrap_theme_layout',
+		'type' 		=> 'checkbox',
+	));
+
 }
 add_action( 'customize_register', 'the_bootstrap_customize_register' );
 
