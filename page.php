@@ -15,7 +15,7 @@
 
 get_header(); ?>
 
-<div id="primary" class="span8">
+<div id="primary" class="row"><!-- <ir> ############################################## -->
 	<?php tha_content_before(); ?>
 	<div id="content" role="main">
 		<?php tha_content_top();
@@ -30,7 +30,20 @@ get_header(); ?>
 </div><!-- #primary -->
 
 <?php
-get_sidebar();
+
+	/* <ir> ########################################################################### */
+	if(get_theme_mod('special_sidebar', 'false') == true) {
+		?><style>
+			@media (min-width: 900px) {
+				#primary {
+					width: 620px !important;
+					float: left;
+				}
+			}
+		</style><?php
+		get_sidebar();
+	}
+
 get_footer();
 
 
