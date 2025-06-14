@@ -12,14 +12,14 @@ class The_Bootstrap_Nav_Walker extends Walker_Nav_Menu {
 	/**
 	 * @see Walker_Nav_Menu::start_lvl()
 	 */
-	function start_lvl( &$output, $depth ) {
+	function start_lvl( &$output, $depth = 0, $arg = [] ) {
 		$output .= "\n<ul class=\"dropdown-menu\">\n";
 	}
 
 	/**
 	 * @see Walker_Nav_Menu::start_el()
 	 */
-	function start_el( &$output, $item, $depth, $args ) {
+	function start_el( &$output, $item, $depth = 0, $args = [], $id = 0 ) {
 		global $wp_query;
 		
 		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
@@ -51,7 +51,7 @@ class The_Bootstrap_Nav_Walker extends Walker_Nav_Menu {
 		$item_output	.=	( $args->has_children AND 1 > $depth ) ? ' <b class="caret"></b>' : '';
 		$item_output	.=	'</a>' . $args->after;
 
-		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args, $id );
 	}
 
 	/**
