@@ -16,14 +16,17 @@
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		
+
+		<?php if ( ! function_exists( '_wp_render_title_tag' ) ) : ?>
 		<title><?php wp_title( '&laquo;', true, 'right' ); ?></title>
-		
+		<?php endif; ?>
+
 		<?php tha_head_bottom(); ?>
 		<?php wp_head(); ?>
 	</head>
-	
+
 	<body <?php body_class(); ?>>
+		<?php if ( function_exists( 'wp_body_open' ) ) : wp_body_open(); endif; ?>
 		<div class="container">
 			<div id="page" class="hfeed row">
 				<?php tha_header_before(); ?>
@@ -46,7 +49,7 @@
 						</h1>
 						<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
 					</hgroup>
-					
+
 					<?php if ( get_header_image() ) : ?>
 					<a id="header-image" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 						<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
@@ -77,7 +80,7 @@
 											'depth'				=>	3,
 											'fallback_cb'		=>	false,
 											'walker'			=>	new The_Bootstrap_Nav_Walker,
-										) ); 
+										) );
 										if ( the_bootstrap_options()->navbar_searchform ) {
 											the_bootstrap_navbar_searchform();
 										} ?>
@@ -93,7 +96,7 @@
 					tha_header_bottom(); ?>
 				</header><!-- #branding --><?php
 				tha_header_after();
-				
+
 
 /* End of file header.php */
 /* Location: ./wp-content/themes/the-bootstrap/header.php */

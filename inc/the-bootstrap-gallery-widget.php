@@ -13,7 +13,7 @@ class The_Bootstrap_Gallery_Widget extends WP_Widget {
 	///////////////////////////////////////////////////////////////////////////
 	// METHODS, PUBLIC
 	///////////////////////////////////////////////////////////////////////////
-	
+
 	/**
 	 * Constructor
 	 *
@@ -24,7 +24,7 @@ class The_Bootstrap_Gallery_Widget extends WP_Widget {
 	 * @return	The_Bootstrap_Gallery_Widget
 	 */
 	public function __construct() {
-		
+
 		parent::__construct( 'the-bootstrap-gallery', __( 'The Bootstrap Gallery Widget', 'the-bootstrap' ), array(
 			'classname'		=>	'the-bootstrap-gallery',
 			'description'	=>	__( 'Displays gallery images of a specified post with the Gallery post format.', 'the-bootstrap' )
@@ -56,11 +56,11 @@ class The_Bootstrap_Gallery_Widget extends WP_Widget {
 			'orderby'			=>	'menu_order ID',
 		) );
 		if ( empty( $attachments ) ) return;
-		
+
 		extract( $args );
-		
+
 		echo   str_replace( 'well ', '', $before_widget );
-		
+
 		if ( $title = get_the_title( $instance['post_id'] ) )
 			echo $before_title . '<a href="' . get_permalink( $instance['post_id'] ) . '" title="' . sprintf( esc_attr__( 'Permalink to %s', 'the-bootstrap' ), strip_tags( $title ) ) . '" rel="bookmark">' . $title . '</a>' . $after_title;
 		?>
@@ -69,28 +69,28 @@ class The_Bootstrap_Gallery_Widget extends WP_Widget {
 			<!-- Carousel items -->
 			<div class="carousel-inner">
 				<?php foreach ( $attachments as $attachment ) : ?>
-				<figure class="item">
-					<?php echo wp_get_attachment_image( $attachment->ID, array( 370, 278 ) ); 
-					if ( has_excerpt( $attachment->ID ) ) : ?>
-					<figcaption class="carousel-caption">
-						<h4><?php echo get_the_title( $attachment->ID ); ?></h4>
-						<p><?php echo apply_filters( 'get_the_excerpt', $attachment->post_excerpt ); ?></p>
-					</figcaption>
-					<?php endif; ?>
-				</figure>
+					<figure class="item">
+						<?php echo wp_get_attachment_image( $attachment->ID, array( 370, 278 ) );
+						if ( has_excerpt( $attachment->ID ) ) : ?>
+							<figcaption class="carousel-caption">
+								<h4><?php echo get_the_title( $attachment->ID ); ?></h4>
+								<p><?php echo apply_filters( 'get_the_excerpt', $attachment->post_excerpt ); ?></p>
+							</figcaption>
+						<?php endif; ?>
+					</figure>
 				<?php endforeach; ?>
 			</div><!-- .carousel-inner -->
-		
+
 			<!-- Carousel nav -->
 			<a class="carousel-control left" href="#sidebar-gallery-slider" data-slide="prev"><?php _ex( '&lsaquo;', 'carousel-control', 'the-bootstrap' ); ?></a>
 			<a class="carousel-control right" href="#sidebar-gallery-slider" data-slide="next"><?php _ex( '&rsaquo;', 'carousel-control', 'the-bootstrap' ); ?></a>
 		</div><!-- #sidebar-gallery-slider .carousel .slide -->
 		<?php
-		
+
 		echo $after_widget;
 	}
 
-	
+
 	/**
 	 * Updates the widget settings
 	 *
@@ -104,14 +104,14 @@ class The_Bootstrap_Gallery_Widget extends WP_Widget {
 	 * @return	array
 	 */
 	public function update( $new_instance, $old_instance ) {
-		
+
 		$instance				=	$old_instance;
 		$instance['post_id']	=	absint( $new_instance['post_id'] );
 
 		return $instance;
 	}
 
-	
+
 	/**
 	 * Displays the widget's settings form
 	 *
@@ -137,7 +137,7 @@ class The_Bootstrap_Gallery_Widget extends WP_Widget {
 				)
 			)
 		) );
-		
+
 		if ( empty( $gallery_posts ) ) {
 			echo '<p class="description">'. sprintf( __( 'No galleries have been created yet. <a href="%s">Create some</a>.', 'the-bootstrap' ), admin_url( 'post-new.php' ) ) . '</p>';
 			return;

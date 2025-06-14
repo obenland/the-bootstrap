@@ -3,7 +3,7 @@
 Contributors:		kobenland, obenland
 Tags:				black, blue, white, light, two-columns, left-sidebar, right-sidebar, flexible-width, custom-header, custom-background, threaded-comments, translation-ready, microformats, custom-menu, post-formats, sticky-posts
 Donate link:		https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=542W6XT4PLT4L
-Requires at least:	3.3.0
+Requires at least:	3.4.0
 Tested up to:		6.8.0
 Stable tag:			2.0.2
 
