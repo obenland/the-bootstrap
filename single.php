@@ -3,9 +3,9 @@
  *
  * The Template for displaying all single posts.
  *
- * @author		Konstantin Obenland
- * @package		The Bootstrap
- * @since		1.0.0 - 05.02.2012
+ * @author      Konstantin Obenland
+ * @package     The Bootstrap
+ * @since       1.0.0 - 05.02.2012
  */
 
 get_header(); ?>
@@ -14,13 +14,15 @@ get_header(); ?>
 	
 	<?php tha_content_before(); ?>
 	<div id="content" role="main">
-		<?php tha_content_top();
+		<?php
+		tha_content_top();
 
 		while ( have_posts() ) {
 			the_post();
 			get_template_part( '/partials/content', 'single' );
 			comments_template();
-		} ?>
+		}
+		?>
 		
 		<nav id="nav-single" class="pager">
 			<h3 class="assistive-text"><?php _e( 'Post navigation', 'the-bootstrap' ); ?></h3>
@@ -38,5 +40,6 @@ get_sidebar();
 get_footer();
 
 
-/* End of file index.php */
+/*
+End of file index.php */
 /* Location: ./wp-content/themes/the-bootstrap/single.php */

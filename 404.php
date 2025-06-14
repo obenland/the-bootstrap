@@ -3,9 +3,9 @@
  *
  * The template for displaying 404 pages (Not Found).
  *
- * @author		Konstantin Obenland
- * @package		The Bootstrap
- * @since		1.0.0 - 07.02.2012
+ * @author      Konstantin Obenland
+ * @package     The Bootstrap
+ * @since       1.0.0 - 07.02.2012
  */
 
 get_header(); ?>
@@ -28,22 +28,30 @@ get_header(); ?>
 
 				<?php
 				get_search_form();
-				
+
 				the_widget( 'WP_Widget_Recent_Posts', array( 'number' => 10 ), array( 'widget_id' => '404' ) );
-				
-				the_widget( 'WP_Widget_Categories', array(
-					'title'	=>	__( 'Most Used Categories', 'the-bootstrap' ),
-				) );
-				
+
+				the_widget(
+					'WP_Widget_Categories',
+					array(
+						'title' => __( 'Most Used Categories', 'the-bootstrap' ),
+					)
+				);
+
 				$archive_content = sprintf( _x( 'Try looking in the monthly archives. %1$s', '%1$s: smilie', 'the-bootstrap' ), convert_smilies( ':)' ) );
-				the_widget( 'WP_Widget_Archives', array(
-					'count'		=>	0,
-					'dropdown'	=>	1
-				), array(
-					'after_title'	=>	"</h2><p>{$archive_content}</p>"
-				) );
-				
-				the_widget( 'WP_Widget_Tag_Cloud' ); ?>
+				the_widget(
+					'WP_Widget_Archives',
+					array(
+						'count'    => 0,
+						'dropdown' => 1,
+					),
+					array(
+						'after_title' => "</h2><p>{$archive_content}</p>",
+					)
+				);
+
+				the_widget( 'WP_Widget_Tag_Cloud' );
+				?>
 
 			</div><!-- .entry-content -->
 			<?php tha_entry_bottom(); ?>
@@ -60,5 +68,6 @@ get_sidebar();
 get_footer();
 
 
-/* End of file 404.php */
+/*
+End of file 404.php */
 /* Location: ./wp-content/themes/the-bootstrap/404.php */

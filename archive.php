@@ -8,9 +8,9 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @author		Konstantin Obenland
- * @package		The Bootstrap
- * @since		1.0.0 - 07.02.2012
+ * @author      Konstantin Obenland
+ * @package     The Bootstrap
+ * @since       1.0.0 - 07.02.2012
  */
 
 get_header(); ?>
@@ -19,9 +19,11 @@ get_header(); ?>
 
 	<?php tha_content_before(); ?>
 	<div id="content" role="main">
-		<?php tha_content_top();
-		
-		if ( have_posts() ) : ?>
+		<?php
+		tha_content_top();
+
+		if ( have_posts() ) :
+			?>
 
 			<header class="page-header">
 				<h1 class="page-title">
@@ -34,7 +36,8 @@ get_header(); ?>
 						printf( __( 'Yearly Archives: %s', 'the-bootstrap' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 					else :
 						_e( 'Blog Archives', 'the-bootstrap' );
-					endif; ?>
+					endif;
+					?>
 				</h1>
 			</header><!-- .page-header -->
 
@@ -47,8 +50,9 @@ get_header(); ?>
 		else :
 			get_template_part( '/partials/content', 'not-found' );
 		endif;
-		
-		tha_content_bottom(); ?>
+
+		tha_content_bottom();
+		?>
 	</div><!-- #content -->
 	<?php tha_content_after(); ?>
 </section><!-- #primary -->
@@ -58,5 +62,6 @@ get_sidebar();
 get_footer();
 
 
-/* End of file archive.php */
+/*
+End of file archive.php */
 /* Location: ./wp-content/themes/the-bootstrap/archive.php */

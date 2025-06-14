@@ -132,7 +132,7 @@ article.page {
 }
 
 .entry-content .twitter-tweet-rendered {
-    max-width: 100% !important;
+	max-width: 100% !important;
 }
 
 
@@ -142,7 +142,7 @@ article.page {
 #comments-title {
 	border-bottom: 1px solid #EEEEEE;
 	font-size: 19.5px;
-    margin: 0 0 27px;
+	margin: 0 0 27px;
 }
 
 #comment,
@@ -268,7 +268,7 @@ table .label {
 
 .comment-subscription-form > label {
 	min-height: 18px;
-    padding-left: 18px;
+	padding-left: 18px;
 }
 
 
@@ -311,18 +311,18 @@ table .label {
 -------------------------------------------------------------- */
 
 .aligncenter {
-    display:block;
-    margin: 0 auto 20px;
+	display:block;
+	margin: 0 auto 20px;
 }
 
 .alignright {
-    float:right;
-    margin: 0 0 20px 20px;
+	float:right;
+	margin: 0 0 20px 20px;
 }
 
 .alignleft {
-    float:left;
-    margin: 0 20px 20px 0;
+	float:left;
+	margin: 0 20px 20px 0;
 }
 
 .wp-caption {
@@ -341,15 +341,15 @@ table .label {
 }
 
 .wp-caption.alignnone {
-    margin: 5px 20px 20px 0;
+	margin: 5px 20px 20px 0;
 }
 
 .wp-caption.alignleft {
-    margin: 5px 20px 20px 0;
+	margin: 5px 20px 20px 0;
 }
 
 .wp-caption.alignright {
-    margin: 5px 0 20px 20px;
+	margin: 5px 0 20px 20px;
 }
 
 .sticky {}

@@ -3,9 +3,9 @@
  *
  * The default template for displaying content
  *
- * @author		Konstantin Obenland
- * @package		The Bootstrap
- * @since		1.0.0 - 05.02.2012
+ * @author      Konstantin Obenland
+ * @package     The Bootstrap
+ * @since       1.0.0 - 05.02.2012
  */
 
 
@@ -14,17 +14,18 @@ tha_entry_before(); ?>
 	<?php tha_entry_top(); ?>
 	
 	<header class="page-header">
-	<?php if ( is_sticky() AND is_home() ) : ?>
+	<?php if ( is_sticky() and is_home() ) : ?>
 		<hgroup>
 			<?php the_title( '<h1 class="entry-title"><a href="' . get_permalink() . '" title="' . sprintf( esc_attr__( 'Permalink to %s', 'the-bootstrap' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark">', '</a></h1>' ); ?>
 			<h3 class="entry-format"><?php _e( 'Featured', 'the-bootstrap' ); ?></h3>
 		</hgroup>
-	<?php
+		<?php
 		else :
-			the_title( '<h1 class="entry-title"><a href="' . get_permalink() .'" title="' . sprintf( esc_attr__( 'Permalink to %s', 'the-bootstrap' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark">', '</a></h1>' );
+			the_title( '<h1 class="entry-title"><a href="' . get_permalink() . '" title="' . sprintf( esc_attr__( 'Permalink to %s', 'the-bootstrap' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark">', '</a></h1>' );
 		endif;
-		
-		if ( 'post' == get_post_type() ) : ?>
+
+		if ( 'post' == get_post_type() ) :
+			?>
 		<div class="entry-meta">
 			<?php the_bootstrap_posted_on(); ?>
 		</div><!-- .entry-meta -->
@@ -41,9 +42,11 @@ tha_entry_before(); ?>
 		<a class="thumbnail post-thumbnail span2" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 			<?php the_post_thumbnail( 'thumbnail' ); ?>
 		</a>
-		<?php endif;
+			<?php
+		endif;
 		the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'the-bootstrap' ) );
-		the_bootstrap_link_pages(); ?>
+		the_bootstrap_link_pages();
+		?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 
@@ -51,15 +54,18 @@ tha_entry_before(); ?>
 		<?php
 		$categories_list = get_the_category_list( _x( ', ', 'used between list items, there is a space after the comma', 'the-bootstrap' ) );
 
-		if ( 'post' == get_post_type() AND $categories_list ) // Hide category text for pages on Search
+		if ( 'post' == get_post_type() and $categories_list ) { // Hide category text for pages on Search
 			printf( '<span class="cat-links block">' . __( 'Posted in %1$s.', 'the-bootstrap' ) . '</span>', $categories_list );
+		}
 		?>
 	</footer><!-- #entry-meta -->
 	
 	<?php tha_entry_bottom(); ?>
 </article><!-- #post-<?php the_ID(); ?> -->
-<?php tha_entry_after();
+<?php
+tha_entry_after();
 
 
-/* End of file content.php */
+/*
+End of file content.php */
 /* Location: ./wp-content/themes/the-bootstrap/partials/content.php */
