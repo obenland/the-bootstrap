@@ -3,8 +3,8 @@ Contributors:		kobenland
 Tags:				black, blue, white, light, two-columns, left-sidebar, right-sidebar, flexible-width, custom-header, custom-background, threaded-comments, translation-ready, microformats, custom-menu, post-formats, sticky-posts
 Donate link:		https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=542W6XT4PLT4L
 Requires at least:	3.3.0
-Tested up to:		3.4.1
-Stable tag:			2.0.0
+Tested up to:		3.5.0
+Stable tag:			2.0.1
 
 A WordPress Theme based on Bootstrap, from Twitter
 
@@ -67,6 +67,9 @@ For more information on SemVer, please visit [http://semver.org/].
 
 
 == Changelog ==
+
+= 2.0.1 =
+* Updated Twitter Bootstrap to 2.2.2
 
 = 2.0.0 =
 
