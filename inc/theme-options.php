@@ -326,8 +326,8 @@ function the_bootstrap_theme_options_validate( $input ) {
 		$output['navbar_position'] = $input['navbar_position'];
 	}
 
-	$output['navbar_site_name']  = isset( $input['navbar_site_name'] ) and $input['navbar_site_name'];
-	$output['navbar_searchform'] = isset( $input['navbar_searchform'] ) and $input['navbar_searchform'];
+	$output['navbar_site_name']  = isset( $input['navbar_site_name'] ) && $input['navbar_site_name'];
+	$output['navbar_searchform'] = isset( $input['navbar_searchform'] ) && $input['navbar_searchform'];
 
 	if ( ! get_settings_errors() ) {
 		add_settings_error( 'the-bootstrap-options', 'settings_updated', sprintf( __( 'Settings saved. <a href="%s">Visit your site</a> to see how it looks.', 'the-bootstrap' ), home_url( '/' ) ), 'updated' );
