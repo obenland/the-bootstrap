@@ -1,10 +1,10 @@
 === The Bootstrap ===
-Contributors:		kobenland
+Contributors:		kobenland, obenland
 Tags:				black, blue, white, light, two-columns, left-sidebar, right-sidebar, flexible-width, custom-header, custom-background, threaded-comments, translation-ready, microformats, custom-menu, post-formats, sticky-posts
 Donate link:		https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=542W6XT4PLT4L
 Requires at least:	3.3.0
-Tested up to:		3.5.0
-Stable tag:			2.0.1
+Tested up to:		6.8.0
+Stable tag:			2.0.2
 
 A WordPress Theme based on Bootstrap, from Twitter
 
@@ -17,8 +17,8 @@ The Bootstrap is fully compatible with WordPress SEO by Yoast!
 Please note:
 
 Due to design restrictions in Bootstrap, the navigation menu can "only" be three levels deep, while parent menu items only serves as a headline for the child menu items and can not be accessed over the navigation menu.
-The Footer Menu is best suitable for short menues with just a few links. It replaces the credits section, once a menu has been assigned to the location.
-To take advantage of all the possibilites Bootstrap has to offer, Bootstrap requires jQuery 1.7, which does not come with WordPress versions prior to 3.3.0. Consider adding a plugin that provides the lates version of jQuery, if you want to use this Theme with WordPress 3.2.1 or lower.
+The Footer Menu is best suitable for short menus with just a few links. It replaces the credits section, once a menu has been assigned to the location.
+To take advantage of all the possibilities Bootstrap has to offer, Bootstrap requires jQuery 1.7, which does not come with WordPress versions prior to 3.3.0. Consider adding a plugin that provides the lates version of jQuery, if you want to use this Theme with WordPress 3.2.1 or lower.
 
 = License =
 Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public Licemse.
@@ -38,6 +38,7 @@ Currently available in:
 * French
 * German
 * Hungarian
+* Italian
 * Japanese
 * Russian
 
@@ -67,6 +68,10 @@ For more information on SemVer, please visit [http://semver.org/].
 
 
 == Changelog ==
+
+= 2.0.2 =
+* Updated `Walker_Nav_Menu` compatibility for PHP 8.1.
+* Added Italian translation. Props @Lamianuovaclio.
 
 = 2.0.1 =
 * Updated Twitter Bootstrap to 2.2.2
