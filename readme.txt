@@ -1,17 +1,17 @@
 === The Bootstrap ===
-Contributors:		kobenland, obenland
-Tags:				black, blue, white, light, two-columns, left-sidebar, right-sidebar, flexible-width, custom-header, custom-background, threaded-comments, translation-ready, microformats, custom-menu, post-formats, sticky-posts
-Donate link:		https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=542W6XT4PLT4L
-Requires at least:	3.4.0
-Tested up to:		6.8.0
-Stable tag:			2.0.2
+Contributors:      kobenland, obenland
+Tags:              black, blue, white, light, two-columns, left-sidebar, right-sidebar, flexible-width, custom-header, custom-background, threaded-comments, translation-ready, microformats, custom-menu, post-formats, sticky-posts
+Donate link:       https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=542W6XT4PLT4L
+Requires at least: 3.4.0
+Tested up to:      6.8.0
+Stable tag:        2.0.3
 
 A WordPress Theme based on Bootstrap, from Twitter
 
 == Description ==
 
-The Theme is 100% responsive - you do not need a seperate mobile-Theme with this layout.
-It has a seperate Sidebar just for image pages, to make it a special place to show your pictures!
+The Theme is 100% responsive - you do not need a separate mobile theme with this layout.
+It has a separate Sidebar just for image pages, to make it a special place to show your pictures!
 The Bootstrap is fully compatible with WordPress SEO by Yoast!
 
 Please note:
@@ -68,6 +68,10 @@ For more information on SemVer, please visit [http://semver.org/].
 
 
 == Changelog ==
+
+= 2.0.3 =
+* Updated screenshot.png.
+* Closer to WordPress Coding Standards.
 
 = 2.0.2 =
 * Updated `Walker_Nav_Menu` compatibility for PHP 8.1.
