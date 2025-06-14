@@ -3,9 +3,9 @@
  *
  * The template for displaying Category Archive pages.
  *
- * @author		Konstantin Obenland
- * @package		The Bootstrap
- * @since		1.0.0 - 05.02.2012
+ * @author      Konstantin Obenland
+ * @package     The Bootstrap
+ * @since       1.0.0 - 05.02.2012
  */
 
 get_header(); ?>
@@ -14,18 +14,24 @@ get_header(); ?>
 
 	<?php tha_content_before(); ?>
 	<div id="content" role="main">
-		<?php tha_content_top();
+		<?php
+		tha_content_top();
 
-		if ( have_posts() ) : ?>
+		if ( have_posts() ) :
+			?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php
+				<h1 class="page-title">
+				<?php
 					printf( __( 'Category Archives: %s', 'the-bootstrap' ), '<span>' . single_cat_title( '', false ) . '</span>' );
-				?></h1>
+				?>
+				</h1>
 	
-				<?php if ( $category_description = category_description() ) {
+				<?php
+				if ( $category_description = category_description() ) {
 					echo apply_filters( 'category_archive_meta', '<div class="category-archive-meta">' . $category_description . '</div>' );
-				} ?>
+				}
+				?>
 			</header><!-- .page-header -->
 	
 			<?php
@@ -37,8 +43,9 @@ get_header(); ?>
 		else :
 			get_template_part( '/partials/content', 'not-found' );
 		endif;
-		
-		tha_content_bottom(); ?>
+
+		tha_content_bottom();
+		?>
 	</div><!-- #content -->
 	<?php tha_content_after(); ?>
 </section><!-- #primary -->
@@ -48,5 +55,6 @@ get_sidebar();
 get_footer();
 
 
-/* End of file index.php */
+/*
+End of file index.php */
 /* Location: ./wp-content/themes/the-bootstrap/category.php */

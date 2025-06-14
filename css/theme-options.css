@@ -1,10 +1,10 @@
 #poststuff #post-body.columns-2 {
-    margin-right: 300px;
+	margin-right: 300px;
 }
 #post-body.columns-2 #postbox-container-1 {
-    float: right;
-    margin-right: -300px;
-    width: 280px;
+	float: right;
+	margin-right: -300px;
+	width: 280px;
 }
 #post-body-content {
 	float: left;
@@ -18,8 +18,8 @@
 .obenland-wp div.inside li.twitter {
 	background: none no-repeat scroll 0 0 transparent;
 	list-style-type: none;
-    margin-left: 0;
-    padding-left: 20px;
+	margin-left: 0;
+	padding-left: 20px;
 }
 .obenland-wp div.inside li.rss {
 	background-image: url("../img/rss.png");

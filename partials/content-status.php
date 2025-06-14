@@ -5,9 +5,9 @@
  *
  * Learn more: http://codex.wordpress.org/Post_Formats
  *
- * @author		Konstantin Obenland
- * @package		The Bootstrap
- * @since		1.0.0 - 07.02.2012
+ * @author      Konstantin Obenland
+ * @package     The Bootstrap
+ * @since       1.0.0 - 07.02.2012
  */
 
 
@@ -20,7 +20,8 @@ tha_entry_before(); ?>
 		<div class="offset1">
 			<?php
 			the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'the-bootstrap' ) );
-			the_bootstrap_link_pages(); ?>
+			the_bootstrap_link_pages();
+			?>
 		</div>
 	</div><!-- .entry-content -->
 
@@ -30,8 +31,10 @@ tha_entry_before(); ?>
 	
 	<?php tha_entry_bottom(); ?>
 </article><!-- #post-<?php the_ID(); ?> -->
-<?php tha_entry_after();
+<?php
+tha_entry_after();
 
 
-/* End of file content-status.php */
+/*
+End of file content-status.php */
 /* Location: ./wp-content/themes/the-bootstrap/partials/content-status.php */
